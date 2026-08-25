@@ -1,15 +1,17 @@
 var path = require('path');
 module.exports = {
   devServer: {
+    client: {
+      overlay: false
+    },
     proxy: {
       '^/rest': {
-        //target:  'http://localhost:8082',
-        target: 'https://v1.quant-ux.com',
+        target: 'http://localhost:8080',
         ws: true,
         changeOrigin: true
       },
       '^/ai': {
-        target:  'https://v1.quant-ux.com',
+        target: 'http://localhost:8080',
         ws: true,
         changeOrigin: true
       }

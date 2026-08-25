@@ -5,7 +5,7 @@ import MockModelService from './mocks/MockModelService'
 import MockCommandService from './mocks/MockCommandService'
 import lang from "../../src/dojo/_base/lang";
 
-requestAnimationFrame = function () {}
+window.requestAnimationFrame = function () {}
 
 export function createController (model, data={}) {
     model = lang.clone(model)
