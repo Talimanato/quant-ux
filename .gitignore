@@ -29,3 +29,6 @@ ai.js
 __pycache__/
 tests/e2e/debug*.png
 *.pyc
+
+# runtime logs and pid files
+logs/
