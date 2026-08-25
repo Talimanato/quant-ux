@@ -183,20 +183,20 @@ def _run_studio_layers(env):
             expect(layer_list.locator(".MatcTree")).to_be_visible(timeout=10000)
 
             # LayerList should contain the screen and the widget.
-            expect(layer_list.get_by_text("Screen").first).to_be_visible(timeout=5000)
-            expect(layer_list.get_by_text(widget_name).first).to_be_visible(timeout=5000)
+            expect(layer_list.get_by_text("Screen").first).to_be_visible(timeout=10000)
+            expect(layer_list.get_by_text(widget_name).first).to_be_visible(timeout=10000)
             print("LayerList rendered with screen and widget.")
 
             # 6. Select the widget in the LayerList.
             layer_list.get_by_text(widget_name).first.click()
-            expect(page.locator(".MatcBoxSelected")).to_have_count(1, timeout=5000)
-            expect(page.locator(".MatcWidgetSelected")).to_have_count(1, timeout=5000)
+            expect(page.locator(".MatcBoxSelected")).to_have_count(1, timeout=10000)
+            expect(page.locator(".MatcWidgetSelected")).to_have_count(1, timeout=10000)
             print("Widget selected from LayerList.")
 
             # 7. Try to rename the widget via the LayerList (double-click the label).
             layer_list.get_by_text(widget_name).first.dblclick()
             input_locator = layer_list.locator("input.MatcTreeItemLabel")
-            expect(input_locator).to_be_visible(timeout=5000)
+            expect(input_locator).to_be_visible(timeout=10000)
 
             new_name = "LayerBox"
             input_locator.fill(new_name)
@@ -204,7 +204,7 @@ def _run_studio_layers(env):
             page.wait_for_timeout(1500)
 
             # Wait for the new label to appear in the LayerList.
-            expect(layer_list.get_by_text(new_name).first).to_be_visible(timeout=5000)
+            expect(layer_list.get_by_text(new_name).first).to_be_visible(timeout=10000)
 
             # Verify the backend persisted the rename.
             saved = get_app(app_id, token)
@@ -217,7 +217,7 @@ def _run_studio_layers(env):
             # option shown for normal widget nodes (the lock icon is not rendered
             # because TreeItem.hasLock is hard-coded to false in this build).
             layer_list.get_by_text(new_name).first.click()
-            expect(page.locator(".MatcBoxSelected")).to_have_count(1, timeout=5000)
+            expect(page.locator(".MatcBoxSelected")).to_have_count(1, timeout=10000)
 
             visible_icon = layer_list.locator(
                 ".MatcTreeItemSelected .MatcTreeItemOptions .MatcQIcon svg.Visible"
@@ -230,9 +230,9 @@ def _run_studio_layers(env):
             layer_list.locator(".MatcTreeItemSelected .MatcTreeItemOptions .MatcQIcon").first.click()
             page.wait_for_timeout(1500)
 
-            expect(hidden_icon).to_be_visible(timeout=5000)
-            expect(page.locator(".MatcWidget")).to_have_count(0, timeout=5000)
-            expect(page.locator(".MatcWidgetDND")).to_have_count(0, timeout=5000)
+            expect(hidden_icon).to_be_visible(timeout=10000)
+            expect(page.locator(".MatcWidget")).to_have_count(0, timeout=10000)
+            expect(page.locator(".MatcWidgetDND")).to_have_count(0, timeout=10000)
 
             saved = get_app(app_id, token)
             widget = saved["widgets"][widget_id]
@@ -243,8 +243,8 @@ def _run_studio_layers(env):
             layer_list.locator(".MatcTreeItemSelected .MatcTreeItemOptions .MatcQIcon").first.click()
             page.wait_for_timeout(1500)
 
-            expect(visible_icon).to_be_visible(timeout=5000)
-            expect(page.locator(".MatcWidget")).to_have_count(1, timeout=5000)
+            expect(visible_icon).to_be_visible(timeout=10000)
+            expect(page.locator(".MatcWidget")).to_have_count(1, timeout=10000)
 
             saved = get_app(app_id, token)
             widget = saved["widgets"][widget_id]

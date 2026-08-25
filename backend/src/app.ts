@@ -13,6 +13,7 @@ import { createImageRouter } from './routes/images';
 import { createStubRouter } from './routes/stubs';
 import { createNotificationRouter } from './routes/notifications';
 import { createLibraryRouter } from './routes/libs';
+import { createAiRouter } from './routes/ai';
 import { BlobService } from './services/BlobService';
 import { AppAcl } from './acl/AppAcl';
 
@@ -50,6 +51,7 @@ export function createApp(config: Config) {
   app.use('/rest', createStubRouter(db, appAcl));
   app.use('/rest', createNotificationRouter(db));
   app.use('/rest', createLibraryRouter(db, appAcl));
+  app.use('/ai', createAiRouter(config));
 
   // fallback
   app.use((err: any, req: Request, res: Response, next: any) => {

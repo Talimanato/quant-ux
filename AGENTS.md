@@ -54,7 +54,7 @@ This is a Vue 3 (compat build) frontend (`/src`) and a new Node.js/SQLite backen
 
 ## Current verification status
 
-- `cd backend && npm test` -> 9 passed (includes app updates, command stack, team, invitation, image upload/list/delete)
+- `cd backend && npm test` -> 15 passed (app updates, command stack, team, invitation, image upload/list/delete, password reset, AI proxy validation, log sink)
 - `npm run build` -> success
 - `npm run lint` -> no errors
 - `npm run test:unit` -> 130 passed
@@ -93,6 +93,14 @@ A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **
 - Rebuild `dist` before E2E runs (`npm run build`) — the harness does NOT use the dev server.
 - Ports come from `get_free_port(9000/9100)`; leftover processes are killed via `atexit`/signal handlers and `_kill_port_owner` (only inside the 9000-9999 range).
 - Readiness checks re-verify the child process is alive afterwards, to detect stale servers that answer on the same port.
+
+## Backend feature notes
+
+- **Password reset**: `POST /rest/user/password/request` and `/rest/user/password/set` (migration `002_password_reset.sql`). There is **no SMTP support** — the reset link is printed to the server log (`[password-reset] ... #/?id=<key>`); wire `QUX_MAIL_*` up if email delivery is needed.
+- **AI proxy**: `POST /ai/openai.json` (`backend/src/routes/ai.ts`) forwards `openAIPayload` to the OpenAI-style upstream. Configure via `QUX_AI_TOKEN` (server key, takes precedence) and `QUX_AI_ALLOWED_URLS` (comma separated base URLs; default `https://api.openai.com`). Returns 503 `ai.token.missing` when no key is configured.
+- **Client error log**: `POST /rest/log/error` acknowledges `Logger` reports (no-op sink).
+- **Collab WebSocket**: the URL comes from `config.json` (`websocket` key, default `wss://ws.quant-ux.com` — the author's public service). Self-hosted deployments point it at their own `qux-websocket` instance; `public/config.json` is gitignored and copied to `dist/` at build time.
+- `GET /rest/events/:appID.json?batch=true` accepts the flag for compatibility; no batching is needed at SQLite scale.
 
 ## E2E setup detail
 

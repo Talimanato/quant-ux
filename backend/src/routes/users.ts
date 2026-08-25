@@ -141,6 +141,65 @@ export function createUserRouter(db: SQLiteClient, jwt: JWTService, config: Conf
     return res.json({ message: 'user.notification.updated' });
   });
 
+  /**
+   * Password reset. The frontend calls these from the login page
+   * (UserService.reset / reset2). This backend has no SMTP support, so the
+   * reset link is written to the server log for self hosted setups.
+   */
+  const RESET_TOKEN_TTL = 24 * 60 * 60 * 1000;
+
+  router.post('/user/password/request', (req: Request, res: Response) => {
+    const email = String(req.body?.email || '').toLowerCase();
+    const user = email ? db.findOne('user', { email }) : null;
+
+    if (user) {
+      db.removeDocuments('password_reset', { userID: user._id });
+      const key = Util.getRandomString();
+      db.insert('password_reset', {
+        _id: Util.getRandomString(),
+        userID: user._id,
+        key,
+        created: Date.now(),
+        expires: Date.now() + RESET_TOKEN_TTL
+      });
+      console.log(`[password-reset] reset link for ${email}: #/?id=${key}`);
+    }
+
+    // Always the same answer so the endpoint does not reveal which
+    // accounts exist.
+    return res.json({ type: 'ok' });
+  });
+
+  router.post('/user/password/set', (req: Request, res: Response) => {
+    const { email, password, key } = req.body || {};
+    const fail = () => res.json({ type: 'error' });
+
+    if (!email || !password || !key) {
+      return fail();
+    }
+    if (String(password).length < 6) {
+      return fail();
+    }
+
+    const user = db.findOne('user', { email: String(email).toLowerCase() });
+    const reset = user
+      ? db.findOne('password_reset', { userID: user._id, key: String(key) })
+      : null;
+    if (!user || !reset) {
+      return fail();
+    }
+    if (!reset.expires || reset.expires < Date.now()) {
+      db.removeDocuments('password_reset', { userID: user._id });
+      return fail();
+    }
+
+    db.updateCollection('user', { _id: user._id }, {
+      $set: { password: Util.hashPassword(String(password)), lastUpdate: Date.now() }
+    });
+    db.removeDocuments('password_reset', { userID: user._id });
+    return res.json({ type: 'ok' });
+  });
+
   router.post('/user/:id.json', (req: Request, res: Response) => {
     const user = req.user as QuxUser;
     const id = req.params.id;

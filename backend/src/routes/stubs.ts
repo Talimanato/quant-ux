@@ -7,6 +7,12 @@ import * as Util from '../util/Util';
 export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   const router = Router();
 
+  // Client side logger (src/common/Logger.js) reports errors here. Just
+  // acknowledge them; wire QUX_DEBUG logging here if needed.
+  router.post('/log/error', (req: Request, res: Response) => {
+    return res.json({ type: 'ok' });
+  });
+
   /**
    * The comment table only has fixed columns (id, appID, type, reference,
    * userID, message, created, data). Everything else (text, session, user,
@@ -488,9 +494,8 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
     if (req.query.exclude) {
       query.type = { $ne: req.query.exclude };
     }
-    if (req.query.batch === 'true') {
-      // batch mode may be used for large data, just return empty for now
-    }
+    // batch=true is accepted for compatibility: the full list is small
+    // enough in SQLite that no batching is required.
     const events = db.find('event', query);
     return res.json(events);
   });
