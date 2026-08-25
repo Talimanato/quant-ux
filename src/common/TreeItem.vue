@@ -66,6 +66,9 @@ import QIcon from 'page/QIcon'
 export default {
   name: "TreeItem",
   props:['value', 'level'],
+  // declared so the listeners do not fall through as native DOM listeners
+  // (the rename <input> fires a native 'select' event)
+  emits: ['select', 'open', 'locked', 'hidden', 'changeLabel', 'dnd', 'startEdit', 'endEdit'],
   mixins: [],
   data: function() {
     return {
@@ -181,7 +184,7 @@ export default {
     },
     toggleOpen () {
       const open = !this.value.open
-      this.$set(this.value, "open", open)
+      this.value.open = open
       this.$emit('open', this.value.id, open )
     },
     onClick (e) {
@@ -291,8 +294,11 @@ export default {
     }
   },
   watch: {
-    value (v) {
-      this.value = v
+    value () {
+      /**
+       * The prop is already updated when the watcher fires. In Vue 2 this
+       * assignment was a no-op, in Vue 3 mutating a prop throws.
+       */
     }
   },
   mounted() {

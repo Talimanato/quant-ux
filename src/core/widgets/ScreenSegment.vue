@@ -199,7 +199,7 @@ export default {
       const newScreen = Object.values(this.app.screens).find(s => s.name === value)
       if (newScreen) {
         this.renderScreen(this.model, newScreen.id)
-        this.emit('rerender', this)
+        this.$emitDojo('rerender', this)
       } else {
         this.logger.error('setValue', 'Screen with name ' + value + ' does not exist')
         this.renderScreen(this.model, this.model?.props?.screenID)

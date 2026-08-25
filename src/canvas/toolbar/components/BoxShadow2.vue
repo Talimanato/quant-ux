@@ -85,13 +85,13 @@ export default {
 
       onHide () {
         if (this.tempValue && (this.tempValue.v !== 0 || this.tempValue.h !== 0 || this.tempValue.s !== 0 || this.tempValue.b !== 0)) {
-          this.emit('change', this.tempValue)
+          this.$emitDojo('change', this.tempValue)
         }
       },
 
       onTempChange (v) {
         this.tempValue = v
-        this.emit('changing', this.tempValue)
+        this.$emitDojo('changing', this.tempValue)
       },
 
 			onRemove (e){

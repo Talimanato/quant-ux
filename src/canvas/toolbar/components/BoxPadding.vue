@@ -94,7 +94,7 @@ export default {
 							this.value[k] = value;
 						}
 					}
-					this.emit("change", this.getDelta(this.value));
+					this.$emitDojo("change", this.getDelta(this.value));
 				}
 				//this.showPadding();
 			},

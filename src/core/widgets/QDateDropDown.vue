@@ -246,7 +246,7 @@ export default {
           e: e.e
         };
         this.emitDataBinding(event.value);
-        this.emit("stateChange", event);
+        this.$emitDojo("stateChange", event);
         this.setValue(event.value);
 
         setTimeout(() =>  {
@@ -260,7 +260,7 @@ export default {
           noheat: true,
           e: e.e
         };
-        this.emit("stateChange", event);
+        this.$emitDojo("stateChange", event);
       }
     },
 
@@ -420,7 +420,7 @@ export default {
       }
     },
 
-    beforeDestroy() {
+    beforeUnmount() {
       this.cleanUp();
     },
 

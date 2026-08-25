@@ -14,7 +14,7 @@ import touch from 'dojo/touch'
 import Evented from 'dojo/Evented'
 
 
-var value = false
+// var value = false
 
 export default {
     name: 'CheckBox',
@@ -47,13 +47,13 @@ export default {
 			}
 		},
 		
-		setLabel:function(label){
+		setLabel:function(){
 			//this.label.innerHTML=label;	
 		},
 		
 		onChange:function(){
 			this.setValue(!this.value);
-			this.emit("change", this.value );
+			this.$emitDojo("change", this.value );
 		}
     }, 
     mounted () {

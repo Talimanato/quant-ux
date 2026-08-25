@@ -146,7 +146,7 @@ export default {
     },
 
 		onChange () {
-			this.emit('change', this.value)
+			this.$emitDojo('change', this.value)
 		},
 
     selectHandle  (i) {

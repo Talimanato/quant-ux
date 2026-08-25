@@ -373,7 +373,7 @@ export default {
             this.rest.headers.splice(i, 1);
         },
         onDataBingingFileChange (key, file) {
-            this.$set(this.databingValues, key, file)
+            this.databingValues[key] = file
         },
         onFileChange (file) {
             this.uploadedFile = file
@@ -401,7 +401,7 @@ export default {
 
                 if (!this.rest.headers) {
                     this.logger.log(-1, 'setWidget', 'Set headers')
-                    this.$set(this.rest, "headers", [])
+                    this.rest.headers = []
                 }
             }
 		},
@@ -413,7 +413,7 @@ export default {
             return this.rest
         },
         onChangeFileDataBinging (value) {
-            this.$set(this.rest.input, 'fileDataBinding', value)
+            this.rest.input.fileDataBinding = value
             this.onChange()
         },
         onChangeOutputVar (value) {

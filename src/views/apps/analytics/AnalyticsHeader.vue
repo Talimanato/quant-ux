@@ -93,7 +93,6 @@ export default {
   },
   watch: {
     value(data) {
-      this.value = data;
       this.setValue(data);
     }
   },

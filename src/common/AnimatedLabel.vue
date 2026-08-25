@@ -53,15 +53,14 @@ export default {
         }
    },
    watch: {
-       value (v) {
-           this.value = v
+       value () {
            this.start()
        }
    },
    mounted () {
         this.start()
    },
-   beforeDestroy () {
+   beforeUnmount () {
     this.cleanUp() 
    }
 }

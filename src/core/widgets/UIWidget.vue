@@ -155,7 +155,7 @@ export default {
     },
 
     _onWidgetGesture (gesture, startEvent, endEvent) {
-      this.emit("gesture", gesture, startEvent, endEvent);
+      this.$emitDojo("gesture", gesture, startEvent, endEvent);
     },
 
     /**
@@ -168,7 +168,7 @@ export default {
     /**
      * Gets called by RenderFactory...
      */
-    beforeDestroy () {
+    beforeUnmount () {
       if (this._compositeState) {
         this.emitCompositeState();
       }
@@ -195,7 +195,7 @@ export default {
       const databinding = this.getDataBinding(this.model);
       if (databinding && databinding[key]) {
         const variable = databinding[key];
-        this.emit("databinding", variable, value);
+        this.$emitDojo("databinding", variable, value);
       }
     },
 
@@ -252,19 +252,19 @@ export default {
     },
 
     emitClick (e) {
-      this.emit("click", e);
+      this.$emitDojo("click", e);
     },
 
     emitFocus (e) {
-      this.emit("focus", e);
+      this.$emitDojo("focus", e);
     },
 
     emitHoverStart (e) {
-      this.emit("hoverStart", e);
+      this.$emitDojo("hoverStart", e);
     },
 
     emitHoverEnd (e) {
-      this.emit("hoverEnd", e);
+      this.$emitDojo("hoverEnd", e);
     },
 
     emitMouseMove (e, clicked) {
@@ -273,23 +273,23 @@ export default {
       } else {
         clicked = 1;
       }
-      this.emit("mousemove", e, clicked);
+      this.$emitDojo("mousemove", e, clicked);
     },
 
     emitMouseOver (e) {
-      this.emit("mouseover", e);
+      this.$emitDojo("mouseover", e);
     },
 
     emitMouseOut (e) {
-      this.emit("mouseout", e);
+      this.$emitDojo("mouseout", e);
     },
 
     emitValidationError (value) {
-      this.emit("validationError", { value: value });
+      this.$emitDojo("validationError", { value: value });
     },
 
     emitValidationOK () {
-      this.emit("validationOK");
+      this.$emitDojo("validationOK");
     },
 
     /**
@@ -312,7 +312,7 @@ export default {
       if (options) {
         event.options = options;
       }
-      this.emit("stateChange", event);
+      this.$emitDojo("stateChange", event);
     },
 
     emitHiddenStateChange (type, value, e, time) {
@@ -330,7 +330,7 @@ export default {
       if (options) {
         event.options = options;
       }
-      this.emit("stateChange", event);
+      this.$emitDojo("stateChange", event);
     },
 
     /**
@@ -353,7 +353,7 @@ export default {
       if (options) {
         event.options = options;
       }
-      this.emit("stateChange", event);
+      this.$emitDojo("stateChange", event);
     },
 
     /**
@@ -418,7 +418,7 @@ export default {
         if (e) {
           this._compositeState.e = e;
         }
-        this.emit("stateChange", this._compositeState);
+        this.$emitDojo("stateChange", this._compositeState);
         delete this._compositeState;
       }
     },
@@ -438,7 +438,7 @@ export default {
         duration: duration,
         delay: 0
       };
-      this.emit("animation", animation);
+      this.$emitDojo("animation", animation);
     },
 
     onDomMouseOver (e) {
@@ -1389,8 +1389,8 @@ export default {
       console.warn(this.name + '().inherected() > DEPRECTAED')
     }
   },
-  destroyed () {
-    this.beforeDestroy()
+  unmounted () {
+    this.beforeUnmount()
   },
   mounted() {
     if (this.qWidget) {

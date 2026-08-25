@@ -75,7 +75,7 @@ export default {
 
       setTab(t) {
         this.tab = t
-        this.emit('resize')
+        this.$emitDojo('resize')
       },
 
       init () {
@@ -137,7 +137,7 @@ export default {
 					i : this.insertBox.getValue(),
 					c: this.picker.getValueAsString()
 				}
-        this.emit('changing', this.tempValue)
+        this.$emitDojo('changing', this.tempValue)
 			},
 
       setHasInsertAndSpread (v) {

@@ -52,7 +52,7 @@ export default {
             this.stopEvent(e)
             const item = this.navigation[i]
             if (item && item.to) {
-                this.emit('navigation', item.to)
+                this.$emitDojo('navigation', item.to)
             }
         },
 

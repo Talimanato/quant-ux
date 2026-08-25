@@ -131,7 +131,7 @@ export default {
         e: e,
         selection: selection
       };
-      this.emit("stateChange", event);
+      this.$emitDojo("stateChange", event);
     },
 
     render (model, style, scaleX, scaleY) {

@@ -194,7 +194,7 @@ export default {
             item.to = value
         },
         removeItem(i) {
-            this.$delete(this.items, i)
+            this.items.splice(i, 1)
         },
         addItem() {
             this.items.push({

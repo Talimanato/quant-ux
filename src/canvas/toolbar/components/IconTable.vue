@@ -161,7 +161,7 @@ export default {
 				const icon = node.getAttribute("data-matc-icon");
 				if(icon){
                     css.add(node, 'selected')
-					this.emit('change', 'mdi mdi-' + icon)
+					this.$emitDojo('change', 'mdi mdi-' + icon)
 					this.$emit('change', 'mdi mdi-' + icon)
 				}
 			}
@@ -179,7 +179,7 @@ export default {
 				if(icon){
 					const svg = this.icons[icon]
                     css.add(node, 'selected')
-					this.emit('change', svg)
+					this.$emitDojo('change', svg)
 					this.$emit('change', svg)
 				}
 			}

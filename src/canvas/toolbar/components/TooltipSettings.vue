@@ -83,7 +83,7 @@ export default {
         },
 
         onChangeStyle () {
-            this.emit("change", {
+            this.$emitDojo("change", {
                 'tooltipBackground': this.tooltipBackground,
                 'tooltipColor': this.tooltipColor,
                 'tooltipFontSize': this.tooltipFontSize

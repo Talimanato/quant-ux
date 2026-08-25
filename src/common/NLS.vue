@@ -29,10 +29,16 @@ export default {
 			}
     },
     getNlSWithReplacement (key, values) {
-      let translated = this.getNLS(key)
-      for (let key in values) {
-        const value = values[key]
-        translated = translated.replace(new RegExp(`\{\{${key}\}\}`), value)
+      // Use the raw JSON message instead of $i18n.t() so that the double-brace
+      // placeholder syntax used for manual replacement (e.g. {{name}}) does not
+      // trigger a Vue i18n v9 "Not allowed nest placeholder" compile error.
+      let translated = JSONPath.get(nls, key)
+      if (!translated) {
+        translated = this.getNLS(key)
+      }
+      for (let k in values) {
+        const value = values[k]
+        translated = translated.replace(new RegExp(`\\{\\{${k}\\}\\}`), value)
       }
       return translated
     },

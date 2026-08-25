@@ -256,7 +256,7 @@
         return v * 1;
       },
   
-      beforeDestroy () {
+      beforeUnmount () {
         if (this._moveListener) {
           this._moveListener.remove()
         }

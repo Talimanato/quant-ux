@@ -338,7 +338,7 @@ export default {
 				this.hideDropDown(e);
 			}
 			this.setValue(value);
-			this.emit("change", value );
+			this.$emitDojo("change", value );
 		}
     }
 }

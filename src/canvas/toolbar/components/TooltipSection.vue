@@ -76,11 +76,11 @@ export default {
         },
 
         onChangeStyle (style) {
-          this.emit("onChangeStyle", style)
+          this.$emitDojo("onChangeStyle", style)
         },
 
         onChangeText () {
-            this.emit("onChangeText", this.tooltipText)
+            this.$emitDojo("onChangeText", this.tooltipText)
         },
 
         blur () {

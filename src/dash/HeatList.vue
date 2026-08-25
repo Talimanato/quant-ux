@@ -67,7 +67,7 @@ export default {
 
     onTest(id, e) {
       this.stopEvent(e);
-      this.emit("test", id);
+      this.$emitDojo("test", id);
     },
 
 

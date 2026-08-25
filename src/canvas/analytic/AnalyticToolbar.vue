@@ -357,7 +357,7 @@ export default {
 		onNewComment(e){
 			this.logger.log(2,"onNewComment", "entry");
 			this.stopEvent(e);
-			this.emit("newComment", {"type" : "comment", "event" : e});
+			this.$emitDojo("newComment", {"type" : "comment", "event" : e});
 		},
 
 		setAnalyticMode(mode, params, callback){

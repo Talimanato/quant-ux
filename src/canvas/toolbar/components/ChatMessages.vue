@@ -150,7 +150,7 @@ export default {
             this.onChange()
         },
         removeMessage (i) {
-            this.$delete(this.messages, i)
+            this.messages.splice(i, 1)
             this.onChange()
         },
         onDragStart (e, i) {

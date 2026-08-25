@@ -150,7 +150,7 @@
     "simulator": {
         "welcome": {
             "title": "Welcome",
-            "msg": 	"You were invited for a usability test of the <b>{{name}}</b> app.",
+            "msg": "You were invited for a usability test of the {{name}} app.",
             "msg2": "",
             "privacy-title": "Privacy",
             "privacy": "Your interactions, including clicks and text input, will be <b>recorded</b> to evaluate the app's performance and identify areas for improvement.",

@@ -1823,7 +1823,7 @@ export default {
 			dataBindingBtn.placeAt(this.cntr)
 			dataBindingBtn.on('showDialog', (variable) => this._showDataBindingDialog(widget, variable))
 			dataBindingBtn.on('change', (value) => {
-				this.emit("propertyChange", "databinding", value);
+				this.$emitDojo("propertyChange", "databinding", value);
 			})
 
 
@@ -1849,7 +1849,7 @@ export default {
 		},
 
 		setSurveyElement (value) {
-			this.emit("propertyChange", "isSurveyElement", value);
+			this.$emitDojo("propertyChange", "isSurveyElement", value);
 		},
 
 		_showDataBindingDialog (widget, variable){
@@ -1887,7 +1887,7 @@ export default {
 			/**
 			 * FIXME: Since 2.1.5 we should add here some other call
 			 */
-			this.emit("propertyChange", "databinding", value);
+			this.$emitDojo("propertyChange", "databinding", value);
 			d.close();
 		},
 
@@ -1898,7 +1898,7 @@ export default {
 		// 	const value = dataBindingWidget.getValue()
 		// 	const schema = dataBindingWidget.getSchema()
 		// 	const data = dataBindingWidget.getData()
-		// 	this.emit("dataBindingChange", value, schema, data);
+		// 	this.$emitDojo("dataBindingChange", value, schema, data);
 		// 	d.close();
 		// },
 
@@ -1931,7 +1931,7 @@ export default {
 
 		setChatSettings (dialog, settings) {
 			const value = settings.getValue()	
-			this.emit("propertyMultiChange", {
+			this.$emitDojo("propertyMultiChange", {
 				value: value.value,
 				responses: value.responses
 			})
@@ -1968,7 +1968,7 @@ export default {
 
 		setTableSettings (dialog, settings) {
 			const value = settings.getValue()
-			this.emit("propertyMultiChange", {
+			this.$emitDojo("propertyMultiChange", {
 				tableActions: value.tableActions,
 				columns: value.columns,
 				data: value.data
@@ -2066,7 +2066,7 @@ export default {
 		setFormGroup (d, list){
 			var value = list.getSelected();
 			console.debug("setFormGroup", value)
-			this.emit("propertyChange", "formGroup", value);
+			this.$emitDojo("propertyChange", "formGroup", value);
 			d.close();
 			list.destroy();
 		},
@@ -2186,7 +2186,7 @@ export default {
 			} else {
 				delete ref[refId];
 			}
-			this.emit("propertyChange", "refs", ref);
+			this.$emitDojo("propertyChange", "refs", ref);
 
 
 			d.close();
@@ -2718,12 +2718,12 @@ export default {
 
 		onProperyChanged (key, value){
 			this.logger.log(2, "onProperyChanged", "enter > "+ key + " > " + value);
-			this.emit("propertyChange", key, value);
+			this.$emitDojo("propertyChange", key, value);
 		},
 
 		onStyleChanged (key, value){
 			this.logger.log(2, "onStyleChanged", "enter > "+ key + " > " + value);
-			this.emit("stypeChange", key, value);
+			this.$emitDojo("stypeChange", key, value);
 		},
 
 		onSVGIconColorChanged (key, value) {
@@ -2733,7 +2733,7 @@ export default {
 
 		onTempStyleChanged  (key, value){
 			this.logger.log(2, "onTempStyleChanged", "enter > "+ key + " > " + value);
-			this.emit("stypeChanging", key, value);
+			this.$emitDojo("stypeChanging", key, value);
 		},
 
 		_addChildWidget (w){

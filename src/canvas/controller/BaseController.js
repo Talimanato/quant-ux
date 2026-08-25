@@ -316,7 +316,7 @@ export default class BaseController extends Core {
 			}
 
 			this.setDirty();
-			this.emit('change', this.model)
+			this.$emitDojo('change', this.model)
 
 			if (this._canvas){
 				this._canvas.updateSourceModel(inheritedModel);
@@ -384,7 +384,7 @@ export default class BaseController extends Core {
 			ModelFixer.fixRecursiveGroups(this.model)
 			ModelFixer.fixMissingSubgroups(this.model)
 			ModelFixer.fixDoubleGroup(this.model)
-			this.emit("notSavedWarningShow", this.model);
+			this.$emitDojo("notSavedWarningShow", this.model);
 			return
 		} 
 

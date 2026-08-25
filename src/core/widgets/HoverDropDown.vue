@@ -90,7 +90,7 @@ export default {
 			css.remove(this.domNode, "MatcWidgetTypeHoverDropDownOpen");
 		},
 
-		beforeDestroy () {
+		beforeUnmount () {
 			this.cleanUpBackDrop();
       		this.cleanUp();
    		}

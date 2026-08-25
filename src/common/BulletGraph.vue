@@ -117,9 +117,8 @@ export default {
 	},
 	watch: {
 		value (v) {
-			this.value = v
-			this.setValue(this.value)
-			this.setLabel(this.value)
+			this.setValue(v)
+			this.setLabel(v)
 		}
 	},
     mounted () {

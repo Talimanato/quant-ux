@@ -38,8 +38,8 @@
                                             {{settings.description}}
                                         </p>
                                         <template  v-else>
-                                            <p v-html="getNlSWithReplacement('simulator.welcome.msg', {'name': model.name})"></p>
-                                            <p v-html="getNlSWithReplacement('simulator.welcome.msg2', {'name': model.name})"></p>
+                                            <p v-html="getNlSWithReplacement('simulator.welcome.msg', {'name': '<b>' + model.name + '</b>'})"></p>
+                                            <p v-html="getNlSWithReplacement('simulator.welcome.msg2', {'name': '<b>' + model.name + '</b>'})"></p>
                                         </template>
                                   
                                     </div>
@@ -167,7 +167,6 @@
      
             setTestsettings (settings){
                 this.logger.log(1,"setTestsettings","enter > ", settings);
-                this.settings = settings;
                 this.setCustomSplash(settings)
                 setTimeout(() => this.hideLogo(), 500);
             },
@@ -216,9 +215,6 @@
       
         },
         watch: {
-            model (m) {
-                this.model = m
-            },
             settings (s) {
                 this.setTestsettings(s)
             }

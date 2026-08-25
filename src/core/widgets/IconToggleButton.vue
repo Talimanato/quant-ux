@@ -79,7 +79,7 @@ export default {
 
     onChange(e){
         this.setValue(!this.value);
-        this.emit("change", this.value );
+        this.$emitDojo("change", this.value );
         this.emitClick(e);
         topic.publish(
             this.topic, 

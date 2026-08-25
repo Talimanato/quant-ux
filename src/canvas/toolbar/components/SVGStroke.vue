@@ -78,13 +78,13 @@ export default {
 
         setTempWidth (value){
             this.width = value
-            this.emit("changing", "strokeWidth", this.width);
+            this.$emitDojo("changing", "strokeWidth", this.width);
             this.closeColor();
         },
 
         setWidth (value){
             this.width = value
-            this.emit("change", "strokeWidth", this.width);
+            this.$emitDojo("change", "strokeWidth", this.width);
             this.closeColor();
         },
 
@@ -94,12 +94,12 @@ export default {
 
         setColor (value){
             this.color = value
-            this.emit("change", 'stroke', this.color);
+            this.$emitDojo("change", 'stroke', this.color);
         },
 
         setTempColor (value){
             this.color = value
-            this.emit("changing", 'stroke', this.color);
+            this.$emitDojo("changing", 'stroke', this.color);
         },
 
         setValue (path){

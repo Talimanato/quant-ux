@@ -71,7 +71,7 @@ export default {
             designtokens = template.designtokens
           }
         }
-        this.$set(this.box, 'designtokens', designtokens)
+        this.box.designtokens = designtokens
         this.$forceUpdate()
       }
     },

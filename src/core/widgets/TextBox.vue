@@ -131,7 +131,7 @@ export default {
         this.emitAnimation(this.model.id, 200, this.model.focus);
       }
 
-      this.emit("focus", {});
+      this.$emitDojo("focus", {});
       this.afterFocus();
     },
 
@@ -143,7 +143,7 @@ export default {
       this.log.log(3, "onKeyUp", "enter > ");
       this.addCompositeSubState(this._readValue());
       this.value = this._readValue();
-      this.emit("keyUp", this._readValue());
+      this.$emitDojo("keyUp", this._readValue());
     },
 
     onKeyDown(e) {
@@ -159,7 +159,7 @@ export default {
       var gesture = {
         type: "KeyboardEnter"
       };
-      this.emit("gesture", gesture);
+      this.$emitDojo("gesture", gesture);
     },
 
     onChange () {
@@ -169,7 +169,7 @@ export default {
       const gesture = {
         type: "InputChange"
       };
-      this.emit("gesture", gesture);
+      this.$emitDojo("gesture", gesture);
     }, 
 
 
@@ -191,7 +191,7 @@ export default {
       this.value = this._readValue();
       this.cleanUp();
       this.hasFocus = false;
-      this.emit("blur", {});
+      this.$emitDojo("blur", {});
     },
 
     getStateOptions () {
@@ -555,7 +555,7 @@ export default {
 
   
 
-    beforeDestroy () {
+    beforeUnmount () {
       if (this._compositeState) {
         this.emitCompositeState("text", this.input.value);
       }

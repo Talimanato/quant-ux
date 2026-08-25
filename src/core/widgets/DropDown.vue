@@ -221,7 +221,7 @@ export default {
         noheat: true,
         e: e
       };
-      this.emit("stateChange", event);
+      this.$emitDojo("stateChange", event);
     },
 
     onClose (e) {
@@ -532,7 +532,7 @@ export default {
       return this.validate(this.value, showError);
     },
 
-    beforeDestroy () {
+    beforeUnmount () {
       this.cleanUp();
     }
   },

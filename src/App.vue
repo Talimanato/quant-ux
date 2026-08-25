@@ -13,6 +13,7 @@
 import css from 'dojo/css'
 import win from 'dojo/win'
 import Services from 'services/Services'
+import topic from 'dojo/topic'
 
 export default {
 data: function() {
@@ -66,14 +67,14 @@ data: function() {
 			alert('Something is wrong. Please login again!')
 			Services.getUserService().logout()
 			this.$router.push('/')
-			this.$root.$emit('MatcLogout', Services.getUserService().GUEST)
+			topic.publish('MatcLogout', Services.getUserService().GUEST)
 			this.logoutMessageShow = true
 		}
 		if (res.tokenTimedOut) {
 			alert('Your session has expired. Please login again')
 			Services.getUserService().logout()
 			this.$router.push('/')
-			this.$root.$emit('MatcLogout', Services.getUserService().GUEST)
+			topic.publish('MatcLogout', Services.getUserService().GUEST)
 			this.logoutMessageShow = true
 		}
 	},
@@ -91,21 +92,27 @@ data: function() {
 	Services.setErrorHandler((url, res) => {
 		this.handler4xx(url, res)
 	})
-	this.$root.$on('Success', (msg) => {
+	this.successHandle = topic.subscribe('Success', (msg) => {
 		this.showSuccess(msg)
 	})
-	this.$root.$on('Error', (msg) => {
+	this.errorHandle = topic.subscribe('Error', (msg) => {
 		this.showError(msg)
 	})
-	this.$root.$on('Hint', (msg) => {
+	this.hintHandle = topic.subscribe('Hint', (msg) => {
 		this.showHint(msg)
 	})
-	this.$root.$on('UserLogin', (user) => {
+	this.userLoginHandle = topic.subscribe('UserLogin', (user) => {
 		Services.getUserService().setUser(user)
 	})
 	css.remove(win.body(), 'MatcPublic')
 	this.initNLS()
 	this.initScroll()
+  },
+  beforeUnmount () {
+	if (this.successHandle) this.successHandle.remove()
+	if (this.errorHandle) this.errorHandle.remove()
+	if (this.hintHandle) this.hintHandle.remove()
+	if (this.userLoginHandle) this.userLoginHandle.remove()
   }
 }
 </script>

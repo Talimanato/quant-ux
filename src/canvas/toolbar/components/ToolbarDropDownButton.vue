@@ -325,21 +325,21 @@ export default {
 
 		onChanging(value) {
 			this.tempValue = value
-			this.emit("changing", value);
+			this.$emitDojo("changing", value);
 		},
 
 		onChange(value, e) {
 			this.stopEvent(e);
 			this.hideDropDown();
 			this.setValue(value);
-			this.emit("change", value, e);
+			this.$emitDojo("change", value, e);
 		},
 
 		onHide() {
 			if (this.tempValue !== null && this.tempValue != this.value) {
 				// if we close and not click, e.g. because of ESC,
 				// we show the old value
-				this.emit("changing", this.value);
+				this.$emitDojo("changing", this.value);
 			}
 			this.hideChildren();
 		},

@@ -165,7 +165,7 @@ export default {
 
 		onChange(parents) {
 
-			this.emit("change", parents);
+			this.$emitDojo("change", parents);
 		},
 
 		_getAbstract(string, max) {

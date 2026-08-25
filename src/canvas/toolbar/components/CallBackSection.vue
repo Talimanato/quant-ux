@@ -70,27 +70,27 @@ export default {
     },
     methods: {
         onWrapChange (value){
-            this.emit('changeStyle', 'wrap', value)
+            this.$emitDojo('changeStyle', 'wrap', value)
         },
 
         onClickChange (e) {
             this.callbacks.click = e.target.value
-            this.emit('changeProps', 'callbacks', this.callbacks)
+            this.$emitDojo('changeProps', 'callbacks', this.callbacks)
         },
 
         onChangeChange (e) {
             this.callbacks.change = e.target.value
-            this.emit('changeProps', 'callbacks', this.callbacks)
+            this.$emitDojo('changeProps', 'callbacks', this.callbacks)
         },
 
         onRenderChange (e) {
             this.callbacks.render = e.target.value
-            this.emit('changeProps', 'callbacks', this.callbacks)
+            this.$emitDojo('changeProps', 'callbacks', this.callbacks)
         },
 
         onLoadChange (e) {
             this.callbacks.load = e.target.value
-            this.emit('changeScreenProps', 'callbacks', {
+            this.$emitDojo('changeScreenProps', 'callbacks', {
                 'load': this.callbacks.load
             })
         },

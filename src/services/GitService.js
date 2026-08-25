@@ -1,6 +1,6 @@
 export default class GitService {
 
-  constructor(token) {
+  constructor() {
 
   }
 

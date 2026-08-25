@@ -252,7 +252,7 @@ export default {
       },
       deleteToken (d, token) {
         d.close()
-        this.emit('delete', token)
+        this.$emitDojo('delete', token)
         setTimeout(() => {
           this.$forceUpdate()
         }, 100)
@@ -342,7 +342,7 @@ export default {
 
       onSave () {
         if (this.selectedDesignToken) {
-          this.emit('change', this.selectedDesignToken)
+          this.$emitDojo('change', this.selectedDesignToken)
         }
         this.hideDropDown()
       },

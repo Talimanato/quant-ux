@@ -686,7 +686,7 @@ export default {
         this.logger.log(1, 'undo ', 'enter')
         if (this.commandStack.hasUndo()) {
             const lastValue =  this.commandStack.undo()
-            this.$set(this, 'value', lastValue)
+            this.value = lastValue
             this.unSelect()
             this.startSelectTool()
         } else {
@@ -699,7 +699,7 @@ export default {
         this.logger.log(1, 'redo ', 'enter')
         if (this.commandStack.hasRedo()) {
             const lastValue =  this.commandStack.redo()
-            this.$set(this, 'value', lastValue)
+            this.value = lastValue
             this.unSelect()
             this.startSelectTool()
         } else {

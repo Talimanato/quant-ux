@@ -103,7 +103,7 @@ export default {
     onDomPress (e) {
       this.stopEvent(e);
       this.onClick(e);
-      this.emit("click", this._value, e);
+      this.$emitDojo("click", this._value, e);
     },
 
     onHandlePress (e) {
@@ -112,7 +112,7 @@ export default {
       this._touchMoveListner = this.addTouchMove(win.body(), lang.hitch(this, "onHandleMove"));
       this._touchReleaseListner = this.addTouchRelease(win.body(), lang.hitch(this, "onHandleRelease"));
       css.add(this.domNode, "VommondSliderMoving");
-      this.emit("press", e);
+      this.$emitDojo("press", e);
       this.onClick(e);
     },
 
@@ -124,7 +124,7 @@ export default {
     onHandleRelease (e) {
       this.stopEvent(e);
       this.cleanup();
-      this.emit("release", e, this._value);
+      this.$emitDojo("release", e, this._value);
     },
 
     cleanup () {
@@ -156,7 +156,7 @@ export default {
       }
 
       this.setValue(w);
-      this.emit("change", w, e);
+      this.$emitDojo("change", w, e);
     },
 
     setValue (value) {

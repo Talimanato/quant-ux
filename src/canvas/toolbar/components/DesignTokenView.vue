@@ -31,7 +31,7 @@ export default {
     },
     methods: {
       unlink () {
-        this.emit('unlink', this.designtoken)
+        this.$emitDojo('unlink', this.designtoken)
       },
       setModel (m) {
         this.model = m

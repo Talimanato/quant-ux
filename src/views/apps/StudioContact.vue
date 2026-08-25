@@ -42,6 +42,7 @@
 import Services from 'services/Services'
 import QIcon from "page/QIcon";
 import ZoomDialog from 'common/ZoomDialog'
+import topic from 'dojo/topic'
 
 export default {
     name: "StudioNotification",
@@ -78,7 +79,7 @@ export default {
                 let res = await Services.getUserService().contact(this.name, this.email, this.message)
                 if (res) {
                     this.success = this.$t('app.mail.success')
-                    this.$root.$emit('Success',this.$t('app.mail.success'))
+                    topic.publish('Success',this.$t('app.mail.success'))
                     setTimeout(() => {
                         this.$refs.dialog.close()
                     }, 500)

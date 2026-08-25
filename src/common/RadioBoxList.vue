@@ -67,7 +67,7 @@ export default {
 
 		onChange(option) {
 			this.setValue(option.value);
-			this.emit("change", this.value);
+			this.$emitDojo("change", this.value);
 		},
 
 		getValue() {

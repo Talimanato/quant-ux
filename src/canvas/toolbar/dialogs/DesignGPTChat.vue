@@ -41,18 +41,14 @@
                     <div class="MatchOpenAIChatCntr ">
                         <div class="MatchOpenAIChatMessages" ref="messages">
 
-                            <template v-for="m in messages">
-                                <div :key="m.content" :class="'MatchOpenAIChatMessage ' + m.role ">
-                                    <div class="MatchOpenAIChatMessageUser">
+                            <div v-for="(m, idx) in messages" :key="m.id || m.content || idx" :class="'MatchOpenAIChatMessage ' + m.role ">
+                                <div class="MatchOpenAIChatMessageUser">
 
-                                    </div>
-                                    <div class="MatchOpenAIChatMessageContent">
-                                        {{m.content}}
-                                    </div>
-                                   
                                 </div>
-
-                            </template>
+                                <div class="MatchOpenAIChatMessageContent">
+                                    {{m.content}}
+                                </div>
+                            </div>
 
                         </div>
                          <div class="MatchOpenAIChatPrompt">

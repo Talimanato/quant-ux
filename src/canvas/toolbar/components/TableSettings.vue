@@ -261,12 +261,12 @@ export default {
             this.style = lang.clone(this.widget.style)
             this.props = lang.clone(this.widget.props)
             if (!this.props.tableActions) {
-                this.$set(this.props, 'tableActions', [])
+                this.props.tableActions = []
             }
             // legacy tables might not have columns
             if (!this.props.columns) {
                 const parsedCols = this.parseCols(w)
-                this.$set(this.props, 'columns', parsedCols)
+                this.props.columns = parsedCols
             }
         },
 
@@ -331,11 +331,11 @@ export default {
         },
         onChangeStyle(key, value) {
             this.logger.log(0, 'onChangeStyle', key, value)
-            this.$set(this.style, key, value)
+            this.style[key] = value
         },
         onChangeProps(key, value) {
             this.logger.log(0, 'onChangeProps', key, value)
-            this.$set(this.props, key, value)
+            this.props[key] = value
         },
         setBorderStyle(value) {
             this.onChangeStyle('borderStyle', value)
@@ -359,23 +359,23 @@ export default {
             input.value = ''
         },
         removeAction(i) {
-            this.$delete(this.props.tableActions, i)
+            this.props.tableActions.splice(i, 1)
         },
         removeColumn(i) {
-            this.$delete(this.props.columns, i)
+            this.props.columns.splice(i, 1)
             const data = this.props.data
             if (data) {
                 data.forEach(row => {
-                    this.$delete(row, i)
+                    row.splice(i, 1)
                 })
             }
         },
         onChangeActionColor(action, key, color) {
-            this.$set(action, key, color)
+            action[key] = color
         },
 
         onChangeColumnColor(column, key, color) {
-            this.$set(column, key, color)
+            column[key] = color
         },
 
         getValue() {

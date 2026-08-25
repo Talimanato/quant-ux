@@ -30,7 +30,6 @@
                         </td>
                         <td></td>
                     </tr>
-                 </tbody>
            
                 
                   <tr >
@@ -51,6 +50,7 @@
                     </td>
                     <td></td>
                  </tr>
+                 </tbody>
              </table>
          </div>
 	</div>
@@ -141,12 +141,12 @@ export default {
             this.onSelectVariable(true, v)
             this.onChange()
         },      
-        onSelectVariable (selected, variable) {      
-            this.logger.log(-1, 'onSelectVariable', 'enter', selected, variable)     
+        onSelectVariable (selected, variable) {
+            this.logger.log(-1, 'onSelectVariable', 'enter', selected, variable)
             if (selected) {
-                this.$set(this.databinding, this.selectedVaribaleType,variable)
-             } else {
-                this.$delete(this.databinding, this.selectedVaribaleType)
+                this.databinding[this.selectedVaribaleType] = variable
+            } else {
+                delete this.databinding[this.selectedVaribaleType]
             }
             this.onChange()
         },
@@ -154,7 +154,7 @@ export default {
             return this.databinding
         },
         onChange () {
-            this.emit('change', this.databinding)
+            this.$emitDojo('change', this.databinding)
         },
         setModel (v) {
             this.model = v

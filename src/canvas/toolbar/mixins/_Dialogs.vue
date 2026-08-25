@@ -20,6 +20,7 @@ import ScreenSizeSelector from 'page/ScreenSizeSelector'
 import Plan from 'page/Plan'
 import Services from 'services/Services'
 import QR from 'core/QR'
+import topic from 'dojo/topic'
 import Help from 'help/Help'
 import Share from 'page/Share'
 
@@ -80,15 +81,15 @@ export default {
 			aiDialog.setController(this.controller)
 			aiDialog.setCanvas(this.canvas)
 			aiDialog.setZoom(this.canvas.getZoomFactor())
-			aiDialog.$on('save', data => {
+			dialog.own(aiDialog.on('save', data => {
 				this.logger.log(-1, "showImportDialog", "save > ", data);
-				this.emit("newImportApp", { "obj": data, "event": this._lastMouseMoveEvent });
+				this.$emitDojo("newImportApp", { "obj": data, "event": this._lastMouseMoveEvent });
 				dialog.close()
-			})
-			aiDialog.$on('cancel', () => {
+			}))
+			dialog.own(aiDialog.on('cancel', () => {
 				this.logger.log(-1, "showImportDialog", "cancel > ");
 				dialog.close()
-			})
+			}))
 		},
 
 		showImportDialog(e, zipFiles = null) {
@@ -110,14 +111,14 @@ export default {
 			if (zipFiles) {
 				importDialog.onZipFileDropped(zipFiles)
 			}
-			importDialog.$on('save', data => {
+			dialog.own(importDialog.on('save', data => {
 				this.logger.log(-1, "showImportDialog", "save > ", data);
 				dialog.close()
-			})
-			importDialog.$on('cancel', () => {
+			}))
+			dialog.own(importDialog.on('cancel', () => {
 				this.logger.log(-1, "showImportDialog", "cancel > ");
 				dialog.close()
-			})
+			}))
 		},
 
 		showHelp(e) {
@@ -414,7 +415,7 @@ export default {
 								/**
 								 * Set here the real controller so the copy will work!
 								 */
-								this.$root.$emit('UserLogin', result)
+								topic.publish('UserLogin', result)
 								this.controller.setModelService(Services.getModelService())
 								this.controller.onSaveAsAfterSignUp(newModel, this.model.name);
 							}

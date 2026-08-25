@@ -55,7 +55,7 @@ export default {
 		onChange(e){
 			this.stopEvent(e);
 			this.setValue(!this.value);
-			this.emit("change", this.value );
+			this.$emitDojo("change", this.value );
 		}
     },
     mounted () {

@@ -101,7 +101,7 @@ export default {
             const comment = this.comments.find(c => c.id === commentId)
             if (comment) {
                 comment.status = status
-                this.emit("save", comment, true)
+                this.$emitDojo("save", comment, true)
             } else {
                 this.logger.error("onChangeStatus", "Cannot find comment " + commentId)
             }
@@ -110,18 +110,18 @@ export default {
             const comment = this.comments.find(c => c.id === commentId)
             if (comment) {
                 comment.message = message
-                this.emit("save", comment, true)
+                this.$emitDojo("save", comment, true)
             } else {
                 this.logger.error("onChangeMessage", "Cannot find comment " + commentId)
             }
         },
         onDelete(comment) {
-            this.emit("delete", comment)
+            this.$emitDojo("delete", comment)
         },
 
         onDeleteChild (child) {
             this.children = this.children.filter(c => c.id !== child.id)
-            this.emit("delete", child, true)
+            this.$emitDojo("delete", child, true)
         },
        
         onReply () {
@@ -130,14 +130,14 @@ export default {
             delete reply._id
             reply.parentId = this.comment.id
             reply.message = this.newMessage
-            this.emit("save", reply, false)
+            this.$emitDojo("save", reply, false)
             this.newMessage = ''
             this.isReply = false
         },
 
         onCreate() {
             this.comment.message = this.newMessage
-            this.emit("save", this.comment)
+            this.$emitDojo("save", this.comment)
         },
 
         showReply () {
@@ -165,11 +165,11 @@ export default {
         },
 
         onNext (i, e) {
-            this.emit("next", i, e)
+            this.$emitDojo("next", i, e)
         },
 
         onCancel() {
-            this.emit("cancel")
+            this.$emitDojo("cancel")
         }
     },
 

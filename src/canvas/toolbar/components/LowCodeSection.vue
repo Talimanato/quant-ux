@@ -122,39 +122,39 @@ export default {
     methods: {
         onLayoutChange (value) {
             if (this.isGroup) {
-                this.emit('changeGroupStyle', 'layout', value)
+                this.$emitDojo('changeGroupStyle', 'layout', value)
             } else {
-                this.emit('changeStyle', 'layout', value)
+                this.$emitDojo('changeStyle', 'layout', value)
             }
         },
         onPaddingXChange (value) {
             if (this.isGroup) {
-                this.emit('changeGroupStyle', 'flexPaddingX', value)
+                this.$emitDojo('changeGroupStyle', 'flexPaddingX', value)
             } else {
-                this.emit('changeStyle', 'flexPaddingX', value)
+                this.$emitDojo('changeStyle', 'flexPaddingX', value)
             }
         },
         onPaddingYChange (value) {
             if (this.isGroup) {
-                this.emit('changeGroupStyle', 'flexPaddingY', value)
+                this.$emitDojo('changeGroupStyle', 'flexPaddingY', value)
             } else {
-                this.emit('changeStyle', 'flexPaddingY', value)
+                this.$emitDojo('changeStyle', 'flexPaddingY', value)
             }
         },
         onSpacingChange (value) {
             if (this.isGroup) {
-                this.emit('changeGroupStyle', 'flexSpacing', value)
+                this.$emitDojo('changeGroupStyle', 'flexSpacing', value)
             } else {
-                this.emit('changeStyle', 'flexSpacing', value)
+                this.$emitDojo('changeStyle', 'flexSpacing', value)
             }
         },
 
         onCustomChange (e) {
             let value = e.target.value
             if (this.isGroup) {
-                this.emit('changeGroupProps', 'customComponent', value)
+                this.$emitDojo('changeGroupProps', 'customComponent', value)
             } else {
-                this.emit('changeProps', 'customComponent', value)
+                this.$emitDojo('changeProps', 'customComponent', value)
             }
         },
 

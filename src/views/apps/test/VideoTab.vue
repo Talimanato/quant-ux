@@ -65,6 +65,7 @@ import Services from "services/Services";
 import Util from "core/Util";
 import VideoAnnotation from "views/apps/test/VideoAnnotation";
 import VideoPlayer from "views/apps/test/VideoPlayer";
+import topic from "dojo/topic";
 
 export default {
   name: "Test",
@@ -140,7 +141,7 @@ export default {
     },
     onChangeSessionLabel () {
       this.modelService.updateEvent(this.app.id, this.sessionStart)
-      this.$root.$emit("Success", "Test name was updated");
+      topic.publish("Success", "Test name was updated");
     },
     onLoaded(events, mouse) {
        const start = events.find(e => e.type === 'SessionStart')

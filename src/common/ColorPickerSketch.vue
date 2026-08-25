@@ -402,7 +402,7 @@ export default {
 		},
 
 		onChange (){
-			this.emit("change", this.getColorString(this.color));
+			this.$emitDojo("change", this.getColorString(this.color));
 		},
 
 		toHsv (c) {

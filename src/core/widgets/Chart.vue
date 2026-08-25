@@ -714,7 +714,7 @@ export default {
 		setState (){
 		},
 
-		beforeDestroy () {
+		beforeUnmount () {
 			this.animationRunning = false
 		}
     },

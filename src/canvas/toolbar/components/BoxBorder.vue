@@ -289,7 +289,7 @@ export default {
 					this.value[k] = value;
 				}
 			}
-			this.emit("change", this.value);
+			this.$emitDojo("change", this.value);
 		},
 
 		showWidth() {
@@ -314,7 +314,7 @@ export default {
 						this.value[k] = value;
 					}
 				}
-				this.emit("change", this.getDelta(this.value));
+				this.$emitDojo("change", this.getDelta(this.value));
 			}
 		},
 
@@ -338,7 +338,7 @@ export default {
 					this.value[k] = value;
 				}
 			}
-			this.emit("change", this.getDelta(this.value));
+			this.$emitDojo("change", this.getDelta(this.value));
 		},
 
 		setTempColor(key, input, value) {
@@ -349,7 +349,7 @@ export default {
 					this.value[k] = value;
 				}
 			}
-			this.emit("changing", this.getDelta(this.value));
+			this.$emitDojo("changing", this.getDelta(this.value));
 		},
 
 		showRadius() {
@@ -373,7 +373,7 @@ export default {
 						this.value[k] = value;
 					}
 				}
-				this.emit("change", this.getDelta(this.value));
+				this.$emitDojo("change", this.getDelta(this.value));
 			}
 		},
 

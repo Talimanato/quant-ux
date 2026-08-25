@@ -208,7 +208,7 @@ export default {
     }
   },
   mounted() {},
-  beforeDestroy() {  
+  beforeUnmount() {  
   }
 };
 </script>

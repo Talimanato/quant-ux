@@ -321,6 +321,8 @@ export default {
 
     destroy: function() {}
   },
-  mounted() {}
+  mounted() {
+    this.postCreate();
+  }
 };
 </script>

@@ -253,7 +253,7 @@ export default {
       this.emitClick(e);
     },
 
-    beforeDestroy () {
+    beforeUnmount () {
       this._isDestroyed = true
       this.animIsRunning = false
       clearTimeout(this.animationRepeat)

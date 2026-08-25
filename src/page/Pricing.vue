@@ -8,13 +8,9 @@
 import DojoWidget from 'dojo/DojoWidget'
 import css from 'dojo/css'
 import lang from 'dojo/_base/lang'
-import window from 'dojo/window'
-import query from 'dojo/query'
 import on from 'dojo/on'
 import touch from 'dojo/touch'
 import Evented from 'dojo/Evented'
-import _Widget from 'common/_Widget'
-import Dialog from 'common/Dialog'
 import DomBuilder from 'common/DomBuilder'
 
 
@@ -28,10 +24,11 @@ export default {
             role: "user", 
             key: "", 
             category: "default", 
-            labels: {, 
-            "Free": "Free Forever", 
-            "Pro": "Quant-UX Account", 
-            "Enterprise": "Enterprise"
+            labels: {
+                "Free": "Free Forever",
+                "Pro": "Quant-UX Account",
+                "Enterprise": "Enterprise"
+            }
         }
     },
     components: {},
@@ -90,16 +87,16 @@ export default {
 		
 			
 			var ulCntr = db.div("MatcPricingFeatureDetailsContainer").build(tdFeatures);
-			for(var i=0; i< features.length; i++){				
+			for(let i = 0; i< features.length; i++){				
 				var list = features[i];	
-				var ul = db.ul().build(ulCntr);
-				for(var name in list){						
+				let ul = db.ul().build(ulCntr);
+				for(let name in list){						
 					if(list[name]){
-						var li = db.li().build(ul);
+						let li = db.li().build(ul);
 						db.span("mdi mdi-check").build(li);
 						db.span("", name).build(li);
 					} else {
-						var li =db.li("MatcPricingFeatureDisable").build(ul);
+						let li =db.li("MatcPricingFeatureDisable").build(ul);
 						db.span("mdi mdi-close").build(li);
 						db.span("", name + " (comming soon)").build(li);
 					}										
@@ -108,14 +105,14 @@ export default {
 			
 			
 			ulCntr = db.div("MatcPricingFeatureShortContainer", "").build(tdFeatures);
-			var ul = db.ul().build(ulCntr);
-			for(var name in shortFeatures){
+			let ul = db.ul().build(ulCntr);
+			for(let name in shortFeatures){
 				if(shortFeatures[name]){
-					var li = db.li().build(ul);
+					let li = db.li().build(ul);
 					db.span("mdi mdi-check").build(li);
 					db.span("", name).build(li);
 				} else {
-					var li =db.li("MatcPricingFeatureDisable").build(ul);
+					let li =db.li("MatcPricingFeatureDisable").build(ul);
 					db.span("mdi mdi-close").build(li);
 					db.span("", name + " (comming soon)").build(li);
 				}										
@@ -143,12 +140,12 @@ export default {
 			
 			if(this.expandedDetails){
 				css.remove(this.domNode, "MatcPricingFeatureClosed");
-				for(var i=0; i < this.detailLinks.length; i++){
+				for(let i = 0; i < this.detailLinks.length; i++){
 					this.detailLinks[i].innerHTML="Hide Details";
 				}
 			} else {
 				css.add(this.domNode, "MatcPricingFeatureClosed");
-				for(var i=0; i < this.detailLinks.length; i++){
+				for(let i = 0; i < this.detailLinks.length; i++){
 					this.detailLinks[i].innerHTML="Show Details";
 				}
 			}

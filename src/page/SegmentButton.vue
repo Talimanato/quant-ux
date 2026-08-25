@@ -60,8 +60,8 @@ export default {
 		
 		onChange (o){
 			this.setValue(o.value);
-			this.emit("change", this.selected );
-			this.emit("input", this.selected );
+			this.$emitDojo("change", this.selected );
+			this.$emitDojo("input", this.selected );
 		}
 	},
 	watch: {

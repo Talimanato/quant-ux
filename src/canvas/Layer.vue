@@ -22,7 +22,7 @@ export default {
 					this.setLayerListScrollBar(true)
 				}
 			} catch (e){
-				console.debug(e)
+				this.logger.error('initLayer', 'Could not build layer list', e)
 			}
 		},
 

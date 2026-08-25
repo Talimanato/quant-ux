@@ -206,8 +206,8 @@ export default {
         this.setLabel(value);
       }
       this.setValue(value);
-      this.emit("change", value, e);
-      this.emit("input", this.selected);
+      this.$emitDojo("change", value, e);
+      this.$emitDojo("input", this.selected);
     }
   },
   watch: {

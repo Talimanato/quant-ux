@@ -105,6 +105,7 @@ import DojoWidget from "dojo/DojoWidget";
 import Services from "services/Services";
 import CheckBox from "common/CheckBox.vue";
 import UserImageUploader from "page/UserImageUploader.vue";
+import topic from "dojo/topic";
 
 export default {
   name: "Finish",
@@ -170,7 +171,7 @@ export default {
       dialog.innerHTML = this.getNLS("user.retire.cusoon");
       d.own(
         on(d, "close", () => {
-          this.$root.$emit("logout");
+          topic.publish("logout");
         })
       );
     },
@@ -249,7 +250,7 @@ export default {
         this.showError("Email is taken...");
         this.error = "The email is already taken";
       } else {
-        this.$root.$emit("user", result);
+        topic.publish("user", result);
         this.showSuccess("Account updated");
       }
     },

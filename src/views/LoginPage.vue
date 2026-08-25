@@ -109,6 +109,7 @@
 import Services from 'services/Services'
 import Logger from 'common/Logger'
 import CheckBox from '../common/CheckBox.vue'
+import topic from 'dojo/topic'
 
 export default {
   name: "Header",
@@ -138,7 +139,6 @@ export default {
   watch: {
     'user' (v) {
       this.logger.log(6, 'watch', 'user >> ' + v.email)
-      this.user = v
     }
   },
   components: {
@@ -190,12 +190,12 @@ export default {
             password: this.password
         })
         if (result.type == "error") {
-            this.$root.$emit("Error", "Wrong login credentials")
+            topic.publish("Error", "Wrong login credentials")
             this.errorMessage = "Login is wrong"
             this.hasLoginError = true
         } else {
             this.$emit('login', result);
-            this.$root.$emit('UserLogin', result)
+            topic.publish('UserLogin', result)
             this.hasLoginError = false
         }
       },
@@ -241,7 +241,7 @@ export default {
                 password: this.password,
             })
             this.$emit('login', user);
-            this.$root.$emit('UserLogin', user)
+            topic.publish('UserLogin', user)
             this.logger.log(-1,'signup', 'exit with login', this.email)
         }
       }

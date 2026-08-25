@@ -113,7 +113,7 @@
         this.emitClick(e);
 
         this.selection = this.images.filter(i => i.selected).map(i => i.i)
-        this.emit("change", this.selection);
+        this.$emitDojo("change", this.selection);
       },
   
       onImageHover (img, i) {

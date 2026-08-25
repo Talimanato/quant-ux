@@ -249,7 +249,7 @@ export default {
 		save(d) {
 			if (this.slider) {
 				var style = this.onChange();
-				this.emit("change", style);
+				this.$emitDojo("change", style);
 			}
 			d.close();
 			this.cleanUp();

@@ -8,21 +8,14 @@
 import DojoWidget from 'dojo/DojoWidget'
 import css from 'dojo/css'
 import lang from 'dojo/_base/lang'
-import window from 'dojo/_base/window'
 import on from 'dojo/on'
 import touch from 'dojo/touch'
-import _Widget from 'common/_Widget'
 import DomBuilder from 'common/DomBuilder'
 import CheckBox from 'common/CheckBox'
-import _Plan from 'page/_Plan'
-import Util from 'core/Util'
-
-
-var billingDiv = ""
 
 export default {
     name: 'PlanSelector',
-    mixins:[_TemplatedMixin, Plan, Util, DojoWidget],
+    mixins:[DojoWidget],
     data: function () {
         return {
             billingDiv: ""
@@ -37,7 +30,7 @@ export default {
 		
 		
 		
-		getValue:function(plan) {
+		getValue:function() {
 			return this.value;
 		},
 		

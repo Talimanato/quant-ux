@@ -59,17 +59,17 @@ export default {
         onMinWidthChange (e) {
             let value = e.target.value
             if (this.isGroup) {
-                this.emit('changeGroupStyle', 'minWidth', value)
+                this.$emitDojo('changeGroupStyle', 'minWidth', value)
             } else {
-                this.emit('changeStyle', 'minWidth', value)
+                this.$emitDojo('changeStyle', 'minWidth', value)
             }
         },
         onMaxWidthChange (e) {
             let value = e.target.value
             if (this.isGroup) {
-                this.emit('changeGroupStyle', 'maxWidth', value)
+                this.$emitDojo('changeGroupStyle', 'maxWidth', value)
             } else {
-                this.emit('changeStyle', 'maxWidth', value)
+                this.$emitDojo('changeStyle', 'maxWidth', value)
             }
         },
 

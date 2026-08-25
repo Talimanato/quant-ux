@@ -5,7 +5,7 @@
 			<span class="VommondCheckBoxHook" data-dojo-attach-point="hook">
 			</span>
 		</div>
-		<span class="VommondCheckBoxLabel" v-if="label">{{label}}</span>
+		<span class="VommondCheckBoxLabel" v-if="internalLabel">{{internalLabel}}</span>
 	</div>
 </template>
 
@@ -26,7 +26,8 @@ export default {
   mixins: [DojoWidget],
   data: function () {
     return {
-      checked: false
+      checked: false,
+      internalLabel: ''
     }
   },
   props: ['label', 'value'],
@@ -55,14 +56,14 @@ export default {
 		},
 
 		setLabel (l){
-			this.label = l
+			this.internalLabel = l
 		},
 
 		onChange (e){
 			this.stopEvent(e)
 			this.setValue(!this.checked);
-			this.emit("change", this.checked );
-			this.emit("input", this.checked );
+			this.$emitDojo("change", this.checked );
+			this.$emitDojo("input", this.checked );
 		}
   },
   watch: {
@@ -71,6 +72,7 @@ export default {
 		}
   },
   mounted () {
+      this.internalLabel = this.label || ''
       this.log.log(10, 'mounted', 'enter')
   }
 }

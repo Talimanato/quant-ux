@@ -98,7 +98,7 @@ export default {
           this.setDataBindingByKey(rest.output.databinding, "ERROR")
         }
         this.logger.error("executeRest","error", e);
-        this.emit('onRestError', e, rest, data)
+        this.$emitDojo('onRestError', e, rest, data)
       }
       return false
     }

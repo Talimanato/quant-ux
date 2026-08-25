@@ -396,7 +396,10 @@ export default {
     }
 
   },
-  beforeDestroy () {
+  beforeUnmount () {
+    if (this._loadAllTimeout) {
+      clearTimeout(this._loadAllTimeout)
+    }
     if (this.collabSession) {
       this.collabSession.sendBye()
       this.collabSession.close()
@@ -416,7 +419,7 @@ export default {
     this.load(mode);
 
     this.logger.log(-1, "mounted", "exit > " + mode);
-    setTimeout(() => this.loadAll(), 3000)
+    this._loadAllTimeout = setTimeout(() => this.loadAll(), 3000)
   }
 };
 </script>

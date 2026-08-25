@@ -47,12 +47,12 @@ export default {
 
 			onBlur () {
 				if (this.input.value) {
-					this.emit('change', this.input.value)
+					this.$emitDojo('change', this.input.value)
 				}
 			},
 
 			onFocus () {
-				this.emit('focus', this.input.value)
+				this.$emitDojo('focus', this.input.value)
 			},
 
 			blur () {
@@ -132,7 +132,7 @@ export default {
 						}
 
 						if (this.fireOnBlur) {
-							this.emit('change', this.input.value)
+							this.$emitDojo('change', this.input.value)
 							return
 						} else {
 							console.debug("onKey() Ignore empty ENTER", )
@@ -209,10 +209,10 @@ export default {
 
 			onSelect (s){
 				if (s.action) {
-					this.emit(s.action, s)
+					this.$emitDojo(s.action, s)
 				} else {
 					this.input.value = s.value;
-					this.emit('change', s.value)
+					this.$emitDojo('change', s.value)
 					this.hideSuggestion();
 				}
 			},

@@ -322,7 +322,7 @@ export default {
 			const tasks = this.settings.tasks;
 			const matches = this.analytics.getTaskPerformance(session, tasks, true);
 			matches.data.forEach(match => {
-				this.$set(this.taskDone, match.task, true)
+				this.taskDone[match.task] = true
 			})
 
 			if (this.settings.showSuccessInTest) {

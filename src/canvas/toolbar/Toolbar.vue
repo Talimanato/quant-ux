@@ -734,7 +734,7 @@ export default {
 				}
 			}
 
-			if(this.widgetSize.isDirty()){
+			if(this.widgetSize && this.widgetSize.isDirty){
 				this.widgetSize.update();
 			}
 
@@ -777,7 +777,7 @@ export default {
 		onToolCreateScreen(e) {
 			this.logger.log(-1,"onToolCreateScreen", "entry >", e);
 			let scrn = this.createEmptyScreen(0, 0, 'Screen')
-			this.emit("newThemedScreen", {"obj" : scrn, "event" : e});
+			this.$emitDojo("newThemedScreen", {"obj" : scrn, "event" : e});
 		},
 
 		onToolBasic (v, e) {
@@ -788,7 +788,7 @@ export default {
 
 			if (v.value === 'screen') {
 				let scrn = this.createEmptyScreen(0, 0, 'Screen')
-				this.emit("newThemedScreen", {"obj" : scrn, "event" : e});
+				this.$emitDojo("newThemedScreen", {"obj" : scrn, "event" : e});
 				return		
 			}
 	
@@ -892,7 +892,7 @@ export default {
 			        "background": "#777"
 				}
 			};
-			this.emit("onNewScriptObject", {"obj" : obj, "event":e});
+			this.$emitDojo("onNewScriptObject", {"obj" : obj, "event":e});
 		},
 
 		onNewAudioObject (e) {
@@ -916,7 +916,7 @@ export default {
 			        "background": "#777"
 				}
 			};
-			this.emit("onNewScriptObject", {"obj" : obj, "event":e});
+			this.$emitDojo("onNewScriptObject", {"obj" : obj, "event":e});
 		},
 
 		onNewGridContainer (e) {
@@ -971,7 +971,7 @@ export default {
 					"borderLeftStyle" : "solid"
 				}
 			}
-			this.emit("onNewScriptObject", {"obj" : obj, "event":e});
+			this.$emitDojo("onNewScriptObject", {"obj" : obj, "event":e});
 		},
 
 		onNewRestObject (e) {
@@ -1012,7 +1012,7 @@ export default {
 			        "background": "#777"
 				}
 			};
-			this.emit("onNewRestObject", {"obj" : obj, "event":e});
+			this.$emitDojo("onNewRestObject", {"obj" : obj, "event":e});
 		},
 
 		onNewLogicObject (e, label="OR", isRandom=false){
@@ -1038,13 +1038,13 @@ export default {
 				}
 			};
 			// 56a9fc
-			this.emit("onNewLogicObject", {"obj" : obj, "event":e});
+			this.$emitDojo("onNewLogicObject", {"obj" : obj, "event":e});
 		},
 
 
 		onThemedMultiScreen (screens,e ){
 			this.logger.log(0,"onThemedMultiScreen", "entry > ");
-			this.emit("newMultiThemedScreen", {"obj" : screens, "event":e});
+			this.$emitDojo("newMultiThemedScreen", {"obj" : screens, "event":e});
 		},
 
 		onImportChange (imports) {
@@ -1082,15 +1082,15 @@ export default {
 				/**
 				 * special handling for templates
 				 */
-				this.emit("newTemplated"+type, {"id" : obj.id, "event" : e});
+				this.$emitDojo("newTemplated"+type, {"id" : obj.id, "event" : e});
 			} else if(type === "Screen"){
-				this.emit("newThemedScreen", {"obj" : obj, "event" : e});
+				this.$emitDojo("newThemedScreen", {"obj" : obj, "event" : e});
 			} else if(type === "Group"){
-				this.emit("newThemedGroup", {"obj" : obj, "event" : e});
+				this.$emitDojo("newThemedGroup", {"obj" : obj, "event" : e});
 			} else if (type === "Widget"){
-				this.emit("newThemedWidget",{"obj" : obj, "event" : e} );
+				this.$emitDojo("newThemedWidget",{"obj" : obj, "event" : e} );
 			} else if (type === "ScreenAndWidget") {
-				this.emit("newThemedScreenAndWidget",{"obj" : obj, "event" : e} );
+				this.$emitDojo("newThemedScreenAndWidget",{"obj" : obj, "event" : e} );
 			}
 		},
 
@@ -1101,15 +1101,15 @@ export default {
 
 			if(this._selectedWidget){
 
-				this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedWidget.id});
+				this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedWidget.id});
 
 			} else if(this._selectedGroup){
 
-				this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedGroup.id});
+				this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedGroup.id});
 
 			} else if(this._selectedScreen){
 
-				this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedScreen.id});
+				this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedScreen.id});
 
 			}
 
@@ -1121,15 +1121,15 @@ export default {
 
 			if(this._selectedWidget){
 
-				this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedWidget.id, "duration":500, "animation":"transform"});
+				this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedWidget.id, "duration":500, "animation":"transform"});
 
 			} else if(this._selectedGroup){
 
-				this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedGroup.id, "duration":500, "animation":"transform"});
+				this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedGroup.id, "duration":500, "animation":"transform"});
 
 			} else if(this._selectedScreen){
 
-				this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedScreen.id, "duration":500, "animation":"transform"});
+				this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedScreen.id, "duration":500, "animation":"transform"});
 
 			}
 
@@ -1140,13 +1140,13 @@ export default {
 			this.logger.log(0,"onNewComment", "entry");
 			this.stopEvent(e);
 
-			this.emit("newComment", {"type" : "comment", "event" : e});
+			this.$emitDojo("newComment", {"type" : "comment", "event" : e});
 		},
 
 
 
 		createOnClick (e){
-			this.emit("newLine", {"type" : "line", "event" : e, "from" : this._selectedWidget.id});
+			this.$emitDojo("newLine", {"type" : "line", "event" : e, "from" : this._selectedWidget.id});
 			return false;
 		},
 
@@ -1590,13 +1590,13 @@ export default {
 			topic.publish("matc/canvas/click", "");
 		
 			this.controller.setMode("svg");
-			this.emit("onNewSVG", {"event":e, 'type': tool.value});
+			this.$emitDojo("onNewSVG", {"event":e, 'type': tool.value});
 		},
 
 		onToolEditSVG () {
 			if (this._selectedWidget) {
 				this.controller.setMode("svg");
-				this.emit("onEditSVG", {'id': this._selectedWidget.id});
+				this.$emitDojo("onEditSVG", {'id': this._selectedWidget.id});
 			}
 		},
 

@@ -1,8 +1,4 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
-
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 let matcRoutes = []
 
@@ -35,7 +31,8 @@ matcRoutes.push({path:'apps/tryout.html', component: () => import(/* webpackChun
 // matcRoutes.push({path:'apps/:id/replay/:session.html', name: "apps_video", component: () => import(/* webpackChunkName: "apps" */ 'views/apps/Overview.vue')})
 
 
-export default new VueRouter({
+export default createRouter({
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/simulate.html',

@@ -84,13 +84,13 @@ x
                 </span>
                 <div class="MatcHelpTopicsCntr">
                     <div v-if="!standalone">
-                        <template v-for="topic in topics">
-                            <a @click="setTopic(topic.id)" :class="[{'selected': topic.id === selected && !selectedParagraph}, topic.css]" :key="topic.id" :topicid="topic.id" ref="links" >
+                        <template v-for="topic in topics" :key="topic.id">
+                            <a @click="setTopic(topic.id)" :class="[{'selected': topic.id === selected && !selectedParagraph}, topic.css]" :topicid="topic.id" ref="links" >
                                 {{topic.name}}
                             </a>
                             <template v-if="topic.id === selected">
-                                <template v-for="(p, i) in topic.paragraphs"  >
-                                    <a  v-if="p.title" :key="i" :class="['MatcHelpSubTopic', {'selected': p.id === selectedParagraph}]" @click.stop="setSupTopic(p.id)" :topicid="p.id" ref="links"  >
+                                <template v-for="(p, i) in topic.paragraphs" :key="i">
+                                    <a  v-if="p.title" :class="['MatcHelpSubTopic', {'selected': p.id === selectedParagraph}]" @click.stop="setSupTopic(p.id)" :topicid="p.id" ref="links"  >
                                         {{p.title}}
                                     </a>
                                 </template>
@@ -99,13 +99,13 @@ x
                         </template>
                     </div>
                     <div v-else>
-                        <template v-for="topic in topics">
-                            <a :class="[{'selected': topic.id === selected && !selectedParagraph}, topic.css]" :key="topic.id" :href="'#/help/' + topic.id + '.html'" :topicid="topic.id" ref="links" >
+                        <template v-for="topic in topics" :key="topic.id">
+                            <a :class="[{'selected': topic.id === selected && !selectedParagraph}, topic.css]" :href="'#/help/' + topic.id + '.html'" :topicid="topic.id" ref="links" >
                                 {{topic.name}}
                             </a>
                             <template v-if="topic.id === selected">
-                                <template v-for="(p, i) in topic.paragraphs"  >
-                                    <a  v-if="p.title" :key="i"  :class="['MatcHelpSubTopic', {'selected': p.id === selectedParagraph}]" :href="'#/help/' + topic.id + '/' + p.id +'.html'"  :topicid="p.id" ref="links" >
+                                <template v-for="(p, i) in topic.paragraphs" :key="i">
+                                    <a  v-if="p.title" :class="['MatcHelpSubTopic', {'selected': p.id === selectedParagraph}]" :href="'#/help/' + topic.id + '/' + p.id +'.html'"  :topicid="p.id" ref="links" >
                                         {{p.title}}
                                     </a>
                                 </template>
@@ -132,7 +132,8 @@ textarea {
 <script>
 import DojoWidget from 'dojo/DojoWidget'
 import Services from 'services/Services'
-import Vue from 'vue'
+import { nextTick } from 'vue'
+import topic from 'dojo/topic'
 
 export default {
     name: 'HelpButton',
@@ -186,7 +187,7 @@ export default {
         },
         setSupTopic (paragraph, focusLink=false) {
             this.selectedParagraph = paragraph
-            Vue.nextTick( () => {
+            nextTick( () => {
                 this.focus(paragraph, focusLink)
             })
         },
@@ -236,7 +237,7 @@ export default {
             if (this.contactEmail && this.contactMessage) {
                 let res = await Services.getUserService().contact(this.contactName, this.contactEmail, this.contactMessage)
                 if (res) {
-                    this.$root.$emit('Success', 'Thanks for contacting us! The dialog will close automatically')
+                    topic.publish('Success', 'Thanks for contacting us! The dialog will close automatically')
                     this.concatSucess = 'Thanks for contacting us! The dialog will close automatically'
                     this.contactError = ''
 
@@ -290,7 +291,7 @@ export default {
         }
         this.texts = texts
         if (this.selectedParagraph) {
-            Vue.nextTick( () => {
+            nextTick( () => {
                 this.focus(this.selectedParagraph)
             })
         }

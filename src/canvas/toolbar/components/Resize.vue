@@ -150,7 +150,7 @@ export default {
                 fixedVertical: this.growVertical
             }
             this.isDirty = true
-            this.emit('change', resize)
+            this.$emitDojo('change', resize)
         },
 
 		setValue  (v){

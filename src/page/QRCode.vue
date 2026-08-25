@@ -2,10 +2,12 @@
   <img class="MatcAppList" />
 </template>
 <script>
+import DojoWidget from 'dojo/DojoWidget'
+import Logger from 'common/Logger'
 
 export default {
   name: "QRCode",
-  mixins: [DojoWidget, List, Plan],
+  mixins: [DojoWidget],
   props: ['hash', 'debug', 'live', 'log'],
   data: function() {
     return {

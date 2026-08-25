@@ -66,13 +66,13 @@ export default {
 		_sendFiles() {
 			if (this.mode == "public") {
 				console.debug("Upload not allowed in public")
-				this.emit("uploadPublicError", []);
+				this.$emitDojo("uploadPublicError", []);
 				return;
 			}
 
 			css.remove(this.domNode, "MatcUploaderDnD");
 			if (this.enabled && this.url) {
-				this.emit("uploadStart", []);
+				this.$emitDojo("uploadStart", []);
 
 				var formData = new FormData();
 				var names = {};
@@ -94,7 +94,7 @@ export default {
 				this.startUploadAnimation();
 
 			} else {
-				this.emit("uploadStart", []);
+				this.$emitDojo("uploadStart", []);
 				/**
 				 * Simulate upload
 				 */
@@ -107,12 +107,12 @@ export default {
 		onUploadDone(data) {
 			this.stopUploadAnimation();
 			data = JSON.parse(data);
-			this.emit("uploadDone", data, this._lastMouseEvent);
+			this.$emitDojo("uploadDone", data, this._lastMouseEvent);
 		},
 
 		onUploadError() {
 			this.stopUploadAnimation();
-			this.emit("uploadError", []);
+			this.$emitDojo("uploadError", []);
 		},
 
 		_onFileChange(e) {
@@ -186,7 +186,7 @@ export default {
 
 		stopDummyAnimation() {
 			this.stopUploadAnimation();
-			this.emit("uploadNotEnabled", []);
+			this.$emitDojo("uploadNotEnabled", []);
 		},
 
 		animate() {

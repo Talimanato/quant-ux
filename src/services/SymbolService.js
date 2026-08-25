@@ -1,6 +1,7 @@
 import AbstractService from 'services/AbstractService'
 import Logger from 'common/Logger'
-import Vue from "vue"
+import { createApp } from 'vue'
+import { initDojoWidget } from 'dojo/DojoUtil'
 import ModelGeom from 'core/ModelGeom'
 import lang from 'dojo/_base/lang'
 import CoreUtil from 'core/CoreUtil'
@@ -337,10 +338,11 @@ class SymbolService extends AbstractService{
 		}
 
     $new (cls) {
-      var ComponentClass = Vue.extend(cls);
-      var instance = new ComponentClass();
+      var el = document.createElement('div');
+      var app = createApp(cls);
+      var instance = app.mount(el);
+      initDojoWidget(instance);
       instance.mode = this.mode
-      instance.$mount(); // pass nothing
       return instance;
     }
 

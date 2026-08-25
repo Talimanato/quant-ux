@@ -6,10 +6,7 @@ export function getNPMTemplate (){
 }
 
 export function getRouterTemplate () {
-  return `import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+  return `import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
@@ -24,7 +21,8 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHashHistory(),
   routes
 })
 
@@ -68,20 +66,17 @@ export function getMainTemplate(hash, model) {
   methods = methods.substring(0, methods.length-2)
 
 
-  return `<template>
+  return `import { createApp } from 'vue'
+import Luisa from 'luisa-vue'
+// more documentation can be found at https://luias.could
+
+const app = createApp({
+  name: '${model.name}',
+  template: \`
   <div class="">
     <Luisa design="${hash}" v-model="viewModel"/>
   </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import Luisa from 'luisa-vue'
-Vue.use(Luisa);
-// more documentation can be found at https://luias.could
-
-export default {
-  name: '${model.name}',
+  \`,
   data: function () {
     return {
       viewModel: {
@@ -94,8 +89,10 @@ ${viewModel}
   methods: {
 ${methods}
   }
-}
-</script>
+})
+
+app.use(Luisa)
+app.mount('#app')
 `
 }
 

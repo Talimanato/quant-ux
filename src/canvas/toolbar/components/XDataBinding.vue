@@ -192,7 +192,7 @@ export default {
             for (let i = 0; i < this.variableKeys.length; i++) {
                 let key = this.variableKeys[i].value
                 if (this.databinding[key] === undefined || this.databinding[key] === null) {
-                    this.$set(this.databinding, key, v)
+                    this.databinding[key] = v
                     this.logger.log(-1, 'setNewVariableKey', 'exit > Free key taken: ' + key)
                     return;
                 }
@@ -201,7 +201,7 @@ export default {
              * Take the first one, most likely default
              */
             let key = this.variableKeys[0].value
-            this.$set(this.databinding, key, v)
+            this.databinding[key] = v
             this.logger.log(-1, 'setNewVariableKey', 'exit > Default key taken: ' + key)
         },
         onCheckBox (selected, name, key) {
@@ -210,13 +210,13 @@ export default {
             if (selected) {
                 this.setNewVariableKey(name)
             } else {
-                this.$delete(this.databinding, key)
+                delete this.databinding[key]
             }
             this.onChange()
             this.unCheckNotAssigned()
         },
         onSelectVariable (v, key = "default") {
-            this.$set(this.databinding, key, v)
+            this.databinding[key] = v
             this.onChange()
         },
         setNewType (newKey) {
@@ -225,7 +225,7 @@ export default {
         setType (newKey, name) {
             let oldKey = this.getCurrentKey(name)
             if (oldKey) {
-                this.$delete(this.databinding, oldKey)
+                delete this.databinding[oldKey]
             }
             this.onSelectVariable(name, newKey)
             this.onChange()
@@ -243,7 +243,7 @@ export default {
             return this.databinding
         },
         onChange () {
-            this.emit('change', this.databinding)
+            this.$emitDojo('change', this.databinding)
         },
         setModel (v) {
             this.model = v

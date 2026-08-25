@@ -61,7 +61,7 @@ export default {
 				var k = this.borderRadius[i];
 				this.value[k] = value;
 			}
-			this.emit("changing", this.getDelta(this.value));
+			this.$emitDojo("changing", this.getDelta(this.value));
 		},
 
 		setRadius  (key, value){
@@ -71,7 +71,7 @@ export default {
 				var k = this.borderRadius[i];
 				this.value[k] = value;
 			}
-			this.emit("change", this.getDelta(this.value));
+			this.$emitDojo("change", this.getDelta(this.value));
 		},
 
 

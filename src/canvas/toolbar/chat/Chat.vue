@@ -9,9 +9,7 @@
         <div class="luisa-chat-body">
            
                 
-                <template v-for="(m,i) in messages">
-                    <ChatMessage :message="m" @delete="deleteMessage(i)" :key="i"></ChatMessage>
-                </template>
+                <ChatMessage v-for="(m,i) in messages" :message="m" @delete="deleteMessage(i)" :key="i"></ChatMessage>
                 <div ref="bodyEnd"></div>        
         
 

@@ -49,10 +49,10 @@ export default {
             this.model = m
         },
         onDist (o, e) {
-            this.emit('dist', o, e)
+            this.$emitDojo('dist', o, e)
         },
         onAlign (o,e ) {
-            this.emit('align', o, e)
+            this.$emitDojo('align', o, e)
         }
     }, 
     mounted () {

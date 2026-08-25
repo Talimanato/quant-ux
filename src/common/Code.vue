@@ -18,7 +18,7 @@
           <code ref="codeNPM" class="html" >{{npmTemplate}}</code>
         </pre>
 
-        <span class="MatcHint">Copy this class to your main file, e.g. Home.vue. </span>
+        <span class="MatcHint">Copy this class to your main file, e.g. main.js. </span>
         <pre>
           <code ref="codeLowCode" class="html" >{{lowCodeTemplate}}</code>
         </pre>
@@ -42,7 +42,7 @@ import hljs from 'highlight.js';
 import javascript from 'highlight.js/lib/languages/javascript'
 import xml from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
-import Vue from 'vue'
+import { nextTick } from 'vue'
 
 
 export default {
@@ -87,7 +87,7 @@ export default {
         this.$refs.codeCSS.innerHTML = v
       }
       this.cssTemplate = v
-      Vue.nextTick(() => {
+      nextTick(() => {
         this.highlightBlock(this.$refs.codeCSS);
       })
     },
@@ -99,7 +99,7 @@ export default {
       }
       this.hasVue = true
       this.vueTemplate = v
-      Vue.nextTick(() => {
+      nextTick(() => {
         this.highlightBlock(this.$refs.codeVue);
       })
     },
@@ -107,7 +107,7 @@ export default {
       v = v.trim()
       this.hasHTML = true
       this.htmlTemplate = v
-      Vue.nextTick(() => {
+      nextTick(() => {
         this.highlightBlock(this.$refs.codeHTML);
       })
     },
@@ -116,19 +116,19 @@ export default {
       this.tab = 'lowCode'
       this.hasLowCode = true
       this.lowCodeTemplate = v
-      Vue.nextTick(() => {
+      nextTick(() => {
         this.highlightBlock(this.$refs.codeLowCode);
       })
     },
     setNPMTemplate (v) {
       this.npmTemplate = v
-      Vue.nextTick(() => {
+      nextTick(() => {
         this.highlightBlock(this.$refs.codeNPM);
       })
     },
     setRouterTemplate (v) {
       this.routerTemplate = v
-      Vue.nextTick(() => {
+      nextTick(() => {
         this.highlightBlock(this.$refs.codeRouter);
       })
     },
@@ -145,25 +145,25 @@ export default {
   watch: {
       html (v) {
         this.htmlTemplate = v
-        Vue.nextTick(() => {
+        nextTick(() => {
           this.highlightBlock(this.$refs.codeHTML);
         })
       },
       css (v) {
         this.cssTemplate = v
-        Vue.nextTick(() => {
+        nextTick(() => {
           this.highlightBlock(this.$refs.codeCSS);
         })
       },
       vue (v) {
         this.vueTemplate = v
-        Vue.nextTick(() => {
+        nextTick(() => {
           this.highlightBlock(this.$refs.codeVue);
         })
       },
       lowCode (v) {
         this.lowCode = v
-        Vue.nextTick(() => {
+        nextTick(() => {
           this.highlightBlock(this.$refs.codeLowCode);
         })
       }
@@ -188,7 +188,7 @@ export default {
     if (this.selected) {
       this.tab = this.selected
     }
-    Vue.nextTick(() => {
+    nextTick(() => {
       hljs.highlightBlock(this.$refs.codeCSS);
       hljs.highlightBlock(this.$refs.codeHTML);
       hljs.highlightBlock(this.$refs.codeVue);

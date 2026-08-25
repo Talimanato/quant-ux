@@ -1442,7 +1442,9 @@ export default {
 									this.propertiesCntr.scrollTop = state.scrollTop;
 								});
 							}
-							this.widgetViewModeBtn.setValue(state.view);
+							if (this.widgetViewModeBtn && this.widgetViewModeBtn.setValue) {
+								this.widgetViewModeBtn.setValue(state.view);
+							}
 						}
 					} else {
 						/**
@@ -1457,7 +1459,9 @@ export default {
 							me.propertiesCntr.scrollTop = 0;
 						},1);
 
-						this.widgetViewModeBtn.setValue("style");
+						if (this.widgetViewModeBtn && this.widgetViewModeBtn.setValue) {
+							this.widgetViewModeBtn.setValue("style");
+						}
 					}
 				} else {
 					/**

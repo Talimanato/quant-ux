@@ -39,13 +39,13 @@ export default {
 		
 			if (this.mode == "public") {
 				console.debug("Upload not allowed in public")
-				this.emit("uploadPublicError", []);
+				this.$emitDojo("uploadPublicError", []);
 				return;
 			}
 
 			css.remove(this.domNode, "MatcUploaderDnD");
 			if (this.enabled && this.url) {
-				this.emit("uploadStart", []);
+				this.$emitDojo("uploadStart", []);
 
 				var formData = new FormData();
 				var names = {};
@@ -67,7 +67,7 @@ export default {
 				this.startUploadAnimation();
 
 			} else {
-				this.emit("uploadStart", []);
+				this.$emitDojo("uploadStart", []);
 				/**
 				 * Simulate upload
 				 */

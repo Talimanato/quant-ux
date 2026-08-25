@@ -103,7 +103,7 @@ export default {
             }
             if (value !== undefined) {
                 dataBinding[key] = value
-                this.emit('change', dataBinding)
+                this.$emitDojo('change', dataBinding)
             }
         },
         getDataBindingValue (key) {
@@ -124,7 +124,7 @@ export default {
         },
         onOpenDialog (variable) {
             console.debug('onOpenDialog', variable)
-            this.emit('showDialog', variable)
+            this.$emitDojo('showDialog', variable)
         }
     },
     mounted () {

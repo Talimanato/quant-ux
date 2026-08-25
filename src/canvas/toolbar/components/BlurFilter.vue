@@ -90,7 +90,7 @@ export default {
         this.tempValue = {
 					blur: Math.round(this.blurSlider.getValue())
 				}
-        this.emit('changing', this.tempValue)
+        this.$emitDojo('changing', this.tempValue)
       },
 
       setValuesInWidgets (backFilter){
@@ -110,13 +110,13 @@ export default {
 
       onHide () {
         if (this.tempValue && (this.tempValue.blur !== 0)) {
-          this.emit('change', this.tempValue)
+          this.$emitDojo('change', this.tempValue)
         }
       },
 
       onTempChange (v) {
         this.tempValue = v
-        this.emit('changing', this.tempValue)
+        this.$emitDojo('changing', this.tempValue)
       },
 
 			onRemove (e){

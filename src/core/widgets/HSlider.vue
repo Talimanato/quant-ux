@@ -203,7 +203,7 @@ export default {
       this.slider.hndl.style.borderStyle = style.handleBorderStyle;
     },
 
-    beforeDestroy () {
+    beforeUnmount () {
       if (this._compositeState) {
         this.emitCompositeState();
       }

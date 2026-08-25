@@ -50,7 +50,7 @@ export default {
 
 		onChange() {
 			this.setValue(!this.value);
-			this.emit("change", this.value);
+			this.$emitDojo("change", this.value);
 		}
 	},
 	mounted() {

@@ -2,7 +2,8 @@ import lang from 'dojo/_base/lang'
 import css from 'dojo/css'
 import Logger from 'common/Logger'
 
-import Vue from "vue";
+import { createApp } from 'vue';
+import { initDojoWidget } from 'dojo/DojoUtil'
 
 import UIWidget from 'core/widgets/UIWidget'
 import CheckBoxWidget from 'core/widgets/CheckBoxWidget'
@@ -400,10 +401,11 @@ export default class RenderFactory extends Core {
 	}
 
 	$new (cls) {
-		const ComponentClass = Vue.extend(cls);
-		const instance = new ComponentClass();
+		const el = document.createElement('div');
+		const app = createApp(cls);
+		const instance = app.mount(el);
+		initDojoWidget(instance);
 		instance.mode = this.mode
-		instance.$mount(); // pass nothing
 		/**
 		 * We have to set the JWT token!
 		 */
@@ -459,7 +461,7 @@ export default class RenderFactory extends Core {
 					if (orgModel) {
 						if (this._uiWidgetsStates[orgModel.id] != null && this._uiWidgetsStates[orgModel.id] != undefined) {
 							w.setState(this._uiWidgetsStates[orgModel.id]);
-							this.emit("uiWidgetInit", {
+							this.$emitDojo("uiWidgetInit", {
 								state: this._uiWidgetsStates[orgModel.id],
 								id: model.id
 							});
@@ -1854,7 +1856,7 @@ export default class RenderFactory extends Core {
 					id = widget.inherited;
 				}
 				this._uiWidgetsStates[id] = w.getState();
-				w.beforeDestroy();
+				w.beforeUnmount();
 
 				/**
 				 * destroy later (after animas are done)
@@ -1899,7 +1901,7 @@ export default class RenderFactory extends Core {
 					}
 					this._uiWidgetsStates[id] = w.getState();
 				}
-				w.beforeDestroy()
+				w.beforeUnmount()
 				delete this._uiWidgets[id]
 			}
 		})

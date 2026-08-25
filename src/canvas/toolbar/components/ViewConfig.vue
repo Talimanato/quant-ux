@@ -115,75 +115,76 @@ export default {
             hasPopup: false,
             zoomLevels: [0.05, 0.1, 0.25, 0.5, 0.75, 1.0, 2],
             zoomLevelPos: 3,
-            hasIcon: false
+            hasIcon: false,
+            localValue: this.value ? { ...this.value } : {}
         }
     },
     computed: {
         gridLabel() {
-            if (this.value && this.value.grid) {
-                if (this.value.grid.type === 'grid') {
-                    return `${this.value.grid.w} x ${this.value.grid.h}`
+            if (this.localValue && this.localValue.grid) {
+                if (this.localValue.grid.type === 'grid') {
+                    return `${this.localValue.grid.w} x ${this.localValue.grid.h}`
                 }
             }
             return ''
         },
         zoomFactor() {
-            if (this.value && this.value.zoom) {
-                return Math.round(this.value.zoom * 100)
+            if (this.localValue && this.localValue.zoom) {
+                return Math.round(this.localValue.zoom * 100)
             }
             return '-'
         },
         hasLines() {
-            if (this.value) {
-                return this.value.renderLines
+            if (this.localValue) {
+                return this.localValue.renderLines
             }
             return true
         },
         hasDistance() {
-            if (this.value) {
-                return this.value.showDistance
+            if (this.localValue) {
+                return this.localValue.showDistance
             }
             return true
         },
         hasComments() {
-            if (this.value) {
-                return this.value.showComments
+            if (this.localValue) {
+                return this.localValue.showComments
             }
             return true
         },
         hasRuler() {
-            if (this.value) {
-                return this.value.showRuler
+            if (this.localValue) {
+                return this.localValue.showRuler
             }
             return true
         },
         hasData() {
-            if (this.value) {
-                return this.value.hasDataView
+            if (this.localValue) {
+                return this.localValue.hasDataView
             }
             return true
         },
         hasLayers() {
-            if (this.value) {
-                return this.value.layerListVisible
+            if (this.localValue) {
+                return this.localValue.layerListVisible
             }
             return false
         },
         hasBW() {
-            if (this.value) {
-                return this.value.isBlackAndWhite
+            if (this.localValue) {
+                return this.localValue.isBlackAndWhite
             }
             return false
         },
         hasGrid() {
-            if (this.value) {
-                return this.value.hasGrid
+            if (this.localValue) {
+                return this.localValue.hasGrid
             }
             return false
         },
         hasVisibleGrid() {
-            if (this.value) {
-                return this.value.hasVisibleGrid
+            if (this.localValue) {
+                return this.localValue.hasVisibleGrid
             }
             return false
         }
@@ -199,63 +200,63 @@ export default {
 
         onChangeVisibleGrid(value) {
             this.log.log(-1, 'onChangeVisibleGrid', 'enter', value)
-            this.value.hasVisibleGrid = value
+            this.localValue.hasVisibleGrid = value
             //this.hideMaybe()
             this.$emit('change', 'hasVisibleGrid', value)
         },
 
         onChangeGrid(value) {
             this.log.log(-1, 'onChangeGrid', 'enter', value)
-            this.value.hasGrid = value
+            this.localValue.hasGrid = value
             //this.hideMaybe()
             this.$emit('change', 'hasGrid', value)
         },
 
         onChangeBW(value) {
             this.log.log(-1, 'onChangeBW', 'enter', value)
-            this.value.isBlackAndWhite = value
+            this.localValue.isBlackAndWhite = value
             //this.hideMaybe()
             this.$emit('change', 'isBlackAndWhite', value)
         },
 
         onChangeLayer(value) {
             this.log.log(-1, 'onChangeLayer', 'enter', value)
-            this.value.layerListVisible = value
+            this.localValue.layerListVisible = value
             //this.hideMaybe()
             this.$emit('change', 'layerListVisible', value)
         },
 
         onChangeLines(value) {
             this.log.log(-1, 'onChangeLines', 'enter', value)
-            this.value.renderLines = value
+            this.localValue.renderLines = value
             // this.hideMaybe()
             this.$emit('change', 'renderLines', value)
         },
 
         onChangeDistance(value) {
             this.log.log(-1, 'onChangeDistance', 'enter', value)
-            this.value.showDistance = value
+            this.localValue.showDistance = value
             // this.hideMaybe()
             this.$emit('change', 'showDistance', value)
         },
 
         onChangeRuler(value) {
             this.log.log(-1, 'onChangeRuler', 'enter', value)
-            this.value.showRuler = value
+            this.localValue.showRuler = value
             // this.hideMaybe()
             this.$emit('change', 'showRuler', value)
         },
 
         onChangeComments(value) {
             this.log.log(-1, 'onChangeRuler', 'enter', value)
-            this.value.showComments = value
+            this.localValue.showComments = value
             // this.hideMaybe()
             this.$emit('change', 'showComments', value)
         },
 
         onChangeData(value) {
             this.log.log(-1, 'onChangeData', 'enter', value)
-            this.value.hasDataView = value
+            this.localValue.hasDataView = value
             // this.hideMaybe()
             this.$emit('change', 'hasDataView', value)
         },
@@ -263,20 +264,20 @@ export default {
         onZoom(pos) {
             //this.hideMaybe()
             this.zoomLevelPos = pos
-            this.value.zoom = this.zoomLevels[this.zoomLevelPos];
-            this.$emit('change', 'zoom', this.value.zoom)
+            this.localValue.zoom = this.zoomLevels[this.zoomLevelPos];
+            this.$emit('change', 'zoom', this.localValue.zoom)
         },
 
         onZoomMinus() {
             this.log.log(-1, 'onZoomMinus', 'enter')
             //if (this.zoomLevelPos >= 1){
             this.zoomLevelPos--;
-            let zoom = Math.round((this.value.zoom - 0.05) * 100)
+            let zoom = Math.round((this.localValue.zoom - 0.05) * 100)
             zoom -= zoom % 5
             zoom = Math.max(2, zoom)
             zoom /= 100
-            this.value.zoom = zoom
-            this.$emit('change', 'zoom', this.value.zoom)
+            this.localValue.zoom = zoom
+            this.$emit('change', 'zoom', this.localValue.zoom)
             //}
             // this.hideMaybe()
             return false
@@ -286,12 +287,12 @@ export default {
             this.log.log(-1, 'onZoomPlus', 'enter')
             //if (this.zoomLevelPos < this.zoomLevels.length -1){
             this.zoomLevelPos++;
-            let zoom = Math.round((this.value.zoom + 0.05) * 100)
+            let zoom = Math.round((this.localValue.zoom + 0.05) * 100)
             zoom -= zoom % 5
             zoom /= 100
             console.debug(zoom)
-            this.value.zoom = zoom
-            this.$emit('change', 'zoom', this.value.zoom)
+            this.localValue.zoom = zoom
+            this.$emit('change', 'zoom', this.localValue.zoom)
             //}
             // this.hideMaybe()
             return false
@@ -360,7 +361,7 @@ export default {
     watch: {
         value(v) {
             this.log.log(2, 'watch(value)', 'enter', v)
-            this.value = v
+            this.localValue = v ? { ...v } : {}
         }
     },
     mounted() {

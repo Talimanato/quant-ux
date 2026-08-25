@@ -393,7 +393,7 @@ export default {
       return v * 1;
     },
 
-    beforeDestroy () {
+    beforeUnmount () {
       if (this._compositeState) {
         this.emitCompositeState();
       }

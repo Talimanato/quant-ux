@@ -20,19 +20,26 @@ import DesignTokenView from './DesignTokenView'
 //import {iconDOM} from 'page/QIconUtil'
 
 export default {
-	name: 'BoxBorder2',
-	mixins: [_Tooltip, _DesignToken, DojoWidget],
-	data: function () {
-		return {
-			value: false,
-			tab: "Width",
-			isLocked: true,
-			borderWidth: ["borderTopWidth", "borderBottomWidth", "borderLeftWidth", "borderRightWidth"],
-			borderColor: ["borderTopColor", "borderBottomColor", "borderRightColor", "borderLeftColor"],
-			colorWidgets: [],
-			inputEvent: "change"
-		}
-	},
+    name: 'BoxBorder2',
+    mixins: [_Tooltip, _DesignToken, DojoWidget],
+    props: {
+	colorWidgets: {
+	    type: Array,
+	    default () {
+		return []
+	    }
+	}
+    },
+    data: function () {
+	return {
+	    value: false,
+	    tab: "Width",
+	    isLocked: true,
+	    borderWidth: ["borderTopWidth", "borderBottomWidth", "borderLeftWidth", "borderRightWidth"],
+	    borderColor: ["borderTopColor", "borderBottomColor", "borderRightColor", "borderLeftColor"],
+	    inputEvent: "change"
+	}
+    },
 	components: {
 		'DesignTokenView': DesignTokenView
 	},
@@ -109,7 +116,7 @@ export default {
 				var k = this.borderWidth[i];
 				this.value[k] = value;
 			}
-			this.emit("changing", this.getDelta(this.value));
+			this.$emitDojo("changing", this.getDelta(this.value));
 			//this.closeColor();
 		},
 
@@ -120,7 +127,7 @@ export default {
 				var k = this.borderWidth[i];
 				this.value[k] = value;
 			}
-			this.emit("change", this.getDelta(this.value));
+			this.$emitDojo("change", this.getDelta(this.value));
 			//this.closeColor();
 		},
 
@@ -134,7 +141,7 @@ export default {
 				var k = this.borderColor[i];
 				this.value[k] = value;
 			}
-			this.emit("change", this.getDelta(this.value));
+			this.$emitDojo("change", this.getDelta(this.value));
 		},
 
 		setTempColor(key, input, value) {
@@ -143,7 +150,7 @@ export default {
 				var k = this.borderColor[i];
 				this.value[k] = value;
 			}
-			this.emit("changing", this.getDelta(this.value));
+			this.$emitDojo("changing", this.getDelta(this.value));
 		},
 
 

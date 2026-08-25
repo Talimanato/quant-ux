@@ -218,15 +218,15 @@ export default {
   },
 
   setWidgetStyle (key, value) {
-	  this.emit('change', key, value)
+	  this.$emitDojo('change', key, value)
   },
 
   setTempWidgetStyle (key, value) {
-	  this.emit('changing', key, value)
+	  this.$emitDojo('changing', key, value)
   },
 
   toggleStyle (key, value) {
-	  this.emit('toggle', key, value)
+	  this.$emitDojo('toggle', key, value)
   }
 
   },

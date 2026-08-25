@@ -79,7 +79,6 @@ export default {
   watch: {
     test(v) {
       this.logger.info("watch", "test >", v);
-      this.test = v;
     }
   },
   async mounted() {

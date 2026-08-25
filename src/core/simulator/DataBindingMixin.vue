@@ -103,7 +103,7 @@ export default {
 		setDataBindingByKey (path, value) {
 			if (this.dataBindingValues) {
 				JSONPath.set(this.dataBindingValues, path, value)
-				this.emit('onDataBindingChange', this.dataBindingValues)
+				this.$emitDojo('onDataBindingChange', this.dataBindingValues)
 			}
 		},
 
@@ -147,7 +147,7 @@ export default {
 			//let oldValue = JSONPath.get(this.dataBindingValues, variable)
 			//if (oldValue !== value) {
 				this.dataBindingValues = JSONPath.set(this.dataBindingValues, variable, value)
-				this.emit('onDataBindingChange', this.dataBindingValues)
+				this.$emitDojo('onDataBindingChange', this.dataBindingValues)
 				this.updateAllDataBindings(screenID, variable, value, runDataScripts)
 			// } else {
 			// 	this.logger.log(1, "onUIWidgetDataBinding","exit > No change");
@@ -265,7 +265,7 @@ export default {
 					}
 				}
             }
-			this.emit('onDataBindingChange', this.dataBindingValues)
+			this.$emitDojo('onDataBindingChange', this.dataBindingValues)
 		},
 
 		isRepaterChild (uiWidget) {

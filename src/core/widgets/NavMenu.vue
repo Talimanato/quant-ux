@@ -211,7 +211,7 @@ export default {
             this.stopEvent(e);   
             this.cleanUp();
             if (item && item.to) {
-                this.emit('navigation', item.to)
+                this.$emitDojo('navigation', item.to)
             }
 
             const event = {
@@ -221,7 +221,7 @@ export default {
                 noheat: true,
                 e: e
             };
-            this.emit("stateChange", event);
+            this.$emitDojo("stateChange", event);
         },
 
         onClose(e) {
@@ -527,7 +527,7 @@ export default {
             return this.validate(this.value, showError);
         },
 
-        beforeDestroy() {
+        beforeUnmount() {
             this.cleanUp();
         }
     },

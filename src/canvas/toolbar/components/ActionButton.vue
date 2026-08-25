@@ -364,14 +364,14 @@ export default {
 					event: event
 				}
 			]
-			this.emit("updateAction", newAction);
+			this.$emitDojo("updateAction", newAction);
 		},
 
 		setActionCallback(dialog, input, action, widget, e) {
 			action.callback = input.value
 			this.stopEvent(e);
 			dialog.close();
-			this.emit("updateAction", widget.id, { 'callback': input.value });
+			this.$emitDojo("updateAction", widget.id, { 'callback': input.value });
 		},
 
 
@@ -549,22 +549,22 @@ export default {
 		showScreenAnim(d, line, e) {
 			this.stopEvent(e);
 			d.close();
-			this.emit("showScreenAnimation", line);
+			this.$emitDojo("showScreenAnimation", line);
 		},
 
 		setAnimation(d, settings, line, e) {
 			this.stopEvent(e);
 			d.close();
-			this.emit("updateLineByID", line.id, settings.getValue());
+			this.$emitDojo("updateLineByID", line.id, settings.getValue());
 		},
 
 		onActionBack() {
-			this.emit("newAction", { type: "back" });
+			this.$emitDojo("newAction", { type: "back" });
 		},
 
 		setActionType(action, type) {
 			action.type = type
-			this.emit("updateAction", action);
+			this.$emitDojo("updateAction", action);
 		},
 
 		/*******************************************************************
@@ -620,7 +620,7 @@ export default {
 
 
 		onActionWorkflow() {
-			this.emit("newAction", { type: "workflow", steps: [] });
+			this.$emitDojo("newAction", { type: "workflow", steps: [] });
 		},
 
 		showEditWorkflow(action, e) {
@@ -657,7 +657,7 @@ export default {
 		setActionWorkflow(d, settings, action) {
 			let updatedAction = settings.getValue()
 			action.steps = updatedAction.steps
-			this.emit("updateAction", action);
+			this.$emitDojo("updateAction", action);
 			d.close()
 		},
 
@@ -665,33 +665,33 @@ export default {
 			/**
 			 * Show Popup
 			 */
-			this.emit("newAction", { type: "js" });
+			this.$emitDojo("newAction", { type: "js" });
 		},
 
 		onRemoveAction(action, e) {
 			this.stopEvent(e);
-			this.emit("removeAction", action);
+			this.$emitDojo("removeAction", action);
 		},
 
 
 		onNewLine(e) {
-			this.emit("newLine", e);
+			this.$emitDojo("newLine", e);
 		},
 
 		onNewTransfromLine(e) {
-			this.emit("newTransformLine", e);
+			this.$emitDojo("newTransformLine", e);
 		},
 
 		updateLine(id, data) {
-			this.emit("updateLineByID", id, data);
+			this.$emitDojo("updateLineByID", id, data);
 		},
 
 		onRemoveLineByID(id) {
-			this.emit("removeLineById", id);
+			this.$emitDojo("removeLineById", id);
 		},
 
 		setLinePropertyByID(id, prop, value) {
-			this.emit("setLinePropertyByID", id, prop, value);
+			this.$emitDojo("setLinePropertyByID", id, prop, value);
 		},
 
 		onLineTimerByID(id, input) {
@@ -699,7 +699,7 @@ export default {
 			var value = input.value;
 
 			if (this.isNumber(value)) {
-				this.emit("setLinePropertyByID", id, "timer", value);
+				this.$emitDojo("setLinePropertyByID", id, "timer", value);
 			} else {
 				console.warn("onLineTimerByID > Data Warng")
 			}
@@ -710,8 +710,8 @@ export default {
 
 			if (line.timer != value) {
 				if (this.isNumber(value)) {
-					this.emit("setLinePropertyByID", id, "event", "timer");
-					this.emit("setLinePropertyByID", id, "timer", value);
+					this.$emitDojo("setLinePropertyByID", id, "event", "timer");
+					this.$emitDojo("setLinePropertyByID", id, "timer", value);
 				} else {
 					console.warn("onLineTimerAndDurationByID > Data Warng")
 					btn.hideDropDown();
@@ -728,43 +728,43 @@ export default {
 		},
 
 		onRemoveLine(e) {
-			this.emit("removeLine", e);
+			this.$emitDojo("removeLine", e);
 		},
 
 		onLineValidation(value) {
 			var val = { all: value }
-			this.emit("setLineProperty", "validation", val);
+			this.$emitDojo("setLineProperty", "validation", val);
 		},
 
 
 		onLineHideByID(id, value) {
-			this.emit("setLinePropertyByID", id, "hidden", value);
+			this.$emitDojo("setLinePropertyByID", id, "hidden", value);
 		},
 
 		onLineScrollByID(id, value) {
-			this.emit("setLinePropertyByID", id, "scroll", value);
+			this.$emitDojo("setLinePropertyByID", id, "scroll", value);
 		},
 
 
 		onLineEventByID(id, value) {
 			// FIXME: Copz line and do one change!
-			this.emit("setLinePropertyByID", id, "event", value);
+			this.$emitDojo("setLinePropertyByID", id, "event", value);
 
 			if (value == "swipeLeft") {
-				this.emit("setLinePropertyByID", id, "animation", "slideLeft");
-				this.emit("setLinePropertyByID", id, "duration", 250);
+				this.$emitDojo("setLinePropertyByID", id, "animation", "slideLeft");
+				this.$emitDojo("setLinePropertyByID", id, "duration", 250);
 
 			} else if (value == "swipeRight") {
-				this.emit("setLinePropertyByID", id, "animation", "slideRight");
-				this.emit("setLinePropertyByID", id, "duration", 250);
+				this.$emitDojo("setLinePropertyByID", id, "animation", "slideRight");
+				this.$emitDojo("setLinePropertyByID", id, "duration", 250);
 
 			} else if (value == "swipeUp") {
-				this.emit("setLinePropertyByID", id, "animation", "slideUp");
-				this.emit("setLinePropertyByID", id, "duration", 250);
+				this.$emitDojo("setLinePropertyByID", id, "animation", "slideUp");
+				this.$emitDojo("setLinePropertyByID", id, "duration", 250);
 
 			} else if (value == "swipeDown") {
-				this.emit("setLinePropertyByID", id, "animation", "slideDown");
-				this.emit("setLinePropertyByID", id, "duration", 250);
+				this.$emitDojo("setLinePropertyByID", id, "animation", "slideDown");
+				this.$emitDojo("setLinePropertyByID", id, "duration", 250);
 			}
 		},
 

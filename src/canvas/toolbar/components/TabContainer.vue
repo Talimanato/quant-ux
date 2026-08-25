@@ -16,11 +16,9 @@
 import DojoWidget from 'dojo/DojoWidget'
 import css from 'dojo/css'
 import lang from 'dojo/_base/lang'
-import window from 'dojo/_base/window'
 import on from 'dojo/on'
 import touch from 'dojo/touch'
 import Evented from 'dojo/Evented'
-import _Widget from 'common/_Widget'
 import DomBuilder from 'common/DomBuilder'
 
 

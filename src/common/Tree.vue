@@ -27,6 +27,10 @@ import TreeItem from 'common/TreeItem'
 export default {
   name: "Tree",
   props:['value', 'selection'],
+  // declared so the listeners do not fall through as native DOM listeners
+  // (e.g. the rename <input> fires a native 'select' event that would
+  // otherwise reach the LayerList handler with a non-array argument)
+  emits: ['select', 'open', 'locked', 'hidden', 'changeLabel', 'dnd'],
   mixins: [],
   data: function() {
     return {
@@ -53,7 +57,7 @@ export default {
       this.clearEdit()
       if (this.nodes[id]) {
         let node = this.nodes[id]
-        this.$set(node, 'label', txt)
+        node.label = txt
       } else {
         console.debug('cannot find ', id)
       }
@@ -63,14 +67,14 @@ export default {
       this.clearEdit()
       if (this.nodes[id]) {
         let node = this.nodes[id]
-        this.$set(node, 'editable', true)
+        node.editable = true
         this.emitSelection()
       }
     },
     clearEdit () {
        for (let id in this.nodes){
         const node = this.nodes[id]
-        this.$set(node, 'editable', false)
+        node.editable = false
       }
     },
     onSelect (id, expand) {
@@ -80,9 +84,9 @@ export default {
       if (this.nodes[id]) {
         const node = this.nodes[id]
         if (node.selected === true) {
-          this.$set(node, 'selected', false)
+          node.selected = false
         } else {
-          this.$set(node, 'selected', true)
+          node.selected = true
         }
         this.emitSelection()
       }
@@ -96,7 +100,7 @@ export default {
     clearSelection () {
       for (let id in this.nodes){
         const node = this.nodes[id]
-        this.$set(node, 'selected', false)
+        node.selected = false
       }
     },
     setSelection (ids) {
@@ -104,7 +108,7 @@ export default {
       for (let id in ids) {
         if (this.nodes[id]) {
           const node = this.nodes[id]
-          this.$set(node, 'selected', true)
+          node.selected = true
         } else {
           console.warn('setSelection(), No node with id', id)
         }
@@ -125,8 +129,7 @@ export default {
     }
   },
   watch: {
-    value (v) {
-      this.value = v
+    value () {
       this.initTree()
     },
     selection (v) {

@@ -136,7 +136,7 @@ export default {
       },
       onChangeView (selection) {
         for (let key in selection) {
-          this.$set(this.viewOptions, key, selection[key])
+          this.viewOptions[key] = selection[key]
         }
       },
        downloadCVS () {

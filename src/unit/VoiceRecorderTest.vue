@@ -308,7 +308,7 @@ export default {
       this.isRecording = false
     })
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.service) {
       this.service.destroy()
     }

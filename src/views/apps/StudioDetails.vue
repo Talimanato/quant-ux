@@ -139,7 +139,7 @@ export default {
             this.$emit("change", txt)
         },
         showMore () {
-            this.emit("more")
+            this.$emitDojo("more")
         },
         addComment () {
             this.hasNew = true
@@ -338,7 +338,6 @@ export default {
     },
     watch: {
         isLoaded (v) {
-            this.isLoaded = v;
             if (!v) {
                 this.comments = []
                 this.hasNew = false
@@ -347,17 +346,14 @@ export default {
         },
         app(v) {
             this.logger.info("watch", "app >", v);
-            this.app = v;
             this.onChange()
         },
         test(v) {
             this.logger.info("watch", "test >", v);
-            this.test = v;
             this.onChange()
         },
         events(v) {
             this.logger.log(1, "watch", "events >", v);
-            this.events = v;
             this.onChange()
         }
     },

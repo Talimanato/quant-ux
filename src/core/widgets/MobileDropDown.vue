@@ -347,7 +347,7 @@ export default {
       }
     },
 
-    beforeDestroy () {
+    beforeUnmount () {
       this.cleanUp();
     }
   },

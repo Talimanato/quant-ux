@@ -30,7 +30,7 @@
             <div class="MatcLayoutCols mb-32">
                 <textarea
                     class="form-control MatcTextAreaMedium MatcLayoutColGrow"
-                    v-model="test.description"
+                    v-model="localTest.description"
                     data-gramm_editor="false"
                     @change="onTestChange"
                     placeholder="Enter here a welcome message for your testers."
@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group ">
-            <CheckBox :value="test.recordOneTestPerUser" :label="getNLS('testSettingsRecordOneTestPerUser')" @change="setRecordOnePerUser"/>
+            <CheckBox :value="localTest.recordOneTestPerUser" :label="getNLS('testSettingsRecordOneTestPerUser')" @change="setRecordOnePerUser"/>
           </div>
 
         
@@ -68,7 +68,7 @@
               subtopic="testing.tasks"
               :hasNotifications="false"
             /></h3>
-          <TestSettings :pub="pub" :test="test" :app="app" @change="onTaskChange" :hash="hash"/>
+          <TestSettings :pub="pub" :test="localTest" :app="app" @change="onTaskChange" :hash="hash"/>
         </div>
   
     </section>
@@ -82,7 +82,7 @@
               :hasNotifications="false"
             /></h3>
           <div class="form-group ">
-            <CheckBox :value="test.transcribeVoice" :label="getNLS('testSettingsTranscribeVoice')" @change="setTranscribeVoice"/>
+            <CheckBox :value="localTest.transcribeVoice" :label="getNLS('testSettingsTranscribeVoice')" @change="setTranscribeVoice"/>
           </div>
         </div>  
     </section> -->
@@ -123,6 +123,7 @@ import Dialog from "common/Dialog"
 import touch from "dojo/touch"
 import DomBuilder from "common/DomBuilder"
 import CheckBox from "common/CheckBox";
+import topic from "dojo/topic";
 
 export default {
   name: "Test",
@@ -130,6 +131,8 @@ export default {
   props: ["app", "test", "annotation", "events", "hash"],
   data: function() {
     return {
+      localTest: {},
+      localEvents: [],
       sessionCount: 10,
       hasDragOver: false,
       isUploading: false,
@@ -173,19 +176,19 @@ export default {
       return "apps";
     },
     hasSplash () {
-      return this.test && this.test.splash
+      return this.localTest && this.localTest.splash
     },
     splashUrl () {
-      if (this.test && this.test.splash) {
-        return '/rest/images/' + this.hash + "/" + this.test.splash.url
+      if (this.localTest && this.localTest.splash) {
+        return '/rest/images/' + this.hash + "/" + this.localTest.splash.url
       }
       return ''
     },
     splashMessage () {
       if (this.isUploading) {
-        return this.getNLS('test.splash.uploading')
+        return this.getNLS('localTest.splash.uploading')
       }
-      return this.getNLS('test.splash.upload')
+      return this.getNLS('localTest.splash.upload')
     }
   },
   methods: {
@@ -219,7 +222,7 @@ export default {
           result = JSON.parse(result)
      
           if (result.uploads && result.uploads.length === 1) {
-            this.test.splash = result.uploads[0]
+            this.localTest.splash = result.uploads[0]
             this.onTestChange()
           }
           this.isUploading = false
@@ -228,21 +231,21 @@ export default {
       }
     },
     async onRemoveSplash () {
-      if (this.test.splash) {
-        await this.imageService.delete(this.app, this.test.splash)
+      if (this.localTest.splash) {
+        await this.imageService.delete(this.app, this.localTest.splash)
       }
-      delete this.test.splash
+      delete this.localTest.splash
       this.onTestChange()
     },
     onTaskChange(test) {
       this.$emit("change", lang.clone(test));
     },
     setRecordOnePerUser(value) {
-      this.test.recordOneTestPerUser = value
+      this.localTest.recordOneTestPerUser = value
       this.onTestChange()
     },
     setTranscribeVoice(value) {
-      this.test.transcribeVoice = value
+      this.localTest.transcribeVoice = value
       this.onTestChange()
     },
 
@@ -252,11 +255,11 @@ export default {
       } else {
         const res = await this.modelService.saveTestSettings(
           this.app.id,
-          this.test
+          this.localTest
         );
         if (res.status === "ok") {
           this.showSuccess("Saved");
-          this.$emit("change", lang.clone(this.test));
+          this.$emit("change", lang.clone(this.localTest));
         } else {
           this.showError("Could not save test settings");
         }
@@ -264,7 +267,7 @@ export default {
     },
     showBullet() {
       this.logger.log(-2, "show", "entry >");
-      const df = new DataFrame(this.events);
+      const df = new DataFrame(this.localEvents);
       this.sessionCount = df.unique("session");
       this.logger.log(0, "show", "exit", this.sessionCount);
     },
@@ -272,7 +275,7 @@ export default {
       this.logger.log(-1, "showSessions", "enter " + this.planGetTestCount());
       this.cleanUpTempListener()
       const app = this.app;
-      const list = this._getTestList(lang.clone(this.events), this.annotation, this.test);
+      const list = this._getTestList(lang.clone(this.localEvents), this.annotation, this.localTest);
       const urlPrefix = this.urlPrefix;
 
       const tbl = this.$new(Table);
@@ -361,11 +364,11 @@ export default {
     onChangeSessionLabel (value, row) {
       this.logger.log(-1,"onChangeSessionLabel", "enter >", value);
       const session = row.session
-      const sessionStart = this.events.find(e => e.type === 'SessionStart' && e.session === session)
+      const sessionStart = this.localEvents.find(e => e.type === 'SessionStart' && e.session === session)
       if (sessionStart) {
         sessionStart.label = value
         this.modelService.updateEvent(this.app.id, sessionStart)
-        this.$root.$emit("Success", "Test name was updated");
+        topic.publish("Success", "Test name was updated");
       } else {
         this.logger.warn("onChangeSessionLabel", "No session start >");
       }
@@ -494,11 +497,11 @@ export default {
     test(v) {
       // for some reason not called
       this.logger.info("watch", "test >", v);
-      this.test = v;
+      this.localTest = v || {};
     },
     events (v) {
       this.logger.info("watch", "events >", v);
-      this.events = v;
+      this.localEvents = v || [];
       this.showBullet();
       this.showSessions();
     }
@@ -507,6 +510,8 @@ export default {
     this.logger = new Logger("Test");
     this.modelService = Services.getModelService(this.$route);
     this.imageService = Services.getImageService()
+    this.localTest = this.test || {};
+    this.localEvents = this.events || [];
     this.showBullet();
     this.showSessions();
     this.logger.info("mounted", "exit");

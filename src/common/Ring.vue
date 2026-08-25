@@ -86,11 +86,11 @@ export default {
     },
 
     onHelp(e) {
-      this.emit("help", e);
+      this.$emitDojo("help", e);
     },
 
     onAction(e) {
-      this.emit("action", e);
+      this.$emitDojo("action", e);
     },
 
     setColor(c) {

@@ -56,6 +56,7 @@ import LanguagePicker from "page/LanguagePicker";
 // import AccountButton from 'page/AccountButton'
 import QIcon from 'page/QIcon'
 import _Tooltip from "common/_Tooltip";
+import topic from "dojo/topic";
 
 export default {
   name: "Header",
@@ -68,7 +69,6 @@ export default {
   watch: {
     'user'(v) {
       this.logger.log(6, 'watch', 'user >> ' + v.email)
-      this.user = v
     }
   },
   components: {
@@ -81,7 +81,7 @@ export default {
       this.logger.log(-1, "setLanguage", "entry", language);
       Services.getUserService().setLanguage(language)
       this.$root.$i18n.locale = language
-      this.$root.$emit('Success', this.$i18n.t('common.language-changed'))
+      topic.publish('Success', this.$i18n.t('common.language-changed'))
 
     },
 

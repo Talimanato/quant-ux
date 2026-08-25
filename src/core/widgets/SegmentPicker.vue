@@ -162,7 +162,7 @@ export default {
       }
     },
 
-    beforeDestroy: function() {
+    beforeUnmount: function() {
     }
   },
   mounted() {}

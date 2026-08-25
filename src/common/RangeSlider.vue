@@ -136,13 +136,13 @@ export default {
 				this.value.start = this._startStart - dif
 				this.value.end = this._startEnd - dif
 				this.setValue(this.value);
-				this.emit("change", this.value);
+				this.$emitDojo("change", this.value);
 			},
 
 			onBarRelease (e) {
 				this.stopEvent(e)
 				this.cleanup()
-				this.emit("change", this.value);
+				this.$emitDojo("change", this.value);
 			},
 
 			onDomPress (e){
@@ -163,7 +163,7 @@ export default {
 					this.correctRight(w);
 				}
 				this.setValue(this.value);
-				this.emit("change", this.value);
+				this.$emitDojo("change", this.value);
 			},
 
 			correctLeft (w){
@@ -237,7 +237,7 @@ export default {
 					this.correctRight(w);
 				}
 				this.setValue(this.value);
-				this.emit("change", this.value);
+				this.$emitDojo("change", this.value);
 			},
 
 			onHandleRelease (e){

@@ -122,7 +122,7 @@ export default {
     own(listener) {
       this._dojoListener.push(listener);
     },
-    emit(event, value1, value2, value3, value4, value5) {
+    $emitDojo(event, value1, value2, value3, value4, value5) {
       this.$emit(event, value1, value2, value3, value4, value5);
       if (this._dojoWidgetEventListener[event]) {
         let listeners = this._dojoWidgetEventListener[event];
@@ -354,13 +354,13 @@ export default {
      * Message sending stuff
      */
     showHint (msg) {
-      this.$root.$emit('Hint', msg)
+      topic.publish('Hint', msg)
     },
     showError (msg) {
-      this.$root.$emit('Error', msg)
+      topic.publish('Error', msg)
     },
     showSuccess (msg) {
-      this.$root.$emit('Success', msg)
+      topic.publish('Success', msg)
     },
     /**
      * Helper
@@ -461,7 +461,7 @@ export default {
     }
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     this.destroy()
     this._dojoCleanUpOwn();
     this._dojoCleanUpEvent();

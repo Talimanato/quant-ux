@@ -258,14 +258,14 @@ export default {
     },
 
     onCancel () {
-      this.emit("close", {});
+      this.$emitDojo("close", {});
     },
 
     onSave() {
       this.task.flow.sort((a, b) => {
         return a.time - b.time;
       });
-      this.emit("save", this.task);
+      this.$emitDojo("save", this.task);
     },
 
     getValue () {

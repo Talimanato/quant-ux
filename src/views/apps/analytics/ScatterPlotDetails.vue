@@ -6,61 +6,62 @@
                 <span class="MatcScatterPlotDetailsArrow"></span>
                 <div class="MatcScatterPlotDetailsContainer">
                     <table>
-                        <tr>
-                            <td>
-                                {{getNLS("analytics.distribution.details.duration")}}:
-                            </td>
-                            <td>
-                                {{Math.round(value.s.duration / 1000)}} s
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {{getNLS("analytics.distribution.details.interactions")}}:
-                            </td>
-                            <td>
-                                {{value.s.interactions}}
-                            </td>
-                        </tr>
-                        <!-- <tr>
-                            <td>
-                                {{getNLS("analytics.distribution.details.errors")}}:
-                            </td>
-                            <td>
-                                {{value.s.errors}}
-                            </td>
-                        </tr> -->
-                     
-                        <tr>
-                            <td>
-                                {{getNLS("analytics.distribution.details.screens")}} :
-                            </td>
-                            <td>
-                                {{value.s.screenUnique}} / {{value.s.screenLoads}}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {{getNLS("analytics.distribution.details.weirdness")}} :
-                            </td>
-                            <td>
-                                {{Math.round(value.s.weirdness * 100)}}
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {{getNLS("analytics.distribution.details.duration")}}:
+                                </td>
+                                <td>
+                                    {{Math.round(value.s.duration / 1000)}} s
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{getNLS("analytics.distribution.details.interactions")}}:
+                                </td>
+                                <td>
+                                    {{value.s.interactions}}
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>
+                                    {{getNLS("analytics.distribution.details.errors")}}:
+                                </td>
+                                <td>
+                                    {{value.s.errors}}
+                                </td>
+                            </tr> -->
+                         
+                            <tr>
+                                <td>
+                                    {{getNLS("analytics.distribution.details.screens")}} :
+                                </td>
+                                <td>
+                                    {{value.s.screenUnique}} / {{value.s.screenLoads}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{getNLS("analytics.distribution.details.weirdness")}} :
+                                </td>
+                                <td>
+                                    {{Math.round(value.s.weirdness * 100)}}
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>
-                                {{getNLS("analytics.distribution.details.tasks")}}:
-                            </td>
-                            <td>
-                                <div class="MatcScatterPlotDetailsTaskCntr">
-                                    <span v-for="t in value.tasks" :key="t" class="MatcScatterPlotDetailsTask">
-                                        {{t}}
-                                    </span>
-                                </div>
-                            </td>
-                        </tr>
-                       
+                            <tr>
+                                <td>
+                                    {{getNLS("analytics.distribution.details.tasks")}}:
+                                </td>
+                                <td>
+                                    <div class="MatcScatterPlotDetailsTaskCntr">
+                                        <span v-for="t in value.tasks" :key="t" class="MatcScatterPlotDetailsTask">
+                                            {{t}}
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                 

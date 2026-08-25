@@ -130,7 +130,7 @@ export default {
           if (this.downloader) {
             this.downloader.cleanUp()
           }
-          this.emit('cancel')
+          this.$emitDojo('cancel')
         },
 
         async onExport () {

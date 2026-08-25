@@ -85,7 +85,7 @@ export default {
         setIntValue (key, value) {
             this.isDirty = true
             this.value[key] = value
-            this.emit('changing', 'strokeDash', `${this.value.dash},${this.value.gap}`)
+            this.$emitDojo('changing', 'strokeDash', `${this.value.dash},${this.value.gap}`)
         },
 
         onReset () {
@@ -95,7 +95,7 @@ export default {
             this.isDirty = true
             this.dashSlider.setValue(0)
             this.gapSlider.setValue(0)    
-            this.emit('changing', 'strokeDash', `${this.value.dash},${this.value.gap}`)
+            this.$emitDojo('changing', 'strokeDash', `${this.value.dash},${this.value.gap}`)
         },
 
         setValue (value) {
@@ -116,7 +116,7 @@ export default {
 
 		onHide (){
 			if (this.isDirty) {
-                this.emit('change', 'strokeDash', `${this.value.dash},${this.value.gap}`)
+                this.$emitDojo('change', 'strokeDash', `${this.value.dash},${this.value.gap}`)
             }
 		},
 

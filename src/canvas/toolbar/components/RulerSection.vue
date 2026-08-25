@@ -85,7 +85,7 @@ export default {
             this.onChangeProps()
         },
         onChangeProps () {
-    	    this.emit("changeProps", {
+    	    this.$emitDojo("changeProps", {
                 sticky: this.sticky,
                 resize: this.resize
             });
@@ -112,7 +112,7 @@ export default {
             }
         },
         onChangeV () {
-            this.emit("changeV", this.v);
+            this.$emitDojo("changeV", this.v);
         },
         setValue (screen, ruler) {
             if (ruler.props) {

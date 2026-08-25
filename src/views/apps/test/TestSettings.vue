@@ -41,11 +41,11 @@
             </tbody>
           </table>
           <div class="form-group mb-32">
-            <CheckBox :value="test.showTaskInTest" :label="getNLS('testSettingsShowTaskInTest')" @change="onShowTaskChange"/>
+            <CheckBox :value="testSettings.showTaskInTest" :label="getNLS('testSettingsShowTaskInTest')" @change="onShowTaskChange"/>
               </div>
 
-          <div class="form-group" v-if="test.showTaskInTest" >
-            <CheckBox :value="test.showSuccessInTest" :label="getNLS('testSettingsShowSuccessInTest')" @change="onShowSuccessInTest"/>
+          <div class="form-group" v-if="testSettings.showTaskInTest" >
+            <CheckBox :value="testSettings.showSuccessInTest" :label="getNLS('testSettingsShowSuccessInTest')" @change="onShowSuccessInTest"/>
           </div>
 
           </div>
@@ -85,7 +85,7 @@ export default {
   mixins: [Util, Plan, DojoWidget],
   data: function() {
     return {
-      testSettings: null,
+      testSettings: {},
       appID: "",
       userID: ""
     };
@@ -173,12 +173,12 @@ export default {
     },
 
     onShowTaskChange (value) {
-      this.test.showTaskInTest = value
+      this.testSettings.showTaskInTest = value
       this.save();
     },
 
     onShowSuccessInTest (value) {
-      this.test.showSuccessInTest = value
+      this.testSettings.showSuccessInTest = value
       this.save();
     },
 
@@ -187,8 +187,9 @@ export default {
       var dialog = document.createElement("div");
       css.add(dialog, "MatchTaskRecorderDialog");
       var s = this.$new(TaskRecorder, { model: this.app, hash: this.hash });
+      const tasks = this.testSettings.tasks || []
       s.setValue({
-        name: "Task " + (this.test.tasks.length + 1),
+        name: "Task " + (tasks.length + 1),
         description: '',
         flow: [],
         strict: false
@@ -205,10 +206,10 @@ export default {
     async createNewTask(s, dialog) {
       let newTask = s.getValue()
       dialog.close()
-      if (!this.test.tasks) {
-        this.test.tasks = [];
+      if (!this.testSettings.tasks) {
+        this.testSettings.tasks = [];
       }
-      this.test.tasks.push({
+      this.testSettings.tasks.push({
         name: newTask.name,
         description: newTask.description,
         id: "t" + Date.now(),
@@ -256,7 +257,7 @@ export default {
 
     updateTask(s, dialog) {
       let updatedTask = s.getValue()
-      let task = this.test.tasks.find(t => t.id === updatedTask.id);
+      let task = this.testSettings.tasks.find(t => t.id === updatedTask.id);
       if (task) {
         task.name = updatedTask.name
         task.strict = updatedTask.strict
@@ -287,7 +288,7 @@ export default {
     },
 
     removeTask (i, d) {
-      this.test.tasks.splice(i, 1);
+      this.testSettings.tasks.splice(i, 1);
       d.close();
       this.save();
     },
@@ -298,17 +299,17 @@ export default {
       } else {
         let res = await Services.getModelService().saveTestSettings(
           this.app.id,
-          this.test
+          this.testSettings
         );
         if (res.status === "ok") {
           this.showSuccess("Saved..");
-          this.$emit("change", this.test);
+          this.$emit("change", this.testSettings);
         }
       }
     },
 
      _onEditFlow(task, i, node) {
-      var tasks = this.test.tasks;
+      var tasks = this.testSettings.tasks;
       for (let j = 0; j < tasks.length; j++) {
         var t = tasks[j];
         if (t.id == task.id) {
@@ -329,8 +330,7 @@ export default {
   watch: {
     test(v) {
       console.debug("TestSetting.watch() > test", v);
-      this.test = v;
-      this.setValue(v);
+      this.setValue(v || {});
     }
   },
   mounted() {}

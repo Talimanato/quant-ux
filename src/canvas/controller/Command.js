@@ -29,9 +29,22 @@ export default class Command extends BaseController{
     }
 
 	addChangeStack (modelChanges){
-        this.logger.log(1,"addChangeStack", "entry > " + modelChanges.length);
+        this.logger.log(1,"addChangeStack", "entry > " + (modelChanges ? modelChanges.length : 0));
 
 		//console.debug('addChangeStack', JSON.stringify(modelChanges, null, 2))
+
+		if (!this.commandChangeStack) {
+            this.logger.warn("addChangeStack", "commandChangeStack not initialized, calling initChangeStack");
+            this.initChangeStack(this.model ? this.model.id : null);
+        }
+
+		if (!this.commandChangeStack) {
+            this.commandChangeStack = {
+                appID: this.model ? this.model.id : null,
+                stack: [],
+                pos: -1
+            };
+        }
 
 		if(this.commandChangeStack.pos + 1 < this.commandChangeStack.stack.length){		
 			this.commandChangeStack.stack = this.commandChangeStack.stack.slice(0, this.commandChangeStack.pos + 1);
@@ -117,6 +130,9 @@ export default class Command extends BaseController{
 
 
 	compactChangeStack() {
+        if (!this.commandChangeStack) {
+            return;
+        }
         if (this.commandChangeStack.stack.length > this.changeStackMaxLength) {
 			this.commandChangeStack.stack.shift()
 			this.commandChangeStack.pos = Math.max(-1, this.commandChangeStack.pos - 1)
@@ -282,7 +298,7 @@ export default class Command extends BaseController{
 		} else {
 			this.postCommand(command);
 		}
-		this.emit("commandAdded", this.commandStack.stack.length);
+		this.$emitDojo("commandAdded", this.commandStack.stack.length);
 	}
 
 	onCommandDeleted (command){

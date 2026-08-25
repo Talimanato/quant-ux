@@ -16,6 +16,7 @@ import Logger from "common/Logger";
 import DomBuilder from "common/DomBuilder";
 import Dialog from "common/Dialog";
 import Services from "services/Services";
+import topic from "dojo/topic";
 
 export default {
   name: "Notification",
@@ -96,7 +97,7 @@ export default {
             let res = await Services.getUserService().contact(name, email, msg)
             if (res) {
                 hint.innerHTML = 'Thanks for contacting us! The dialog will close automatically'
-                this.$root.$emit('Success', 'Thanks for contacting us! The dialog will close automatically')
+                topic.publish('Success', 'Thanks for contacting us! The dialog will close automatically')
                 setTimeout(() => {
                     dialog.close()
                 }, 500)

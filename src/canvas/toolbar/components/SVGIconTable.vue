@@ -119,7 +119,7 @@ export default {
 				if(icon){
 					const svg = this.icons[icon]
                     css.add(node, 'selected')
-					this.emit('change', svg)
+					this.$emitDojo('change', svg)
 					this.$emit('change', svg)
 				}
 			}

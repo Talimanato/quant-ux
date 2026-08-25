@@ -114,13 +114,13 @@ export default {
 			onImportScreen (e) {
 				this.stopEvent(e);
 				this.hideDropDown();
-				this.emit("onImport", e);
+				this.$emitDojo("onImport", e);
 			},
 
 			onDesignGPT (e) {
 				this.stopEvent(e);
 				this.hideDropDown();
-				this.emit("onDesignGPT", e);
+				this.$emitDojo("onDesignGPT", e);
 			},
 
 
@@ -129,7 +129,7 @@ export default {
 				var screen = this.createEmptyScreen(0,0,"Screen");
 				screen._type = "Screen";
 				this.hideDropDown();
-				this.emit("onAdd", screen,e);
+				this.$emitDojo("onAdd", screen,e);
 			},
 
 
@@ -156,7 +156,7 @@ export default {
 					screens.push(screen);
 				}
 				this.hideDropDown();
-				this.emit("onUpload", screens,e);
+				this.$emitDojo("onUpload", screens,e);
 
 			},
 

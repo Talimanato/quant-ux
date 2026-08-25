@@ -112,14 +112,14 @@ export default {
         this.tokenLabel = this.tokenLabels[t]
       },
       onNew (name) {
-        this.emit('new', this.tokenType, this.cssProps, name)
+        this.$emitDojo('new', this.tokenType, this.cssProps, name)
         this.hideDropDown()
       },
       onSelectToken (designtoken) {
-        this.emit('link', designtoken, this.cssProps)
+        this.$emitDojo('link', designtoken, this.cssProps)
       },
       onUnLink () {
-        this.emit('unlink', this.currentDesignToken)
+        this.$emitDojo('unlink', this.currentDesignToken)
         this.hideDropDown()
       },
 

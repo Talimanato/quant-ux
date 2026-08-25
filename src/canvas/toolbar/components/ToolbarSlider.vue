@@ -55,7 +55,7 @@ export default {
 			if (this.isValid(this.input.value)){
 				if (this.input.value != this.value){
 					this.setValue(this.input.value);
-					this.emit("change", this.value);
+					this.$emitDojo("change", this.value);
 					this.input.select()
 					this.input.focus()
 				}
@@ -64,21 +64,21 @@ export default {
 
 		onMoveSlider (){
 			this.setValue(this.slider.getValue());
-			this.emit("changing", this.value);
+			this.$emitDojo("changing", this.value);
 			this.focusInput()
 		},
 
 		onChangeSlider (){
 			if (this.slider != this.slider.getValue()){
 				this.setValue(this.slider.getValue());
-				this.emit("change", this.value);
+				this.$emitDojo("change", this.value);
 				this.focusInput()
 			}
 		},
 
 		onClickSlider (){
 			this.setValue(this.slider.getValue());
-			this.emit("change", this.value);
+			this.$emitDojo("change", this.value);
 			this.focusInput()
 		},
 

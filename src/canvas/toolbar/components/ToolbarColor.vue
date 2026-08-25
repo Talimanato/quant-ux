@@ -132,7 +132,7 @@ export default {
 				let value = this.$refs.hexInput.value
 				if (/^#([0-9A-F]{3}){1,2}$/i.test(value)) {
 					this.ignoreReOpen = new Date().getTime()
-					this.emit("change", value);
+					this.$emitDojo("change", value);
 				} else {
 					console.debug('ToolbarColor.setColorHasHex() > Wrong value', value)
 					this.hexError = true
@@ -289,14 +289,14 @@ export default {
 		onTempColorSelected(value) {
 			if (this.value != value) {
 				this.tempValue = value;
-				this.emit("changing", value);
+				this.$emitDojo("changing", value);
 				this.setLabelColor(value);
 			}
 		},
 
 		flush() {
 			if (this.tempValue) {
-				this.emit("change", this.tempValue);
+				this.$emitDojo("change", this.tempValue);
 				this.tempValue = false
 			}
 		},

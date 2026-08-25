@@ -240,7 +240,7 @@ export default {
         },
 
         onCancel() {
-            this.$emit('cancel')
+            this.$emitDojo('cancel')
         },
 
         onKeyUp (e) {
@@ -259,7 +259,7 @@ export default {
 
         async onSave() {
             this.logger.log(-1, 'onSave', 'enter')
-            this.$emit('save', this.preview)
+            this.$emitDojo('save', this.preview)
         },
 
         async onCreatePreview() {

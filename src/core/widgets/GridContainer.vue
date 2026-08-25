@@ -128,7 +128,7 @@ export default {
           cell.y = y
           i++
           x += this.cellW + this.columnGap
-          //this.$set(this.cells, i, cell)
+
         }
         y += this.cellH + this.rowGap
       }

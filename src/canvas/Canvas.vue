@@ -768,8 +768,8 @@ export default {
 	},
 	mounted () {
 	},
-	beforeDestroy () {
-		this.logger.log(3,"beforeDestroy", "enter > ");
+	beforeUnmount () {
+		this.logger.log(3,"beforeUnmount", "enter > ");
 		this.destroy()
 	}
 }

@@ -451,7 +451,7 @@ export default {
 				var val = validation.getValue();
 				val = lang.clone(val);
 				val.type="date";
-				this.emit("propertyChange", "validation", val);
+				this.$emitDojo("propertyChange", "validation", val);
 
 				d.close();
 			} else {
@@ -464,7 +464,7 @@ export default {
 			val = lang.clone(val);
 			val.type = null;
 			val.date = null;
-			this.emit("propertyChange", "validation", val);
+			this.$emitDojo("propertyChange", "validation", val);
 		},
 
 		getErrorLabels (model){
@@ -626,7 +626,7 @@ export default {
 			}
 			ref["errorLabels"] = errorLabels;
 
-			this.emit("propertyChange", "refs", ref);
+			this.$emitDojo("propertyChange", "refs", ref);
 			d.close();
 		},
 
@@ -681,18 +681,18 @@ export default {
 			var val = this.getValidationModel(this.widget);
 			val = lang.clone(val);
 			val.required = value;
-			this.emit("propertyChange", "validation", val);
+			this.$emitDojo("propertyChange", "validation", val);
 		},
 
 		setIgnoreState (value) {
-			this.emit("propertyChange", "ignoreStateOnPageLoad", value);
+			this.$emitDojo("propertyChange", "ignoreStateOnPageLoad", value);
 		},
 
 		setValidationDataType (value){
 			var val = this.getValidationModel(this.widget);
 			val = lang.clone(val);
 			val.type = value;
-			this.emit("propertyChange", "validation", val);
+			this.$emitDojo("propertyChange", "validation", val);
 		},
 
 
@@ -729,7 +729,7 @@ export default {
 
 				var val = validation.getValue();
 				val = lang.clone(val);
-				this.emit("propertyChange", "validation", val);
+				this.$emitDojo("propertyChange", "validation", val);
 
 				d.close();
 			} else {

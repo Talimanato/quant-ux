@@ -49,11 +49,11 @@ export default {
 
       setAngle  (value) {
         this.value = value
-        this.emit("change", value);
+        this.$emitDojo("change", value);
       },
 
       setTempAngle  (value){
-        this.emit("changing", value);
+        this.$emitDojo("changing", value);
       },
 
       setValue (v){

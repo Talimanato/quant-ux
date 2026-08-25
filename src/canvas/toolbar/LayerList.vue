@@ -64,7 +64,7 @@ export default {
             onStartDND(e, d => {
 				const width = pos + d.x
                 this.layerListWidth = Math.min(Math.max(196, width), 400)
-				this.emit('onWidthChange', this.layerListWidth)           
+				this.$emitDojo('onWidthChange', this.layerListWidth)           
             })
         },
 
@@ -89,9 +89,9 @@ export default {
 
 		toggleTreeCollapsed (tree) {
 			if (this.collapsed[tree.id] !== null && this.collapsed[tree.id] != undefined) {
-				this.$set(this.collapsed, tree.id, !this.collapsed[tree.id])
+				this.collapsed[tree.id] = !this.collapsed[tree.id]
 			} else {
-				this.$set(this.collapsed, tree.id, true)
+				this.collapsed[tree.id] = true
 			}
 		},
 
@@ -132,6 +132,11 @@ export default {
 
 		onSelect (ids) {
 			this.logger.log(1, "onSelect", "entry > ", ids);
+			if (!Array.isArray(ids)) {
+				// guard against native DOM 'select' events (e.g. from the
+				// rename input) that may fall through as listeners
+				return
+			}
 			if (!this.canvas) {
 				return
 			}
@@ -757,11 +762,11 @@ export default {
 		changeName (box) {
 			let node = this.nodes[box.id]
 			if (node) {
-				this.$set(node, 'label', box.name)
+				node.label = box.name
 			} else {
 				let tree = this.trees.find(t => t.id === box.id)
 				if (tree) {
-					this.$set(tree, 'name', box.name)
+					tree.name = box.name
 				} else {
 					/**
 					 * This can happen for REST and OR nodes,
@@ -810,7 +815,7 @@ export default {
 					this.expandIfNeeded(id)
 					const node = this.nodes[id]
 					if (node) {
-						this.$set(node, 'selected', true)
+						node.selected = true
 					} else {
 						this.logger.log(4, 'selectNode', 'No node with id: ' + id)
 					}
@@ -856,7 +861,7 @@ export default {
 				this.openNodes[node.groupID] = true
 				node = this.nodes[node.groupID]
 				if (node) {
-					this.$set(node, 'open', true)
+					node.open = true
 				} 
 			}
 		},
@@ -877,8 +882,8 @@ export default {
 		unSelectNodes () {
 			for (let id in this.nodes) {
 				let node = this.nodes[id]
-				this.$set(node, 'selected', false)
-				//this.$set(node, 'scroll', false)
+				node.selected = false
+
 			}
 		},
 

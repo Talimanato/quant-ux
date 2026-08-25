@@ -629,8 +629,8 @@ export default {
     this.initFocusListener()
     this.logger.info("mounted", "exit > ");
   },
-  beforeDestroy() {
-    this.logger.log(-1, "beforeDestroy", "enter > ");
+  beforeUnmount() {
+    this.logger.log(-1, "beforeUnmount", "enter > ");
     window.removeEventListener('focus', this._focusListner);
     delete this._focusListner
   }

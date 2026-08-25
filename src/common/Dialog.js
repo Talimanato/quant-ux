@@ -279,7 +279,7 @@ export default class Dialog extends Evented {
 	}
 
 	close() {
-		this.emit("close", {});
+		this.$emitDojo("close", {});
 		if (this._dialogBackground) {
 			win.body().removeChild(this._dialogBackground);
 		}

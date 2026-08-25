@@ -309,7 +309,7 @@ export default {
 				}
 			}
 
-			this.emit("change")
+			this.$emitDojo("change")
 
 			return valid
 		},

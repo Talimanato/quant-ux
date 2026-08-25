@@ -115,7 +115,7 @@ export default {
      
         const selection = this.getSelectedElements()
         selection.forEach(element => {
-            this.$set(element, key, value)
+            element[key] = value
         })
     },
 
@@ -123,7 +123,7 @@ export default {
         this.logger.log(-1, 'styleSelection ', 'enter', key)
         const selection = this.getSelectedElements()
         selection.forEach(element => {
-           this.$set(element, key, value)
+           element[key] = value
         })
         this.onChange()
     },

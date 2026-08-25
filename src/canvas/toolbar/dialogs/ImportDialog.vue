@@ -201,7 +201,7 @@ export default {
         },
 
         onCancel () {
-            this.$emit('cancel')
+            this.$emitDojo('cancel')
         },
 
         async onSave () {
@@ -251,7 +251,7 @@ export default {
             if (this.figmaSelectedPage) {
                 this.tab = 'progress'
                 await this.parseFigma(this.figmaAcccessKey, this.figmaUrl, this.figmaModel, this.figmaSelectedPage, this.model.screenSize)
-                this.$emit('save')
+                this.$emitDojo('save')
             } else {
                 this.errorMSG = this.getNLS('dialog.import.error-figma-page')
             }
@@ -321,7 +321,7 @@ export default {
                     if (this.figmaPages.length === 1) {
                         this.figmaSelectedPage = this.figmaPages[0].id
                         await this.parseFigma(accessKey, url, this.figmaModel, this.figmaSelectedPage, this.model.screenSize)
-                        this.$emit('save')
+                        this.$emitDojo('save')
                     } else {
                         /**
                          * show the page selection page
@@ -510,7 +510,7 @@ export default {
             /**
              * Close dialog
              */
-            this.$emit('save')
+            this.$emitDojo('save')
         },
 
         getCanvasCenter () {
@@ -657,7 +657,7 @@ export default {
             // import app
             await this.controller.importApp(zipModel, this.getCanvasCenter())
             // close dialog
-            this.$emit('save')
+            this.$emitDojo('save')
         }
 
 

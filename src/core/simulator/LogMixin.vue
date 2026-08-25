@@ -118,7 +118,7 @@ export default {
 				}
 			}
 
-			this.emit("event", event);
+			this.$emitDojo("event", event);
 		},
 
 

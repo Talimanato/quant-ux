@@ -107,7 +107,7 @@ export default {
         contrast: Math.round(this.contrastSlider.getValue()),
         saturate: Math.round(this.satSlider.getValue())
       }
-      this.emit('changing', this.tempValue)
+      this.$emitDojo('changing', this.tempValue)
     },
 
     setValuesInWidgets(filter) {
@@ -149,13 +149,13 @@ export default {
 
     onHide() {
       if (this.tempValue) {
-        this.emit('change', this.tempValue)
+        this.$emitDojo('change', this.tempValue)
       }
     },
 
     onTempChange(v) {
       this.tempValue = v
-      this.emit('changing', this.tempValue)
+      this.$emitDojo('changing', this.tempValue)
     },
 
     onRemove(e) {

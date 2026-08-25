@@ -83,7 +83,7 @@ export default {
 		
 		onSelect:function(widget){
 		
-			this.emit("select", widget.id);
+			this.$emitDojo("select", widget.id);
 		},
 		
 		_getAbstract:function(string,max){

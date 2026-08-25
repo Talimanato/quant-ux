@@ -529,7 +529,7 @@ export default {
             this.dataBindingValues = v
             this.dataBindingFromExternal = true
             this.render(this.model, this.style, this._scaleX, this._scaleY)
-            this.emit('rerender', this)
+            this.$emitDojo('rerender', this)
         },
 
         getOutputDataBindingValue(index) {

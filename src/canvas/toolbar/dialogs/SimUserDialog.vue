@@ -148,14 +148,14 @@ export default {
             this.tab = 'openai'
             this.currentRound = 0
 
-            this.emit('done', events)
+            this.$emitDojo('done', events)
             this.$emit('done', events)
         },
         setModel (model) {
             this.model = model   
         },
         onCancel() {
-            this.emit('cancel')
+            this.$emitDojo('cancel')
         },
 
         onChangeOpenAIKey () {

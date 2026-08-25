@@ -217,19 +217,19 @@ export default {
         onChange (value) {
             this.hideDropDown();
             //this.setValue(value);
-            this.emit("change", this.selectedOption, value);
+            this.$emitDojo("change", this.selectedOption, value);
         },
 
 		onTempColorSelected (value){
 			if (this.value != value) {
 				this.tempValue = value;
-				this.emit("changing", this.selectedOption, value);
+				this.$emitDojo("changing", this.selectedOption, value);
 			}
 		},
 
 		flush  (){
 			if (this.tempValue && this.tempValue){
-				this.emit("change", this.selectedOption, this.tempValue);
+				this.$emitDojo("change", this.selectedOption, this.tempValue);
 				delete this.tempValue
 			}
 		}

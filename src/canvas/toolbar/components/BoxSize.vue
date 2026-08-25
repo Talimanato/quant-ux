@@ -112,7 +112,7 @@ export default {
 		},
 
 		toggleLinked () {
-			this.$set(this.linkedStatusByWidget, this.widgetId, !this.linkedStatusByWidget[this.widgetId])
+			this.linkedStatusByWidget[this.widgetId] = !this.linkedStatusByWidget[this.widgetId]
 		},
 
 		setCanvasSettings (settings) {
@@ -201,7 +201,7 @@ export default {
 				}
 
 				if (hasChange) {
-					this.emit("change", this.value);
+					this.$emitDojo("change", this.value);
 				}
 			}
 		},
@@ -273,7 +273,7 @@ export default {
 			};
 			this.widgetId = box.id ? box.id : 'No'
 			if (this.linkedStatusByWidget[this.widgetId] === undefined) {
-				this.$set(this.linkedStatusByWidget, this.widgetId, false)
+				this.linkedStatusByWidget[this.widgetId] = false
 			}
 			this.render();
 		},

@@ -23,6 +23,7 @@ import Logger from 'common/Logger'
 import ErrorDialog from 'common/ErrorDialog'
 import win from 'dojo/win'
 import css from 'dojo/css'
+import topic from 'dojo/topic'
 
 export default {
   name: "home",
@@ -99,9 +100,12 @@ export default {
       this.showErrorDetails(error, source)
       return true;
     };
-    this.$root.$on('MatcLogout', (user) => {
+    this.matcLogoutHandle = topic.subscribe('MatcLogout', (user) => {
         this.onLogout(user)
     })
+  },
+  beforeUnmount() {
+    if (this.matcLogoutHandle) this.matcLogoutHandle.remove()
   }
 };
 </script>

@@ -558,7 +558,7 @@ export default {
 					imports.push(appID)
 				}
 			}
-			this.emit('importsChange', imports)
+			this.$emitDojo('importsChange', imports)
 		},
 
 		updateImports () {
@@ -744,7 +744,7 @@ export default {
 			};
 			//this.model.lastCategory = "Icons";
 			this.hideDropDown();
-			this.emit("change", value ,e);
+			this.$emitDojo("change", value ,e);
 		},
 
 		onCreateSVGIcon (icon, e){
@@ -780,7 +780,7 @@ export default {
 			};
 			//this.model.lastCategory = "Icons";
 			this.hideDropDown();
-			this.emit("change", value ,e);
+			this.$emitDojo("change", value ,e);
 		},
 
 		renderImportedApp (app) {
@@ -1113,7 +1113,7 @@ export default {
 		onRemoveTemplate (template, e) {
 			this.stopEvent(e);
 			//this.hideDropDown();
-			this.emit("removeTemplate", template ,e);
+			this.$emitDojo("removeTemplate", template ,e);
 			setTimeout(() => {
 				this.showTemplates()
 			}, 100)
@@ -1129,7 +1129,7 @@ export default {
 				this.model.lastCategory = "WireFrame"
 			}
 			this.hideDropDown();
-			this.emit("change", value ,e);
+			this.$emitDojo("change", value ,e);
 		},
 
 		_getPreviewSize (child){

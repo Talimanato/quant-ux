@@ -147,7 +147,9 @@ export default {
 
 
 		hideDisButtons (){
-			this.alignmentBtn.hideDistribution()
+			if (this.alignmentBtn && this.alignmentBtn.hideDistribution) {
+				this.alignmentBtn.hideDistribution()
+			}
 		},
 
 		showDistButtons (ids){
@@ -220,7 +222,9 @@ export default {
 			css.add(this.screenBackDiv, "MatcToolbarSectionHidden");
 			css.add(this.screenParentsDiv, "MatcToolbarSectionHidden");
 			css.add(this.screenDownloadDiv, "MatcToolbarSectionHidden");
-			css.add(this.screenDownLoad.domNode, "MatcHidden")
+			if (this.screenDownLoad && this.screenDownLoad.domNode) {
+				css.add(this.screenDownLoad.domNode, "MatcHidden")
+			}
 			css.add(this.screenImageDiv, "MatcToolbarSectionHidden")
 
 			if(this.screenActionDiv){

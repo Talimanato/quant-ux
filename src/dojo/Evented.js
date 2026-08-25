@@ -26,7 +26,7 @@ export default class Evented {
         this._dojoCleanUpOwn()
     }
 
-    emit(event, value1, value2, value3, value4, value5) {
+    $emitDojo(event, value1, value2, value3, value4, value5) {
         if (this.$emit) {
             this.$emit(event, value1, value2, value3, value4, value5);
         }

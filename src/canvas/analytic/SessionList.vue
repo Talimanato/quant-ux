@@ -100,7 +100,7 @@ export default {
       const label = e.target.value.trim()
       s.label = label
       this.selectedSession = false
-      this.emit("label", s.session, label)
+      this.$emitDojo("label", s.session, label)
     },
     onEdit (s) {
       if (this.hasAiEvents) {
@@ -116,22 +116,22 @@ export default {
       }, 100)
     },
     onPlay(s,e) {
-      this.emit("play", s, e)
+      this.$emitDojo("play", s, e)
     },
     onMouseOver (s) {
-      this.emit("hover",s)
+      this.$emitDojo("hover",s)
     },
     onMouseOut () {
-      this.emit("hover", null)
+      this.$emitDojo("hover", null)
     },
     onChange () {
-      this.emit("select", this.selected)
+      this.$emitDojo("select", this.selected)
     },
     getSelected () {
       return this.selected
     },
     toggleSession (s) {
-      this.$set(this.selected, s.session, !this.selected[s.session])
+      this.selected[s.session] = !this.selected[s.session]
       this.$forceUpdate()
       this.onChange()
     },

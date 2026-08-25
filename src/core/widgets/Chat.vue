@@ -468,7 +468,7 @@ export default {
     }
   },
   mounted() {},
-  beforeDestroy() {
+  beforeUnmount() {
     if (this._responseTimer) {
       clearTimeout(this._responseTimer);
       this._responseTimer = null;

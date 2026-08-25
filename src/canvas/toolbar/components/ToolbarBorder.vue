@@ -51,7 +51,7 @@ export default {
 			var v = {};
 			v[key] = this._value[key];
 
-			this.emit("change", v);
+			this.$emitDojo("change", v);
 		},
 
 		setValue:function(v){
