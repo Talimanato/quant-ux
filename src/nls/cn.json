@@ -162,6 +162,7 @@
             "tab-axure": "Axure",
             "axure-drop-msg": "将 Axure 导出的 HTML 原型（ZIP）拖到此处",
             "axure-progress": "正在导入 Axure 原型…",
+            "axure-note": "注意：仅导入静态布局。交互、页面跳转、母版内容与自适应视图不会迁移。",
             "error-axure-parse": "无法导入 Axure 导出文件。请在 Axure RP 中通过「发布 > ZIP」导出，或压缩导出的 HTML 文件夹后重试。"
         },
         "login": {
@@ -470,7 +471,7 @@
             "details": {
                 "yLabel": "交互量",
                 "yLabelEast": "时间",
-                "xLabel": "交互量 | 时间",
+                "xLabel": "交互量 {'|'} 时间",
                 "bottom25Label": "交互量",
                 "bottom75Label": "时间"
             },

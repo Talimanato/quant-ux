@@ -44,6 +44,7 @@
                     </span>
                     <input type="file" @change="onAxureChange" >
                 </div>
+                <div class="MatcHint MatchImportDialogNote">{{ getNLS('dialog.import.axure-note')}}</div>
             </div>
 
 

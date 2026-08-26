@@ -313,6 +313,7 @@
             "tab-axure": "Axure",
             "axure-drop-msg": "Drop the Axure HTML export (ZIP) here",
             "axure-progress": "Importing Axure prototype...",
+            "axure-note": "Note: only the static layout is imported. Interactions, page links, masters and adaptive views are not migrated.",
             "error-axure-parse": "Could not import the Axure export. Please export from Axure RP via 'Publish > ZIP' or zip the generated HTML folder."
         },
         "export": {
@@ -619,7 +620,7 @@
             "details": {
                 "yLabel": "Interactions",
                 "yLabelEast": "Duration",
-                "xLabel": "Interactions | Duration",
+                "xLabel": "Interactions {'|'} Duration",
                 "bottom25Label": "Interactions",
                 "bottom75Label": "Duration"
             },

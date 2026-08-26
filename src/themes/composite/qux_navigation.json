@@ -3,7 +3,7 @@
     "id": "QXNavTopBar",
     "type": "Group",
     "_type": "Group",
-    "name": "Top Bar",
+    "name": "顶部导航栏",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 1040,
@@ -118,7 +118,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Home"
+          "label": "首页"
         },
         "has": {
           "label": true,
@@ -145,7 +145,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Features"
+          "label": "功能"
         },
         "has": {
           "label": true,
@@ -171,7 +171,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Pricing"
+          "label": "定价"
         },
         "has": {
           "label": true,
@@ -197,7 +197,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "About"
+          "label": "关于我们"
         },
         "has": {
           "label": true,
@@ -223,7 +223,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Sign in"
+          "label": "登录"
         },
         "has": {
           "label": true,
@@ -249,7 +249,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "Sign Up"
+          "label": "注册"
         },
         "has": {
           "backgroundColor": true,
@@ -313,7 +313,7 @@
     "id": "QXNavTopBarIcons",
     "type": "Group",
     "_type": "Group",
-    "name": "Top Bar with Icons",
+    "name": "顶栏（图标）",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 1064,
@@ -351,7 +351,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Dashboard"
+          "label": "仪表盘"
         },
         "has": {
           "label": true,
@@ -378,7 +378,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Home"
+          "label": "首页"
         },
         "has": {
           "label": true,
@@ -449,7 +449,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Analytics"
+          "label": "数据分析"
         },
         "has": {
           "label": true,
@@ -475,7 +475,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Customers"
+          "label": "客户"
         },
         "has": {
           "label": true,
@@ -501,7 +501,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Reports"
+          "label": "报表"
         },
         "has": {
           "label": true,
@@ -564,7 +564,7 @@
         "id": "QXNav17",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Search",
+        "name": "搜索",
         "x": 960,
         "y": 20,
         "w": 22,
@@ -696,7 +696,7 @@
     "id": "QXNavTopBarSearch",
     "type": "Group",
     "_type": "Group",
-    "name": "Top Bar with Search",
+    "name": "顶栏（搜索）",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 1032,
@@ -734,7 +734,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Workspace"
+          "label": "工作区"
         },
         "has": {
           "label": true,
@@ -798,7 +798,7 @@
         "id": "QXNav24",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Search",
+        "name": "搜索",
         "x": 260,
         "y": 27,
         "w": 18,
@@ -826,7 +826,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Search anything..."
+          "label": "搜索任何内容..."
         },
         "has": {
           "label": true,
@@ -894,7 +894,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "+ Invite"
+          "label": "+ 邀请"
         },
         "has": {
           "backgroundColor": true,
@@ -1002,7 +1002,7 @@
     "id": "QXNavSidebar",
     "type": "Group",
     "_type": "Group",
-    "name": "Sidebar",
+    "name": "侧边栏",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 232,
@@ -1117,7 +1117,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "MENU"
+          "label": "菜单"
         },
         "has": {
           "label": true,
@@ -1274,7 +1274,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Dashboard"
+          "label": "仪表盘"
         },
         "has": {
           "label": true,
@@ -1322,7 +1322,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Analytics"
+          "label": "数据分析"
         },
         "has": {
           "label": true,
@@ -1369,7 +1369,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Team"
+          "label": "团队"
         },
         "has": {
           "label": true,
@@ -1416,7 +1416,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Documents"
+          "label": "文档"
         },
         "has": {
           "label": true,
@@ -1486,7 +1486,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "PROJECTS"
+          "label": "项目"
         },
         "has": {
           "label": true,
@@ -1534,7 +1534,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Marketing"
+          "label": "市场"
         },
         "has": {
           "label": true,
@@ -1581,7 +1581,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Development"
+          "label": "开发"
         },
         "has": {
           "label": true,
@@ -1628,7 +1628,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Settings"
+          "label": "设置"
         },
         "has": {
           "label": true,
@@ -1811,7 +1811,7 @@
     "id": "QXNavSidebarDark",
     "type": "Group",
     "_type": "Group",
-    "name": "Sidebar Dark",
+    "name": "深色侧边栏",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 240,
@@ -2079,7 +2079,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Dashboard"
+          "label": "仪表盘"
         },
         "has": {
           "label": true,
@@ -2127,7 +2127,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Analytics"
+          "label": "数据分析"
         },
         "has": {
           "label": true,
@@ -2174,7 +2174,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Team"
+          "label": "团队"
         },
         "has": {
           "label": true,
@@ -2221,7 +2221,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Documents"
+          "label": "文档"
         },
         "has": {
           "label": true,
@@ -2268,7 +2268,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Calendar"
+          "label": "日历"
         },
         "has": {
           "label": true,
@@ -2315,7 +2315,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Settings"
+          "label": "设置"
         },
         "has": {
           "label": true,
@@ -2385,7 +2385,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Upgrade to Pro"
+          "label": "升级到 Pro"
         },
         "has": {
           "label": true,
@@ -2412,7 +2412,7 @@
         "h": 32,
         "z": null,
         "props": {
-          "label": "Unlock analytics and unlimited projects"
+          "label": "解锁分析与无限项目"
         },
         "has": {
           "label": true,
@@ -2439,7 +2439,7 @@
         "h": 30,
         "z": null,
         "props": {
-          "label": "Upgrade"
+          "label": "升级"
         },
         "has": {
           "backgroundColor": true,
@@ -2579,7 +2579,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Free plan"
+          "label": "免费方案"
         },
         "has": {
           "label": true,
@@ -2621,7 +2621,7 @@
     "id": "QXNavSidebarMini",
     "type": "Group",
     "_type": "Group",
-    "name": "Sidebar Mini",
+    "name": "迷你侧边栏",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 56,
@@ -2983,7 +2983,7 @@
     "id": "QXNavBreadcrumb",
     "type": "Group",
     "_type": "Group",
-    "name": "Breadcrumb Bar",
+    "name": "面包屑导航",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 1040,
@@ -3000,7 +3000,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Home"
+          "label": "首页"
         },
         "has": {
           "label": true,
@@ -3047,7 +3047,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Projects"
+          "label": "项目"
         },
         "has": {
           "label": true,
@@ -3094,7 +3094,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Website Redesign"
+          "label": "网站改版"
         },
         "has": {
           "label": true,
@@ -3135,14 +3135,14 @@
         "id": "QXNav102",
         "type": "Button",
         "_type": "Widget",
-        "name": "Share",
+        "name": "分享",
         "x": 952,
         "y": 0,
         "w": 88,
         "h": 36,
         "z": null,
         "props": {
-          "label": "Share"
+          "label": "分享"
         },
         "has": {
           "backgroundColor": true,
@@ -3206,7 +3206,7 @@
     "id": "QXNavTabs",
     "type": "Group",
     "_type": "Group",
-    "name": "Tab Bar",
+    "name": "标签导航栏",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 1040,
@@ -3223,7 +3223,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Overview"
+          "label": "概览"
         },
         "has": {
           "label": true,
@@ -3294,7 +3294,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Statistics"
+          "label": "统计"
         },
         "has": {
           "label": true,
@@ -3320,7 +3320,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Activity"
+          "label": "动态"
         },
         "has": {
           "label": true,
@@ -3346,7 +3346,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Files"
+          "label": "文件"
         },
         "has": {
           "label": true,
@@ -3372,7 +3372,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Settings"
+          "label": "设置"
         },
         "has": {
           "label": true,
@@ -3391,14 +3391,14 @@
         "id": "QXNav109",
         "type": "Button",
         "_type": "Widget",
-        "name": "Add",
+        "name": "添加",
         "x": 936,
         "y": 0,
         "w": 104,
         "h": 36,
         "z": null,
         "props": {
-          "label": "+ New Task"
+          "label": "+ 新建任务"
         },
         "has": {
           "backgroundColor": true,
@@ -3462,7 +3462,7 @@
     "id": "QXNavFooter",
     "type": "Group",
     "_type": "Group",
-    "name": "Footer",
+    "name": "页脚",
     "category": "Composite",
     "subcategory": "ANav",
     "w": 920,
@@ -3577,7 +3577,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "Open source design and research platform."
+          "label": "开源设计与研究平台。"
         },
         "has": {
           "label": true,
@@ -3597,14 +3597,14 @@
         "id": "QXNav114",
         "type": "Label",
         "_type": "Widget",
-        "name": "Product",
+        "name": "产品",
         "x": 280,
         "y": 0,
         "w": 120,
         "h": 18,
         "z": null,
         "props": {
-          "label": "Product"
+          "label": "产品"
         },
         "has": {
           "label": true,
@@ -3631,7 +3631,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Features"
+          "label": "功能"
         },
         "has": {
           "label": true,
@@ -3657,7 +3657,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Pricing"
+          "label": "定价"
         },
         "has": {
           "label": true,
@@ -3683,7 +3683,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Changelog"
+          "label": "更新日志"
         },
         "has": {
           "label": true,
@@ -3709,7 +3709,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Roadmap"
+          "label": "路线图"
         },
         "has": {
           "label": true,
@@ -3728,14 +3728,14 @@
         "id": "QXNav119",
         "type": "Label",
         "_type": "Widget",
-        "name": "Resources",
+        "name": "资源",
         "x": 440,
         "y": 0,
         "w": 120,
         "h": 18,
         "z": null,
         "props": {
-          "label": "Resources"
+          "label": "资源"
         },
         "has": {
           "label": true,
@@ -3762,7 +3762,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Documentation"
+          "label": "文档"
         },
         "has": {
           "label": true,
@@ -3788,7 +3788,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Tutorials"
+          "label": "教程"
         },
         "has": {
           "label": true,
@@ -3814,7 +3814,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Blog"
+          "label": "博客"
         },
         "has": {
           "label": true,
@@ -3840,7 +3840,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Support"
+          "label": "支持"
         },
         "has": {
           "label": true,
@@ -3859,14 +3859,14 @@
         "id": "QXNav124",
         "type": "Label",
         "_type": "Widget",
-        "name": "Company",
+        "name": "公司",
         "x": 600,
         "y": 0,
         "w": 120,
         "h": 18,
         "z": null,
         "props": {
-          "label": "Company"
+          "label": "公司"
         },
         "has": {
           "label": true,
@@ -3893,7 +3893,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "About"
+          "label": "关于我们"
         },
         "has": {
           "label": true,
@@ -3919,7 +3919,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Careers"
+          "label": "招聘"
         },
         "has": {
           "label": true,
@@ -3945,7 +3945,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Contact"
+          "label": "联系我们"
         },
         "has": {
           "label": true,
@@ -3971,7 +3971,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Legal"
+          "label": "法律条款"
         },
         "has": {
           "label": true,
@@ -3990,14 +3990,14 @@
         "id": "QXNav129",
         "type": "Label",
         "_type": "Widget",
-        "name": "Subscribe",
+        "name": "订阅",
         "x": 760,
         "y": 0,
         "w": 120,
         "h": 18,
         "z": null,
         "props": {
-          "label": "Subscribe"
+          "label": "订阅"
         },
         "has": {
           "label": true,
@@ -4024,7 +4024,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Newsletter"
+          "label": "邮件订阅"
         },
         "has": {
           "label": true,
@@ -4172,7 +4172,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "© 2026 Quant-UX. All rights reserved."
+          "label": "© 2026 Quant-UX 保留所有权利。"
         },
         "has": {
           "label": true,

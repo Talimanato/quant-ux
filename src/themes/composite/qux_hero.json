@@ -3,7 +3,7 @@
     "id": "QXHeroCentered",
     "type": "Group",
     "_type": "Group",
-    "name": "Hero Centered",
+    "name": "居中主视觉",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 820,
@@ -16,7 +16,7 @@
         "name": "Badge",
         "x": 470,
         "y": 24,
-        "w": 209,
+        "w": 111,
         "h": 22,
         "z": null,
         "props": {
@@ -60,11 +60,11 @@
         "name": "Badge Label",
         "x": 470,
         "y": 27,
-        "w": 209,
+        "w": 111,
         "h": 16,
         "z": null,
         "props": {
-          "label": "✦ New: AI design generation"
+          "label": "✦ 新功能：AI 设计生成"
         },
         "has": {
           "label": true,
@@ -91,7 +91,7 @@
         "h": 48,
         "z": null,
         "props": {
-          "label": "Design, test and iterate faster"
+          "label": "更快地设计、测试与迭代"
         },
         "has": {
           "label": true,
@@ -118,7 +118,7 @@
         "h": 48,
         "z": null,
         "props": {
-          "label": "Quant-UX is the open source design and research platform for teams that ship."
+          "label": "Quant-UX 是面向高效交付团队的开源设计与研究平台。"
         },
         "has": {
           "label": true,
@@ -145,7 +145,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Start for free"
+          "label": "免费开始"
         },
         "has": {
           "backgroundColor": true,
@@ -214,7 +214,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "View demo"
+          "label": "查看演示"
         },
         "has": {
           "backgroundColor": true,
@@ -415,7 +415,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Loved by 10,000+ designers"
+          "label": "深受 10,000+ 设计师喜爱"
         },
         "has": {
           "label": true,
@@ -485,7 +485,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "TRUSTED BY TEAMS AT"
+          "label": "受到以下团队信赖"
         },
         "has": {
           "label": true,
@@ -642,7 +642,7 @@
     "id": "QXHeroLeft",
     "type": "Group",
     "_type": "Group",
-    "name": "Hero with Image",
+    "name": "图文主视觉",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 1040,
@@ -655,7 +655,7 @@
         "name": "Eyebrow",
         "x": 0,
         "y": 20,
-        "w": 104,
+        "w": 69,
         "h": 22,
         "z": null,
         "props": {
@@ -699,11 +699,11 @@
         "name": "Eyebrow Label",
         "x": 0,
         "y": 23,
-        "w": 104,
+        "w": 69,
         "h": 16,
         "z": null,
         "props": {
-          "label": "v4.0 is here"
+          "label": "v4.0 来了"
         },
         "has": {
           "label": true,
@@ -730,7 +730,7 @@
         "h": 88,
         "z": null,
         "props": {
-          "label": "Prototype that feels like the real product"
+          "label": "接近真实产品的原型体验"
         },
         "has": {
           "label": true,
@@ -758,7 +758,7 @@
         "h": 48,
         "z": null,
         "props": {
-          "label": "Create interactive prototypes, run usability tests and gather feedback — all in one place."
+          "label": "创建交互原型、运行可用性测试、收集反馈 — 尽在一处。"
         },
         "has": {
           "label": true,
@@ -785,7 +785,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Get started"
+          "label": "开始使用"
         },
         "has": {
           "backgroundColor": true,
@@ -854,7 +854,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Learn more"
+          "label": "了解更多"
         },
         "has": {
           "backgroundColor": true,
@@ -994,7 +994,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Designers"
+          "label": "设计师"
         },
         "has": {
           "label": true,
@@ -1047,7 +1047,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Prototypes"
+          "label": "原型"
         },
         "has": {
           "label": true,
@@ -1100,7 +1100,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Uptime"
+          "label": "可用率"
         },
         "has": {
           "label": true,
@@ -1187,7 +1187,7 @@
         "name": "Float Card",
         "x": 840,
         "y": 300,
-        "w": 160,
+        "w": 90,
         "h": 22,
         "z": null,
         "props": {
@@ -1231,11 +1231,11 @@
         "name": "Float Card Label",
         "x": 840,
         "y": 303,
-        "w": 160,
+        "w": 90,
         "h": 16,
         "z": null,
         "props": {
-          "label": "✓ 38% faster testing"
+          "label": "✓ 测试提速 38%"
         },
         "has": {
           "label": true,
@@ -1257,7 +1257,7 @@
     "id": "QXHeroDark",
     "type": "Group",
     "_type": "Group",
-    "name": "Hero Dark with Form",
+    "name": "深色表单主视觉",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 1040,
@@ -1318,7 +1318,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "EARLY ACCESS"
+          "label": "抢先体验"
         },
         "has": {
           "label": true,
@@ -1345,7 +1345,7 @@
         "h": 96,
         "z": null,
         "props": {
-          "label": "The future of design research"
+          "label": "设计研究的未来"
         },
         "has": {
           "label": true,
@@ -1373,7 +1373,7 @@
         "h": 48,
         "z": null,
         "props": {
-          "label": "Join the waitlist and be the first to try collaborative testing."
+          "label": "加入等候名单，抢先体验协作测试。"
         },
         "has": {
           "label": true,
@@ -1400,7 +1400,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Join waitlist"
+          "label": "加入等候名单"
         },
         "has": {
           "backgroundColor": true,
@@ -1469,7 +1469,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "No credit card required"
+          "label": "无需信用卡"
         },
         "has": {
           "label": true,
@@ -1539,7 +1539,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Create account"
+          "label": "创建账号"
         },
         "has": {
           "label": true,
@@ -1566,7 +1566,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Start your free 14-day trial."
+          "label": "开始 14 天免费试用。"
         },
         "has": {
           "label": true,
@@ -1592,7 +1592,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Email"
+          "label": "邮箱"
         },
         "has": {
           "label": true,
@@ -1753,7 +1753,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Password"
+          "label": "密码"
         },
         "has": {
           "label": true,
@@ -1770,7 +1770,7 @@
       },
       {
         "id": "QXHero46",
-        "type": "Password",
+        "type": "密码",
         "_type": "Widget",
         "name": "F2",
         "x": 612,
@@ -1917,7 +1917,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Create account"
+          "label": "创建账号"
         },
         "has": {
           "backgroundColor": true,
@@ -1981,7 +1981,7 @@
     "id": "QXHeroFeatures3",
     "type": "Group",
     "_type": "Group",
-    "name": "Feature Row",
+    "name": "功能一行",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 1040,
@@ -2107,7 +2107,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Design"
+          "label": "设计"
         },
         "has": {
           "label": true,
@@ -2134,7 +2134,7 @@
         "h": 64,
         "z": null,
         "props": {
-          "label": "Draw screens with a rich widget set and smart snapping."
+          "label": "丰富控件与智能吸附，随手绘制页面。"
         },
         "has": {
           "label": true,
@@ -2161,7 +2161,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Learn more →"
+          "label": "了解更多 →"
         },
         "has": {
           "label": true,
@@ -2296,7 +2296,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Test"
+          "label": "测试"
         },
         "has": {
           "label": true,
@@ -2323,7 +2323,7 @@
         "h": 64,
         "z": null,
         "props": {
-          "label": "Run moderated and unmoderated usability tests."
+          "label": "运行主持型与非主持型可用性测试。"
         },
         "has": {
           "label": true,
@@ -2350,7 +2350,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Learn more →"
+          "label": "了解更多 →"
         },
         "has": {
           "label": true,
@@ -2485,7 +2485,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Analyze"
+          "label": "分析"
         },
         "has": {
           "label": true,
@@ -2512,7 +2512,7 @@
         "h": 64,
         "z": null,
         "props": {
-          "label": "Heatmaps, funnels and task analytics out of the box."
+          "label": "开箱即用的热力图、漏斗和任务分析。"
         },
         "has": {
           "label": true,
@@ -2539,7 +2539,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Learn more →"
+          "label": "了解更多 →"
         },
         "has": {
           "label": true,
@@ -2560,7 +2560,7 @@
     "id": "QXHeroFeatureSplit",
     "type": "Group",
     "_type": "Group",
-    "name": "Feature Split",
+    "name": "功能分栏",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 920,
@@ -2642,7 +2642,7 @@
         "h": 32,
         "z": null,
         "props": {
-          "label": "Everything included"
+          "label": "全部功能齐备"
         },
         "has": {
           "label": true,
@@ -2669,7 +2669,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "No plugins, no add-ons. Everything your team needs ships in the core."
+          "label": "无需插件和附加组件，团队所需功能全部内置于核心。"
         },
         "has": {
           "label": true,
@@ -2717,7 +2717,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Unlimited prototypes"
+          "label": "无限原型"
         },
         "has": {
           "label": true,
@@ -2764,7 +2764,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Collaborative editing"
+          "label": "协作编辑"
         },
         "has": {
           "label": true,
@@ -2811,7 +2811,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Usability test suite"
+          "label": "可用性测试套件"
         },
         "has": {
           "label": true,
@@ -2858,7 +2858,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Analytics & heatmaps"
+          "label": "分析与热力图"
         },
         "has": {
           "label": true,
@@ -2884,7 +2884,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "See all features"
+          "label": "查看全部功能"
         },
         "has": {
           "backgroundColor": true,
@@ -2948,7 +2948,7 @@
     "id": "QXHeroCTA",
     "type": "Group",
     "_type": "Group",
-    "name": "CTA Banner",
+    "name": "行动号召横幅",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 1040,
@@ -3009,7 +3009,7 @@
         "h": 32,
         "z": null,
         "props": {
-          "label": "Ready to start designing?"
+          "label": "准备好开始设计了吗？"
         },
         "has": {
           "label": true,
@@ -3036,7 +3036,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Free for individuals. No credit card required."
+          "label": "个人免费，无需信用卡。"
         },
         "has": {
           "label": true,
@@ -3062,7 +3062,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Create free account"
+          "label": "免费创建账号"
         },
         "has": {
           "backgroundColor": true,
@@ -3126,7 +3126,7 @@
     "id": "QXHeroPageHeader",
     "type": "Group",
     "_type": "Group",
-    "name": "Page Header",
+    "name": "页头",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 1040,
@@ -3143,7 +3143,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Home"
+          "label": "首页"
         },
         "has": {
           "label": true,
@@ -3190,7 +3190,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Team management"
+          "label": "团队管理"
         },
         "has": {
           "label": true,
@@ -3216,7 +3216,7 @@
         "h": 30,
         "z": null,
         "props": {
-          "label": "Team members"
+          "label": "团队成员"
         },
         "has": {
           "label": true,
@@ -3243,7 +3243,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Manage who can access your workspace and prototypes."
+          "label": "管理谁可以访问你的工作区和原型。"
         },
         "has": {
           "label": true,
@@ -3269,7 +3269,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "Export"
+          "label": "导出"
         },
         "has": {
           "backgroundColor": true,
@@ -3338,7 +3338,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "+ Invite"
+          "label": "+ 邀请"
         },
         "has": {
           "backgroundColor": true,
@@ -3446,7 +3446,7 @@
     "id": "QXHeroStats",
     "type": "Group",
     "_type": "Group",
-    "name": "Stats Row",
+    "name": "数据一行",
     "category": "Composite",
     "subcategory": "BHero",
     "w": 1000,
@@ -3490,7 +3490,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Monthly visitors"
+          "label": "月访问量"
         },
         "has": {
           "label": true,
@@ -3587,7 +3587,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Active users"
+          "label": "活跃用户"
         },
         "has": {
           "label": true,
@@ -3684,7 +3684,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Conversion rate"
+          "label": "转化率"
         },
         "has": {
           "label": true,
@@ -3781,7 +3781,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Retention"
+          "label": "留存率"
         },
         "has": {
           "label": true,

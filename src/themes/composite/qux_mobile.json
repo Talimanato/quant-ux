@@ -3,7 +3,7 @@
     "id": "QXMobileStatus",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile Status Bar",
+    "name": "手机状态栏",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 356,
@@ -105,7 +105,7 @@
     "id": "QXMobileHeader",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile Header",
+    "name": "手机顶栏",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 358,
@@ -143,7 +143,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Product Details"
+          "label": "商品详情"
         },
         "has": {
           "label": true,
@@ -163,7 +163,7 @@
         "id": "QXMobile6",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Cart",
+        "name": "购物车",
         "x": 328,
         "y": 16,
         "w": 24,
@@ -257,7 +257,7 @@
     "id": "QXMobileTabBar",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile Tab Bar",
+    "name": "手机标签栏",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 375,
@@ -339,7 +339,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Home"
+          "label": "首页"
         },
         "has": {
           "label": true,
@@ -387,7 +387,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Search"
+          "label": "搜索"
         },
         "has": {
           "label": true,
@@ -434,7 +434,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Saved"
+          "label": "已保存"
         },
         "has": {
           "label": true,
@@ -481,7 +481,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Profile"
+          "label": "个人资料"
         },
         "has": {
           "label": true,
@@ -502,7 +502,7 @@
     "id": "QXMobileList",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile List",
+    "name": "手机列表",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 359,
@@ -512,7 +512,7 @@
         "id": "QXMobile18",
         "type": "Box",
         "_type": "Widget",
-        "name": "Search",
+        "name": "搜索",
         "x": 16,
         "y": 0,
         "w": 343,
@@ -584,7 +584,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Search contacts"
+          "label": "搜索联系人"
         },
         "has": {
           "label": true,
@@ -610,7 +610,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "RECENTS"
+          "label": "最近"
         },
         "has": {
           "label": true,
@@ -708,7 +708,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Product Designer"
+          "label": "产品设计师"
         },
         "has": {
           "label": true,
@@ -870,7 +870,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Developer"
+          "label": "开发者"
         },
         "has": {
           "label": true,
@@ -1032,7 +1032,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Researcher"
+          "label": "研究员"
         },
         "has": {
           "label": true,
@@ -1194,7 +1194,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Marketing"
+          "label": "市场"
         },
         "has": {
           "label": true,
@@ -1356,7 +1356,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Owner"
+          "label": "所有者"
         },
         "has": {
           "label": true,
@@ -1398,7 +1398,7 @@
     "id": "QXMobileCards",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile Article Cards",
+    "name": "手机文章卡",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 359,
@@ -1503,7 +1503,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Design review: Q1 goals"
+          "label": "设计评审：Q1 目标"
         },
         "has": {
           "label": true,
@@ -1530,7 +1530,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Anna Müller · 3 min read"
+          "label": "Anna Müller · 3 分钟阅读"
         },
         "has": {
           "label": true,
@@ -1553,7 +1553,7 @@
         "name": "Tag 0",
         "x": 244,
         "y": 148,
-        "w": 62,
+        "w": 34,
         "h": 20,
         "z": null,
         "props": {
@@ -1597,11 +1597,11 @@
         "name": "Tag 0 Label",
         "x": 244,
         "y": 150,
-        "w": 62,
+        "w": 34,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Design"
+          "label": "设计"
         },
         "has": {
           "label": true,
@@ -1716,7 +1716,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Sprint 25 retrospective"
+          "label": "Sprint 25 复盘"
         },
         "has": {
           "label": true,
@@ -1743,7 +1743,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Team · 5 min read"
+          "label": "团队 · 5 分钟阅读"
         },
         "has": {
           "label": true,
@@ -1766,7 +1766,7 @@
         "name": "Tag 196",
         "x": 244,
         "y": 344,
-        "w": 48,
+        "w": 34,
         "h": 20,
         "z": null,
         "props": {
@@ -1810,11 +1810,11 @@
         "name": "Tag 196 Label",
         "x": 244,
         "y": 346,
-        "w": 48,
+        "w": 34,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Team"
+          "label": "团队"
         },
         "has": {
           "label": true,
@@ -1836,7 +1836,7 @@
     "id": "QXMobileProfile",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile Profile",
+    "name": "手机个人页",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 375,
@@ -1955,7 +1955,7 @@
         "id": "QXMobile61",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Edit",
+        "name": "编辑",
         "x": 328,
         "y": 16,
         "w": 20,
@@ -2010,7 +2010,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "@annamueller · Product Designer"
+          "label": "@annamueller · 产品设计师"
         },
         "has": {
           "label": true,
@@ -2036,7 +2036,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "Designing intuitive products. Coffee enthusiast. Based in Berlin."
+          "label": "设计直觉化产品。咖啡爱好者，现居柏林。"
         },
         "has": {
           "label": true,
@@ -2090,7 +2090,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Posts"
+          "label": "帖子"
         },
         "has": {
           "label": true,
@@ -2143,7 +2143,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Followers"
+          "label": "粉丝"
         },
         "has": {
           "label": true,
@@ -2196,7 +2196,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Following"
+          "label": "正在关注"
         },
         "has": {
           "label": true,
@@ -2215,14 +2215,14 @@
         "id": "QXMobile71",
         "type": "Button",
         "_type": "Widget",
-        "name": "Follow",
+        "name": "关注",
         "x": 48,
         "y": 344,
         "w": 155,
         "h": 40,
         "z": null,
         "props": {
-          "label": "Follow"
+          "label": "关注"
         },
         "has": {
           "backgroundColor": true,
@@ -2285,14 +2285,14 @@
         "id": "QXMobile72",
         "type": "Button",
         "_type": "Widget",
-        "name": "Message",
+        "name": "消息",
         "x": 172,
         "y": 344,
         "w": 155,
         "h": 40,
         "z": null,
         "props": {
-          "label": "Message"
+          "label": "消息"
         },
         "has": {
           "backgroundColor": true,
@@ -2551,7 +2551,7 @@
     "id": "QXMobileSheet",
     "type": "Group",
     "_type": "Group",
-    "name": "Mobile Bottom Sheet",
+    "name": "手机底部弹层",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 375,
@@ -2656,7 +2656,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Add attachment"
+          "label": "添加附件"
         },
         "has": {
           "label": true,
@@ -2769,7 +2769,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Take photo"
+          "label": "拍照"
         },
         "has": {
           "label": true,
@@ -2860,7 +2860,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Choose from gallery"
+          "label": "从相册选择"
         },
         "has": {
           "label": true,
@@ -2951,7 +2951,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Attach document"
+          "label": "添加附件"
         },
         "has": {
           "label": true,
@@ -3042,7 +3042,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Add link"
+          "label": "添加链接"
         },
         "has": {
           "label": true,
@@ -3061,14 +3061,14 @@
         "id": "QXMobile95",
         "type": "Button",
         "_type": "Widget",
-        "name": "Cancel",
+        "name": "取消",
         "x": 16,
         "y": 288,
         "w": 343,
         "h": 40,
         "z": null,
         "props": {
-          "label": "Cancel"
+          "label": "取消"
         },
         "has": {
           "backgroundColor": true,
@@ -3132,7 +3132,7 @@
     "id": "QXMobileOnboarding",
     "type": "Group",
     "_type": "Group",
-    "name": "Onboarding Screen",
+    "name": "引导页",
     "category": "Composite",
     "subcategory": "HMobile",
     "w": 360,
@@ -3142,14 +3142,14 @@
         "id": "QXMobile96",
         "type": "Label",
         "_type": "Widget",
-        "name": "Skip",
+        "name": "跳过",
         "x": 304,
         "y": 16,
         "w": 56,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Skip"
+          "label": "跳过"
         },
         "has": {
           "label": true,
@@ -3240,7 +3240,7 @@
         "h": 26,
         "z": null,
         "props": {
-          "label": "Design with ease"
+          "label": "轻松设计"
         },
         "has": {
           "label": true,
@@ -3267,7 +3267,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Create beautiful prototypes in minutes with smart components and templates."
+          "label": "用智能组件和模板，几分钟创建精美原型。"
         },
         "has": {
           "label": true,
@@ -3426,7 +3426,7 @@
         "h": 48,
         "z": null,
         "props": {
-          "label": "Get started"
+          "label": "开始使用"
         },
         "has": {
           "backgroundColor": true,

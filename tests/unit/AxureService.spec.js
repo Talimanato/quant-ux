@@ -191,6 +191,65 @@ test('flattenObjects - expands dynamic panel state objects', () => {
   expect(objects[1].location.y).toBe(320)
 })
 
+test('flattenObjects - offsets relative children of edge-aligned panel (x=0)', () => {
+  const objects = flattenObjects([{
+    id: 'panel',
+    type: 'Axure:DynamicPanel',
+    location: { x: 0, y: 100 },
+    size: { width: 375, height: 200 },
+    diagrams: [{
+      id: 'state1',
+      objects: [{
+        id: 'child',
+        type: 'Axure:Rectangle',
+        location: { x: 10, y: 20 },
+        size: { width: 100, height: 40 }
+      }]
+    }]
+  }])
+  expect(objects[1].location.x).toBe(10)
+  expect(objects[1].location.y).toBe(120)
+})
+
+test('flattenObjects - keeps page-absolute state children untouched', () => {
+  const objects = flattenObjects([{
+    id: 'panel',
+    type: 'Axure:DynamicPanel',
+    location: { x: 400, y: 300 },
+    size: { width: 200, height: 150 },
+    diagrams: [{
+      id: 'state1',
+      objects: [{
+        id: 'child',
+        type: 'Axure:Rectangle',
+        location: { x: 500, y: 400 },
+        size: { width: 100, height: 40 }
+      }]
+    }]
+  }])
+  expect(objects[1].location.x).toBe(500)
+  expect(objects[1].location.y).toBe(400)
+})
+
+test('flattenObjects - treats non-negative children as relative when panel has no size', () => {
+  const objects = flattenObjects([{
+    id: 'panel',
+    type: 'Axure:DynamicPanel',
+    location: { x: 30, y: 40 },
+    diagrams: [{
+      id: 'state1',
+      objects: [{
+        id: 'child',
+        type: 'Axure:Rectangle',
+        location: { x: 10, y: 20 },
+        size: { width: 100, height: 40 }
+      }]
+    }]
+  }])
+  expect(objects[1].location.x).toBe(40)
+  expect(objects[1].location.y).toBe(60)
+})
+
 test('buildModel - wires screens, widgets and image refs', () => {
   const page = extractPageData(DATA_JS)
   const model = buildModel([{ path: 'pages/login/data.js', data: page }])

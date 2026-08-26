@@ -3,7 +3,7 @@
     "id": "QXChartBar",
     "type": "Group",
     "_type": "Group",
-    "name": "Chart Card",
+    "name": "图表卡片",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -64,7 +64,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Weekly revenue"
+          "label": "周收入"
         },
         "has": {
           "label": true,
@@ -140,7 +140,7 @@
     "id": "QXChartBar2",
     "type": "Group",
     "_type": "Group",
-    "name": "Chart Card 2 Series",
+    "name": "双系列图表卡",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -201,7 +201,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Signups vs upgrades"
+          "label": "注册 vs 升级"
         },
         "has": {
           "label": true,
@@ -284,7 +284,7 @@
     "id": "QXChartLine",
     "type": "Group",
     "_type": "Group",
-    "name": "Line Chart Card",
+    "name": "折线图卡片",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -345,7 +345,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Active users"
+          "label": "活跃用户"
         },
         "has": {
           "label": true,
@@ -422,7 +422,7 @@
     "id": "QXChartHorizontal",
     "type": "Group",
     "_type": "Group",
-    "name": "Horizontal Chart Card",
+    "name": "横向条形图卡",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -483,7 +483,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Top pages"
+          "label": "热门页面"
         },
         "has": {
           "label": true,
@@ -559,7 +559,7 @@
     "id": "QXChartPie",
     "type": "Group",
     "_type": "Group",
-    "name": "Pie Chart Card",
+    "name": "饼图卡片",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -620,7 +620,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Device split"
+          "label": "设备分布"
         },
         "has": {
           "label": true,
@@ -718,7 +718,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Desktop"
+          "label": "桌面端"
         },
         "has": {
           "label": true,
@@ -788,7 +788,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Mobile"
+          "label": "移动端"
         },
         "has": {
           "label": true,
@@ -858,7 +858,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Tablet"
+          "label": "平板"
         },
         "has": {
           "label": true,
@@ -879,7 +879,7 @@
     "id": "QXChartRing",
     "type": "Group",
     "_type": "Group",
-    "name": "Ring Chart Card",
+    "name": "环形图卡片",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -940,7 +940,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Goal completion"
+          "label": "目标完成率"
         },
         "has": {
           "label": true,
@@ -1014,7 +1014,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "1,020 of 1,500 sessions"
+          "label": "1,020 / 1,500 次会话"
         },
         "has": {
           "label": true,
@@ -1035,7 +1035,7 @@
     "id": "QXChartLegend",
     "type": "Group",
     "_type": "Group",
-    "name": "Chart Card Legend",
+    "name": "带图例图表卡",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -1096,7 +1096,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Revenue by region"
+          "label": "各地区收入"
         },
         "has": {
           "label": true,
@@ -1220,7 +1220,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "EMEA"
+          "label": "欧洲/中东/非洲"
         },
         "has": {
           "label": true,
@@ -1290,7 +1290,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "AMER"
+          "label": "美洲"
         },
         "has": {
           "label": true,
@@ -1360,7 +1360,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "APAC"
+          "label": "亚太"
         },
         "has": {
           "label": true,
@@ -1381,7 +1381,7 @@
     "id": "QXChartSpark",
     "type": "Group",
     "_type": "Group",
-    "name": "Mini Chart Card",
+    "name": "迷你图表卡",
     "category": "Charts",
     "subcategory": "QCards",
     "w": 360,
@@ -1442,7 +1442,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Today’s visitors"
+          "label": "今日访问"
         },
         "has": {
           "label": true,

@@ -38,7 +38,7 @@ export default {
     return {
       isVisible: false,
       hasCarret: false,
-      language: 'en',
+      language: 'cn',
       languages: [
         {
           label: "English",
@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     selectedLanguage () {
-      const ln = this.languages.find(l => l.value === this.language)
+      const ln = this.languages.find(l => l.value === this.language || resolveLocale(l.value) === this.language)
       if (ln) {
         return ln.label
       }

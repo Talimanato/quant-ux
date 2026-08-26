@@ -1,12 +1,13 @@
 import AbstractService from './AbstractService'
 import Logger from 'common/Logger'
+import { resolveLocale } from 'services/Locale'
 import Keycloak from "keycloak-js";
 
 class KeyCloakService extends AbstractService{
 
     constructor () {
         super()
-        this.language = 'en'
+        this.language = 'cn'
         this.REFRESH_INTERVAl = 60 * 1000
         this.GUEST = {
             id: -1,
@@ -227,9 +228,9 @@ class KeyCloakService extends AbstractService{
     getLanguage () {
         let s = localStorage.getItem('quxLanguage')
         if (s) {
-            this.language = s
+            this.language = resolveLocale(s)
         } else {
-            this.language = navigator.language
+            this.language = resolveLocale(navigator.language)
         }
         return this.language
     }

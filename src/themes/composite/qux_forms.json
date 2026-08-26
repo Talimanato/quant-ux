@@ -3,7 +3,7 @@
     "id": "QXFormSearch",
     "type": "Group",
     "_type": "Group",
-    "name": "Search Bar",
+    "name": "搜索栏",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 480,
@@ -85,7 +85,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Search products, brands..."
+          "label": "搜索商品、品牌..."
         },
         "has": {
           "label": true,
@@ -111,7 +111,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "Search"
+          "label": "搜索"
         },
         "has": {
           "backgroundColor": true,
@@ -175,7 +175,7 @@
     "id": "QXFormNewsletter",
     "type": "Group",
     "_type": "Group",
-    "name": "Newsletter Signup",
+    "name": "邮件订阅",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 480,
@@ -236,7 +236,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Stay in the loop"
+          "label": "保持资讯畅通"
         },
         "has": {
           "label": true,
@@ -263,7 +263,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Monthly product updates. No spam."
+          "label": "每月产品更新，不发垃圾邮件。"
         },
         "has": {
           "label": true,
@@ -282,14 +282,14 @@
         "id": "QXForm7",
         "type": "TextBox",
         "_type": "Widget",
-        "name": "Email",
+        "name": "邮箱",
         "x": 24,
         "y": 78,
         "w": 300,
         "h": 40,
         "z": null,
         "props": {
-          "label": "Your email address",
+          "label": "你的邮箱地址",
           "placeholder": true
         },
         "has": {
@@ -417,14 +417,14 @@
         "id": "QXForm8",
         "type": "Button",
         "_type": "Widget",
-        "name": "Subscribe",
+        "name": "订阅",
         "x": 332,
         "y": 78,
         "w": 124,
         "h": 40,
         "z": null,
         "props": {
-          "label": "Subscribe"
+          "label": "订阅"
         },
         "has": {
           "backgroundColor": true,
@@ -493,7 +493,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Unsubscribe anytime."
+          "label": "随时可退订。"
         },
         "has": {
           "label": true,
@@ -514,7 +514,7 @@
     "id": "QXFormFilter",
     "type": "Group",
     "_type": "Group",
-    "name": "Filter Panel",
+    "name": "筛选面板",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 260,
@@ -575,7 +575,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Filters"
+          "label": "筛选条件"
         },
         "has": {
           "label": true,
@@ -602,7 +602,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Clear all"
+          "label": "全部清除"
         },
         "has": {
           "label": true,
@@ -672,7 +672,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Category"
+          "label": "分类"
         },
         "has": {
           "label": true,
@@ -700,7 +700,7 @@
         "z": null,
         "props": {
           "checked": true,
-          "label": "Sneakers",
+          "label": "运动鞋",
           "gap": 8
         },
         "has": {
@@ -747,7 +747,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Boots",
+          "label": "靴子",
           "gap": 8
         },
         "has": {
@@ -794,7 +794,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Sandals",
+          "label": "凉鞋",
           "gap": 8
         },
         "has": {
@@ -841,7 +841,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Loafers",
+          "label": "乐福鞋",
           "gap": 8
         },
         "has": {
@@ -931,7 +931,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Price range"
+          "label": "价格区间"
         },
         "has": {
           "label": true,
@@ -951,14 +951,14 @@
         "id": "QXForm21",
         "type": "TextBox",
         "_type": "Widget",
-        "name": "Min",
+        "name": "最小",
         "x": 20,
         "y": 252,
         "w": 100,
         "h": 36,
         "z": null,
         "props": {
-          "label": "Min",
+          "label": "最小",
           "placeholder": true
         },
         "has": {
@@ -1112,14 +1112,14 @@
         "id": "QXForm23",
         "type": "TextBox",
         "_type": "Widget",
-        "name": "Max",
+        "name": "最大",
         "x": 140,
         "y": 252,
         "w": 100,
         "h": 36,
         "z": null,
         "props": {
-          "label": "Max",
+          "label": "最大",
           "placeholder": true
         },
         "has": {
@@ -1291,14 +1291,14 @@
         "id": "QXForm25",
         "type": "Label",
         "_type": "Widget",
-        "name": "Rating",
+        "name": "评分",
         "x": 20,
         "y": 320,
         "w": 200,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Rating"
+          "label": "评分"
         },
         "has": {
           "label": true,
@@ -1326,9 +1326,9 @@
         "z": null,
         "props": {
           "options": [
-            "4 stars & up",
-            "3 stars & up",
-            "Any rating"
+            "4 星及以上",
+            "3 星及以上",
+            "任意评分"
           ]
         },
         "has": {
@@ -1432,14 +1432,14 @@
         "id": "QXForm28",
         "type": "Button",
         "_type": "Widget",
-        "name": "Reset",
+        "name": "重置",
         "x": 20,
         "y": 412,
         "w": 100,
         "h": 36,
         "z": null,
         "props": {
-          "label": "Reset"
+          "label": "重置"
         },
         "has": {
           "backgroundColor": true,
@@ -1501,14 +1501,14 @@
         "id": "QXForm29",
         "type": "Button",
         "_type": "Widget",
-        "name": "Apply",
+        "name": "应用",
         "x": 128,
         "y": 412,
         "w": 112,
         "h": 36,
         "z": null,
         "props": {
-          "label": "Apply filters"
+          "label": "应用筛选"
         },
         "has": {
           "backgroundColor": true,
@@ -1572,7 +1572,7 @@
     "id": "QXFormContact",
     "type": "Group",
     "_type": "Group",
-    "name": "Contact Form",
+    "name": "联系表单",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 420,
@@ -1633,7 +1633,7 @@
         "h": 24,
         "z": null,
         "props": {
-          "label": "Get in touch"
+          "label": "联系我们"
         },
         "has": {
           "label": true,
@@ -1660,7 +1660,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "We usually reply within 24 hours."
+          "label": "我们通常会在 24 小时内回复。"
         },
         "has": {
           "label": true,
@@ -1686,7 +1686,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "First name"
+          "label": "名"
         },
         "has": {
           "label": true,
@@ -1847,7 +1847,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Last name"
+          "label": "姓"
         },
         "has": {
           "label": true,
@@ -2008,7 +2008,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Email"
+          "label": "邮箱"
         },
         "has": {
           "label": true,
@@ -2169,7 +2169,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Subject"
+          "label": "主题"
         },
         "has": {
           "label": true,
@@ -2196,10 +2196,10 @@
         "z": null,
         "props": {
           "options": [
-            "General question",
-            "Sales",
-            "Support",
-            "Partnership"
+            "一般咨询",
+            "销售",
+            "支持",
+            "合作"
           ]
         },
         "has": {
@@ -2266,7 +2266,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Message"
+          "label": "消息"
         },
         "has": {
           "label": true,
@@ -2292,7 +2292,7 @@
         "h": 96,
         "z": null,
         "props": {
-          "label": "How can we help?",
+          "label": "我们能帮什么忙？",
           "placeholder": true
         },
         "has": {
@@ -2428,7 +2428,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Send me a copy of this message",
+          "label": "给我发送一份此消息的副本",
           "gap": 8
         },
         "has": {
@@ -2474,7 +2474,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Send message"
+          "label": "发送消息"
         },
         "has": {
           "backgroundColor": true,
@@ -2538,7 +2538,7 @@
     "id": "QXFormSettings",
     "type": "Group",
     "_type": "Group",
-    "name": "Settings Form",
+    "name": "设置表单",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 520,
@@ -2599,7 +2599,7 @@
         "h": 24,
         "z": null,
         "props": {
-          "label": "Account settings"
+          "label": "账号设置"
         },
         "has": {
           "label": true,
@@ -2670,7 +2670,7 @@
         "h": 32,
         "z": null,
         "props": {
-          "label": "Change photo"
+          "label": "更换照片"
         },
         "has": {
           "backgroundColor": true,
@@ -2739,7 +2739,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Full name"
+          "label": "姓名"
         },
         "has": {
           "label": true,
@@ -2900,7 +2900,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Email"
+          "label": "邮箱"
         },
         "has": {
           "label": true,
@@ -2919,7 +2919,7 @@
         "id": "QXForm52",
         "type": "TextBox",
         "_type": "Widget",
-        "name": "Email",
+        "name": "邮箱",
         "x": 32,
         "y": 256,
         "w": 456,
@@ -3061,7 +3061,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Timezone"
+          "label": "时区"
         },
         "has": {
           "label": true,
@@ -3088,9 +3088,9 @@
         "z": null,
         "props": {
           "options": [
-            "Europe/Berlin (GMT+1)",
-            "America/New_York (GMT-5)",
-            "Asia/Shanghai (GMT+8)"
+            "柏林 (GMT+1)",
+            "纽约 (GMT-5)",
+            "上海 (GMT+8)"
           ]
         },
         "has": {
@@ -3157,7 +3157,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Notifications"
+          "label": "通知"
         },
         "has": {
           "label": true,
@@ -3184,7 +3184,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Email notifications"
+          "label": "邮件通知"
         },
         "has": {
           "label": true,
@@ -3233,7 +3233,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Product updates"
+          "label": "产品更新"
         },
         "has": {
           "label": true,
@@ -3282,7 +3282,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Weekly digest"
+          "label": "每周摘要"
         },
         "has": {
           "label": true,
@@ -3368,14 +3368,14 @@
         "id": "QXForm63",
         "type": "Button",
         "_type": "Widget",
-        "name": "Cancel",
+        "name": "取消",
         "x": 300,
         "y": 516,
         "w": 88,
         "h": 36,
         "z": null,
         "props": {
-          "label": "Cancel"
+          "label": "取消"
         },
         "has": {
           "backgroundColor": true,
@@ -3444,7 +3444,7 @@
         "h": 36,
         "z": null,
         "props": {
-          "label": "Save changes"
+          "label": "保存更改"
         },
         "has": {
           "backgroundColor": true,
@@ -3508,7 +3508,7 @@
     "id": "QXFormSignup",
     "type": "Group",
     "_type": "Group",
-    "name": "Sign Up Form",
+    "name": "注册表单",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 400,
@@ -3569,7 +3569,7 @@
         "h": 24,
         "z": null,
         "props": {
-          "label": "Create your account"
+          "label": "创建你的账号"
         },
         "has": {
           "label": true,
@@ -3596,7 +3596,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Start your 14-day free trial."
+          "label": "开始 14 天免费试用。"
         },
         "has": {
           "label": true,
@@ -3622,7 +3622,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Full name"
+          "label": "姓名"
         },
         "has": {
           "label": true,
@@ -3783,7 +3783,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Email"
+          "label": "邮箱"
         },
         "has": {
           "label": true,
@@ -3802,7 +3802,7 @@
         "id": "QXForm71",
         "type": "TextBox",
         "_type": "Widget",
-        "name": "Email",
+        "name": "邮箱",
         "x": 32,
         "y": 184,
         "w": 336,
@@ -3944,7 +3944,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Password"
+          "label": "密码"
         },
         "has": {
           "label": true,
@@ -3961,7 +3961,7 @@
       },
       {
         "id": "QXForm73",
-        "type": "Password",
+        "type": "密码",
         "_type": "Widget",
         "name": "Pw",
         "x": 32,
@@ -3970,7 +3970,7 @@
         "h": 38,
         "z": null,
         "props": {
-          "label": "8+ characters",
+          "label": "至少 8 个字符",
           "placeholder": true,
           "cleartext": true,
           "cleartextHideLabel": "Hide",
@@ -4108,7 +4108,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Confirm password"
+          "label": "确认密码"
         },
         "has": {
           "label": true,
@@ -4125,7 +4125,7 @@
       },
       {
         "id": "QXForm75",
-        "type": "Password",
+        "type": "密码",
         "_type": "Widget",
         "name": "Pw2",
         "x": 32,
@@ -4134,7 +4134,7 @@
         "h": 38,
         "z": null,
         "props": {
-          "label": "Repeat password",
+          "label": "再次输入密码",
           "placeholder": true
         },
         "has": {
@@ -4283,7 +4283,7 @@
         "id": "QXForm77",
         "type": "LabeledCheckBox",
         "_type": "Widget",
-        "name": "Terms",
+        "name": "条款",
         "x": 32,
         "y": 380,
         "w": 336,
@@ -4291,7 +4291,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "I agree to the Terms and Privacy Policy",
+          "label": "我同意服务条款和隐私政策",
           "gap": 8
         },
         "has": {
@@ -4337,7 +4337,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Create account"
+          "label": "创建账号"
         },
         "has": {
           "backgroundColor": true,
@@ -4450,7 +4450,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "or continue with"
+          "label": "或使用以下方式"
         },
         "has": {
           "label": true,
@@ -4609,7 +4609,7 @@
     "id": "QXFormAddress",
     "type": "Group",
     "_type": "Group",
-    "name": "Address Form",
+    "name": "地址表单",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 420,
@@ -4670,7 +4670,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Shipping address"
+          "label": "收货地址"
         },
         "has": {
           "label": true,
@@ -4697,7 +4697,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Street address"
+          "label": "街道地址"
         },
         "has": {
           "label": true,
@@ -4723,7 +4723,7 @@
         "h": 38,
         "z": null,
         "props": {
-          "label": "Musterstraße 12",
+          "label": "示例路 12 号",
           "placeholder": true
         },
         "has": {
@@ -4858,7 +4858,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "City"
+          "label": "城市"
         },
         "has": {
           "label": true,
@@ -4884,7 +4884,7 @@
         "h": 38,
         "z": null,
         "props": {
-          "label": "Berlin",
+          "label": "柏林",
           "placeholder": true
         },
         "has": {
@@ -5019,7 +5019,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "ZIP"
+          "label": "邮编"
         },
         "has": {
           "label": true,
@@ -5180,7 +5180,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Country"
+          "label": "国家"
         },
         "has": {
           "label": true,
@@ -5207,11 +5207,11 @@
         "z": null,
         "props": {
           "options": [
-            "Germany",
-            "Austria",
-            "Switzerland",
-            "China",
-            "United States"
+            "德国",
+            "奥地利",
+            "瑞士",
+            "中国",
+            "美国"
           ]
         },
         "has": {
@@ -5278,7 +5278,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Phone"
+          "label": "电话"
         },
         "has": {
           "label": true,
@@ -5440,7 +5440,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Use as my default address",
+          "label": "设为我的默认地址",
           "gap": 8
         },
         "has": {
@@ -5486,7 +5486,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Save address"
+          "label": "保存地址"
         },
         "has": {
           "backgroundColor": true,
@@ -5550,7 +5550,7 @@
     "id": "QXFormPayment",
     "type": "Group",
     "_type": "Group",
-    "name": "Payment Form",
+    "name": "支付表单",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 400,
@@ -5611,7 +5611,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Payment details"
+          "label": "支付信息"
         },
         "has": {
           "label": true,
@@ -5701,7 +5701,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Card number"
+          "label": "卡号"
         },
         "has": {
           "label": true,
@@ -5862,7 +5862,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Name on card"
+          "label": "持卡人姓名"
         },
         "has": {
           "label": true,
@@ -6023,7 +6023,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Expiry"
+          "label": "有效期"
         },
         "has": {
           "label": true,
@@ -6049,7 +6049,7 @@
         "h": 38,
         "z": null,
         "props": {
-          "label": "MM / YY",
+          "label": "月 / 年",
           "placeholder": true
         },
         "has": {
@@ -6346,7 +6346,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Save card for future payments",
+          "label": "保存此卡用于后续支付",
           "gap": 8
         },
         "has": {
@@ -6392,7 +6392,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Pay $129.00"
+          "label": "支付 $129.00"
         },
         "has": {
           "backgroundColor": true,
@@ -6457,7 +6457,7 @@
     "id": "QXFormLoginCompact",
     "type": "Group",
     "_type": "Group",
-    "name": "Login Compact",
+    "name": "紧凑登录框",
     "category": "Composite",
     "subcategory": "DForm",
     "w": 320,
@@ -6518,7 +6518,7 @@
         "h": 22,
         "z": null,
         "props": {
-          "label": "Welcome back"
+          "label": "欢迎回来"
         },
         "has": {
           "label": true,
@@ -6545,7 +6545,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Log in to continue."
+          "label": "登录以继续"
         },
         "has": {
           "label": true,
@@ -6571,7 +6571,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Email"
+          "label": "邮箱"
         },
         "has": {
           "label": true,
@@ -6732,7 +6732,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Password"
+          "label": "密码"
         },
         "has": {
           "label": true,
@@ -6749,7 +6749,7 @@
       },
       {
         "id": "QXForm118",
-        "type": "Password",
+        "type": "密码",
         "_type": "Widget",
         "name": "P",
         "x": 28,
@@ -6897,7 +6897,7 @@
         "z": null,
         "props": {
           "checked": false,
-          "label": "Remember me",
+          "label": "记住我",
           "gap": 8
         },
         "has": {
@@ -6943,7 +6943,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Forgot?"
+          "label": "忘记密码？"
         },
         "has": {
           "label": true,
@@ -6969,7 +6969,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Log in"
+          "label": "登录"
         },
         "has": {
           "backgroundColor": true,

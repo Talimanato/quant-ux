@@ -3,7 +3,7 @@
     "id": "QXDashHeader",
     "type": "Group",
     "_type": "Group",
-    "name": "Dashboard Header",
+    "name": "仪表盘顶栏",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 1040,
@@ -20,7 +20,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Analytics overview"
+          "label": "数据分析概览"
         },
         "has": {
           "label": true,
@@ -47,7 +47,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Data from Jan 1 – Jan 31, 2026"
+          "label": "数据范围：2026 年 1 月 1 日 – 1 月 31 日"
         },
         "has": {
           "label": true,
@@ -74,9 +74,9 @@
         "z": null,
         "props": {
           "options": [
-            "Last 30 days",
-            "Last 7 days",
-            "This year"
+            "近 30 天",
+            "近 7 天",
+            "今年"
           ]
         },
         "has": {
@@ -136,7 +136,7 @@
         "id": "QXDash3",
         "type": "Button",
         "_type": "Widget",
-        "name": "Export",
+        "name": "导出",
         "x": 872,
         "y": 12,
         "w": 64,
@@ -226,14 +226,14 @@
         "id": "QXDash5",
         "type": "Button",
         "_type": "Widget",
-        "name": "Add",
+        "name": "添加",
         "x": 936,
         "y": 12,
         "w": 104,
         "h": 36,
         "z": null,
         "props": {
-          "label": "+ New report"
+          "label": "+ 新建报表"
         },
         "has": {
           "backgroundColor": true,
@@ -297,7 +297,7 @@
     "id": "QXDashKPIRow",
     "type": "Group",
     "_type": "Group",
-    "name": "KPI Row",
+    "name": "KPI 指标行",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 1044,
@@ -379,7 +379,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Revenue"
+          "label": "收入"
         },
         "has": {
           "label": true,
@@ -503,7 +503,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "vs last month"
+          "label": "较上月"
         },
         "has": {
           "label": true,
@@ -594,7 +594,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Active users"
+          "label": "活跃用户"
         },
         "has": {
           "label": true,
@@ -718,7 +718,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "vs last month"
+          "label": "较上月"
         },
         "has": {
           "label": true,
@@ -809,7 +809,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Churn"
+          "label": "流失率"
         },
         "has": {
           "label": true,
@@ -933,7 +933,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "vs last month"
+          "label": "较上月"
         },
         "has": {
           "label": true,
@@ -1148,7 +1148,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "vs last month"
+          "label": "较上月"
         },
         "has": {
           "label": true,
@@ -1169,7 +1169,7 @@
     "id": "QXDashBarCard",
     "type": "Group",
     "_type": "Group",
-    "name": "Bar Chart Card",
+    "name": "柱状图卡片",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 480,
@@ -1230,7 +1230,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Weekly sessions"
+          "label": "每周会话"
         },
         "has": {
           "label": true,
@@ -1329,8 +1329,8 @@
         "z": null,
         "props": {
           "options": [
-            "This week",
-            "This month"
+            "本周",
+            "本月"
           ]
         },
         "has": {
@@ -1446,7 +1446,7 @@
     "id": "QXDashLineCard",
     "type": "Group",
     "_type": "Group",
-    "name": "Line Chart Card",
+    "name": "折线图卡片",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 480,
@@ -1507,7 +1507,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Conversion rate"
+          "label": "转化率"
         },
         "has": {
           "label": true,
@@ -1606,8 +1606,8 @@
         "z": null,
         "props": {
           "options": [
-            "30 days",
-            "90 days"
+            "30 天",
+            "90 天"
           ]
         },
         "has": {
@@ -1724,7 +1724,7 @@
     "id": "QXDashRingCard",
     "type": "Group",
     "_type": "Group",
-    "name": "Ring Chart Card",
+    "name": "环形图卡片",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 320,
@@ -1785,7 +1785,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Traffic sources"
+          "label": "流量来源"
         },
         "has": {
           "label": true,
@@ -1903,7 +1903,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Organic search"
+          "label": "自然搜索"
         },
         "has": {
           "label": true,
@@ -2000,7 +2000,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Direct"
+          "label": "直接访问"
         },
         "has": {
           "label": true,
@@ -2097,7 +2097,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Referral"
+          "label": "引荐"
         },
         "has": {
           "label": true,
@@ -2194,7 +2194,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Social"
+          "label": "社交"
         },
         "has": {
           "label": true,
@@ -2242,7 +2242,7 @@
     "id": "QXDashPieCard",
     "type": "Group",
     "_type": "Group",
-    "name": "Pie Chart Card",
+    "name": "饼图卡片",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 320,
@@ -2303,7 +2303,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Device split"
+          "label": "设备分布"
         },
         "has": {
           "label": true,
@@ -2401,7 +2401,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Desktop"
+          "label": "桌面端"
         },
         "has": {
           "label": true,
@@ -2498,7 +2498,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Mobile"
+          "label": "移动端"
         },
         "has": {
           "label": true,
@@ -2595,7 +2595,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Tablet"
+          "label": "平板"
         },
         "has": {
           "label": true,
@@ -2643,7 +2643,7 @@
     "id": "QXDashTableCard",
     "type": "Group",
     "_type": "Group",
-    "name": "Table Card",
+    "name": "表格卡片",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 720,
@@ -2704,7 +2704,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Recent orders"
+          "label": "最近订单"
         },
         "has": {
           "label": true,
@@ -2724,7 +2724,7 @@
         "id": "QXDash76",
         "type": "Box",
         "_type": "Widget",
-        "name": "Search",
+        "name": "搜索",
         "x": 480,
         "y": 14,
         "w": 130,
@@ -2789,14 +2789,14 @@
         "id": "QXDash78",
         "type": "Button",
         "_type": "Widget",
-        "name": "Filter",
+        "name": "筛选",
         "x": 624,
         "y": 14,
         "w": 72,
         "h": 32,
         "z": null,
         "props": {
-          "label": "Filter"
+          "label": "筛选"
         },
         "has": {
           "backgroundColor": true,
@@ -2888,14 +2888,14 @@
               "isSearchable": false
             },
             {
-              "label": "Status",
+              "label": "状态",
               "width": 134,
               "isEditable": false,
               "isSortable": true,
               "isSearchable": false
             },
             {
-              "label": "Total",
+              "label": "合计",
               "width": 134,
               "isEditable": false,
               "isSortable": true,
@@ -2906,36 +2906,36 @@
             [
               "#10248",
               "Anna Müller",
-              "Jan 12, 2026",
-              "Paid",
+              "2026-1-12",
+              "已支付",
               "$129.00"
             ],
             [
               "#10247",
               "Peter Simmons",
-              "Jan 11, 2026",
-              "Pending",
+              "2026-1-11",
+              "待支付",
               "$89.00"
             ],
             [
               "#10246",
               "Julia Chen",
-              "Jan 10, 2026",
-              "Paid",
+              "2026-1-10",
+              "已支付",
               "$249.00"
             ],
             [
               "#10245",
               "Klaus Huber",
-              "Jan 8, 2026",
-              "Refunded",
+              "2026-1-8",
+              "已退款",
               "$59.00"
             ],
             [
               "#10244",
               "Maria Silva",
-              "Jan 6, 2026",
-              "Paid",
+              "2026-1-6",
+              "已支付",
               "$179.00"
             ]
           ]
@@ -2981,7 +2981,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Showing 1–5 of 128"
+          "label": "显示第 1–5 条，共 128 条"
         },
         "has": {
           "label": true,
@@ -3211,7 +3211,7 @@
     "id": "QXDashProgress",
     "type": "Group",
     "_type": "Group",
-    "name": "Progress Panel",
+    "name": "进度面板",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 320,
@@ -3272,7 +3272,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Project progress"
+          "label": "项目进度"
         },
         "has": {
           "label": true,
@@ -3299,7 +3299,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Design system"
+          "label": "设计系统"
         },
         "has": {
           "label": true,
@@ -3390,7 +3390,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Mobile app"
+          "label": "移动应用"
         },
         "has": {
           "label": true,
@@ -3481,7 +3481,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Website"
+          "label": "网站"
         },
         "has": {
           "label": true,
@@ -3572,7 +3572,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "API docs"
+          "label": "API 文档"
         },
         "has": {
           "label": true,
@@ -3658,7 +3658,7 @@
     "id": "QXDashActivity",
     "type": "Group",
     "_type": "Group",
-    "name": "Activity Feed",
+    "name": "动态信息流",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 360,
@@ -3719,7 +3719,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Activity"
+          "label": "动态"
         },
         "has": {
           "label": true,
@@ -3746,7 +3746,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "See all"
+          "label": "查看全部"
         },
         "has": {
           "label": true,
@@ -3837,7 +3837,7 @@
         "h": 34,
         "z": null,
         "props": {
-          "label": "Anna commented on “Checkout flow”"
+          "label": "Anna 评论了“结算流程”"
         },
         "has": {
           "label": true,
@@ -3864,7 +3864,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "10:42 AM"
+          "label": "10:42"
         },
         "has": {
           "label": true,
@@ -3955,7 +3955,7 @@
         "h": 34,
         "z": null,
         "props": {
-          "label": "Peter uploaded “Brand-assets-v3.zip”"
+          "label": "Peter 上传了“Brand-assets-v3.zip”"
         },
         "has": {
           "label": true,
@@ -3982,7 +3982,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "9:15 AM"
+          "label": "09:15"
         },
         "has": {
           "label": true,
@@ -4073,7 +4073,7 @@
         "h": 34,
         "z": null,
         "props": {
-          "label": "Maria invited 2 new members"
+          "label": "Maria 邀请了 2 位新成员"
         },
         "has": {
           "label": true,
@@ -4100,7 +4100,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Yesterday"
+          "label": "昨天"
         },
         "has": {
           "label": true,
@@ -4191,7 +4191,7 @@
         "h": 34,
         "z": null,
         "props": {
-          "label": "Sprint 24 goals completed"
+          "label": "Sprint 24 目标已完成"
         },
         "has": {
           "label": true,
@@ -4218,7 +4218,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Yesterday"
+          "label": "昨天"
         },
         "has": {
           "label": true,
@@ -4309,7 +4309,7 @@
         "h": 34,
         "z": null,
         "props": {
-          "label": "Integration settings changed"
+          "label": "集成设置已变更"
         },
         "has": {
           "label": true,
@@ -4336,7 +4336,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Monday"
+          "label": "周一"
         },
         "has": {
           "label": true,
@@ -4357,7 +4357,7 @@
     "id": "QXDashCalendar",
     "type": "Group",
     "_type": "Group",
-    "name": "Calendar Month",
+    "name": "月历",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 320,
@@ -4418,7 +4418,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "January 2026"
+          "label": "2026 年 1 月"
         },
         "has": {
           "label": true,
@@ -4487,7 +4487,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Mo"
+          "label": "一"
         },
         "has": {
           "label": true,
@@ -4514,7 +4514,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Tu"
+          "label": "二"
         },
         "has": {
           "label": true,
@@ -4541,7 +4541,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "We"
+          "label": "三"
         },
         "has": {
           "label": true,
@@ -4568,7 +4568,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Th"
+          "label": "四"
         },
         "has": {
           "label": true,
@@ -4595,7 +4595,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Fr"
+          "label": "五"
         },
         "has": {
           "label": true,
@@ -4622,7 +4622,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Sa"
+          "label": "六"
         },
         "has": {
           "label": true,
@@ -4649,7 +4649,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Su"
+          "label": "日"
         },
         "has": {
           "label": true,
@@ -5758,7 +5758,7 @@
     "id": "QXDashKanban",
     "type": "Group",
     "_type": "Group",
-    "name": "Kanban Column",
+    "name": "看板列",
     "category": "Composite",
     "subcategory": "EDash",
     "w": 244,
@@ -5775,7 +5775,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "In Progress"
+          "label": "进行中"
         },
         "has": {
           "label": true,
@@ -5866,7 +5866,7 @@
         "id": "QXDash175",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Add",
+        "name": "添加",
         "x": 224,
         "y": 0,
         "w": 20,
@@ -5938,7 +5938,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Fix login redirect on Safari"
+          "label": "修复 Safari 登录跳转"
         },
         "has": {
           "label": true,
@@ -5962,7 +5962,7 @@
         "name": "Tag 32",
         "x": 24,
         "y": 70,
-        "w": 41,
+        "w": 34,
         "h": 22,
         "z": null,
         "props": {
@@ -6006,11 +6006,11 @@
         "name": "Tag 32 Label",
         "x": 24,
         "y": 73,
-        "w": 41,
+        "w": 34,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Bug"
+          "label": "缺陷"
         },
         "has": {
           "label": true,
@@ -6037,7 +6037,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "⏱ Jan 14"
+          "label": "⏱ 1 月 14 日"
         },
         "has": {
           "label": true,
@@ -6151,7 +6151,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Update pricing page copy"
+          "label": "更新定价页文案"
         },
         "has": {
           "label": true,
@@ -6175,7 +6175,7 @@
         "name": "Tag 140",
         "x": 24,
         "y": 178,
-        "w": 69,
+        "w": 34,
         "h": 22,
         "z": null,
         "props": {
@@ -6219,11 +6219,11 @@
         "name": "Tag 140 Label",
         "x": 24,
         "y": 181,
-        "w": 69,
+        "w": 34,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Content"
+          "label": "内容"
         },
         "has": {
           "label": true,
@@ -6250,7 +6250,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "⏱ Jan 16"
+          "label": "⏱ 1 月 16 日"
         },
         "has": {
           "label": true,
@@ -6364,7 +6364,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Setup CI for e2e tests"
+          "label": "为端到端测试搭建 CI"
         },
         "has": {
           "label": true,
@@ -6388,7 +6388,7 @@
         "name": "Tag 248",
         "x": 24,
         "y": 286,
-        "w": 62,
+        "w": 34,
         "h": 22,
         "z": null,
         "props": {
@@ -6432,11 +6432,11 @@
         "name": "Tag 248 Label",
         "x": 24,
         "y": 289,
-        "w": 62,
+        "w": 34,
         "h": 16,
         "z": null,
         "props": {
-          "label": "DevOps"
+          "label": "运维"
         },
         "has": {
           "label": true,
@@ -6463,7 +6463,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "⏱ Jan 18"
+          "label": "⏱ 1 月 18 日"
         },
         "has": {
           "label": true,
@@ -6577,7 +6577,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "+ Add card"
+          "label": "+ 添加卡片"
         },
         "has": {
           "label": true,

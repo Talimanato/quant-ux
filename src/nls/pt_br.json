@@ -100,6 +100,7 @@
             "tab-axure": "Axure",
             "axure-drop-msg": "Arraste o export HTML do Axure (ZIP) aqui",
             "axure-progress": "Importando protótipo do Axure...",
+            "axure-note": "Nota: apenas o layout estático é importado. Interações, links de página, masters e visualizações adaptativas não são migrados.",
             "error-axure-parse": "Não foi possível importar o export do Axure. Exporte via 'Publish > ZIP' ou compacte a pasta HTML gerada."
         },
         "export": {
@@ -256,7 +257,7 @@
             "details": {
                 "yLabel": "Interações",
                 "yLabelEast": "Duração",
-                "xLabel": "Interações | Duração",
+                "xLabel": "Interações {'|'} Duração",
                 "bottom25Label": "Interações",
                 "bottom75Label": "Duração"
             },

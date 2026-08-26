@@ -3,7 +3,7 @@
     "id": "QXListInbox",
     "type": "Group",
     "_type": "Group",
-    "name": "Inbox List",
+    "name": "收件箱列表",
     "category": "Composite",
     "subcategory": "FList",
     "w": 520,
@@ -125,7 +125,7 @@
         "id": "QXList3",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Delete",
+        "name": "删除",
         "x": 84,
         "y": 22,
         "w": 20,
@@ -153,7 +153,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Inbox (2)"
+          "label": "收件箱（2）"
         },
         "has": {
           "label": true,
@@ -339,7 +339,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Design review notes for v3"
+          "label": "v3 设计评审笔记"
         },
         "has": {
           "label": true,
@@ -571,7 +571,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "[quant-ux] PR #482 merged"
+          "label": "[quant-ux] PR #482 已合并"
         },
         "has": {
           "label": true,
@@ -802,7 +802,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Re: Contract update"
+          "label": "回复：合同更新"
         },
         "has": {
           "label": true,
@@ -828,7 +828,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Yesterday"
+          "label": "昨天"
         },
         "has": {
           "label": true,
@@ -1007,7 +1007,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Newsletter"
+          "label": "邮件订阅"
         },
         "has": {
           "label": true,
@@ -1033,7 +1033,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Weekly design digest"
+          "label": "每周设计摘要"
         },
         "has": {
           "label": true,
@@ -1059,7 +1059,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Tue"
+          "label": "周二"
         },
         "has": {
           "label": true,
@@ -1264,7 +1264,7 @@
         "h": 15,
         "z": null,
         "props": {
-          "label": "Lunch tomorrow?"
+          "label": "明天一起午饭？"
         },
         "has": {
           "label": true,
@@ -1290,7 +1290,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Mon"
+          "label": "周一"
         },
         "has": {
           "label": true,
@@ -1332,7 +1332,7 @@
     "id": "QXListChat",
     "type": "Group",
     "_type": "Group",
-    "name": "Chat Window",
+    "name": "聊天窗口",
     "category": "Composite",
     "subcategory": "FList",
     "w": 400,
@@ -1501,14 +1501,14 @@
         "id": "QXList44",
         "type": "Label",
         "_type": "Widget",
-        "name": "Status",
+        "name": "状态",
         "x": 60,
         "y": 34,
         "w": 160,
         "h": 14,
         "z": null,
         "props": {
-          "label": "● Online"
+          "label": "● 在线"
         },
         "has": {
           "label": true,
@@ -1620,7 +1620,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Hey! How is the redesign going?"
+          "label": "嗨！改版进展如何？"
         },
         "has": {
           "label": true,
@@ -1690,7 +1690,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Going great! I finished the dashboard screens today ✨"
+          "label": "很顺利！今天完成了仪表盘页面 ✨"
         },
         "has": {
           "label": true,
@@ -1761,7 +1761,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Can you share them?"
+          "label": "能发我看看吗？"
         },
         "has": {
           "label": true,
@@ -1831,7 +1831,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Sure, one sec!"
+          "label": "好，稍等！"
         },
         "has": {
           "label": true,
@@ -1857,7 +1857,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Anna is typing..."
+          "label": "Anna 正在输入..."
         },
         "has": {
           "label": true,
@@ -1927,7 +1927,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Write a message..."
+          "label": "输入消息..."
         },
         "has": {
           "label": true,
@@ -2034,7 +2034,7 @@
     "id": "QXListNotifications",
     "type": "Group",
     "_type": "Group",
-    "name": "Notification Panel",
+    "name": "通知面板",
     "category": "Composite",
     "subcategory": "FList",
     "w": 360,
@@ -2095,7 +2095,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Notifications"
+          "label": "通知"
         },
         "has": {
           "label": true,
@@ -2122,7 +2122,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Mark all as read"
+          "label": "全部标为已读"
         },
         "has": {
           "label": true,
@@ -2257,7 +2257,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "New team member"
+          "label": "新成员"
         },
         "has": {
           "label": true,
@@ -2284,7 +2284,7 @@
         "h": 30,
         "z": null,
         "props": {
-          "label": "Maria Silva joined your workspace"
+          "label": "Maria Silva 加入了你的工作区"
         },
         "has": {
           "label": true,
@@ -2311,7 +2311,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "2m"
+          "label": "2 分钟"
         },
         "has": {
           "label": true,
@@ -2446,7 +2446,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "New comment"
+          "label": "新评论"
         },
         "has": {
           "label": true,
@@ -2473,7 +2473,7 @@
         "h": 30,
         "z": null,
         "props": {
-          "label": "Peter commented on “Home screen”"
+          "label": "Peter 评论了“首页”"
         },
         "has": {
           "label": true,
@@ -2500,7 +2500,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "1h"
+          "label": "1 小时"
         },
         "has": {
           "label": true,
@@ -2635,7 +2635,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Storage 90% full"
+          "label": "存储已用 90%"
         },
         "has": {
           "label": true,
@@ -2662,7 +2662,7 @@
         "h": 30,
         "z": null,
         "props": {
-          "label": "Consider upgrading your plan"
+          "label": "考虑升级你的方案"
         },
         "has": {
           "label": true,
@@ -2824,7 +2824,7 @@
         "h": 17,
         "z": null,
         "props": {
-          "label": "Deploy finished"
+          "label": "部署完成"
         },
         "has": {
           "label": true,
@@ -2851,7 +2851,7 @@
         "h": 30,
         "z": null,
         "props": {
-          "label": "v4.0.2 is now live"
+          "label": "v4.0.2 已上线"
         },
         "has": {
           "label": true,
@@ -2878,7 +2878,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Yesterday"
+          "label": "昨天"
         },
         "has": {
           "label": true,
@@ -2941,14 +2941,14 @@
         "id": "QXList89",
         "type": "Label",
         "_type": "Widget",
-        "name": "Footer",
+        "name": "页脚",
         "x": 0,
         "y": 372,
         "w": 360,
         "h": 16,
         "z": null,
         "props": {
-          "label": "View all notifications"
+          "label": "查看全部通知"
         },
         "has": {
           "label": true,
@@ -2969,7 +2969,7 @@
     "id": "QXListFeed",
     "type": "Group",
     "_type": "Group",
-    "name": "Feed Item",
+    "name": "动态条目",
     "category": "Composite",
     "subcategory": "FList",
     "w": 480,
@@ -3101,7 +3101,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "@juliadesign · 3h"
+          "label": "@juliadesign · 3 小时"
         },
         "has": {
           "label": true,
@@ -3148,7 +3148,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Just shipped our new design system 🎉 40+ components, fully documented. Feedback welcome!"
+          "label": "新设计系统刚刚上线 🎉 40+ 组件，文档齐全，欢迎反馈！"
         },
         "has": {
           "label": true,
@@ -3306,7 +3306,7 @@
         "id": "QXList101",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Share",
+        "name": "分享",
         "x": 204,
         "y": 144,
         "w": 20,
@@ -3350,7 +3350,7 @@
     "id": "QXListTeam",
     "type": "Group",
     "_type": "Group",
-    "name": "Team List",
+    "name": "团队列表",
     "category": "Composite",
     "subcategory": "FList",
     "w": 360,
@@ -3411,7 +3411,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Team members"
+          "label": "团队成员"
         },
         "has": {
           "label": true,
@@ -3438,7 +3438,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "+ Invite"
+          "label": "+ 邀请"
         },
         "has": {
           "label": true,
@@ -3575,7 +3575,7 @@
         "name": "Role 0",
         "x": 68,
         "y": 86,
-        "w": 55,
+        "w": 41,
         "h": 18,
         "z": null,
         "props": {
@@ -3619,11 +3619,11 @@
         "name": "Role 0 Label",
         "x": 68,
         "y": 87,
-        "w": 55,
+        "w": 41,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Owner"
+          "label": "所有者"
         },
         "has": {
           "label": true,
@@ -3738,7 +3738,7 @@
         "name": "Role 1",
         "x": 68,
         "y": 146,
-        "w": 55,
+        "w": 41,
         "h": 18,
         "z": null,
         "props": {
@@ -3782,11 +3782,11 @@
         "name": "Role 1 Label",
         "x": 68,
         "y": 147,
-        "w": 55,
+        "w": 41,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Admin"
+          "label": "管理员"
         },
         "has": {
           "label": true,
@@ -3901,7 +3901,7 @@
         "name": "Role 2",
         "x": 68,
         "y": 206,
-        "w": 62,
+        "w": 41,
         "h": 18,
         "z": null,
         "props": {
@@ -3945,11 +3945,11 @@
         "name": "Role 2 Label",
         "x": 68,
         "y": 207,
-        "w": 62,
+        "w": 41,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Editor"
+          "label": "可编辑"
         },
         "has": {
           "label": true,
@@ -4064,7 +4064,7 @@
         "name": "Role 3",
         "x": 68,
         "y": 266,
-        "w": 62,
+        "w": 41,
         "h": 18,
         "z": null,
         "props": {
@@ -4108,11 +4108,11 @@
         "name": "Role 3 Label",
         "x": 68,
         "y": 267,
-        "w": 62,
+        "w": 41,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Editor"
+          "label": "可编辑"
         },
         "has": {
           "label": true,
@@ -4227,7 +4227,7 @@
         "name": "Role 4",
         "x": 68,
         "y": 326,
-        "w": 62,
+        "w": 34,
         "h": 18,
         "z": null,
         "props": {
@@ -4271,11 +4271,11 @@
         "name": "Role 4 Label",
         "x": 68,
         "y": 327,
-        "w": 62,
+        "w": 34,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Viewer"
+          "label": "只读"
         },
         "has": {
           "label": true,
@@ -4318,7 +4318,7 @@
     "id": "QXListTodo",
     "type": "Group",
     "_type": "Group",
-    "name": "Todo List",
+    "name": "待办列表",
     "category": "Composite",
     "subcategory": "FList",
     "w": 360,
@@ -4379,7 +4379,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "My tasks"
+          "label": "我的任务"
         },
         "has": {
           "label": true,
@@ -4521,7 +4521,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Add a new task..."
+          "label": "添加新任务..."
         },
         "has": {
           "label": true,
@@ -4591,7 +4591,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "+ Add"
+          "label": "+ 添加"
         },
         "has": {
           "label": true,
@@ -4709,7 +4709,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Review pull request #482"
+          "label": "评审拉取请求 #482"
         },
         "has": {
           "label": true,
@@ -4803,7 +4803,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Prepare sprint demo slides"
+          "label": "准备 Sprint 演示幻灯片"
         },
         "has": {
           "label": true,
@@ -4897,7 +4897,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Update component library docs"
+          "label": "更新组件库文档"
         },
         "has": {
           "label": true,
@@ -4991,7 +4991,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Schedule user testing sessions"
+          "label": "安排可用性测试场次"
         },
         "has": {
           "label": true,
@@ -5085,7 +5085,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Fix mobile nav overflow bug"
+          "label": "修复移动端导航溢出"
         },
         "has": {
           "label": true,
@@ -5169,14 +5169,14 @@
         "id": "QXList157",
         "type": "Label",
         "_type": "Widget",
-        "name": "Footer",
+        "name": "页脚",
         "x": 20,
         "y": 352,
         "w": 200,
         "h": 16,
         "z": null,
         "props": {
-          "label": "4 tasks remaining"
+          "label": "剩余 4 个任务"
         },
         "has": {
           "label": true,
@@ -5202,7 +5202,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Clear done"
+          "label": "清除已完成"
         },
         "has": {
           "label": true,
@@ -5223,7 +5223,7 @@
     "id": "QXListThread",
     "type": "Group",
     "_type": "Group",
-    "name": "Comment Thread",
+    "name": "评论串",
     "category": "Composite",
     "subcategory": "FList",
     "w": 560,
@@ -5240,7 +5240,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Comments (3)"
+          "label": "评论（3）"
         },
         "has": {
           "label": true,
@@ -5382,7 +5382,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "2h ago"
+          "label": "2 小时前"
         },
         "has": {
           "label": true,
@@ -5408,7 +5408,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "The spacing in the hero section looks much better now. Maybe increase the CTA button size?"
+          "label": "主视觉区的间距现在好多了。CTA 按钮要不要再放大一点？"
         },
         "has": {
           "label": true,
@@ -5435,7 +5435,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "↩ Reply"
+          "label": "↩ 回复"
         },
         "has": {
           "label": true,
@@ -5532,7 +5532,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "1h ago"
+          "label": "1 小时前"
         },
         "has": {
           "label": true,
@@ -5558,7 +5558,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Agreed, +2px padding works well."
+          "label": "同意，+2px 内边距效果不错。"
         },
         "has": {
           "label": true,
@@ -5585,7 +5585,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "↩ Reply"
+          "label": "↩ 回复"
         },
         "has": {
           "label": true,
@@ -5699,7 +5699,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Write a reply..."
+          "label": "输入回复..."
         },
         "has": {
           "label": true,
@@ -5741,7 +5741,7 @@
     "id": "QXListSearchResults",
     "type": "Group",
     "_type": "Group",
-    "name": "Search Results",
+    "name": "搜索结果",
     "category": "Composite",
     "subcategory": "FList",
     "w": 560,
@@ -5751,7 +5751,7 @@
         "id": "QXList175",
         "type": "Box",
         "_type": "Widget",
-        "name": "Search",
+        "name": "搜索",
         "x": 0,
         "y": 0,
         "w": 560,
@@ -5823,7 +5823,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "design system"
+          "label": "设计系统"
         },
         "has": {
           "label": true,
@@ -5849,7 +5849,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "About 1,240 results (0.42 seconds)"
+          "label": "约 1,240 条结果（0.42 秒）"
         },
         "has": {
           "label": true,
@@ -5875,7 +5875,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Design systems documentation – Quant-UX Help"
+          "label": "设计系统文档 – Quant-UX 帮助"
         },
         "has": {
           "label": true,
@@ -5927,7 +5927,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Learn how to create, manage and publish your design system components..."
+          "label": "了解如何创建、管理和发布设计系统组件..."
         },
         "has": {
           "label": true,
@@ -5954,7 +5954,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Getting started with prototypes"
+          "label": "原型入门"
         },
         "has": {
           "label": true,
@@ -6006,7 +6006,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Build interactive prototypes in minutes. Add transitions, logic and..."
+          "label": "几分钟构建交互原型，添加转场、逻辑和..."
         },
         "has": {
           "label": true,
@@ -6033,7 +6033,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Design tokens guide"
+          "label": "设计令牌指南"
         },
         "has": {
           "label": true,
@@ -6085,7 +6085,7 @@
         "h": 40,
         "z": null,
         "props": {
-          "label": "Colors, spacing and typography tokens keep your product consistent..."
+          "label": "颜色、间距与排版令牌保持产品一致性..."
         },
         "has": {
           "label": true,

@@ -433,9 +433,40 @@ export function mapWidget (obj, z) {
 }
 
 /**
+ * Axure emits dynamic panel state children either in page-absolute
+ * coordinates or relative to the panel (varies by version/export path).
+ * We treat them as relative when their bounding box fits inside the panel
+ * rect — a deterministic check that also works for edge-aligned panels
+ * (x=0 / y=0) where a "smaller on both axes" comparison would fail.
+ */
+function isRelativeToPanel (children, panel) {
+  if (children.length === 0) {
+    return false
+  }
+  const pw = ((panel.size || {}).width) || Infinity
+  const ph = ((panel.size || {}).height) || Infinity
+  const tol = 2
+  let minX = Infinity
+  let minY = Infinity
+  let maxX = -Infinity
+  let maxY = -Infinity
+  for (const child of children) {
+    const w = ((child.size || {}).width) || 0
+    const h = ((child.size || {}).height) || 0
+    minX = Math.min(minX, child.location.x)
+    minY = Math.min(minY, child.location.y)
+    maxX = Math.max(maxX, child.location.x + w)
+    maxY = Math.max(maxY, child.location.y + h)
+  }
+  if (minX < -tol || minY < -tol) {
+    return false
+  }
+  return maxX <= pw + tol && maxY <= ph + tol
+}
+
+/**
  * Flattens dynamic panel state objects into the page objects list.
- * Axure stores panel states in `obj.diagrams[].objects`. Locations are
- * usually absolute, but we fall back to panel relative coordinates.
+ * Axure stores panel states in `obj.diagrams[].objects`.
  */
 export function flattenObjects (objects) {
   const result = []
@@ -443,15 +474,16 @@ export function flattenObjects (objects) {
     result.push(obj)
     if (obj && obj.type === 'Axure:DynamicPanel' && Array.isArray(obj.diagrams)) {
       const state = obj.diagrams.find(d => !d.adaptiveView) || obj.diagrams[0]
-      if (state && Array.isArray(state.objects)) {
-        for (const child of state.objects) {
-          if (child && child.location) {
-            const panelX = (obj.location || {}).x || 0
-            const panelY = (obj.location || {}).y || 0
-            if (child.location.x < panelX && child.location.y < panelY) {
-              child.location = { x: child.location.x + panelX, y: child.location.y + panelY }
-            }
+      if (state && Array.isArray(state.objects) && state.objects.length > 0) {
+        const children = state.objects.filter(c => c && c.location)
+        if (children.length > 0 && isRelativeToPanel(children, obj)) {
+          const panelX = (obj.location || {}).x || 0
+          const panelY = (obj.location || {}).y || 0
+          for (const child of children) {
+            child.location = { x: child.location.x + panelX, y: child.location.y + panelY }
           }
+        }
+        for (const child of state.objects) {
           result.push(child)
         }
       }

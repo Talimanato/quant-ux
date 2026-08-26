@@ -3,7 +3,7 @@
     "id": "QXShopGrid",
     "type": "Group",
     "_type": "Group",
-    "name": "Product Grid",
+    "name": "商品网格",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 712,
@@ -106,7 +106,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Sneakers"
+          "label": "运动鞋"
         },
         "has": {
           "label": true,
@@ -150,7 +150,7 @@
       },
       {
         "id": "QXShop5",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Rate 0 0",
         "x": 0,
@@ -208,7 +208,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Add"
+          "label": "添加"
         },
         "has": {
           "backgroundColor": true,
@@ -363,7 +363,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Boots"
+          "label": "靴子"
         },
         "has": {
           "label": true,
@@ -389,7 +389,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Classic Leather"
+          "label": "经典皮鞋"
         },
         "has": {
           "label": true,
@@ -407,7 +407,7 @@
       },
       {
         "id": "QXShop13",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Rate 248 0",
         "x": 248,
@@ -465,7 +465,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Add"
+          "label": "添加"
         },
         "has": {
           "backgroundColor": true,
@@ -620,7 +620,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Sandals"
+          "label": "凉鞋"
         },
         "has": {
           "label": true,
@@ -646,7 +646,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Summer Breeze"
+          "label": "夏日清风"
         },
         "has": {
           "label": true,
@@ -664,7 +664,7 @@
       },
       {
         "id": "QXShop21",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Rate 496 0",
         "x": 496,
@@ -722,7 +722,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Add"
+          "label": "添加"
         },
         "has": {
           "backgroundColor": true,
@@ -877,7 +877,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Loafers"
+          "label": "乐福鞋"
         },
         "has": {
           "label": true,
@@ -903,7 +903,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "City Loafer"
+          "label": "城市乐福鞋"
         },
         "has": {
           "label": true,
@@ -921,7 +921,7 @@
       },
       {
         "id": "QXShop29",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Rate 0 296",
         "x": 0,
@@ -979,7 +979,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Add"
+          "label": "添加"
         },
         "has": {
           "backgroundColor": true,
@@ -1134,7 +1134,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Hiking"
+          "label": "徒步"
         },
         "has": {
           "label": true,
@@ -1160,7 +1160,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Trail Blazer"
+          "label": "越野先锋"
         },
         "has": {
           "label": true,
@@ -1178,7 +1178,7 @@
       },
       {
         "id": "QXShop37",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Rate 248 296",
         "x": 248,
@@ -1236,7 +1236,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Add"
+          "label": "添加"
         },
         "has": {
           "backgroundColor": true,
@@ -1391,7 +1391,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "Sneakers"
+          "label": "运动鞋"
         },
         "has": {
           "label": true,
@@ -1417,7 +1417,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Eco Slip-On"
+          "label": "环保一脚蹬"
         },
         "has": {
           "label": true,
@@ -1435,7 +1435,7 @@
       },
       {
         "id": "QXShop45",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Rate 496 296",
         "x": 496,
@@ -1493,7 +1493,7 @@
         "h": 28,
         "z": null,
         "props": {
-          "label": "Add"
+          "label": "添加"
         },
         "has": {
           "backgroundColor": true,
@@ -1557,7 +1557,7 @@
     "id": "QXShopCartItem",
     "type": "Group",
     "_type": "Group",
-    "name": "Cart Item",
+    "name": "购物车条目",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 552,
@@ -1666,7 +1666,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Size 42 · Color: Black"
+          "label": "42 码 · 黑色"
         },
         "has": {
           "label": true,
@@ -1692,7 +1692,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "In stock"
+          "label": "有货"
         },
         "has": {
           "label": true,
@@ -1711,7 +1711,7 @@
         "id": "QXShop53",
         "type": "Icon",
         "_type": "Widget",
-        "name": "Delete",
+        "name": "删除",
         "x": 520,
         "y": 8,
         "w": 20,
@@ -1873,7 +1873,7 @@
     "id": "QXShopSummary",
     "type": "Group",
     "_type": "Group",
-    "name": "Cart Summary",
+    "name": "订单汇总",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 320,
@@ -1934,7 +1934,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Order summary"
+          "label": "订单汇总"
         },
         "has": {
           "label": true,
@@ -1961,7 +1961,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Subtotal (2 items)"
+          "label": "小计（2 件商品）"
         },
         "has": {
           "label": true,
@@ -2013,7 +2013,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Shipping"
+          "label": "配送"
         },
         "has": {
           "label": true,
@@ -2065,7 +2065,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Tax (19%)"
+          "label": "税费（19%）"
         },
         "has": {
           "label": true,
@@ -2161,7 +2161,7 @@
         "h": 20,
         "z": null,
         "props": {
-          "label": "Total"
+          "label": "合计"
         },
         "has": {
           "label": true,
@@ -2259,7 +2259,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Promo code"
+          "label": "优惠码"
         },
         "has": {
           "label": true,
@@ -2278,14 +2278,14 @@
         "id": "QXShop72",
         "type": "Button",
         "_type": "Widget",
-        "name": "Apply",
+        "name": "应用",
         "x": 212,
         "y": 200,
         "w": 84,
         "h": 38,
         "z": null,
         "props": {
-          "label": "Apply"
+          "label": "应用"
         },
         "has": {
           "backgroundColor": true,
@@ -2347,14 +2347,14 @@
         "id": "QXShop73",
         "type": "Button",
         "_type": "Widget",
-        "name": "Checkout",
+        "name": "结算",
         "x": 24,
         "y": 256,
         "w": 272,
         "h": 44,
         "z": null,
         "props": {
-          "label": "Proceed to checkout"
+          "label": "去结算"
         },
         "has": {
           "backgroundColor": true,
@@ -2419,7 +2419,7 @@
     "id": "QXShopCategories",
     "type": "Group",
     "_type": "Group",
-    "name": "Category Tiles",
+    "name": "分类磁贴",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 576,
@@ -2545,7 +2545,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Fashion"
+          "label": "时尚"
         },
         "has": {
           "label": true,
@@ -2572,7 +2572,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "128 items"
+          "label": "128 件商品"
         },
         "has": {
           "label": true,
@@ -2707,7 +2707,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Electronics"
+          "label": "数码"
         },
         "has": {
           "label": true,
@@ -2734,7 +2734,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "128 items"
+          "label": "128 件商品"
         },
         "has": {
           "label": true,
@@ -2869,7 +2869,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Home & Living"
+          "label": "家居生活"
         },
         "has": {
           "label": true,
@@ -2896,7 +2896,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "128 items"
+          "label": "128 件商品"
         },
         "has": {
           "label": true,
@@ -3031,7 +3031,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Sports"
+          "label": "运动"
         },
         "has": {
           "label": true,
@@ -3058,7 +3058,7 @@
         "h": 13,
         "z": null,
         "props": {
-          "label": "128 items"
+          "label": "128 件商品"
         },
         "has": {
           "label": true,
@@ -3079,7 +3079,7 @@
     "id": "QXShopPromo",
     "type": "Group",
     "_type": "Group",
-    "name": "Promo Banner",
+    "name": "促销横幅",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 720,
@@ -3140,7 +3140,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "LIMITED TIME"
+          "label": "限时活动"
         },
         "has": {
           "label": true,
@@ -3167,7 +3167,7 @@
         "h": 32,
         "z": null,
         "props": {
-          "label": "Summer Sale — up to 50% off"
+          "label": "夏日特惠 — 最低 5 折"
         },
         "has": {
           "label": true,
@@ -3194,7 +3194,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Ends Jan 31. While stocks last."
+          "label": "1 月 31 日截止，售完即止。"
         },
         "has": {
           "label": true,
@@ -3264,7 +3264,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "USE CODE"
+          "label": "使用优惠码"
         },
         "has": {
           "label": true,
@@ -3334,7 +3334,7 @@
     "id": "QXShopProductDetail",
     "type": "Group",
     "_type": "Group",
-    "name": "Product Detail",
+    "name": "商品详情",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 712,
@@ -3654,7 +3654,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Sneakers"
+          "label": "运动鞋"
         },
         "has": {
           "label": true,
@@ -3698,9 +3698,9 @@
       },
       {
         "id": "QXShop113",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
-        "name": "Rating",
+        "name": "评分",
         "x": 408,
         "y": 56,
         "w": 110,
@@ -3729,7 +3729,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "4.8 (128 reviews)"
+          "label": "4.8（128 条评价）"
         },
         "has": {
           "label": true,
@@ -3804,7 +3804,7 @@
         "name": "Save",
         "x": 556,
         "y": 92,
-        "w": 76,
+        "w": 55,
         "h": 22,
         "z": null,
         "props": {
@@ -3848,11 +3848,11 @@
         "name": "Save Label",
         "x": 556,
         "y": 95,
-        "w": 76,
+        "w": 55,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Save 19%"
+          "label": "省 19%"
         },
         "has": {
           "label": true,
@@ -3879,7 +3879,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Size"
+          "label": "尺码"
         },
         "has": {
           "label": true,
@@ -3960,7 +3960,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Color"
+          "label": "颜色"
         },
         "has": {
           "label": true,
@@ -4163,7 +4163,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Quantity"
+          "label": "数量"
         },
         "has": {
           "label": true,
@@ -4296,14 +4296,14 @@
         "id": "QXShop131",
         "type": "Button",
         "_type": "Widget",
-        "name": "Add",
+        "name": "添加",
         "x": 516,
         "y": 292,
         "w": 196,
         "h": 40,
         "z": null,
         "props": {
-          "label": "Add to cart"
+          "label": "加入购物车"
         },
         "has": {
           "backgroundColor": true,
@@ -4372,7 +4372,7 @@
         "h": 44,
         "z": null,
         "props": {
-          "label": "Buy it now"
+          "label": "立即购买"
         },
         "has": {
           "backgroundColor": true,
@@ -4486,7 +4486,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "SKU: RPX1-001"
+          "label": "SKU：RPX1-001"
         },
         "has": {
           "label": true,
@@ -4512,7 +4512,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Free shipping · 30-day returns"
+          "label": "免运费 · 30 天退换"
         },
         "has": {
           "label": true,
@@ -4533,7 +4533,7 @@
     "id": "QXShopOrder",
     "type": "Group",
     "_type": "Group",
-    "name": "Order Card",
+    "name": "订单卡片",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 560,
@@ -4594,7 +4594,7 @@
         "h": 18,
         "z": null,
         "props": {
-          "label": "Order #10248"
+          "label": "订单 #10248"
         },
         "has": {
           "label": true,
@@ -4621,7 +4621,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Jan 12, 2026 · 3 items"
+          "label": "2026 年 1 月 12 日 · 3 项"
         },
         "has": {
           "label": true,
@@ -4640,10 +4640,10 @@
         "id": "QXShop139",
         "type": "Box",
         "_type": "Widget",
-        "name": "Status",
+        "name": "状态",
         "x": 460,
         "y": 20,
-        "w": 48,
+        "w": 41,
         "h": 22,
         "z": null,
         "props": {
@@ -4684,14 +4684,14 @@
         "id": "QXShop140",
         "type": "Label",
         "_type": "Widget",
-        "name": "Status Label",
+        "name": "状态 Label",
         "x": 460,
         "y": 23,
-        "w": 48,
+        "w": 41,
         "h": 16,
         "z": null,
         "props": {
-          "label": "Paid"
+          "label": "已支付"
         },
         "has": {
           "label": true,
@@ -4718,7 +4718,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "Runner Pro X1 ×1, Classic Leather ×2"
+          "label": "Runner Pro X1 ×1、经典皮鞋 ×2"
         },
         "has": {
           "label": true,
@@ -4737,7 +4737,7 @@
         "id": "QXShop142",
         "type": "Label",
         "_type": "Widget",
-        "name": "Total",
+        "name": "合计",
         "x": 440,
         "y": 66,
         "w": 96,
@@ -4771,7 +4771,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "View details →"
+          "label": "查看详情 →"
         },
         "has": {
           "label": true,
@@ -4792,7 +4792,7 @@
     "id": "QXShopSteps",
     "type": "Group",
     "_type": "Group",
-    "name": "Checkout Steps",
+    "name": "结算步骤",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 880,
@@ -4880,7 +4880,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Cart"
+          "label": "购物车"
         },
         "has": {
           "label": true,
@@ -5021,7 +5021,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Shipping"
+          "label": "配送"
         },
         "has": {
           "label": true,
@@ -5163,7 +5163,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Payment"
+          "label": "支付"
         },
         "has": {
           "label": true,
@@ -5304,7 +5304,7 @@
         "h": 16,
         "z": null,
         "props": {
-          "label": "Done"
+          "label": "已完成"
         },
         "has": {
           "label": true,
@@ -5325,7 +5325,7 @@
     "id": "QXShopRating",
     "type": "Group",
     "_type": "Group",
-    "name": "Rating Breakdown",
+    "name": "评分分布",
     "category": "Composite",
     "subcategory": "GShop",
     "w": 400,
@@ -5404,7 +5404,7 @@
       },
       {
         "id": "QXShop161",
-        "type": "Rating",
+        "type": "评分",
         "_type": "Widget",
         "name": "Stars",
         "x": 24,
@@ -5435,7 +5435,7 @@
         "h": 14,
         "z": null,
         "props": {
-          "label": "128 reviews"
+          "label": "128 条评价"
         },
         "has": {
           "label": true,

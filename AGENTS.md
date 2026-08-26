@@ -113,18 +113,20 @@ A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **
 
 ## Axure RP import
 
-- `src/services/AxureParser.js` holds the pure parsing functions (unit tested in `tests/unit/AxureService.spec.js`): `extractPageData` (JSON after `$axure.loadCurrentPage(` in `pages/*/data.js`), `flattenObjects` (expands dynamic panel states with a relative-offset heuristic), `mapWidget` (Axure type → QUX widget, e.g. `Axure:TextBox`→TextBox, `Heading1-4`→Label 26/22/18/16 bold, `Image`→Image + `imageUrl`), `buildModel` (screens laid out in a row, first screen `props.start`).
+- `src/services/AxureParser.js` holds the pure parsing functions (unit tested in `tests/unit/AxureService.spec.js`): `extractPageData` (JSON after `$axure.loadCurrentPage(` in `pages/*/data.js`), `flattenObjects` (expands dynamic panel states; treats state children as panel-relative when their bounding box fits inside the panel), `mapWidget` (Axure type → QUX widget, e.g. `Axure:TextBox`→TextBox, `Heading1-4`→Label 26/22/18/16 bold, `Image`→Image + `imageUrl`), `buildModel` (screens laid out in a row, first screen `props.start`).
 - `src/services/AxureService.js` orchestrates: loads the zip with a dynamic `jszip` import, uploads referenced `files/...` images to `/rest/images/<appID>` and sets `style.backgroundImage = {name, url, w, h}`.
 - `ImportDialog.vue` has an `axure` tab next to Zip/Figma; on save it centers the imported screens on the canvas before `controller.addScreensAndWidgets(model)`.
-- NLS keys: `dialog.import.tab-axure`, `axure-drop-msg`, `axure-progress`, `error-axure-parse`.
+- NLS keys: `dialog.import.tab-axure`, `axure-drop-msg`, `axure-progress`, `axure-note`, `error-axure-parse`.
+- **Known limitations (disclosed in the UI via `axure-note`)**: this is a static-layout import — interactions/page links, master contents and non-base adaptive views are dropped; unknown widget types (Repeater, Table, Menu, …) fall back to a Box. Target is Axure RP 9/10 exports (`pages/*/data.js`); RP 8 and older exports are not supported and fail with `axure.no.pages`. Verification so far is unit tests plus a synthetic export zip — **a real RP 9/10 export has not been tested**.
 
 ## i18n: Chinese is the default language
 
 - `src/services/Locale.js` `resolveLocale()` maps any stored/browser value (`zh*`, `de*`, `pt*`, `en*`) to the four supported locales; **unknown/missing → `cn`**.
-- `src/main.js` boots vue-i18n with `resolveLocale(localStorage.quxLanguage) ?? 'cn'`; `UserService.getLanguage()` and `LanguagePicker` use the same helper. Never read `navigator.language` directly.
-- **E2E must seed English**: every `tests/e2e/test_*.py` sets `localStorage.setItem('quxLanguage', 'en')` right after seeding `quxUser`, because the text assertions expect English strings. New E2E scripts need the same line.
-- vue-i18n 9 message values treat `@` as linked-message syntax — an unescaped `you@studio.com` crashes the whole page render (`Invalid linked format`). Escape as `you{'@'}studio.com` in all four `src/nls/*.json` files.
-- The welcome-notification strings (dashboard auto dialog) live in `NotificationService.initRules()` with an `isCN()` variant — they are not NLS keys.
+- `src/main.js` boots vue-i18n with `resolveLocale(localStorage.quxLanguage) ?? 'cn'`; `UserService.getLanguage()`, `KeyCloakService.getLanguage()` and `LanguagePicker` use the same helper. Never read `navigator.language` directly (always wrap it in `resolveLocale`).
+- **E2E must seed English**: every `tests/e2e/test_*.py` (all 18) sets `localStorage.setItem('quxLanguage', 'en')`, because the text assertions expect English strings. New E2E scripts need the same line.
+- vue-i18n 9 message values treat `@` as linked-message syntax and `|` as plural separator — an unescaped `you@studio.com` crashes the whole page render (`Invalid linked format`), and a bare `|` silently truncates the text. Escape as `you{'@'}studio.com` / `Interactions {'|'} Duration` in all four `src/nls/*.json` files.
+- The welcome-notification strings (dashboard auto dialog) live in `NotificationService.initRules()` with an `isCN()` variant (Chinese vs English only — de/pt users get English) — they are not NLS keys.
+- Language coverage is uneven by design of this pass: cn gained 409 keys (592 total) and en is fully aligned, but **de is missing ~393 keys and pt_br ~329** — those locales fall back to English via `fallbackLocale: 'en'`.
 
 ## Prefab / template library
 
