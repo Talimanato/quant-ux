@@ -62,7 +62,6 @@
             this.wrapper = wrapper
 
             const sim = this.$new(Simulator, {mode : "debug", logData : false, runTimerLinesOnScreenLoad : false, isDesktopTest:true, isWiringEvents:true});
-            sim.mode = "debug"
             sim.logData = false
             sim.setStartScreen(Object.values(app.screens)[0])
             sim.placeAt(wrapper)

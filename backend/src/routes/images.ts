@@ -60,7 +60,7 @@ export function createImageRouter(db: SQLiteClient, blob: BlobService, appAcl: A
     blob.getBlob(appId, image, res);
   });
 
-  router.post('/images/:appID', upload.array('files', 20), async (req: Request, res: Response) => {
+  router.post('/images/:appID', upload.fields([{ name: 'files', maxCount: 20 }, { name: 'file', maxCount: 20 }]), async (req: Request, res: Response) => {
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canWrite(user, appId);
@@ -68,7 +68,8 @@ export function createImageRouter(db: SQLiteClient, blob: BlobService, appAcl: A
       return res.status(405).json({ error: 'image.write.denied' });
     }
 
-    const files = req.files as Express.Multer.File[];
+    const uploaded = req.files as { [fieldname: string]: Express.Multer.File[] } | undefined;
+    const files = uploaded ? [...(uploaded.files || []), ...(uploaded.file || [])] : [];
     if (!files || files.length === 0) {
       return res.status(405).json({ error: 'image.no.files' });
     }

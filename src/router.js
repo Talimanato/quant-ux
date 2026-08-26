@@ -19,6 +19,10 @@ matcRoutes.push({path:'apps/:id/replay/:session.html', component: () => import(/
 matcRoutes.push({path:'apps/create-app.html', component: () => import(/* webpackChunkName: "apps" */ 'views/apps/Create.vue'), meta: {hideHeader: true}})
 matcRoutes.push({path:'apps/tryout.html', component: () => import(/* webpackChunkName: "apps" */ 'views/apps/Create.vue'), meta: {hideHeader:true}})
 
+// Libraries
+matcRoutes.push({path:'libs.html', component: () => import(/* webpackChunkName: "apps" */ 'views/apps/Library.vue'), meta: {hasHeader: true}})
+matcRoutes.push({path:'libs/:id.html', component: () => import(/* webpackChunkName: "apps" */ 'views/apps/Library.vue'), meta: {hasHeader: true}})
+
 
 // Apps
 // matcRoutes.push({path:'', component: () => import(/* webpackChunkName: "apps" */ 'views/apps/Apps.vue'),  meta: {isDarkHeader: true}})

@@ -10,6 +10,9 @@ export default class WebSocketService {
   }
 
   init (callback) {
+    if (!this.url) {
+      return
+    }
     Logger.log(1, 'WebSocketService.init()', this.appId, this.url)
     try {
       let connection = new WebSocket(`${this.url}/?app=${this.appId}&jwt=${this.jwtToken}`)

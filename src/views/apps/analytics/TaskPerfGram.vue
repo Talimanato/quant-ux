@@ -222,7 +222,10 @@ export default {
 				css.add(this.tabsCntr, "hidden");
 				css.add(this.cntr, "hidden");
 				this.db.h2("", this.getNLS("dash.perf.no-flow-title")).build(this.domNode);
-				this.db.div("MatcMarginTop", this.getNLS("dash.perf.no-flow-msg"), true).build(this.domNode);
+				const msgCntr = this.db.div("MatcMarginTop").build(this.domNode);
+				const msgP = document.createElement("p");
+				msgP.textContent = this.getNLS("dash.perf.no-flow-msg");
+				msgCntr.appendChild(msgP);
 			}
 		},
 

@@ -71,7 +71,7 @@
               </p>
             </div>
             <div class="col-md-2 col-md-offset-1 visible-md-block visible-lg-block">
-              <Label>Image</Label>
+              <label>Image</label>
               <UserImage :user="user" @change="onImageChanged"/>
             </div>
    
@@ -142,8 +142,12 @@ export default {
       db.h3("", this.getNLS("user.retire.hi") + name + ",")
         .build(dialog);
 
-      db.div("MatcMarginTop", this.getNLS("user.retire.msg"), true)
-        .build(dialog);
+      const msgCntr = db.div("MatcMarginTop").build(dialog);
+      const bold = document.createElement("b");
+      bold.appendChild(document.createTextNode(this.getNLS("user.retire.msg.2")));
+      msgCntr.appendChild(document.createTextNode(this.getNLS("user.retire.msg.1")));
+      msgCntr.appendChild(bold);
+      msgCntr.appendChild(document.createTextNode(this.getNLS("user.retire.msg.3")));
 
       const bar = db
         .div("MatcButtonBar MatcMarginTopXXL")

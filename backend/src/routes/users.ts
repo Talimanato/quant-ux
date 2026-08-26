@@ -4,6 +4,7 @@ import { JWTService } from '../services/JWTService';
 import { Config } from '../config';
 import { QuxUser } from '../acl/ACL';
 import * as Util from '../util/Util';
+import { requireNonEmptyBody } from '../util/ValidateBody';
 
 export function createUserRouter(db: SQLiteClient, jwt: JWTService, config: Config): Router {
   const router = Router();
@@ -201,6 +202,9 @@ export function createUserRouter(db: SQLiteClient, jwt: JWTService, config: Conf
   });
 
   router.post('/user/:id.json', (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'user.update.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const id = req.params.id;
 
@@ -235,6 +239,9 @@ export function createUserRouter(db: SQLiteClient, jwt: JWTService, config: Conf
     db.updateCollection('user', { _id: id }, { $set: updates });
 
     const dbUser = db.findOne('user', { _id: id });
+    if (!dbUser) {
+      return res.status(404).json({ error: 'user.not.found' });
+    }
     return res.json(cleanUser(dbUser));
   });
 

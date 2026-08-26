@@ -54,6 +54,7 @@ import RenderFactory from 'core/RenderFactory'
 import _DropDown from './_DropDown'
 import Services from 'services/Services'
 import CheckBox from 'common/CheckBox'
+import Dialog from 'common/Dialog'
 import ModelUtil from 'core/ModelUtil'
 import QIcon from 'page/QIcon'
 import {wrapIcon} from 'page/QIconUtil'
@@ -454,6 +455,14 @@ export default {
 			this._lis["Template"] = liTemplates;
 			this.own(on(liTemplates, touch.press, lang.hitch(this, "showTemplates", true) ));
 
+			/**
+			 * 5.5 Libraries (shared component libs)
+			 */
+			const liLibraries = db.li().build(ul);
+			db.a("", this.getNLS("library.title")).build(liLibraries);
+			this._lis["Libraries"] = liLibraries;
+			this.own(on(liLibraries, touch.press, lang.hitch(this, "showLibraries", true) ));
+
 		
 
 			/**
@@ -816,6 +825,497 @@ export default {
 
 		},
 
+		/**********************************************************************
+		 * Libraries (shared-libs / component library)
+		 * The listed libraries are loaded via LibraryService.findLibs(). The
+		 * lib.data content is expanded to the top level of each lib object
+		 * (lib.widgets / lib.templates / lib.screens / lib.groups) and may be
+		 * undefined. We normalize them and feed the resulting elements through
+		 * the same renderElements()/onCreate() chain as the Import section.
+		 **********************************************************************/
+
+		async showLibraries (resetSearch){
+			this.showWidgets()
+			if(resetSearch){
+				this.resetSearch();
+			}
+			this.selectedCategory = 'Libraries';
+			this.renderSelectedTab(this.selectedCategory);
+			await this.renderLibraries();
+		},
+
+		async renderLibraries (){
+			if (!this._libraries){
+				try {
+					this._libraries = await Services.getLibraryService().findLibs()
+				} catch (err){
+					console.warn('CreateButton.renderLibraries() > Error', err)
+					this._libraries = []
+				}
+			}
+			this.renderFactory.cleanUp();
+			this.cleanUpTempListener();
+
+			const db = new DomBuilder();
+			const cntr = db.div("MatcCreateLibListCntr").build();
+
+			const libs = this._libraries || []
+			if (libs.length === 0){
+				db.span("MatcHint", this.getNLS("library.empty")).build(cntr);
+			}
+			libs.forEach(lib => {
+				const row = db.div("MatcCreateLibRow MatcToolbarDropDownButtonItem").build(cntr);
+				db.span("mdi mdi-library").build(row);
+				db.div("MatcCreateLibName", lib.name || lib.id).build(row);
+				const count = this._getLibEntryCount(lib)
+				if (count > 0){
+					db.span("MatcHint MatcCreateLibCount", "" + count).build(row);
+				}
+				this.tempOwn(on(row, touch.press, lang.hitch(this, "showLibraryContent", lib)));
+			})
+
+			if (!this.searchQuery){
+				this.iconCntr.innerHTML = "";
+			}
+			this.iconCntr.appendChild(cntr);
+			this.scrollToTop()
+		},
+
+		_getLibEntryCount (lib) {
+			let count = 0
+			;["widgets","templates","screens","groups"].forEach(key => {
+				const value = lib[key]
+				if (value){
+					count += Array.isArray(value) ? value.length : Object.keys(value).length
+				}
+			})
+			return count
+		},
+
+		showLibraryContent (lib, e){
+			this.stopEvent(e)
+			this.showWidgets()
+			if (this.searchQuery){
+				this.resetSearch();
+			}
+			this.selectedCategory = 'Libraries';
+			this.renderSelectedTab(this.selectedCategory);
+			const elements = this._convertLibToElements(lib)
+			this._libraryElements = {}
+			elements.forEach(el => {
+				if (el && el.id){
+					this._libraryElements[el.id] = el
+				}
+			})
+			this.renderElements(elements, 'Libraries', false);
+		},
+
+		_convertLibToElements (lib){
+			const elements = []
+			const widgetsMap = this._toObjectMap(lib.widgets)
+			const templatesMap = this._toObjectMap(lib.templates)
+			const groups = this._toArray(lib.groups)
+			const screens = this._toArray(lib.screens)
+
+			/**
+			 * 1) app style data (widgets map + groups referencing widget ids)
+			 * -> reuse SymbolService.convertAppToSymbols, exactly like the
+			 * Import section does for imported apps (onImportedLoaded)
+			 */
+			const appGroups = {}
+			groups.forEach(g => {
+				if (g.children && g.children.length > 0 && typeof g.children[0] === 'string'){
+					appGroups[g.id] = g
+				}
+			})
+			const pseudoApp = {
+				id: lib.id,
+				name: lib.name || 'Library',
+				widgets: widgetsMap,
+				groups: appGroups,
+				templates: templatesMap
+			}
+			const converted = Services.getSymbolService().convertAppToSymbols(pseudoApp)
+			converted.forEach(el => {
+				if (el.type === 'Group' && (!el.children || el.children.length === 0)){
+					return
+				}
+				/**
+				 * if the referenced template is not part of the library the
+				 * widget is not self contained. Break the link, so the drop
+				 * path does not try to create a templated model.
+				 */
+				if (el.template && !templatesMap[el.template]){
+					delete el.template
+				}
+				this._normalizeName(el)
+				elements.push(el)
+			})
+
+			/**
+			 * 2) groups stored in materialized format
+			 * (children are widget objects, not ids)
+			 */
+			groups.forEach(g => {
+				if (g.children && g.children.length > 0 && typeof g.children[0] !== 'string'){
+					this._normalizeName(g)
+					elements.push(g)
+				}
+			})
+
+			/**
+			 * 3) standalone templates that are not referenced by a widget
+			 */
+			const referenced = {}
+			Object.values(widgetsMap).forEach(w => {
+				if (w && w.template){
+					referenced[w.template] = true
+				}
+			})
+			Object.values(templatesMap).forEach(t => {
+				if (!t || referenced[t.id]){
+					return
+				}
+				if (t.templateType === 'Widget'){
+					const el = this._templateToWidgetElement(t, templatesMap)
+					if (el){
+						elements.push(el)
+					}
+				} else if (t.templateType === 'Group'){
+					const el = this._groupTemplateToElement(t, templatesMap)
+					if (el){
+						elements.push(el)
+					}
+				}
+			})
+
+			/**
+			 * 4) screens
+			 */
+			screens.forEach(screen => {
+				const el = this._screenToElement(screen, widgetsMap, templatesMap)
+				if (el){
+					elements.push(el)
+				}
+			})
+
+			return elements
+		},
+
+		_normalizeName (el){
+			if (!el.name){
+				el.name = 'Component'
+			}
+			return el
+		},
+
+		_toArray (value){
+			if (!value){
+				return []
+			}
+			if (Array.isArray(value)){
+				return value
+			}
+			if (typeof value === 'object'){
+				return Object.values(value)
+			}
+			return []
+		},
+
+		_toObjectMap (value){
+			if (!value){
+				return {}
+			}
+			if (Array.isArray(value)){
+				const map = {}
+				value.forEach(item => {
+					if (item && item.id){
+						map[item.id] = item
+					}
+				})
+				return map
+			}
+			return value
+		},
+
+		_templateToWidgetElement (template, templatesMap){
+			const el = lang.clone(template)
+			if (el.template && templatesMap){
+				/**
+				 * inline the parent template style like
+				 * SymbolService.convertAppToSymbols() does
+				 */
+				const parent = templatesMap[el.template]
+				if (parent){
+					const merged = lang.clone(parent.style || {})
+					if (el.style){
+						for (const key in el.style){
+							merged[key] = el.style[key]
+						}
+					}
+					el.style = merged
+				}
+			}
+			delete el.template
+			delete el.templateType
+			delete el.variant
+			delete el.variantOf
+			delete el.copyOf
+			delete el.visible
+			delete el._preview
+			delete el._previewSize
+			el._type = 'Widget'
+			if (el.x === undefined || el.x === null){
+				el.x = 0
+			}
+			if (el.y === undefined || el.y === null){
+				el.y = 0
+			}
+			if (!el.name){
+				el.name = 'Component'
+			}
+			return el
+		},
+
+		_groupTemplateToElement (template, templatesMap){
+			const childIds = this._collectTemplateChildren(template)
+			const children = []
+			childIds.forEach(tid => {
+				const childTemplate = templatesMap && templatesMap[tid]
+				if (childTemplate){
+					const el = this._templateToWidgetElement(childTemplate, templatesMap)
+					children.push(el)
+				}
+			})
+			if (children.length === 0){
+				return null
+			}
+			return {
+				id: template.id,
+				name: template.name || 'Component',
+				type: 'Group',
+				_type: 'Group',
+				children: children
+			}
+		},
+
+		_collectTemplateChildren (template){
+			const ids = []
+			const collect = (t) => {
+				if (t.children){
+					ids.push(...t.children)
+				}
+				if (t.groups){
+					t.groups.forEach(collect)
+				}
+			}
+			collect(template)
+			return ids
+		},
+
+		_screenToElement (screen, widgetsMap, templatesMap){
+			if (!screen){
+				return null
+			}
+			/**
+			 * already a ScreenAndWidget element
+			 */
+			if (screen.screens && screen.widgets){
+				const el = lang.clone(screen)
+				el._type = 'ScreenAndWidget'
+				if (el.id === undefined){
+					el.id = el.name
+				}
+				return this._normalizeName(el)
+			}
+			/**
+			 * raw screen object -> build a ScreenAndWidget element
+			 */
+			if (screen.children){
+				const widgets = {}
+				screen.children.forEach(childID => {
+					const w = widgetsMap[childID]
+					if (w){
+						widgets[childID] = this._templateToWidgetElement(w, templatesMap)
+					}
+				})
+				const clone = lang.clone(screen)
+				delete clone.created
+				delete clone.modified
+				delete clone.min
+				if (clone.x === undefined || clone.x === null){
+					clone.x = 0
+				}
+				if (clone.y === undefined || clone.y === null){
+					clone.y = 0
+				}
+				const id = screen.id || screen.name || 'Screen'
+				clone.id = id
+				return {
+					id: id,
+					name: screen.name || 'Screen',
+					type: 'ScreenAndWidget',
+					_type: 'ScreenAndWidget',
+					screens: {[id]: clone},
+					widgets: widgets,
+					groups: {},
+					lines: {}
+				}
+			}
+			return null
+		},
+
+		/**********************************************************************
+		 * Save to Library
+		 * Serializes the current component (template) into a self-contained
+		 * library hit and appends it to the selected library (merge on the
+		 * backend is key level, so we read the existing array first and
+		 * concat + dedupe by id on the client side)
+		 **********************************************************************/
+
+		onSaveTemplateToLibrary (template, e){
+			this.stopEvent(e)
+			const entry = this._buildTemplateLibEntry(template)
+			if (entry && entry.length > 0){
+				this.showLibrarySaveDialog(entry, e)
+			}
+		},
+
+		_buildTemplateLibEntry (template){
+			const templatesMap = this.model.templates || {}
+			const root = templatesMap[template.id]
+			if (!root){
+				return null
+			}
+			const result = []
+			const seen = {}
+			const cloneTemplate = (t) => {
+				if (!t || seen[t.id]){
+					return
+				}
+				seen[t.id] = true
+				if (t.variantOf){
+					/**
+					 * variants only store the delta. getMergedTemplate returns
+					 * the merged style chain, so the library hit stays
+					 * self-contained
+					 */
+					const merged = ModelUtil.getMergedTemplate(t.id, this.model)
+					if (merged){
+						const clone = lang.clone(t)
+						ModelUtil.mixinNewStyles(clone, merged)
+						clone.style = lang.clone(merged.style)
+						delete clone.variantOf
+						delete clone.copyOf
+						result.push(clone)
+						return
+					}
+				}
+				result.push(lang.clone(t))
+			}
+			cloneTemplate(root)
+			if (root.templateType === 'Group' && root.children){
+				root.children.forEach(tid => cloneTemplate(templatesMap[tid]))
+				const addSubGroups = (groups) => {
+					if (!groups){
+						return
+					}
+					groups.forEach(sg => {
+						result.push(lang.clone(sg))
+						if (sg.children){
+							sg.children.forEach(tid => cloneTemplate(templatesMap[tid]))
+						}
+						addSubGroups(sg.groups)
+					})
+				}
+				addSubGroups(root.groups)
+			}
+			return result
+		},
+
+		async showLibrarySaveDialog (entry, e){
+			if (!this._libraries){
+				try {
+					this._libraries = await Services.getLibraryService().findLibs()
+				} catch (err){
+					console.warn('CreateButton.showLibrarySaveDialog() > Error', err)
+					this._libraries = []
+				}
+			}
+			const dialog = new Dialog();
+			const db = new DomBuilder();
+			const popup = db.div("MatcDialog MatcPadding").build();
+			const cntr = db.div("MatcCreateLibSaveCntr").build(popup);
+
+			db.h3("MatcDialogHeader", this.getNLS("library.save.title")).build(cntr);
+
+			const libs = this._libraries || []
+			if (libs.length === 0){
+				db.div("MatcHint", this.getNLS("library.empty")).build(cntr);
+			}
+			libs.forEach(lib => {
+				const row = db.div("MatcCreateLibSaveRow MatcToolbarDropDownButtonItem").build(cntr);
+				db.span("mdi mdi-library").build(row);
+				db.div("MatcCreateLibSaveName", lib.name || lib.id).build(row);
+				const saveBtn = db.div("MatcButton MatcButtonXS MatcButtonPrimary", this.getNLS("library.save.submit")).build(row);
+				dialog.own(on(saveBtn, touch.press, lang.hitch(this, "_saveEntryToLib", entry, lib, dialog)));
+			})
+
+			/**
+			 * Simple "new library" entry
+			 */
+			const newRow = db.div("MatcCreateLibSaveNew").build(cntr);
+			db.div("MatcHint MatcCreateLibSaveNewLabel", this.getNLS("library.save.new")).build(newRow);
+			const inputName = db.input("form-control MatcIgnoreOnKeyPress", "", this.getNLS("library.create.name-placeholder")).build(newRow);
+			const createBtn = db.div("MatcButton MatcButtonXS MatcButtonPrimary", this.getNLS("library.create.submit")).build(newRow);
+			dialog.own(on(createBtn, touch.press, async () => {
+				const name = inputName.value.trim()
+				if (!name){
+					return
+				}
+				try {
+					const newLib = await Services.getLibraryService().createLib(name, "", false)
+					this._libraries.push(newLib)
+					await this._saveEntryToLib(entry, newLib, dialog)
+				} catch (err){
+					console.error('CreateButton.showLibrarySaveDialog() > create error', err)
+					this.showError(this.getNLS("library.create.error"))
+				}
+			}))
+
+			const bar = db.div("MatcButtonBar MatcMarginTop").build(popup);
+			const cancel = db.a("MatcLinkButton", this.getNLS("btn.cancel")).build(bar);
+			dialog.own(on(cancel, touch.press, lang.hitch(dialog, "close")));
+
+			dialog.popup(popup, e.target);
+		},
+
+		async _saveEntryToLib (entry, lib, dialog){
+			try {
+				const libService = Services.getLibraryService()
+				const current = await libService.findLib(lib.id)
+				let templates = []
+				if (current && current.templates){
+					templates = Array.isArray(current.templates) ? current.templates.slice() : Object.values(current.templates)
+				}
+				entry.forEach(t => {
+					if (!templates.some(x => x && x.id === t.id)){
+						templates.push(t)
+					}
+				})
+				await libService.updateLib(lib.id, { templates: templates })
+				/**
+				 * keep the cached library list in sync
+				 */
+				lib.templates = templates
+				dialog.close();
+				this.showSuccess(this.getNLS("library.save.success"))
+			} catch (err){
+				console.error('CreateButton._saveEntryToLib() > Error', err)
+				this.showError(this.getNLS("library.save.error"))
+			}
+		},
+
 		renderCategory (category){
 
 			var children = this.categories[category];
@@ -838,6 +1338,14 @@ export default {
 					var child = children[id];
 					if(child.name && child.name.toLowerCase().indexOf(query) >=0){
 						elements.push(child);
+					}
+				}
+			}
+			if (this._libraryElements) {
+				for (var libID in this._libraryElements) {
+					var libChild = this._libraryElements[libID];
+					if (libChild.name && libChild.name.toLowerCase().indexOf(query) >=0){
+						elements.push(libChild);
 					}
 				}
 			}
@@ -918,6 +1426,8 @@ export default {
 					if (isTemplate) {
 						let delBtn = db.div("MatcCreateBtnRemove  mdi mdi-close-circle").build(div)
 						this.tempOwn(on(delBtn, touch.press, lang.hitch(this, "onRemoveTemplate", child)));
+						let libBtn = db.div("MatcCreateBtnSaveLib mdi mdi-library-plus").build(div)
+						this.tempOwn(on(libBtn, touch.press, lang.hitch(this, "onSaveTemplateToLibrary", child)));
 					}
 				}
 			}

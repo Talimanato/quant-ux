@@ -45,7 +45,8 @@
   
   export default {
 	  name: 'Simulator',
-	  props: ['mode', 'app', 'hasPreload'],
+	  props: ['app', 'hasPreload'],
+	  inheritAttrs: false,
 	  mixins:[
 		  Layout, Gestures, RestMixin, LogMixin, RenderMixin, EventMixin,ScriptMixin, TooltipMixin,
 		  ScrollMixin, AnimationMixin, MouseMixin, DataBindingMixin, TemplateMixin, AudioMixin, DojoWidget
@@ -54,6 +55,7 @@
 		  return {
 				hasSplash: false,
 				debug: false,
+				mode: 'simulator',
 				logData: true,
 				qr: false,
 				hash: null,
@@ -84,6 +86,7 @@
 	  },
 	  methods: {
 		  async postCreate (){
+			  this.mode = this.$attrs.mode || 'simulator'
 			  this.logger = new Logger("Simulator");
 			  this.logger.debugLevel = 1;
   

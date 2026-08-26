@@ -20,7 +20,7 @@
                                 <div class="MatcTestContent" v-if="step === 6">
                                     <div class="MatcTestContentCntr">
                                         <h2>{{getNLS("simulator.password.title")}} </h2>
-                                        <p v-html="getNLS('simulator.password.msg')"></p>
+                                        <p>{{ getNLS('simulator.password.msg') }}<b>{{ getNLS('simulator.password.next') }}</b></p>
                                         <input v-model="password" class="form-control" @keypress.enter="setPassword"/>
                                         <div class="MatcButton MatcMarginTop" @click="setPassword()">
                                             {{getNLS("simulator.password.next")}}
@@ -38,8 +38,8 @@
                                             {{settings.description}}
                                         </p>
                                         <template  v-else>
-                                            <p v-html="getNlSWithReplacement('simulator.welcome.msg', {'name': '<b>' + model.name + '</b>'})"></p>
-                                            <p v-html="getNlSWithReplacement('simulator.welcome.msg2', {'name': '<b>' + model.name + '</b>'})"></p>
+                                            <p>{{ i18nMsg('simulator.welcome.msg', { name: model ? model.name : '' }) }}</p>
+                                            <p>{{ i18nMsg('simulator.welcome.msg2', { name: model ? model.name : '' }) }}</p>
                                         </template>
                                   
                                     </div>
@@ -77,9 +77,9 @@
                                 <div class="MatcTestContent" v-if="step === 5">
                                     <div class="MatcTestContentCntr">
                                         <h2> {{getNLS("simulator.welcome.privacy-title")}}</h2>
-                                        <p v-html="getNLS('simulator.welcome.privacy')"></p>
-                                        <p v-html="getNLS('simulator.welcome.privacy1')"></p>
-                                        <p class="MatcMarginTopXL" v-html="getNLS('simulator.welcome.click-start')"></p>
+                                        <p>{{ getNLS('simulator.welcome.privacy.1') }}<b>{{ getNLS('simulator.welcome.privacy.2') }}</b>{{ getNLS('simulator.welcome.privacy.3') }}</p>
+                                        <p>{{ getNLS('simulator.welcome.privacy1.1') }}<a href="#/privacy.html" target="quxPrivacy">{{ getNLS('simulator.welcome.privacy1.2') }}</a>.</p>
+                                        <p class="MatcMarginTopXL">{{ getNLS('simulator.welcome.click-start') }}</p>
                                     </div>
                                     <div class="MatcMarginTop">
                                         <div class="MatcButton MatcButtonPrimary MatcTestStartButton"	@click="onStart()">
@@ -196,6 +196,19 @@
             },
     
      
+            i18nMsg (key, values) {
+                if (this.$i18n) {
+                    return this.$i18n.t(key, values || {})
+                }
+                let msg = this.getNLS(key)
+                if (values) {
+                    for (let k in values) {
+                        msg = msg.split('{' + k + '}').join(values[k])
+                    }
+                }
+                return msg
+            },
+    
             getUserTasks (){
                 const tasks = [];
                 if (this.settings.tasks && this.settings.tasks){

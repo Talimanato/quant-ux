@@ -4,6 +4,7 @@ import { JWTService } from '../services/JWTService';
 import { AppAcl } from '../acl/AppAcl';
 import { QuxUser, ROLES, hasRole } from '../acl/ACL';
 import * as Util from '../util/Util';
+import { requireNonEmptyBody } from '../util/ValidateBody';
 import { BlobService } from '../services/BlobService';
 
 export function createAppRouter(db: SQLiteClient, jwt: JWTService, appAcl: AppAcl, blob?: BlobService): Router {
@@ -65,6 +66,9 @@ export function createAppRouter(db: SQLiteClient, jwt: JWTService, appAcl: AppAc
   });
 
   router.post('/apps', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'app.create.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     if (!hasRole(user, ROLES.USER)) {
       return res.status(401).json({ error: 'app.create.denied' });
@@ -161,6 +165,9 @@ export function createAppRouter(db: SQLiteClient, jwt: JWTService, appAcl: AppAc
   });
 
   router.post('/apps/:appID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'app.update.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const id = req.params.appID;
     const app = db.findOne('app', { _id: id });
@@ -209,6 +216,9 @@ export function createAppRouter(db: SQLiteClient, jwt: JWTService, appAcl: AppAc
   });
 
   router.post('/apps/props/:appID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'app.props.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const id = req.params.appID;
     const allowed = await appAcl.canWrite(user, id);
@@ -230,7 +240,7 @@ export function createAppRouter(db: SQLiteClient, jwt: JWTService, appAcl: AppAc
     updates.lastUpdate = Date.now();
 
     db.updateCollection('app', { _id: id }, { $set: updates });
-    return res.json({ message: 'app.update.success' });
+    return res.json({ message: 'app.update.success', status: 'ok' });
   });
 
   router.delete('/apps/:appID.json', async (req: Request, res: Response) => {
@@ -317,6 +327,9 @@ export function createAppRouter(db: SQLiteClient, jwt: JWTService, appAcl: AppAc
   });
 
   router.post('/apps/copy/:appID', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'app.copy.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const id = req.params.appID;
     const app = db.findOne('app', { _id: id });

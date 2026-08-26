@@ -1078,7 +1078,7 @@ export default class RenderFactory extends Core {
 		var inlineEdit = document.createElement("div");
 		css.add(inlineEdit, "MatcInlineEditable");
 		this._labelNodes[model.id] = inlineEdit;
-		if (!model.props.label) {
+		if (!model.props || !model.props.label) {
 			/**
 			 * Show default label in edit mode!
 			 */

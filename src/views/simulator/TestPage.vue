@@ -551,15 +551,13 @@ export default {
 
 		createSimulator (){
 			if(this.debug){
-				const sim = this.$new(Simulator);
+				const sim = this.$new(Simulator, { mode: "debug", logData: false });
 				sim.on('event', (e) => this.onSimulatorEvent(e))
-				sim.mode = "debug"
 				sim.logData = false
 				return sim
 			} else {
-				const sim = this.$new(Simulator);
+				const sim = this.$new(Simulator, { mode: "debug", logData: false });
 				sim.on('event', (e) => this.onSimulatorEvent(e))
-				sim.mode = "debug"
 				sim.logData = this.logging
 				sim.applyTestSettings(this.settings)
 				return sim

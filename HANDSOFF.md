@@ -1,197 +1,265 @@
-# Quant-UX Migration HANDSOFF
+# Quant-UX 迁移实测 Handoff
 
-> Last updated: 2026-08-25
-> This document captures the completed work, current state, known issues, and recommended next steps for the Quant-UX full-stack migration (Java backend → Node.js, Vue 2 → Vue 3).
-
----
-
-## 1. Project Goal
-
-- Replace the Java backend (`KlausSchaefers/qux-java`) with a Node.js + TypeScript backend in `backend/`.
-- Migrate the existing Vue 2 frontend to Vue 3 (`@vue/compat`).
-- Preserve functional parity.
-- Use SQLite (`better-sqlite3`) with raw SQL.
-- Store image binaries on the filesystem and metadata in SQLite.
-- Provide backend and frontend tests, and real Playwright E2E coverage.
-- Keep the stack runnable locally without Docker.
+> 生成时间：2026-08-26  
+> 当前工作目录：`/Users/zk/WebstormProjects/quant-ux`  
+> 本文件基于一次全量后端 + 前端浏览器/Playwright 实测，汇总已发现的关键问题、修复方案与下一步工作。
 
 ---
 
-## 2. Completed Work
+## 1. 本次完成的工作
 
-### 2.1 Backend Migration
+### 1.1 全量实测覆盖
 
-- **Entry & setup**: `backend/src/server.ts`, `backend/src/app.ts`, `backend/src/config.ts`.
-- **Database**: `backend/src/db/Database.ts`, `backend/src/db/SQLiteClient.ts`, raw SQL migrations in `backend/src/db/migrations/`.
-- **Auth**: JWT middleware (`backend/src/middleware/auth.ts`), ACL (`backend/src/acl/`).
-- **Routes/Features**: apps, images, libraries, notifications, stubs, teams, invitations, comments, users.
-- **Services**: BlobService (filesystem image storage), JWTService.
-- **Tests**: `backend/tests/app.test.ts`, `backend/tests/user.test.ts`.
-- **E2E isolation**: `tests/e2e/conftest.py` supports per-run SQLite files, image directories, dynamic ports, and isolated backend/frontend processes.
+| 模块 | 执行方式 | 结果 |
+|---|---|---|
+| 认证 & Dashboard | subagent 48d472d5 | PASS |
+| Studio 编辑器核心（屏幕、撤销/重做、组件、图层） | subagent 71bafe71 | PASS |
+| Studio 对话框 & 高级组件（Settings/Import/Export、分组） | `pytest tests/e2e/test_studio_dialogs.py test_studio_widgets_advanced.py` | PASS (2/2) |
+| Libraries / Team / Images | subagent 1d582b4a | 通过，但发现前端缺失/字段不匹配 |
+| Analytics / Test / Simulator / Share / Replay | 直接运行 5 个 quick 脚本 | Share/Design/Mobile/Replay 通过；**公开测试页 Start 崩溃** |
+| 后端 API 全量探针 | subagent 4ca26848 | 87/87 路由覆盖，主流程正常；发现 1 CRITICAL、1 MEDIUM、11 LOW 异常 |
 
-### 2.2 Frontend Vue 3 Migration
+### 1.2 已通过的自动化基线
 
-Key patterns implemented (recorded in `AGENTS.md`):
+- 后端 Jest：`18 passed / 18 total`
+- 前端 `npm run test:unit`：`130 passed / 130 total`
+- 前端 `npm run lint`：No errors
+- 前端 `npm run build`：success
+- E2E `pytest tests/e2e --ignore=tests/e2e/test_studio.py`：17/17 passed
+- E2E `python3 tests/e2e/test_studio.py`：PASS
 
-- `@vue/compat` in Vue 3 mode.
-- Vue Router 4 (`createRouter` / `createWebHashHistory`).
-- Vue I18n 9 (`createI18n`).
-- Dojo event bus renamed from `this.emit()` to `this.$emitDojo()`.
-- `Vue.nextTick` replaced with named `nextTick` imports.
-- Dojo utility constructors use `createApp` instead of `Vue.extend` / `new ComponentClass()`.
-- Removed Vue 2 global APIs and event APIs.
+### 1.3 测试环境当前状态
 
-Specific files updated for Vue 2 → Vue 3 compatibility (non-exhaustive):
+- 后端 dev server：`http://localhost:8080`（仍在运行）
+- 前端 dev server：`http://localhost:8081`（仍在运行）
+- Browser preview 仍可使用
+- 测试脚本与截图保留在 `/tmp/`：
+  - `/tmp/qux-qa-*.py` 与 `/tmp/qux-qa-*.png`（subagent 产出）
+  - `/tmp/test_design_quick.py`、`test_share_quick.py`、`test_replay_quick.py`、`test_mobile_quick.py`、`test_pub_quick.py`
+  - `/tmp/qux-backend-report.json`（后端探针完整报告）
 
-- `src/dojo/DojoWidget.vue`, `src/dojo/DojoUtil.js`
-- `src/main.js`, `src/router.js`
-- `src/common/Tree.vue`, `src/common/TreeItem.vue`, `src/common/Table.vue`, `src/common/NLS.vue`
-- `src/canvas/toolbar/LayerList.vue`
-- `src/canvas/toolbar/components/DataBindingTree.vue`, `src/canvas/toolbar/components/XDataBinding.vue`, `src/canvas/toolbar/components/TableSettings.vue`, `src/canvas/toolbar/components/SVGSize.vue`, `src/canvas/toolbar/components/BoxSize.vue`, `src/canvas/toolbar/components/NavigationTable.vue`, `src/canvas/toolbar/components/RestSettings.vue`, `src/canvas/toolbar/components/ChatMessages.vue`
-- `src/canvas/toolbar/mixins/_Dialogs.vue`, `src/canvas/toolbar/mixins/_Render.vue`, `src/canvas/toolbar/mixins/_Show.vue`
-- `src/svg/SVGEditor.vue`, `src/svg/mixins/Actions.vue`
-- `src/core/code/LowCodeUtil.js`
-- `src/views/apps/Design.vue`, `src/views/apps/Overview.vue`, `src/views/apps/StudioOverview.vue`
-- `src/views/apps/analytics/AnalyticsTab.vue`, `src/views/apps/analytics/SurveySection.vue`, `src/views/apps/analytics/TaskCreateDialog.vue`
-- `src/views/apps/test/TestTab.vue`, `src/views/apps/test/TestSettings.vue`
-- `src/views/simulator/Splash.vue`, `src/views/simulator/TestPage.vue`
-- `src/views/Header.vue`, `src/views/LoginPage.vue`, `src/views/QUX.vue`, `src/views/user/Account.vue`
-- `src/unit/FastRenderTest.vue` deleted.
-
-### 2.3 Recent Fixes (latest batch)
-
-- **i18n nested placeholder**: `src/common/NLS.vue` and `src/nls/en.json` changed to avoid HTML inside placeholders; simulator test now passes.
-- **Prop mutation in analytics/test tabs**:
-  - `src/views/apps/analytics/AnalyticsTab.vue`: removed direct assignments to read-only `test`/`events` props.
-  - `src/views/apps/test/TestTab.vue`: introduced local `localTest`/`localEvents` to replace direct prop mutation.
-  - `src/views/apps/test/TestSettings.vue`: moved from mutating `test` prop to using local `testSettings` copy.
-- **Table initialization**: `src/common/Table.vue` now calls `postCreate()` in `mounted()` to initialize the Dojo logger before `setValue()`.
-- **Design lifecycle**: `src/views/apps/Design.vue` timer cleanup.
-
-### 2.4 E2E Tests Created
-
-All under `tests/e2e/` using Playwright + isolated backend/frontend (`conftest.py`):
-
-- `test_auth_account.py`
-- `test_app_dashboard.py`
-- `test_app_design.py`
-- `test_app_settings.py`
-- `test_app_test.py`
-- `test_app_analytics.py`
-- `test_images_team.py`
-- `test_libraries.py`
-- `test_simulator.py`
-- `test_studio.py`
-- `test_studio_screens.py`
-- `test_studio_layers.py`
-- `test_studio_widgets_basic.py`
-- `test_studio_widgets_advanced.py`
-- `test_studio_dialogs.py`
+> 注意：实测过程中 2 个 subagent（Studio 对话框/高级功能、Analytics/Test/Simulator/Share）因触发消息速率限制中断；剩余 quick 脚本由主会话直接接手运行完成。
 
 ---
 
-## 3. Verification Status
+## 2. 已定位的关键 Bug（按优先级）
 
-| Command | Status |
-|--------|--------|
-| `cd backend && npm test` | 9/9 PASS |
-| `npm run test:unit` | 130/130 PASS |
-| `npm run build` | PASS (warnings only) |
-| `npm run lint` | PASS |
+### P0：公开测试页（`/test.html`）Start 后白屏
 
-### Playwright scripts (run individually)
+- **表现**：点击 Start 后 `MatcScreen count: 0`，页面未渲染原型。控制台出现：
+  ```
+  [Vue warn]: Attempting to mutate prop "mode". Props are readonly.
+  PAGE ERROR: 'set' on proxy: trap returned falsish for property 'mode'
+  ```
+- **文件**：`src/core/Simulator.vue`、`src/views/simulator/TestPage.vue`
+- **根因**：`Simulator.vue` 把 `mode` 声明为 `props`，但 `TestPage.vue` 在 `createSimulator()` 中创建实例后，又直接赋值 `sim.mode = "debug"`。Vue 3 props 只读，赋值触发 proxy 异常。
+- **影响**：所有公开测试、模拟器、DesktopTest 入口都可能触发。
+- **修复方案**：
+  1. 将 `mode` 从 `Simulator.vue` 的 `props` 中移除，改为 `data` 字段，并在 `postCreate` 中从 `this.$attrs.mode` 初始化。
+  2. 设置 `inheritAttrs: false`，防止 `mode` 属性被渲染到根 DOM。
+  3. 将 `TestPage.vue` 中 `this.$new(Simulator)` 改为 `this.$new(Simulator, { mode: "debug", logData: false })`，并删除后续 `sim.mode = "debug"` 赋值。
+  4. 同理清理 `src/unit/ResponsiveTest.vue` 中重复的 `sim.mode = "debug"`。
 
-| Script | Status |
-|--------|--------|
-| `test_simulator.py` | PASS |
-| `test_app_test.py` | PASS (add-task UI not fully exercised, caught gracefully) |
-| `test_app_analytics.py` | PASS |
-| `test_studio_screens.py` | PASS |
-| `test_studio_widgets_basic.py` | PASS |
-| `test_studio_widgets_advanced.py` | PASS |
-| `test_studio_layers.py` | FAIL (`.MatcToolbarLayerList` selector not matched) |
+### P0：后端 `POST /rest/user/:id.json` 对不存在 ID 返回 500
 
-### `pytest -q tests/e2e` (sequential run)
+- **表现**：调用不存在的用户 ID 会抛出：
+  ```
+  Cannot destructure property 'password' of 'user' as it is null.
+  ```
+- **文件**：`backend/src/routes/users.ts:203-239`
+- **根因**：`db.updateCollection` 后调用 `db.findOne('user', { _id: id })`，找不到时返回 `null`，随后 `cleanUser(dbUser)` 直接解构 `password` 触发异常。
+- **影响**：任何能构造用户 ID 的请求都会让后端崩溃并泄露栈信息。
+- **修复方案**：在 `cleanUser` 调用前判空：
+  ```ts
+  const dbUser = db.findOne('user', { _id: id });
+  if (!dbUser) {
+    return res.status(404).json({ error: 'user.not.found' });
+  }
+  return res.json(cleanUser(dbUser));
+  ```
 
-- Intermittent editor-canvas timeouts (`localhost:8081` unavailable or `.MatcCanvas` not rendered in 20s) when run sequentially.
-- Root cause: `IsolatedTestEnvironment` port reuse and frontend process lifecycle between tests; individual scripts are stable.
+### P0：图片上传 UI 与后端字段不匹配
+
+- **表现**：通过 Studio UI 上传图片时后端返回 `MulterError: Unexpected field`（field: `file`），HTTP 500。
+- **文件**：
+  - 前端：`src/page/Uploader.vue:82`、`src/canvas/Upload.vue:182`、`src/canvas/toolbar/dialogs/ImportDialog.vue:476`、`src/page/ObjectUploader.vue:55`、`src/views/apps/test/TestTab.vue:220`
+  - 后端：`backend/src/routes/images.ts:63`
+- **根因**：前端所有上传点使用字段名 `file`，后端 multer 配置 `upload.array('files', 20)` 只接收 `files`。
+- **影响**：所有图片上传入口当前均不可用（测试团队用 API 上传才能绕过）。
+- **修复方案**：
+  - 推荐 A（最小侵入，保留后端校验）：将 `images.ts:63` 改为 `upload.fields([{ name: 'files', maxCount: 20 }, { name: 'file', maxCount: 20 }])`，并在处理函数中合并两个字段的文件数组：
+    ```ts
+    const uploaded = req.files as { [fieldname: string]: Express.Multer.File[] } | undefined;
+    const files = uploaded
+      ? [...(uploaded.files || []), ...(uploaded.file || [])]
+      : [];
+    ```
+  - 备选 B：统一前端所有 `formData.append('file', ...)` 改为 `formData.append('files', ...)`，但前端文件多、易遗漏，且需重新测试所有上传入口。
+
+### P1：`StudioOverview.checkEventCount` 误报更新失败
+
+- **表现**：每次打开 Overview 都会 `console.error('checkEventCount >> Could not update')` 并 `sendError`。
+- **文件**：`src/views/apps/StudioOverview.vue:370`、`backend/src/routes/apps.ts:232-233`
+- **根因**：前端检查 `res.status !== "ok"`，后端返回 `{ message: 'app.update.success' }` 缺少 `status`。
+- **影响**：大量 false-positive 错误日志；其他调用 `updateAppProps` 的界面（`SettingsTab.vue`、`AppList.vue` 等）也依赖 `res.status`，当前都会误判为失败。
+- **修复方案**：在 `backend/src/routes/apps.ts:233` 增加 `status: 'ok'`：
+  ```ts
+  return res.json({ message: 'app.update.success', status: 'ok' });
+  ```
+
+### P1：`RenderFactory` 未校验 `model.props`
+
+- **表现**：插入无 `props` 字段的 widget 时控制台出现 `Cannot read properties of undefined (reading 'label')`。
+- **文件**：`src/core/RenderFactory.js:1081`
+- **根因**：`_createInlineEdit` 直接访问 `model.props.label`，未处理 `model.props` 未定义。
+- **修复方案**：
+  ```js
+  if (!model.props || !model.props.label) {
+  ```
+
+### P1：`GET /rest/libs/:libID/suggestions/team.json` 不校验 `libID`
+
+- **表现**：任意 `libID` 都返回当前用户所在所有库房的队友列表，与传入的 `libID` 无关。
+- **文件**：`backend/src/routes/libs.ts:129-143`
+- **影响**：信息泄露、越权。
+- **修复方案**：验证当前用户对 `libID` 有读取权限，并限定返回的 userIds 属于该库：
+  ```ts
+  const libId = req.params.libID;
+  if (!(await canReadLib(user, libId))) {
+    return res.status(404).json({ error: 'lib.suggestions.denied' });
+  }
+  const myTeams = db.find('library_team', { userID: user.id, libID: libId });
+  const relatedTeams = db.find('library_team', { libID });
+  ```
+
+### P2：`Account.vue` 引用未注册 `Label` 组件
+
+- **表现**：Vue warn `Failed to resolve component: Label`。
+- **文件**：`src/views/user/Account.vue:74`
+- **修复方案**：移除 `<Label>Image</Label>` 或将其替换为 `<label class="...">Image</label>`/`<h5>Image</h5>`。
+
+### P2：WebSocket 默认指向公网 `wss://ws.quant-ux.com`
+
+- **表现**：本地测试时持续 `WebSocket connection ... failed: HTTP Authentication failed`。
+- **文件**：`public/config.json`（gitignored，运行时被复制到 `dist/`）
+- **修复方案**：本地开发提供 `public/config.json` 或让前端在缺失/失败时优雅降级（例如不显示 console 错误、关闭自动重试）。
+
+### P2：i18n 消息含 HTML 触发 `[intlify]` 警告
+
+- **表现**：测试/模拟器欢迎页出现多条 `Detected HTML in message. Recommend not using HTML messages to avoid XSS.`
+- **文件**：i18n message 文件
+- **修复方案**：用 `{0}` 插值替换 HTML 标签，或在 Vue I18n 配置中明确关闭 HTML 警告。
+
+### P2：多条写接口接受空 payload 仍返回 200
+
+- **表现**：`POST /rest/apps/:appID.json`、 `/rest/apps/props/:appID.json`、 `/rest/libs/:libID.json` 等接收空对象并返回 200。
+- **文件**：`backend/src/routes/apps.ts`、`libs.ts`、`stubs.ts` 等
+- **影响**：数据完整性、可审计性风险。
+- **修复方案**：增加 schema/必填字段校验；空体返回 `400`。
+
+### P2：Library 前端未接入
+
+- **表现**：访问 `/#/libs.html` 空白，无路由/视图。
+- **文件**：`src/router.js`、`backend/src/routes/libs.ts`
+- **根因**：后端 Library 接口已迁移完成，前端未接入。
+- **影响**：Library 功能完全不可用。
+- **修复方案**：在 `src/router.js` 添加 Library 路由，或在 Studio 组件面板中对接 `/rest/libs`。
 
 ---
 
-## 4. Known Issues
+## 3. 当前工作中断点
 
-1. **Sequential E2E instability**: `pytest tests/e2e` in one process sometimes fails to start the isolated frontend or reuses a busy port. The `conftest.py` fixture should be hardened so each test uses a guaranteed free port and tears down processes cleanly.
-2. **Studio layer-list test**: `test_studio_layers.py` cannot find `.MatcToolbarLayerList`. This is either a selector mismatch or the layer list is rendered lazily; needs test or UI adjustment.
-3. **Add-task dialog**: `test_app_test.py` opens the dialog but cannot complete the task creation flow. `TestSettings` task-creation is functional, but the test assertion needs refinement.
-4. **Dojo widget console warnings**: non-fatal errors remain for some legacy Dojo widgets (`Table`, `TaskCreateDialog`, `TestTab` session list) where `postCreate`/logger initialization is inconsistent. They do not block current scripts but should be cleaned up.
-5. **Missing E2E coverage**: `test_analytics_canvas.py` (analytics canvas/diagram interactions) and `test_share_comments.py` (public sharing + comments) were planned but not implemented.
-6. **Subagent rate limit**: during the last multi-agent run the orchestrator hit a `429 Too many requests` limit (`retry-after` ~1900s). Parallel work should be spaced or the limit should be considered in the schedule.
+- 已通过 `read` 工具查看所有需要修改的文件（见第 2 节），但**尚未执行任何 `edit`/`write` 修改**。
+- 后端和前端 dev server 仍在运行（端口 8080/8081）。
+- `/tmp` 中保留了大量实测脚本和截图，可供复用。
 
 ---
 
-## 5. Next Steps (Recommended)
+## 4. 下一步工作清单
 
-1. **Harden E2E harness** (`tests/e2e/conftest.py`):
-   - Ensure unique free ports per test run.
-   - Add robust teardown/kill of leftover backend/frontend processes.
-   - Stabilize sequential `pytest` execution so all 16 tests pass in one invocation.
-2. **Fix `test_studio_layers.py`**:
-   - Verify the real DOM structure for the layer list.
-   - Adjust selector or add an explicit toggle step.
-3. **Implement missing tests**:
-   - `test_analytics_canvas.py`
-   - `test_share_comments.py`
-4. **Dojo lifecycle cleanup**:
-   - Audit components with empty or custom `mounted()` hooks that suppress the `DojoWidget` mixin lifecycle.
-   - Standardize `postCreate()`/`initLogger()` calls to remove the remaining `Cannot read properties of undefined (reading 'log')` / `innerHTML` console errors.
-5. **Complete the multi-agent Playwright campaign** once rate limits allow, keeping each subagent task small (≤16 concurrent).
-6. **Run a full verification sweep** after the above:
-   - `cd backend && npm test`
-   - `npm run test:unit`
-   - `npm run build`
-   - `npm run lint`
-   - `pytest tests/e2e`
+建议按以下顺序推进：
+
+1. [ ] **应用 P0 修复**（先保证不崩溃、核心上传可用）：
+   - [ ] `backend/src/routes/users.ts`：用户更新 500 修复
+   - [ ] `backend/src/routes/images.ts`：图片上传字段 `file`/`files` 兼容
+   - [ ] `src/core/Simulator.vue` + `src/views/simulator/TestPage.vue` + `src/unit/ResponsiveTest.vue`：Vue `mode` prop 改为 data
+   - [ ] 针对 Test/Simulator 重新运行 `python3 /tmp/test_pub_quick.py`、`test_mobile_quick.py`，以及 `pytest tests/e2e/test_app_test.py test_simulator.py test_share_comments.py`
+
+2. [ ] **应用 P1 修复**：
+   - [ ] `backend/src/routes/apps.ts`：`updateAppProps` 返回增加 `status: 'ok'`
+   - [ ] `src/core/RenderFactory.js`：`model.props` 空值防护
+   - [ ] `backend/src/routes/libs.ts`：Library suggestions 校验 `libID`
+   - [ ] 重新运行 `npm run build`、`npm run lint`、`npm run test:unit`、`cd backend && npm test`、`pytest tests/e2e`
+
+3. [ ] **应用 P2 修复**（可选/按产品优先级）：
+   - [ ] `src/views/user/Account.vue`：移除/替换未注册 `Label`
+   - [ ] WebSocket 本地降级（`public/config.json` 或前端容错）
+   - [ ] i18n HTML 清理
+   - [ ] 后端写接口空 payload 校验
+   - [ ] Library 前端接入
+
+4. [ ] **回归验证**：
+   - [ ] `npm run build` 无新增 warning/error
+   - [ ] `npm run test:unit` 130/130 通过
+   - [ ] `cd backend && npm test` 18/18 通过
+   - [ ] `pytest tests/e2e` 全部通过
+   - [ ] 手动/Playwright 快速脚本验证公开测试页、图片上传、分享评论、模拟器
+
+5. [ ] **清理**：
+   - [ ] 停止 dev server：
+     ```bash
+     lsof -ti:8080,8081 | xargs kill -9
+     ```
+   - [ ] 归档或删除 `/tmp/test_*_quick.py`、`/tmp/qux-qa-*.py`、`/tmp/qux-backend-report.json`（如需保留可移动到项目 `tests/qa/`）
 
 ---
 
-## 6. Important Files
-
-- `AGENTS.md` – migration conventions and decisions.
-- `tests/e2e/conftest.py` – isolated E2E infrastructure.
-- `backend/src/server.ts` / `backend/src/app.ts` – backend entry points.
-- `src/router.js` – frontend routes.
-- `src/main.js` – frontend bootstrap.
-- `src/dojo/DojoWidget.vue` / `src/dojo/DojoUtil.js` – Dojo compatibility layer.
-- `src/views/apps/test/TestTab.vue` / `TestSettings.vue` – recently fixed prop mutation.
-- `src/views/apps/analytics/AnalyticsTab.vue` – recently fixed prop mutation.
-- `src/common/Table.vue` – Dojo initialization fix.
-- `src/common/NLS.vue` / `src/nls/en.json` – i18n fix.
-
----
-
-## 7. How to Run Locally
+## 5. 快速复测命令
 
 ```bash
-# Backend tests
+# 后端
 cd backend && npm test
 
-# Frontend unit tests
+# 前端
+npm run lint
 npm run test:unit
-
-# Build
 npm run build
 
-# Lint
-npm run lint
+# E2E
+pytest tests/e2e -v
 
-# Individual E2E scripts
-python3 tests/e2e/test_simulator.py
-python3 tests/e2e/test_app_test.py
-python3 tests/e2e/test_app_analytics.py
-python3 tests/e2e/test_studio_screens.py
-python3 tests/e2e/test_studio_widgets_basic.py
-python3 tests/e2e/test_studio_widgets_advanced.py
-
-# Full E2E suite (currently flaky due to port/lifecycle reuse)
-pytest tests/e2e
+# 手动浏览器脚本（基于现有 /tmp 脚本）
+python3 /tmp/test_pub_quick.py
+python3 /tmp/test_mobile_quick.py
+python3 /tmp/test_share_quick.py
+python3 /tmp/test_design_quick.py
+python3 /tmp/test_replay_quick.py
 ```
+
+---
+
+## 6. 相关文件索引
+
+| 作用 | 路径 |
+|---|---|
+| 项目笔记 | `AGENTS.md` |
+| 后端入口 | `backend/src/server.ts` |
+| 后端路由挂载 | `backend/src/app.ts` |
+| 用户路由 | `backend/src/routes/users.ts` |
+| 图片路由 | `backend/src/routes/images.ts` |
+| 应用路由 | `backend/src/routes/apps.ts` |
+| 库路由 | `backend/src/routes/libs.ts` |
+| Studio Overview | `src/views/apps/StudioOverview.vue` |
+| 模拟器组件 | `src/core/Simulator.vue` |
+| 测试页面 | `src/views/simulator/TestPage.vue` |
+| 渲染工厂 | `src/core/RenderFactory.js` |
+| 账户页面 | `src/views/user/Account.vue` |
+| Dojo 工具 | `src/dojo/DojoUtil.js` |
+| 后端探针报告 | `/tmp/qux-backend-report.json` |
+
+---
+
+## 7. 备注
+
+- 本次实测中 subagent 遇到整体消息速率限制，导致 2 个测试子任务未完成。后续修复工作可视情况拆分为更小的 subagent 任务或直接由主会话处理。
+- `HANDSOFF.md` 生成时未修改仓库源码；源码修改记录从本文件落盘后开始。

@@ -12,6 +12,7 @@ import NotificationService from './NotificationService'
 import AIService from './AIService'
 import AISimService from './AISimService'
 import UploadService from './UploadService'
+import LibraryService from './LibraryService'
 
 class Services {
 
@@ -19,7 +20,7 @@ class Services {
         this.config = {
             'default': true,
             'auth': 'qux',
-            'websocket': 'wss://ws.quant-ux.com'
+            'websocket': ''
         }
     }
 
@@ -37,8 +38,12 @@ class Services {
                 } else {
                     reject(new Error('Could not load config'))
                 }
-            }).catch((err) => {
-                reject(err)
+            }).catch(() => {
+                // Config could not be loaded (e.g. missing /config.json during
+                // dev). Fall back to the constructor defaults instead of
+                // rejecting, so the app still mounts; collaboration (WebSocket)
+                // degrades to null.
+                resolve(this.config)
             })
         })
     }
@@ -131,6 +136,11 @@ class Services {
     getCommandService () {
         CommandService.setToken(this.getUserService().getToken())
         return CommandService
+    }
+
+    getLibraryService () {
+        LibraryService.setToken(this.getUserService().getToken())
+        return LibraryService
     }
 
 }

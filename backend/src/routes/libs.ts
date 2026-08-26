@@ -3,6 +3,7 @@ import { SQLiteClient } from '../db/SQLiteClient';
 import { AppAcl } from '../acl/AppAcl';
 import { QuxUser, ROLES, hasRole } from '../acl/ACL';
 import * as Util from '../util/Util';
+import { requireNonEmptyBody, requireKeys } from '../util/ValidateBody';
 
 export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   const router = Router();
@@ -44,6 +45,9 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/libs', (req: Request, res: Response) => {
+    if (!requireKeys(req, res, ['name'], 'lib.create.missing.name')) {
+      return;
+    }
     const user = req.user as QuxUser;
     if (!hasRole(user, ROLES.USER)) {
       return res.status(401).json({ error: 'lib.create.denied' });
@@ -53,6 +57,7 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
       _id: Util.getRandomString(),
       name: req.body.name,
       description: req.body.description,
+      userID: user.id,
       isPublic: req.body.isPublic || false,
       data: req.body.data || {},
       created: Date.now(),
@@ -79,6 +84,9 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/libs/:libID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'lib.update.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const libId = req.params.libID;
     if (!(await canWriteLib(user, libId))) return res.status(401).json({ error: 'lib.write.denied' });
@@ -112,6 +120,29 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
     return res.json({ message: 'lib.update.success' });
   });
 
+  router.delete('/libs/:libID', async (req: Request, res: Response) => {
+    const user = req.user as QuxUser;
+    const libId = req.params.libID;
+    const lib = db.findOne('library', { _id: libId });
+    if (!lib) return res.status(404).json({ error: 'lib.not.found' });
+
+    const membership = db.findOne('library_team', { libID: libId, userID: user.id });
+    const isOwner = membership?.permission === 3 || lib.userID === user.id;
+    if (!isOwner) {
+      // hide existence from outsiders, but members / public readers know it exists
+      if (await canReadLib(user, libId)) {
+        return res.status(403).json({ error: 'lib.delete.denied' });
+      }
+      return res.status(404).json({ error: 'lib.not.found' });
+    }
+
+    // the library table has no isDeleted column (001_init.sql), so the list
+    // filter `isDeleted` is a no-op; hard delete the record + team rows.
+    db.removeDocuments('library_team', { libID: libId });
+    db.removeDocuments('library', { _id: libId });
+    return res.json({ message: 'lib.delete.success' });
+  });
+
   router.get('/libs/:libID/team.json', async (req: Request, res: Response) => {
     const user = req.user as QuxUser;
     const libId = req.params.libID;
@@ -126,13 +157,16 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
     return res.json(result);
   });
 
-  router.get('/libs/:libID/suggestions/team.json', (req: Request, res: Response) => {
+  router.get('/libs/:libID/suggestions/team.json', async (req: Request, res: Response) => {
     const user = req.user as QuxUser;
     if (!hasRole(user, ROLES.USER)) return res.status(404).json({ error: 'lib.suggestions.denied' });
 
-    const myTeams = db.find('library_team', { userID: user.id });
+    const libId = req.params.libID;
+    if (!(await canReadLib(user, libId))) return res.status(404).json({ error: 'lib.suggestions.denied' });
+
+    const myTeams = db.find('library_team', { userID: user.id, libID: libId });
     const libIds = myTeams.map((t: any) => t.libID);
-    const relatedTeams = db.find('library_team', { libID: { $in: libIds } });
+    const relatedTeams = db.find('library_team', { libID: libId });
     const userIds = [...new Set(relatedTeams.map((t: any) => t.userID))];
     const result = userIds.map((uid) => {
       const u = db.findOne('user', { _id: uid });
@@ -155,10 +189,12 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
 
     const existing = db.findOne('library_team', { userID: target._id, libID: libId });
     if (existing) {
-      db.updateCollection('library_team', { _id: existing._id }, { $set: { permission, lastUpdate: Date.now() } });
-    } else {
-      db.insert('library_team', { _id: Util.getRandomString(), userID: target._id, libID: libId, permission, created: Date.now() });
+      // this endpoint only adds NEW members; permission changes go through
+      // POST /libs/:libID/team/:userID. Never overwrite an existing member's
+      // permission here (would let a writer demote the owner).
+      return res.status(405).json({ error: 'lib.team.exists' });
     }
+    db.insert('library_team', { _id: Util.getRandomString(), userID: target._id, libID: libId, permission, created: Date.now() });
     return res.json({ message: 'lib.team.add.success' });
   });
 
@@ -172,7 +208,17 @@ export function createLibraryRouter(db: SQLiteClient, appAcl: AppAcl): Router {
     if (permission === undefined) return res.status(405).json({ error: 'lib.team.invalid' });
     if (permission >= 3) return res.status(405).json({ error: 'lib.team.owner' });
 
-    db.updateCollection('library_team', { userID: userId, libID: libId }, { $set: { permission, lastUpdate: Date.now() } });
+    const lib = db.findOne('library', { _id: libId });
+    const existing = db.findOne('library_team', { userID: userId, libID: libId });
+    if (!existing) return res.status(404).json({ error: 'lib.team.member.notfound' });
+    // the owner's permission is sacred: never allow demoting the owner
+    // (permission 3 == owner; lib.userID covers legacy libs without an
+    // owner team row).
+    if (existing.permission === 3 || lib?.userID === userId) {
+      return res.status(405).json({ error: 'lib.team.owner' });
+    }
+
+    db.updateCollection('library_team', { _id: existing._id }, { $set: { permission, lastUpdate: Date.now() } });
     return res.json({ message: 'lib.team.update.success' });
   });
 

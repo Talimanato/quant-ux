@@ -160,3 +160,99 @@
 .MatcCreateBtnElement:hover .MatcCreateBtnRemove {
 	display: block;
 }
+
+
+.MatcCreateBtnCntr .mdi.MatcCreateBtnSaveLib {
+	position: absolute;
+	display: none;
+	color: #333;
+	top: 5px;
+	right: 34px;
+	background: #fff;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.MatcCreateBtnCntr .mdi.MatcCreateBtnSaveLib:hover {
+	color: $primary_color;
+}
+
+.MatcCreateBtnElement:hover .MatcCreateBtnSaveLib {
+	display: block;
+}
+
+
+.MatcCreateLibListCntr {
+	padding: 8px;
+	font-size: 14px;
+}
+
+.MatcCreateLibRow {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	color: #555;
+
+	> .mdi {
+		font-size: 18px;
+		margin-right: 8px;
+	}
+
+	.MatcCreateLibName {
+		flex-grow: 1;
+	}
+
+	.MatcCreateLibCount {
+		opacity: 0.7;
+	}
+}
+
+.MatcCreateLibRow:hover {
+	background: #f5f5f5;
+	color: $primary_color;
+}
+
+.MatcCreateLibSaveCntr {
+	max-height: 400px;
+	overflow: auto;
+	padding: 8px 16px;
+
+	.MatcCreateLibSaveRow {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		border-bottom: 1px solid #eee;
+		color: #555;
+		cursor: pointer;
+
+		> .mdi {
+			margin-right: 8px;
+		}
+
+		.MatcCreateLibSaveName {
+			flex-grow: 1;
+		}
+
+		.MatcButtonXS {
+			margin-left: 16px;
+		}
+	}
+
+	.MatcCreateLibSaveNew {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+
+		.MatcCreateLibSaveNewLabel {
+			width: 140px;
+			margin: 0;
+		}
+
+		> input {
+			margin-right: 8px;
+		}
+	}
+}

@@ -3,6 +3,7 @@ import { SQLiteClient } from '../db/SQLiteClient';
 import { AppAcl } from '../acl/AppAcl';
 import { QuxUser } from '../acl/ACL';
 import * as Util from '../util/Util';
+import { requireNonEmptyBody, requireKeys } from '../util/ValidateBody';
 
 export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   const router = Router();
@@ -199,6 +200,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/commands/:appID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'command.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canWrite(user, appId);
@@ -215,6 +219,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/commands/:appID/add', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'command.add.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canWrite(user, appId);
@@ -398,6 +405,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/invitation/:appID/:hash/events.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'invitation.events.body.empty')) {
+      return;
+    }
     const appId = req.params.appID;
     const hash = req.params.hash;
     const inv = db.findOne('invitation', { hash, appID: appId });
@@ -418,6 +428,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/invitation/:appID/:hash/mouse.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'invitation.mouse.body.empty')) {
+      return;
+    }
     const appId = req.params.appID;
     const hash = req.params.hash;
     const inv = db.findOne('invitation', { hash, appID: appId });
@@ -468,6 +481,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/test/:appID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'testsetting.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canWrite(user, appId);
@@ -522,6 +538,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/events/:appID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'events.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canRead(user, appId);
@@ -542,6 +561,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/events/:appID/:id.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'events.update.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const id = req.params.id;
@@ -589,6 +611,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/mouse/:appID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'mouse.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canRead(user, appId);
@@ -654,6 +679,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/annotations/apps/:appID', async (req: Request, res: Response) => {
+    if (!requireKeys(req, res, ['type'], 'annotation.body.invalid')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canWrite(user, appId);
@@ -666,6 +694,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/annotations/apps/:appID/:annotationID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'annotation.update.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const id = req.params.annotationID;
@@ -745,6 +776,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/comments/apps/:appID', async (req: Request, res: Response) => {
+    if (!requireKeys(req, res, ['type'], 'comment.body.invalid')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const allowed = await appAcl.canRead(user, appId);
@@ -755,6 +789,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/comments/apps/:appID/:commentID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'comment.update.body.empty')) {
+      return;
+    }
     const user = req.user as QuxUser;
     const appId = req.params.appID;
     const id = req.params.commentID;
@@ -791,6 +828,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/comments/hash/:hash/:appID', async (req: Request, res: Response) => {
+    if (!requireKeys(req, res, ['type'], 'comment.body.invalid')) {
+      return;
+    }
     const appId = req.params.appID;
     const hash = req.params.hash;
     const inv = db.findOne('invitation', { hash, appID: appId });
@@ -807,6 +847,9 @@ export function createStubRouter(db: SQLiteClient, appAcl: AppAcl): Router {
   });
 
   router.post('/comments/hash/:hash/:appID/:commentID.json', async (req: Request, res: Response) => {
+    if (!requireNonEmptyBody(req, res, 'comment.update.body.empty')) {
+      return;
+    }
     const appId = req.params.appID;
     const hash = req.params.hash;
     const inv = db.findOne('invitation', { hash, appID: appId });
