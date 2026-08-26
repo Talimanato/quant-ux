@@ -8,7 +8,7 @@ import Logger from 'common/Logger'
 export default {
   name: "QRCode",
   mixins: [DojoWidget],
-  props: ['hash', 'debug', 'live', 'log'],
+  props: ['hash', 'debug', 'live'],
   data: function() {
     return {
     };

@@ -62,6 +62,11 @@ export default {
         close () {
             this.visible = false
             this.step = 0
+            /**
+             * Let the host component react to closing (e.g. persisting
+             * state), also when closed via the backdrop.
+             */
+            this.$emit('close')
         },
         position (node, includeScroll = false) {
             if (node) {

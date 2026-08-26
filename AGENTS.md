@@ -88,7 +88,11 @@ Vue 3 flushes `mounted()` hooks in a **microtask** after `app.mount()`, but the 
 
 ## Never mutate props in watchers
 
-A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **throws** `'set' on proxy: trap returned falsish` in Vue 3 — and an uncaught throw inside a lifecycle/watcher flush can abort other components' mounted hooks (this is how the LayerList disappeared). All remaining offenders were removed (`LoginPage`, `Header`, `EditModeButton`, `HeatmapToggleButton`, `AnalyticViewModeButton`, `BulletGraph`, `Tree`, `TreeItem`, `AnimatedLabel`, `CommentsTab`, `AnalyticsHeader`, `HeatTab`). When porting, just delete the self-assignment — the prop is already updated when the watcher fires.
+A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **throws** `'set' on proxy: trap returned falsish` in Vue 3 — and an uncaught throw inside a lifecycle/watcher flush can abort other components' mounted hooks (this is how the LayerList disappeared). The same applies to **setter methods** assigning props (`setPublic(p) { this.isPublic = p }`): this broke the dashboard (Preview/ScreenList) and the Team dialog (Input.setHints). All offenders were removed or converted to internal data/computed mirrors (`Preview.isPublic`, `Input.hintList`, `VideoPlayer.currentTestSettings`, `BulletGraph`, `CollabUser`, `ScatterPlot`, `SVGEditor`, `QRCode`, `Export*` dialogs). When porting, never assign to a prop — pass it via `$new` params (declared props) or mirror it in data.
+
+## Updates dialog auto-open persistence
+
+`StudioNotification.showAutoDialog()` auto-opens the updates dialog for users with no seen notifications. The seen ids are persisted in the `user.notifications` JSON column (migration `003_user_notifications.sql`; the migration runner tolerates duplicate-column errors) and written on close via `NotificationService.setSeenNotifications()` and the `ZoomDialog` `@close` event. Without this the dialog (and its full-screen backdrop) re-appeared on **every** login and intercepted all sidebar clicks.
 
 ## E2E harness
 

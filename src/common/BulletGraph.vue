@@ -51,7 +51,7 @@ export default {
 				var lbl = db.div("vommondLegendBarItemLabel", section.value).build(lblCntr);
 				this.addTooltip(lbl, section.label)
 			}
-			this.sections = sections;
+			// sections is a prop - assignments would throw in Vue 3
 		},
 
 		setLabel:function(lbl){
@@ -88,7 +88,6 @@ export default {
 				value =0 ;
 			}
 			this.bar.style.width = Math.min(100,Math.round((value / this.max ) *100)) +"%";
-			this.value = value;
 			if(this.color){
 				let p = Math.min(value / this.max ,1);
 				if(this.invertColors){

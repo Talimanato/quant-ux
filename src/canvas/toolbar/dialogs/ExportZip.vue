@@ -32,12 +32,12 @@ export default {
     components: {},
     methods: {
 
-			setModel (m){
-				this.model = m;
+			setModel (){
+				// model is a bound prop - do not assign (Vue 3)
 			},
 
-			setJwtToken(t) {
-				this.jwtToken = t
+			setJwtToken () {
+				// jwtToken is a bound prop - do not assign (Vue 3)
 			},
 
       async downloadZip () {

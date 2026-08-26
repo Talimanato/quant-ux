@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS user (
   plan TEXT DEFAULT 'Free',
   lastlogin INTEGER,
   lastNotification INTEGER DEFAULT 0,
+  notifications TEXT,
   aiUsage INTEGER DEFAULT 0,
   aiUsageTotal INTEGER DEFAULT 0,
   loginCount INTEGER DEFAULT 0,

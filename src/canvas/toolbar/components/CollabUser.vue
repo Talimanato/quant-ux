@@ -84,7 +84,6 @@ export default {
   watch: {
     users (v) {
         this.log.log(2, 'watch(users)', 'enter', v)
-        this.users = v
     }
    },
   async mounted() {

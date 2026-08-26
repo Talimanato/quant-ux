@@ -273,7 +273,7 @@ export class SQLiteClient {
         result.id = value;
       } else if (SQLiteClient.BOOLEAN_COLUMNS.has(key)) {
         result[key] = value === 1 || value === true;
-      } else if (key === 'data' || key === 'screenSize' || key === 'has') {
+      } else if (key === 'data' || key === 'screenSize' || key === 'has' || key === 'notifications') {
         if (typeof value === 'string') {
           try {
             result[key] = JSON.parse(value);

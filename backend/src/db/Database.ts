@@ -36,7 +36,16 @@ export class AppDatabase {
 
     for (const file of files) {
       const sql = fs.readFileSync(path.join(migrationDir, file), 'utf-8');
-      this.db.exec(sql);
+      try {
+        this.db.exec(sql);
+      } catch (err) {
+        // tolerate idempotent migrations on existing databases, e.g.
+        // ALTER TABLE ... ADD COLUMN when the column is already there
+        const message = String(err);
+        if (!/duplicate column name/i.test(message)) {
+          throw err;
+        }
+      }
     }
   }
 

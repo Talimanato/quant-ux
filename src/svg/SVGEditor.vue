@@ -796,11 +796,9 @@ export default {
 
   },
   watch: {
-      pos (p) {
-          this.pos = p
+      pos () {
       },
       zoom (z) {
-        this.zoom = z
         this.onZoom(z)
       },
       grid (g) {

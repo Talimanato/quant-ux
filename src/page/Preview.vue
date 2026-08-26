@@ -22,9 +22,12 @@ import Animation from 'core/Animation'
 export default {
   name: "Preview",
   mixins: [Layout, DojoWidget],
-  props: ['app', 'screen', 'isPublic'],
+  // isPublic is set imperatively via setPublic() - as a prop the assignment
+  // would throw in Vue 3
+  props: ['app', 'screen'],
   data: function() {
     return {
+      isPublic: false,
       isFillBackground: false,
       debug: false,
       mode: "standalone",

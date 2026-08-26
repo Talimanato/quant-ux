@@ -46,6 +46,16 @@ export default {
     name: 'Player',
 	mixins:[DojoWidget, Util],
 	props: ["app", "testSettings", "annotation", "sessionID", "eventsWithAnnimations", "pub", "mouse"],
+    computed: {
+        /**
+         * testSettings is a prop (bound in VideoTab), but the analytic
+         * toolbar sets it imperatively via setTestSettings() - the local
+         * mirror keeps both paths working in Vue 3.
+         */
+        currentTestSettings () {
+            return this.localTestSettings !== null ? this.localTestSettings : this.testSettings
+        }
+    },
     data: function () {
         return {
             running: false,
@@ -53,6 +63,7 @@ export default {
             lastEventPos: 0,
             animationTimeOffSet: 400,
             mode: "private",
+            localTestSettings: null,
             invisibleEvents: {
 				"Animation": true,
 				"SessionStart": true,
@@ -96,7 +107,9 @@ export default {
 		},
 
 		setTestSettings (t) {
-			this.testSettings = t
+			// testSettings is a prop (bound in VideoTab); use the local
+			// mirror so imperative callers (analytic player) work too
+			this.localTestSettings = t
 		},
 
 		setDialog(dialog) {
@@ -117,7 +130,6 @@ export default {
 			this.logger.log(0, "setSession", "enter " + sessionID);
 			try {
 
-				this.sessionID = sessionID;
 				this.session = session;
 				session.sortBy("time");
 				this.events = lang.clone(session.as_array());
@@ -723,12 +735,12 @@ export default {
 		getMatches(){
 
 			this.taskNames = {};
-			if(this.testSettings){
+			if(this.currentTestSettings){
 
 				var session = new DataFrame(this.events);
 				session = this.getActionEvents(session);
 
-				var tasks = this.testSettings.tasks;
+				var tasks = this.currentTestSettings.tasks;
 				for(var i=0; i < tasks.length; i++){
 					this.taskNames[tasks[i].id] = tasks[i].name;
 				}

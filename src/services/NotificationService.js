@@ -43,7 +43,25 @@ class NotificationService extends AbstractService{
         }
         return []
     }
-    
+
+    /**
+     * Persist which notifications the user has seen, so the updates
+     * dialog does not auto open on every login.
+     */
+    setSeenNotifications (notifications) {
+        const seen = {}
+        if (notifications) {
+            notifications.forEach(n => {
+                if (n && n.id) {
+                    seen[n.id] = true
+                }
+            })
+        }
+        this._post('rest/user/' + this.user.id + ".json", {
+            notifications: seen
+        })
+    }
+
     async getNotications () {
         if ( this.user.id === -1) {
             return []

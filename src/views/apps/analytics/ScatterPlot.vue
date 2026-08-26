@@ -367,28 +367,22 @@ export default {
         }
     },
     watch: {
-        mode (v) {
-            this.mode = v
+        mode () {
             this.render();
         },
-        yAxis (v) {
-            this.yAxis = v
+        yAxis () {
             this.render()
         },
-        xAxis (v) {
-            this.xAxis = v
+        xAxis () {
             this.render()
         },
-        clusterVars (v) {
-            this.clusterVars = v
+        clusterVars () {
             this.setValue(this.test, this.app, this.events, this.annotation)
         },
-        clusterAlgo (v) {
-            this.clusterAlgo = v
+        clusterAlgo () {
             this.setValue(this.test, this.app, this.events, this.annotation)
         },
-        clusterNorm (v) {
-            this.clusterNorm = v
+        clusterNorm () {
             this.setValue(this.test, this.app, this.events, this.annotation)
         }
     },

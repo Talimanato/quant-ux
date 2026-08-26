@@ -6,7 +6,7 @@
             {{ $t('app.notifications') }}
         </span>
 
-        <ZoomDialog ref="dialog">
+        <ZoomDialog ref="dialog" @close="saveSeenNotifications">
             <div class="MatcDialogXL MatcDialog" @click.stop>
 
                 <h1> {{ $t('app.notifications') }}</h1>
@@ -166,6 +166,18 @@ export default {
         },
         close () {
             this.$refs.dialog.close()
+        },
+        saveSeenNotifications () {
+            /**
+             * Persist the seen notifications so the auto-open does not
+             * fire again on the next login. Called for both the close
+             * button and backdrop clicks.
+             */
+            try {
+                this.notifcationService.setSeenNotifications(this.notifications)
+            } catch (e) {
+                this.logger.error('saveSeenNotifications', 'Could not save', e)
+            }
         },
         formatDate(ts) {
             return UIUtil.formatDate(ts)

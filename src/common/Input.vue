@@ -33,7 +33,14 @@ export default {
 	props:['fireOnBlur', 'top', 'placeholder', 'inline', 'formControl', 'hints', 'value', 'isDropDown', 'toolbar', 'actions', 'magicChar'],
     data: function () {
         return {
-
+            // hints is a prop, but setHints() (e.g. Team dialog) sets it
+            // imperatively - the mirror keeps both paths working in Vue 3
+            internalHints: null
+        }
+    },
+    computed: {
+        hintList () {
+            return this.internalHints !== null ? this.internalHints : this.hints
         }
     },
     components: {},
@@ -61,8 +68,9 @@ export default {
 
 			showAll () {
 				var suggestions = [];
-				for(var i=0; i< this.hints.length; i++){
-					var hint = this.hints[i];
+				var hints = this.hintList || [];
+				for(var i=0; i< hints.length; i++){
+					var hint = hints[i];
 					suggestions.push(hint);
 				}
 				if (suggestions.length > 0) {
@@ -73,7 +81,7 @@ export default {
 			},
 
 			onKey (e){
-				if(!this.hints){
+				if(!this.hintList){
 					return;
 				}
 
@@ -144,8 +152,9 @@ export default {
 				let value = this.input.value;
 				if (value.length >=1){
 					value = value.toLowerCase();
-					for (let i=0; i< this.hints.length; i++){
-						let hint = this.hints[i];
+					let hints = this.hintList || [];
+					for (let i=0; i< hints.length; i++){
+						let hint = hints[i];
 						if (hint._label.indexOf(value)>=0){
 							suggestions.push(hint);
 						}
@@ -252,47 +261,23 @@ export default {
 				return this.input.value;
 			},
 
-			setHints (hints){
-				for(var i=0; i< hints.length; i++){
-					hints[i]._label = hints[i].label.toLowerCase();
-				}
-				this.hints = hints;
-			},
+		setHints (hints){
+			for(var i=0; i< hints.length; i++){
+				hints[i]._label = hints[i].label.toLowerCase();
+			}
+			this.internalHints = hints;
+		},
 			destroy:function(){
 				this.hideSuggestion();
 				this.cleanUpTempListener();
 			}
 		},
 		watch: {
-			fireOnBlur (v) {
-				this.log.log(2, 'watch(fireOnBlur)', 'enter', v)
-				this.fireOnBlur = v
-			},
-			top (v) {
-				this.log.log(2, 'watch(top)', 'enter', v)
-				this.top = v
-			},
-			placeholder (v) {
-				this.log.log(2, 'watch(placeholder)', 'enter', v)
-				this.placeholder = v
-			},
-			inline (v) {
-				this.log.log(2, 'watch(inline)', 'enter', v)
-				this.inline = v
-			},
 			hints (v) {
-				this.log.log(2, 'watch(hints)', 'enter', v)
 				this.setHints(v)
-			},
-			formControl (v) {
-				this.log.log(2, 'watch(formControl)', 'enter', v)
-				this.formControl = v
 			},
 			value (v) {
 				this.setValue(v)
-			},
-			isDropDown (v) {
-				this.isDropDown = v
 			}
 		},
     mounted () {
