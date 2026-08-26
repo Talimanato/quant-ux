@@ -33,3 +33,6 @@ tests/e2e/debug*.png
 # runtime logs and pid files
 logs/
 backend/dist
+
+# playwright MCP session artifacts
+.playwright-mcp/
