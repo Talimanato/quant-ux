@@ -1,0 +1,4218 @@
+[
+  {
+    "id": "QXNavTopBar",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Top Bar",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 1040,
+    "h": 50,
+    "children": [
+      {
+        "id": "QXNav0",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Logo",
+        "x": 0,
+        "y": 14,
+        "w": 36,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 9,
+          "borderTopLeftRadius": 9,
+          "borderBottomRightRadius": 9,
+          "borderBottomLeftRadius": 9,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav1",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Logo Letter",
+        "x": 0,
+        "y": 21,
+        "w": 36,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Q"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav2",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand",
+        "x": 46,
+        "y": 18,
+        "w": 120,
+        "h": 24,
+        "z": null,
+        "props": {
+          "label": "Quant-UX"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 18,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav3",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 1",
+        "x": 300,
+        "y": 22,
+        "w": 56,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Home"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav4",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 2",
+        "x": 364,
+        "y": 22,
+        "w": 64,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Features"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav5",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 3",
+        "x": 436,
+        "y": 22,
+        "w": 64,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Pricing"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav6",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 4",
+        "x": 508,
+        "y": 22,
+        "w": 56,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "About"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav7",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Login Link",
+        "x": 872,
+        "y": 22,
+        "w": 48,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Sign in"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav8",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Signup",
+        "x": 928,
+        "y": 14,
+        "w": 112,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "Sign Up"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavTopBarIcons",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Top Bar with Icons",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 1064,
+    "h": 48,
+    "children": [
+      {
+        "id": "QXNav9",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Menu",
+        "x": 16,
+        "y": 20,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-menu",
+          "color": "#111827",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav10",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand",
+        "x": 56,
+        "y": 22,
+        "w": 140,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Dashboard"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 17,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav11",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav Active",
+        "x": 300,
+        "y": 26,
+        "w": 56,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Home"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav12",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Active Indicator",
+        "x": 300,
+        "y": 46,
+        "w": 56,
+        "h": 2,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav13",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 2",
+        "x": 364,
+        "y": 26,
+        "w": 72,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Analytics"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav14",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 3",
+        "x": 446,
+        "y": 26,
+        "w": 72,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Customers"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav15",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Nav 4",
+        "x": 528,
+        "y": 26,
+        "w": 56,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Reports"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav16",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 940,
+        "y": 18,
+        "w": 1,
+        "h": 28,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXNav17",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Search",
+        "x": 960,
+        "y": 20,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-magnify",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav18",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Bell",
+        "x": 996,
+        "y": 20,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-bell",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav19",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 1036,
+        "y": 16,
+        "w": 28,
+        "h": 28,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 14,
+          "borderTopLeftRadius": 14,
+          "borderBottomRightRadius": 14,
+          "borderBottomLeftRadius": 14,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXNav20",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Badge",
+        "x": 1052,
+        "y": 16,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ef4444",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ef4444",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ef4444",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ef4444",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#ef4444"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavTopBarSearch",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Top Bar with Search",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 1032,
+    "h": 54,
+    "children": [
+      {
+        "id": "QXNav21",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Menu",
+        "x": 16,
+        "y": 24,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-menu",
+          "color": "#111827",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav22",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand",
+        "x": 56,
+        "y": 26,
+        "w": 120,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Workspace"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 17,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav23",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "SearchBar",
+        "x": 240,
+        "y": 18,
+        "w": 420,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#f9fafb"
+        }
+      },
+      {
+        "id": "QXNav24",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Search",
+        "x": 260,
+        "y": 27,
+        "w": 18,
+        "h": 18,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-magnify",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav25",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Search Placeholder",
+        "x": 288,
+        "y": 28,
+        "w": 300,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Search anything..."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav26",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Help",
+        "x": 708,
+        "y": 24,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-help-circle",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav27",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Apps",
+        "x": 744,
+        "y": 24,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-apps",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav28",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Invite",
+        "x": 880,
+        "y": 18,
+        "w": 96,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "+ Invite"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999
+        }
+      },
+      {
+        "id": "QXNav29",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 1000,
+        "y": 18,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderBottomLeftRadius": 16,
+          "background": "#eff6ff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavSidebar",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Sidebar",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 232,
+    "h": 616,
+    "children": [
+      {
+        "id": "QXNav30",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Logo",
+        "x": 20,
+        "y": 24,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav31",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Logo Letter",
+        "x": 20,
+        "y": 29,
+        "w": 32,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Q"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav32",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand",
+        "x": 64,
+        "y": 28,
+        "w": 120,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Quant-UX"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav33",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Section",
+        "x": 20,
+        "y": 88,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "MENU"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav34",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I1",
+        "x": 20,
+        "y": 116,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-view-dashboard",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav35",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Item Active",
+        "x": 8,
+        "y": 110,
+        "w": 224,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXNav36",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Indicator",
+        "x": 8,
+        "y": 110,
+        "w": 3,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 2,
+          "borderTopLeftRadius": 2,
+          "borderBottomRightRadius": 2,
+          "borderBottomLeftRadius": 2,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav37",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I1b",
+        "x": 20,
+        "y": 118,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-view-dashboard",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav38",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L1",
+        "x": 52,
+        "y": 121,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Dashboard"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav39",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I2",
+        "x": 20,
+        "y": 162,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chart-bar",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav40",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L2",
+        "x": 52,
+        "y": 165,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Analytics"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav41",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I3",
+        "x": 20,
+        "y": 206,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-account-group",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav42",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L3",
+        "x": 52,
+        "y": 209,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Team"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav43",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I4",
+        "x": 20,
+        "y": 250,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-file-document-outline",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav44",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L4",
+        "x": 52,
+        "y": 253,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Documents"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav45",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 20,
+        "y": 296,
+        "w": 200,
+        "h": 1,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXNav46",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Section 2",
+        "x": 20,
+        "y": 316,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "PROJECTS"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav47",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I5",
+        "x": 20,
+        "y": 344,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-folder",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav48",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L5",
+        "x": 52,
+        "y": 347,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Marketing"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav49",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I6",
+        "x": 20,
+        "y": 388,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-folder",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav50",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L6",
+        "x": 52,
+        "y": 391,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Development"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav51",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I7",
+        "x": 20,
+        "y": 432,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-cog",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav52",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L7",
+        "x": 52,
+        "y": 435,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Settings"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXNav53",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "UserBox",
+        "x": 12,
+        "y": 560,
+        "w": 216,
+        "h": 56,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 10,
+          "borderTopLeftRadius": 10,
+          "borderBottomRightRadius": 10,
+          "borderBottomLeftRadius": 10,
+          "background": "#f9fafb"
+        }
+      },
+      {
+        "id": "QXNav54",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 24,
+        "y": 572,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderBottomLeftRadius": 16,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXNav55",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "User",
+        "x": 66,
+        "y": 572,
+        "w": 120,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Klaus Huber"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav56",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "User Mail",
+        "x": 66,
+        "y": 590,
+        "w": 140,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "klaus@quant-ux.com"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav57",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Logout",
+        "x": 204,
+        "y": 578,
+        "w": 18,
+        "h": 18,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-logout",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavSidebarDark",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Sidebar Dark",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 240,
+    "h": 640,
+    "children": [
+      {
+        "id": "QXNav83",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "SidebarBg",
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 640,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#1f2937",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#1f2937",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#1f2937",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#1f2937",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#1f2937"
+        }
+      },
+      {
+        "id": "QXNav58",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Logo",
+        "x": 20,
+        "y": 24,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav59",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Logo Letter",
+        "x": 20,
+        "y": 29,
+        "w": 32,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Q"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav60",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand",
+        "x": 64,
+        "y": 28,
+        "w": 120,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Quant-UX"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav61",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Item Active",
+        "x": 8,
+        "y": 84,
+        "w": 224,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#374151",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#374151",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#374151",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#374151",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#374151"
+        }
+      },
+      {
+        "id": "QXNav62",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Indicator",
+        "x": 8,
+        "y": 84,
+        "w": 3,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 2,
+          "borderTopLeftRadius": 2,
+          "borderBottomRightRadius": 2,
+          "borderBottomLeftRadius": 2,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav63",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I1",
+        "x": 20,
+        "y": 92,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-view-dashboard",
+          "color": "#ffffff",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav64",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L1",
+        "x": 52,
+        "y": 95,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Dashboard"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav65",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I2",
+        "x": 20,
+        "y": 136,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chart-bar",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav66",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L2",
+        "x": 52,
+        "y": 139,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Analytics"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav67",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I3",
+        "x": 20,
+        "y": 180,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-account-group",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav68",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L3",
+        "x": 52,
+        "y": 183,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Team"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav69",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I4",
+        "x": 20,
+        "y": 224,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-file-document-outline",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav70",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L4",
+        "x": 52,
+        "y": 227,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Documents"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav71",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I5",
+        "x": 20,
+        "y": 268,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-calendar",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav72",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L5",
+        "x": 52,
+        "y": 271,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Calendar"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav73",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I6",
+        "x": 20,
+        "y": 312,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-cog",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav74",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L6",
+        "x": 52,
+        "y": 315,
+        "w": 100,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Settings"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav75",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Upgrade Card",
+        "x": 16,
+        "y": 400,
+        "w": 208,
+        "h": 120,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#374151",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#374151",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#374151",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#374151",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#374151"
+        }
+      },
+      {
+        "id": "QXNav76",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Upgrade Title",
+        "x": 32,
+        "y": 416,
+        "w": 176,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Upgrade to Pro"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav77",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Upgrade Text",
+        "x": 32,
+        "y": 438,
+        "w": 176,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": "Unlock analytics and unlimited projects"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav78",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Upgrade Btn",
+        "x": 32,
+        "y": 478,
+        "w": 96,
+        "h": 30,
+        "z": null,
+        "props": {
+          "label": "Upgrade"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXNav79",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 20,
+        "y": 568,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderBottomLeftRadius": 16,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXNav80",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "User",
+        "x": 62,
+        "y": 568,
+        "w": 120,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Klaus Huber"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav81",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Plan",
+        "x": 62,
+        "y": 586,
+        "w": 140,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Free plan"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav82",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Logout",
+        "x": 204,
+        "y": 574,
+        "w": 18,
+        "h": 18,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-logout",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavSidebarMini",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Sidebar Mini",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 56,
+    "h": 600,
+    "children": [
+      {
+        "id": "QXNav84",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Logo",
+        "x": 16,
+        "y": 20,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav85",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Logo Letter",
+        "x": 16,
+        "y": 25,
+        "w": 32,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Q"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav86",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Item Active",
+        "x": 8,
+        "y": 76,
+        "w": 48,
+        "h": 40,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 10,
+          "borderTopLeftRadius": 10,
+          "borderBottomRightRadius": 10,
+          "borderBottomLeftRadius": 10,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXNav87",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I1",
+        "x": 22,
+        "y": 86,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-view-dashboard",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav88",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I2",
+        "x": 22,
+        "y": 132,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chart-bar",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav89",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I3",
+        "x": 22,
+        "y": 176,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-account-group",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav90",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I4",
+        "x": 22,
+        "y": 220,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-calendar",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav91",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I5",
+        "x": 22,
+        "y": 264,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-email",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav92",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I6",
+        "x": 22,
+        "y": 308,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-file-document-outline",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav93",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 16,
+        "y": 356,
+        "w": 32,
+        "h": 1,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXNav94",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "I7",
+        "x": 22,
+        "y": 380,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-cog",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav95",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 16,
+        "y": 568,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderBottomLeftRadius": 16,
+          "background": "#eff6ff"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavBreadcrumb",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Breadcrumb Bar",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 1040,
+    "h": 36,
+    "children": [
+      {
+        "id": "QXNav96",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "B1",
+        "x": 0,
+        "y": 10,
+        "w": 48,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Home"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav97",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Chev1",
+        "x": 52,
+        "y": 11,
+        "w": 14,
+        "h": 14,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chevron-right",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav98",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "B2",
+        "x": 72,
+        "y": 10,
+        "w": 72,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Projects"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav99",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Chev2",
+        "x": 148,
+        "y": 11,
+        "w": 14,
+        "h": 14,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chevron-right",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav100",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "B3",
+        "x": 168,
+        "y": 10,
+        "w": 80,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Website Redesign"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav101",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Refresh",
+        "x": 920,
+        "y": 8,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-refresh",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXNav102",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Share",
+        "x": 952,
+        "y": 0,
+        "w": 88,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "Share"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#111827",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavTabs",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Tab Bar",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 1040,
+    "h": 46,
+    "children": [
+      {
+        "id": "QXNav103",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T1",
+        "x": 0,
+        "y": 12,
+        "w": 64,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Overview"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav104",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Tab Indicator",
+        "x": 0,
+        "y": 44,
+        "w": 64,
+        "h": 2,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav105",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T2",
+        "x": 80,
+        "y": 12,
+        "w": 80,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Statistics"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav106",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T3",
+        "x": 176,
+        "y": 12,
+        "w": 72,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Activity"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav107",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T4",
+        "x": 260,
+        "y": 12,
+        "w": 56,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Files"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav108",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T5",
+        "x": 328,
+        "y": 12,
+        "w": 64,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Settings"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav109",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Add",
+        "x": 936,
+        "y": 0,
+        "w": 104,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "+ New Task"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXNavFooter",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Footer",
+    "category": "Composite",
+    "subcategory": "ANav",
+    "w": 920,
+    "h": 224,
+    "children": [
+      {
+        "id": "QXNav110",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Logo",
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXNav111",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Logo Letter",
+        "x": 0,
+        "y": 5,
+        "w": 32,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Q"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav112",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand",
+        "x": 44,
+        "y": 4,
+        "w": 160,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Quant-UX"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav113",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Tagline",
+        "x": 0,
+        "y": 44,
+        "w": 220,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "Open source design and research platform."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav114",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Product",
+        "x": 280,
+        "y": 0,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Product"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav115",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 280 0",
+        "x": 280,
+        "y": 32,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Features"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav116",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 280 1",
+        "x": 280,
+        "y": 60,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Pricing"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav117",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 280 2",
+        "x": 280,
+        "y": 88,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Changelog"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav118",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 280 3",
+        "x": 280,
+        "y": 116,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Roadmap"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav119",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Resources",
+        "x": 440,
+        "y": 0,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Resources"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav120",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 440 0",
+        "x": 440,
+        "y": 32,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Documentation"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav121",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 440 1",
+        "x": 440,
+        "y": 60,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Tutorials"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav122",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 440 2",
+        "x": 440,
+        "y": 88,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Blog"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav123",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 440 3",
+        "x": 440,
+        "y": 116,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Support"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav124",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Company",
+        "x": 600,
+        "y": 0,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Company"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav125",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 600 0",
+        "x": 600,
+        "y": 32,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "About"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav126",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 600 1",
+        "x": 600,
+        "y": 60,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Careers"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav127",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 600 2",
+        "x": 600,
+        "y": 88,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Contact"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav128",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 600 3",
+        "x": 600,
+        "y": 116,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Legal"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav129",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Subscribe",
+        "x": 760,
+        "y": 0,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Subscribe"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXNav130",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 760 0",
+        "x": 760,
+        "y": 32,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Newsletter"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav131",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 760 1",
+        "x": 760,
+        "y": 60,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "YouTube"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav132",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 760 2",
+        "x": 760,
+        "y": 88,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Twitter"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav133",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 760 3",
+        "x": 760,
+        "y": 116,
+        "w": 120,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "GitHub"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXNav134",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 0,
+        "y": 188,
+        "w": 920,
+        "h": 1,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXNav135",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Copy",
+        "x": 0,
+        "y": 208,
+        "w": 320,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "© 2026 Quant-UX. All rights reserved."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXNav136",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Social 1",
+        "x": 860,
+        "y": 206,
+        "w": 24,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "GitHub"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      }
+    ]
+  }
+]

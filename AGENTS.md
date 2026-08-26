@@ -111,6 +111,28 @@ A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **
 - **Collab WebSocket**: the URL comes from `config.json` (`websocket` key, default `wss://ws.quant-ux.com` — the author's public service). Self-hosted deployments point it at their own `qux-websocket` instance; `public/config.json` is gitignored and copied to `dist/` at build time.
 - `GET /rest/events/:appID.json?batch=true` accepts the flag for compatibility; no batching is needed at SQLite scale.
 
+## Axure RP import
+
+- `src/services/AxureParser.js` holds the pure parsing functions (unit tested in `tests/unit/AxureService.spec.js`): `extractPageData` (JSON after `$axure.loadCurrentPage(` in `pages/*/data.js`), `flattenObjects` (expands dynamic panel states with a relative-offset heuristic), `mapWidget` (Axure type → QUX widget, e.g. `Axure:TextBox`→TextBox, `Heading1-4`→Label 26/22/18/16 bold, `Image`→Image + `imageUrl`), `buildModel` (screens laid out in a row, first screen `props.start`).
+- `src/services/AxureService.js` orchestrates: loads the zip with a dynamic `jszip` import, uploads referenced `files/...` images to `/rest/images/<appID>` and sets `style.backgroundImage = {name, url, w, h}`.
+- `ImportDialog.vue` has an `axure` tab next to Zip/Figma; on save it centers the imported screens on the canvas before `controller.addScreensAndWidgets(model)`.
+- NLS keys: `dialog.import.tab-axure`, `axure-drop-msg`, `axure-progress`, `error-axure-parse`.
+
+## i18n: Chinese is the default language
+
+- `src/services/Locale.js` `resolveLocale()` maps any stored/browser value (`zh*`, `de*`, `pt*`, `en*`) to the four supported locales; **unknown/missing → `cn`**.
+- `src/main.js` boots vue-i18n with `resolveLocale(localStorage.quxLanguage) ?? 'cn'`; `UserService.getLanguage()` and `LanguagePicker` use the same helper. Never read `navigator.language` directly.
+- **E2E must seed English**: every `tests/e2e/test_*.py` sets `localStorage.setItem('quxLanguage', 'en')` right after seeding `quxUser`, because the text assertions expect English strings. New E2E scripts need the same line.
+- vue-i18n 9 message values treat `@` as linked-message syntax — an unescaped `you@studio.com` crashes the whole page render (`Invalid linked format`). Escape as `you{'@'}studio.com` in all four `src/nls/*.json` files.
+- The welcome-notification strings (dashboard auto dialog) live in `NotificationService.initRules()` with an `isCN()` variant — they are not NLS keys.
+
+## Prefab / template library
+
+- `tools/prefabs/generate-prefabs.mjs` generates 9 theme JSON files (79 prefabs: nav bars, heroes, cards, forms, dashboards, lists, e-commerce, mobile, chart cards) into `src/themes/composite/qux_*.json` and `src/themes/charts/qux_charts.json`. Run `node tools/prefabs/generate-prefabs.mjs` after editing — do not hand-edit the JSON.
+- The generator follows login.json conventions: groups are `{type:'Group'}` with full child widget models, unique widget id prefixes per file (`QXNav*`, `QXHero*`, ...) are enforced by `setPrefix()`, images use MDI icons (`style.icon = 'mdi mdi-*'`).
+- Widget style gotchas: ProgressBar fill color key is `foreground`; RingChart is `{background, color, lineWidth}`.
+- The files are registered in `SymbolService.getCore()`; CreateButton.vue buckets them by `category` (`Composite` shows as "Templates", `Charts` as its own tab).
+
 ## E2E setup detail
 
 `python3 tests/e2e/test_studio.py` does **not** start the frontend dev server automatically. Start it manually first with:

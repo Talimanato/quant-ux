@@ -69,6 +69,7 @@ def _run_studio_widgets_basic(env):
             page.evaluate(
                 f"""() => {{
                     localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                    localStorage.setItem('quxLanguage', 'en');
                 }}"""
             )
             page.reload()

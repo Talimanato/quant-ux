@@ -10,7 +10,7 @@
         "rounds": "Number of simulated test sessions",
         "task": "Task Description",
         "waiting-details": "Simulating sessions",
-        "prompt-placeholder":"Descripe the task that the user should fullfill",
+        "prompt-placeholder": "Descripe the task that the user should fullfill",
         "beta1": "This feature is experimental. We appreciate",
         "beta2": "feedback"
     },
@@ -62,7 +62,7 @@
         "robo-waiting-4": "I can't wait to see what they will come up with!",
         "robo-waiting-5": "You know that you can ask for colors?",
         "robo-waiting-6": "I am soooo curious!",
-        "robo-waiting-7": "OpenAI is working hard!", 
+        "robo-waiting-7": "OpenAI is working hard!",
         "robo-waiting-8": "Just some seconds more...",
         "robo-waiting-9": "Still working....",
         "robo-waiting-10": "The better you describe your design the better the output will be.",
@@ -76,7 +76,6 @@
         "robo-waiting-18": "Busy crafting a masterpiece...",
         "robo-waiting-19": "Adding the finishing touches on your design...",
         "robo-waiting-20": "Stay tuned for the result!",
-        
         "robo-delayed-1": "Hang in! It can take only some more seconds, minutes or hours...",
         "robo-delayed-2": "Don't give up!",
         "robo-delayed-3": "This is taking really long!",
@@ -150,12 +149,19 @@
     "simulator": {
         "welcome": {
             "title": "Welcome",
-            "msg": "You were invited for a usability test of the {{name}} app.",
+            "msg": "You were invited for a usability test of the {name} app.",
             "msg2": "",
             "privacy-title": "Privacy",
-            "privacy": "Your interactions, including clicks and text input, will be <b>recorded</b> to evaluate the app's performance and identify areas for improvement.",
-            "privacy1": "We do not store any personal information about you, except the data you choose to enter. You can find more information on our <a target='quxPrivacy' href='#/privacy.html'>privacy page</a>.   ",
-            "click-start": "If you agree, click on the <b>Start</b> button to beginn the test.",
+            "privacy": {
+                "1": "Your interactions, including clicks and text input, will be ",
+                "2": "recorded",
+                "3": " to evaluate the app's performance and identify areas for improvement."
+            },
+            "privacy1": {
+                "1": "We do not store any personal information about you, except the data you choose to enter. You can find more information on our ",
+                "2": "privacy page"
+            },
+            "click-start": "If you agree, click on the Start button to beginn the test.",
             "start": "Start",
             "showTasks": "Show Tasks",
             "next": "Next"
@@ -166,7 +172,7 @@
         },
         "password": {
             "title": "Password",
-            "msg": "To test this prototype you need a password. Please enter the password and press <b>Next</b>",
+            "msg": "To test this prototype you need a password. Please enter the password and press ",
             "next": "Next"
         }
     },
@@ -198,7 +204,7 @@
             "logic": "Logic",
             "audio": "Audio",
             "rest": "Web Service",
-            "or": "Or Connector", 
+            "or": "Or Connector",
             "ab": "AB Test",
             "script": "Script",
             "vector": "Vector",
@@ -248,7 +254,7 @@
         "app-color": "Change the app color",
         "simuser": "Simulate how users would use the app with AI (Beta)",
         "removeSimuser": "Remove the AI events",
-        "vector" : "Vector Tools"
+        "vector": "Vector Tools"
     },
     "table-action": "Action X",
     "btn": {
@@ -270,7 +276,6 @@
     },
     "dialog": {
         "import": {
-   
             "images-title": "Import from Images",
             "figma-title": "Import from Figma",
             "tab-images": "Images",
@@ -304,7 +309,11 @@
             "open-api-url": "URL",
             "open-ai-prompt": "Describe your page here",
             "open-ai-prompt-hint": "Please create a login screen",
-            "open-ai-generate": "Generate Preview"
+            "open-ai-generate": "Generate Preview",
+            "tab-axure": "Axure",
+            "axure-drop-msg": "Drop the Axure HTML export (ZIP) here",
+            "axure-progress": "Importing Axure prototype...",
+            "error-axure-parse": "Could not import the Axure export. Please export from Axure RP via 'Publish > ZIP' or zip the generated HTML folder."
         },
         "export": {
             "tab-images": "Images",
@@ -350,17 +359,14 @@
             "headline": "Welcome!",
             "intro": {
                 "1": "You were invited for a usability test of the",
-                "2": "application.",
-                "tasks": "You can try out the prototype and perform certain tasks. When you click on <b>Show Tasks</b> button, you will receive detailed instructions.",
-                "no-tasks": "You can try out the prototype by clicking on the <b>Start Prototype</b> button. "  
-             },
+                "2": "application."
+            },
             "next": "Show Tasks",
             "start": "Start Prototype"
         },
         "task": {
             "headline": "Tasks",
             "description": "In the scope of this usability test you are kindly requested to perform the tasks listed below. Don't worry if you can not fulfill all tasks. This is just a sign that the prototype needs further improvements. The tasks are:",
-            "footer": "You can try out the prototype by clicking on the <b>Start Prototype</b> button.",
             "success-title": "Congratulations!",
             "success-message": "You have completed all tasks. You can close the page now."
         },
@@ -375,7 +381,11 @@
     "user": {
         "retire": {
             "hi": "Hi ",
-            "msg": "are you sure that you want to <b>delete</b> your account? You will loose all your data.",
+            "msg": {
+                "1": "are you sure that you want to ",
+                "2": "delete",
+                "3": " your account? You will loose all your data."
+            },
             "cusoon": "Thanks for using Quant-UX. We hope to see you soon again."
         }
     },
@@ -427,9 +437,9 @@
         "kpi-coverage": "Coverage",
         "kpi-duration": "&#8960 Duration",
         "kpi-task": "&#8960 Success",
-        "comments":"Comments",
+        "comments": "Comments",
         "add-comment": "Add Comment",
-        "screen-list" : "Screens",
+        "screen-list": "Screens",
         "description": "Description",
         "description-hint": "Add a description here",
         "loading": "Loading..."
@@ -456,9 +466,7 @@
         "header": "Task Results",
         "download": "Download Task Summary"
     },
-    "canvas": {
-
-    },
+    "canvas": {},
     "comments": {
         "title": "Comments",
         "post": "Post Comment"
@@ -467,13 +475,71 @@
         "add": "Create new Prototype",
         "sign-in": "Sign up to create a new Prototype"
     },
+    "library": {
+        "title": "Libraries",
+        "empty": "You don't have any libraries yet.",
+        "loading": "Loading...",
+        "load-error": "Could not load the libraries.",
+        "create": {
+            "title": "Create Library",
+            "name": "Name",
+            "name-placeholder": "Enter a name",
+            "description": "Description",
+            "description-placeholder": "Add a description here",
+            "is-public": "Public",
+            "submit": "Create",
+            "cancel": "Cancel",
+            "success": "Library created.",
+            "error": "Could not create the library."
+        },
+        "detail": {
+            "title": "Library",
+            "not-found": "Library not found."
+        },
+        "update-success": "Library updated.",
+        "update-error": "Could not update the library.",
+        "save": {
+            "title": "Save to Library",
+            "submit": "Save",
+            "new": "New library name:",
+            "success": "Saved to the library.",
+            "error": "Could not save to the library."
+        },
+        "delete": {
+            "title": "Delete Library",
+            "confirm": "Do you want to delete the library '{name}'?",
+            "success": "Library deleted.",
+            "error": "Could not delete the library.",
+            "denied": "You are not allowed to delete this library."
+        },
+        "team": {
+            "title": "Team",
+            "add": "Add Member",
+            "email-placeholder": "Enter the email of the new member",
+            "permission": "Permission",
+            "add-submit": "Add",
+            "remove": "Remove",
+            "add-success": "Member added.",
+            "add-error": "Could not add the member.",
+            "exists": "This user is already a member of the library.",
+            "update-success": "Member updated.",
+            "remove-success": "Member removed.",
+            "remove-error": "Could not remove the member.",
+            "remove-self-error": "You cannot remove yourself."
+        },
+        "permission": {
+            "viewer": "Viewer",
+            "editor": "Editor",
+            "owner": "Owner"
+        }
+    },
     "analytics": {
         "outlier": {
-            "title" : "Outliers",
+            "title": "Outliers",
             "no-data": "No data"
         },
         "distribution": {
-            "title" : "Data Distribution",
+            "title": "Data Distribution",
             "scatterModeInteractionXDuration": "Duration X Interaction",
             "scatterModeDurationXScreen": "Duration X Screen Views",
             "scatterModeErrorsXScreen": "Errors X Screen Views",
@@ -572,7 +638,7 @@
                 "session-play": "here"
             },
             "no-flow-title": "No FLow",
-            "no-flow-msg": "<p>Please define a flow with <b>two or more </b> steps. Otherwise we cannot show details about the task performance.</p>"
+            "no-flow-msg": "Please define a flow with two or more steps. Otherwise we cannot show details about the task performance."
         }
     },
     "testSettingsHeader": "Test Settings",
@@ -597,7 +663,6 @@
     "testSettingsUpgradePlan": "Upgrade Plan",
     "testSettingsRecordOneTestPerUser": "Record data only for the first time a user tests the prototype.",
     "testSettingsTranscribeVoice": "Transscribe users voice.",
-
     "dashTaskEmpty": "You can create tasks in the 'Test' tab. ",
     "dashTaskTableName": "Name",
     "dashTaskTableSuccess": "Success",
@@ -610,14 +675,9 @@
     "dashTaskEventDis": "Event Distribution",
     "dashTaskDesPlaceholder": "Enter a description here",
     "dashTaskPerfHeadline": "Task: ",
-
     "taskRecorder1": "A flow is the sequence of interactions the users have to perform to complete a task. ",
     "taskRecorder2": "For instance, they have to visit 'Screen A' and navigate to 'Screen C'. You can also mark important sub events, like clicking on a button, or visitng a screen in between.",
-    "taskRecorderStep0": "Pess <b>Begin</b> to launch the simulator.",
     "taskRecorderStep1": "Perform the interactions your users should perform",
-    "taskRecorderStep2": "You can press <b>Pause</b> to pause the recording",
-    "taskRecorderStep3": "Press <b>Done</b> when the flow is complete.",
-    "taskRecorderStep4": "<b>Select</b> all steps that are important for the task.",
     "taskRecorderPauseHint": "Click Pause to pause recording",
     "taskRecorderPauseBtn": "Pause",
     "taskRecorderPauseDes": "Recoding interaction...",
@@ -629,7 +689,6 @@
     "taskRecorderScreen": "Screen",
     "taskRecorderWidget": "Widget",
     "taskRecorderAction": "Important",
-
     "videoTableStatus": "Status",
     "videoTableUser": "User",
     "videoTableDuration": "Duration",
@@ -637,5 +696,44 @@
     "videoTableEvents": "Events",
     "videoTableDate": "Date",
     "videoTableStatusNotPayed": "Blocked",
-    "videoTablePlanUpdateMsg": "To see all videos upgate your plan."
+    "videoTablePlanUpdateMsg": "To see all videos upgate your plan.",
+    "login": {
+        "brand-slogan-1": "Sketch it.",
+        "brand-slogan-2": "Wire it.",
+        "brand-slogan-3": "Ship it.",
+        "brand-sub": "The open, self-hosted way to prototype, test and refine your product ideas.",
+        "footer-1": "Prototype",
+        "footer-2": "Test",
+        "footer-3": "Learn",
+        "tab-login": "Log in",
+        "tab-signup": "Sign up",
+        "title-login": "Welcome back",
+        "title-signup": "Create your account",
+        "title-reset": "Set a new password",
+        "lede-login": "Log in to continue to your workspace.",
+        "lede-signup": "Free plan, no credit card, your data stays on your server.",
+        "lede-reset": "Enter your email and the token from the reset link.",
+        "email": "Email",
+        "password": "Password",
+        "new-password": "New password",
+        "placeholder-email": "you{'@'}studio.com",
+        "placeholder-password": "At least 6 characters",
+        "forgot": "Forgot password?",
+        "submit-login": "Log in",
+        "submit-signup": "Create account",
+        "submit-reset": "Set new password",
+        "tos-pre": "I accept the",
+        "tos-link": "terms of service",
+        "error-email": "Please enter your email",
+        "error-password-short": "Password too short",
+        "error-token": "Token is wrong",
+        "error-generic": "Something is wrong",
+        "error-login": "Login is wrong",
+        "error-domain": "Not the correct domain",
+        "error-nosignup": "No sign-ups allowed.",
+        "error-taken": "Email is taken",
+        "error-signup": "Could not sign up. Is the email already taken?",
+        "error-tos": "Please accept terms of service",
+        "reset-sent": "Check your mail."
+    }
 }

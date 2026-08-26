@@ -60,12 +60,25 @@
                     </div>
 
                     <div class="MatcStudioNavRow">
+                        <a class="MatcLink MatcStudioNavItem" href="#/libs.html">
+                            <QIcon icon="Component"/>
+                            <span class="MatcCollapseViewMinHidden">
+                                {{ $t('library.title') }}
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="MatcStudioNavRow">
                         <a class="MatcLink MatcStudioNavItem" href="#/help.html">
                             <QIcon icon="Book"/>
                             <span class="MatcCollapseViewMinHidden">
                                 {{ $t('app.help') }}
                             </span>
                         </a>
+                    </div>
+
+                    <div class="MatcStudioNavRow MatcStudioNavRowPicker">
+                        <LanguagePicker :hasLabel="true" @change="setLanguage" />
                     </div>
 
                     <div class="MatcStudioNavRow">
@@ -139,6 +152,7 @@ import QIcon from "page/QIcon";
 import AppListDialog from './AppListDialog'
 import StudioNotification from './StudioNotification'
 import StudioContact from './StudioContact'
+import LanguagePicker from 'page/LanguagePicker'
 
 export default {
     name: "Studio",
@@ -158,7 +172,8 @@ export default {
         'QIcon': QIcon,
         'AppListDialog': AppListDialog,
         'StudioNotification': StudioNotification,
-        'StudioContact': StudioContact
+        'StudioContact': StudioContact,
+        'LanguagePicker': LanguagePicker
     },
     computed: {
         hasMore () {
@@ -192,6 +207,11 @@ export default {
         },
     },
     methods: {
+        setLanguage (language) {
+            this.logger.log(-1, 'setLanguage', 'entry', language)
+            Services.getUserService().setLanguage(language)
+            this.$root.$i18n.locale = language
+        },
         onDuplicate () {
             this.load()
         },

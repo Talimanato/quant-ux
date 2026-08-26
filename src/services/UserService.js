@@ -1,13 +1,14 @@
 import AbstractService from './AbstractService'
 import Logger from '../common/Logger'
 import Cookies from 'js-cookie'
+import { resolveLocale } from 'services/Locale'
 
 class UserService extends AbstractService{
 
     constructor () {
         super()
         this.logger = new Logger('UserService')
-        this.language = 'en'
+        this.language = 'cn'
         this.GUEST = {
             id: -1,
             name: "Guest",
@@ -201,9 +202,9 @@ class UserService extends AbstractService{
         if (s) {
             this.language = s
         } else {
-            this.language = navigator.language
+            this.language = 'cn'
         }
-        return this.language
+        return resolveLocale(this.language)
     }
 
     contact (name, email, message) {

@@ -45,6 +45,7 @@ def test_harness_smoke():
                 page.evaluate(
                     f"""() => {{
                         localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                        localStorage.setItem('quxLanguage', 'en');
                     }}"""
                 )
                 page.reload()

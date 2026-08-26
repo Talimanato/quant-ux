@@ -3,21 +3,45 @@
     "header": {
         "my-prototypes": "我的原型",
         "my-account": "我的账户",
-        "logout": "退出登入"
+        "logout": "退出登入",
+        "examples": "示例",
+        "documentation": "文档",
+        "login": "登录",
+        "signup": "免费注册",
+        "tooltip": {
+            "language": "更改语言",
+            "my-prototypes": "查看你的原型",
+            "documentation": "阅读文档",
+            "my-account": "管理账号或退出登录"
+        }
     },
     "common": {
         "register": "请注册以保存更改...",
         "guest": "宾客",
         "loading": "加载中...",
-        "language-changed": "语言已更改"
+        "language-changed": "语言已更改",
+        "comments": "评论",
+        "close": "关闭"
     },
     "simulator": {
         "welcome": {
             "title": "欢迎",
-            "msg": 	"您被邀请参加 <b>{{name}}</b> 应用程序的可用性测试。 您可以通过单击<b>开始原型</b> 按钮来试用原型。",
-            "privacy": "这是一个可用性测试。 请注意，您的交互将被记录以使设计更好。 我们不存储有关您的任何个人信息。",
+            "msg": "您被邀请参加 {name} 应用程序的可用性测试。 您可以通过单击开始原型 按钮来试用原型。",
+            "privacy": {
+                "1": "这是一个可用性测试。 请注意，您的交互将被记录以使设计更好。 我们不存储有关您的任何个人信息。",
+                "2": "",
+                "3": ""
+            },
             "start": "开始原型",
-            "showTasks": "显示任务"
+            "showTasks": "显示任务",
+            "msg2": "",
+            "privacy-title": "隐私",
+            "privacy1": {
+                "1": "除你自愿填写的内容外，我们不会存储任何个人信息。更多信息请查看我们的",
+                "2": "隐私政策"
+            },
+            "click-start": "如果你同意，请点击\"开始\"按钮开始测试。",
+            "next": "下一步"
         },
         "tasks": {
             "title": "任务",
@@ -25,7 +49,7 @@
         },
         "password": {
             "title": "Password",
-            "msg": "To test this prototype you need a password. Please enter the password and press <b>Next</b>",
+            "msg": "To test this prototype you need a password. Please enter the password and press ",
             "next": "Next"
         }
     },
@@ -39,14 +63,44 @@
             "export": "导出",
             "change-screen-size": "更改屏幕尺寸",
             "save-as": "保存为",
-            "exit": "退出"
+            "exit": "退出",
+            "mode": "明暗模式",
+            "help": "帮助"
         },
         "simulate": "模拟",
         "group": "组",
         "sign-up": "注册以保存",
         "templates": {
             "new": "新建模板"
-        }
+        },
+        "layer": {
+            "front": "置于顶层",
+            "forward": "上移一层",
+            "backward": "下移一层",
+            "back": "置于底层"
+        },
+        "create": {
+            "rectangle": "矩形",
+            "gridContainer": "网格容器",
+            "text": "文本",
+            "hotspot": "热区",
+            "logic": "逻辑",
+            "audio": "音频",
+            "rest": "Web 服务",
+            "or": "或连接器",
+            "ab": "AB 测试",
+            "script": "脚本",
+            "vector": "矢量",
+            "curve": "曲线",
+            "path": "路径",
+            "triangle": "三角形",
+            "circle": "圆形",
+            "freehand": "手绘",
+            "diamond": "菱形",
+            "gpt": "AI 设计助手"
+        },
+        "svgStop": "停止编辑",
+        "removeAIEvents": "停止 AI"
     },
     "table": {
         "action": "Action"
@@ -61,7 +115,13 @@
         "edit": "编辑",
         "post": "发布",
         "close": "关闭",
-        "import": "导入"
+        "import": "导入",
+        "back": "返回",
+        "continue": "继续",
+        "export": "导出",
+        "rename": "重命名",
+        "share": "分享",
+        "change": "更改"
     },
     "dialog": {
         "import": {
@@ -80,7 +140,29 @@
             "error-figma-key": "请提供 access key",
             "error-figma-url": "复制Figma原型Url",
             "error-figma-load": "加载Figma文件发生了一些错误",
-            "error-public": "导入功能无法在使用模式下使用"
+            "error-public": "导入功能无法在使用模式下使用",
+            "tab-zip": "Zip",
+            "tab-github": "Github",
+            "tab-open-ai": "OpenAI - GPT",
+            "zip-drop-msg": "把 ZIP 拖到此处",
+            "figma-select-page": "选择要导入的页面",
+            "figma-select-screens": "选择要导入的画板",
+            "figma-preview": "预览",
+            "figma-progress-preview": "正在加载预览",
+            "error-figma-load-preview": "无法加载预览",
+            "error-figma-page": "请选择要导入的页面，然后点击\"导入\"",
+            "error-swagger-no-url": "请输入包含 swagger 文件的 URL",
+            "error-swagger-wrong_url": "无法加载 URL",
+            "error-no-file": "未选择文件",
+            "error-zip-no-file": "文件类型错误",
+            "open-api-url": "URL",
+            "open-ai-prompt": "在此描述你的页面",
+            "open-ai-prompt-hint": "请创建一个登录页面",
+            "open-ai-generate": "生成预览",
+            "tab-axure": "Axure",
+            "axure-drop-msg": "将 Axure 导出的 HTML 原型（ZIP）拖到此处",
+            "axure-progress": "正在导入 Axure 原型…",
+            "error-axure-parse": "无法导入 Axure 导出文件。请在 Axure RP 中通过「发布 > ZIP」导出，或压缩导出的 HTML 文件夹后重试。"
         },
         "login": {
             "password": {
@@ -100,13 +182,25 @@
                 "1": "我已经阅读",
                 "2": "服务条款 &amp; 隐私政策",
                 "3": ".",
-                "error": "你必须接受服务条款 &amp; 隐私政策!"
+                "error": "你必须接受服务条款 &amp; 隐私政策!",
+                "4": "隐私政策"
             },
             "privacy": {
                 "1": "我已经阅读 ",
                 "2": "隐私政策",
                 "error": "你必须接受此隐私政策!"
             }
+        },
+        "export": {
+            "tab-images": "图片",
+            "tab-github": "Github",
+            "tab-comments": "评论",
+            "tab-zip": "Zip 文件",
+            "github-token": "Github 访问令牌",
+            "github-user": "用户",
+            "github-repo": "仓库",
+            "github-branch": "分支",
+            "github-folder": "文件夹"
         }
     },
     "test": {
@@ -115,8 +209,6 @@
             "intro": {
                 "1": "您被邀请做用途测试关于",
                 "2": "应用.",
-                "tasks": "您可以试用原型并执行某些任务. 当您点击 <b>任务列表</b> 按钮, 您讲收到详细说明.",
-                "no-tasks": "您可以通过点击<b>启动原型</b>按钮来试用原型. ",
                 "privacy": "请注意，我们将被记录您的行为来优化设计。我们不会存储有关您的任何个人信息."
             },
             "next": "任务列表",
@@ -126,16 +218,25 @@
         "task": {
             "headline": "任务",
             "description": "在此可用性测试的范围内，恳请您执行以下任务。如果您不能完成所有任务，请不要担心。这表明原型需要进一步改进。任务是:",
-            "footer": "您可以通过点击<b>启动原型</b>按钮来试用原型."
+            "success-title": "恭喜！",
+            "success-message": "你已完成所有任务，现在可以关闭页面了。"
         },
         "qr": {
             "headline": "扫描二维码."
+        },
+        "splash": {
+            "upload": "拖入启动图",
+            "uploading": "上传中…"
         }
     },
     "user": {
         "retire": {
             "hi": "Hi ",
-            "msg": "您确定要<b>删除</b>您的帐户吗？您将丢失所有数据",
+            "msg": {
+                "1": "您确定要",
+                "2": "删除",
+                "3": "您的帐户吗？您将丢失所有数据"
+            },
             "cusoon": "感谢您使用Quant-UX。希望能再见到你."
         }
     },
@@ -152,21 +253,71 @@
             "settings": "设置",
             "team": "团队",
             "run-test": "启动测试",
-            "share": "分享"
-        }
+            "share": "分享",
+            "comments": "评论",
+            "analytic-canvas": "分析画布"
+        },
+        "mail": {
+            "send": "发送",
+            "success": "感谢与我们联系！",
+            "error": "请输入邮箱和留言内容！"
+        },
+        "test-summary": "测试摘要",
+        "view-more": "查看更多",
+        "contact": "联系",
+        "notifications": "更新",
+        "notifications-none": "当前没有新更新。",
+        "oldnotifications": "历史更新",
+        "allnotifications": "全部更新",
+        "newnotifications": "新更新",
+        "lastEdit": "最近更新",
+        "notification_no_auto": "有新更新时显示此对话框",
+        "numberTests": "测试",
+        "create": "创建",
+        "help": "文档",
+        "recent-projects": "最近的原型",
+        "projects": "全部原型",
+        "more": "更多…",
+        "lastedit": "最近编辑：",
+        "analyze": "分析画布",
+        "logout": "退出登录",
+        "edit": "编辑设计",
+        "welcome-headline": "欢迎使用 Quant-UX！",
+        "welcome-intro": "点击\"创建\"按钮来创建你的第一个原型。",
+        "kpi-sessions": "测试",
+        "kpi-coverage": "覆盖率",
+        "kpi-duration": "&#8960 时长",
+        "kpi-task": "&#8960 成功",
+        "comments": "评论",
+        "add-comment": "添加评论",
+        "screen-list": "屏幕",
+        "description": "描述",
+        "description-hint": "在此添加描述",
+        "loading": "加载中…"
     },
     "survey": {
         "header": "测量问卷",
         "download": "下载调查问卷",
-        "no-data": "未搜集到测量数据. 确保已将数据绑定添加到所需的测量字段."
+        "no-data": "未搜集到测量数据. 确保已将数据绑定添加到所需的测量字段.",
+        "video": "视频",
+        "options": "选项",
+        "fullscreen": "详情",
+        "id": "id",
+        "tasks": "任务",
+        "taskSuccess": "显示任务",
+        "showVideo": "显示视频",
+        "taskDetails": "任务详情",
+        "taskDuration": "任务时长",
+        "taskInteractions": "任务交互",
+        "dialogTable": "数据",
+        "dialogDiagrams": "图表",
+        "ids": "显示 ID"
     },
     "analytic-task-list": {
         "header": "任务集",
         "download": "下载任务总结"
     },
-    "canvas": {
-
-    },
+    "canvas": {},
     "comments": {
         "title": "评论",
         "post": "发表评论"
@@ -175,11 +326,117 @@
         "add": "创建新原型",
         "sign-in": "注册以创建新的原型"
     },
+    "library": {
+        "title": "组件库",
+        "empty": "您还没有任何组件库。",
+        "loading": "加载中...",
+        "load-error": "无法加载组件库。",
+        "create": {
+            "title": "新建组件库",
+            "name": "名称",
+            "name-placeholder": "请输入名称",
+            "description": "描述",
+            "description-placeholder": "在此添加描述",
+            "is-public": "公开",
+            "submit": "创建",
+            "cancel": "取消",
+            "success": "组件库已创建。",
+            "error": "无法创建组件库。"
+        },
+        "detail": {
+            "title": "组件库",
+            "not-found": "未找到该组件库。"
+        },
+        "update-success": "组件库已更新。",
+        "update-error": "无法更新组件库。",
+        "save": {
+            "title": "保存到组件库",
+            "submit": "保存",
+            "new": "新建组件库名称：",
+            "success": "已保存到组件库。",
+            "error": "无法保存到组件库。"
+        },
+        "delete": {
+            "title": "删除组件库",
+            "confirm": "确定要删除组件库 '{name}' 吗？",
+            "success": "组件库已删除。",
+            "error": "无法删除组件库。",
+            "denied": "您没有权限删除该组件库。"
+        },
+        "team": {
+            "title": "成员",
+            "add": "添加成员",
+            "email-placeholder": "输入新成员的邮箱",
+            "permission": "权限",
+            "add-submit": "添加",
+            "remove": "移除",
+            "add-success": "成员已添加。",
+            "add-error": "无法添加成员。",
+            "exists": "该用户已是库成员。",
+            "update-success": "成员已更新。",
+            "remove-success": "成员已移除。",
+            "remove-error": "无法移除成员。",
+            "remove-self-error": "您不能移除自己。"
+        },
+        "permission": {
+            "viewer": "只读",
+            "editor": "编辑",
+            "owner": "所有者"
+        }
+    },
     "analytics": {
         "header": {
             "user": "用户",
             "duration": "测试时间",
             "coverage": "测试覆盖率"
+        },
+        "outlier": {
+            "title": "异常值",
+            "no-data": "暂无数据"
+        },
+        "distribution": {
+            "title": "数据分布",
+            "scatterModeInteractionXDuration": "时长 × 交互",
+            "scatterModeDurationXScreen": "时长 × 屏幕浏览",
+            "scatterModeErrorsXScreen": "错误 × 屏幕浏览",
+            "scatterModeDurationXTasks": "时长 × 任务",
+            "scatterModeScreensXDuration": "屏幕 × 交互",
+            "viewScatter": "散点图",
+            "viewBoxPlot": "箱线图",
+            "viewOutlier": "异常值",
+            "viewDetails": "详情",
+            "cluster-vars": "选项",
+            "options": "选项",
+            "no-data": "暂无数据",
+            "play": "要回放会话录像，请点击",
+            "here": "这里",
+            "outlier": "异常值",
+            "details": {
+                "duration": "时长",
+                "interactions": "交互",
+                "screens": "唯一 / 浏览屏幕数",
+                "screenUnique": "唯一屏幕",
+                "screenLoads": "浏览屏幕",
+                "screenRatio": "唯一 / 浏览屏幕数",
+                "errors": "校验错误",
+                "tasks": "成功任务",
+                "weirdness": "导航异常",
+                "dbscan": "DBSCAN"
+            },
+            "hint": "选择一个圆点以回放屏幕录像。"
+        },
+        "canvas": {
+            "dropoff": {
+                "hintNoTasksDefined": "未定义任务",
+                "errorNoTask": "请选择一个任务"
+            },
+            "heatamp": {
+                "hintAll": "查看设计中用户点击最多的热门区域。",
+                "hintFirst": "了解屏幕加载后最先吸引用户注意的元素。",
+                "hintFirstThree": "三次交互内未被点击的元素，可能不易被用户发现。",
+                "hintMissed": "点击背景等被动元素，可能说明用户操作失误或未能理解预期的交互。",
+                "hintMouse": "鼠标移动与视线高度相关，鼠标热力图显示了用户感兴趣的区域。"
+            }
         }
     },
     "dashScreenList": {
@@ -202,7 +459,9 @@
         "perf": {
             "scatter": {
                 "yLabel": "交互量",
-                "xLabel": "时间"
+                "xLabel": "时间",
+                "outlier": "异常值",
+                "no-task": "无任务"
             },
             "dropoff": {
                 "xLabel": "成功率",
@@ -220,7 +479,9 @@
                 "dropoff": "放下",
                 "duration": "时间",
                 "interactions": "交互量",
-                "details": "箱型图"
+                "details": "箱型图",
+                "funnelDurartion": "步骤时长",
+                "funnelInteraction": "步骤交互"
             },
             "hint": {
                 "scatter": "每个点表示一个成功的用户测试. 选择它们以获得更多信息.",
@@ -228,10 +489,9 @@
                 "session-play": "这里"
             },
             "no-flow-title": "无流程",
-            "no-flow-msg": "<p>请定义一个流程，流程要多于<b>两个步骤</b>. 否则, 我们将无法显示有关任务执行的详细信息. </p>"
+            "no-flow-msg": "请定义一个流程，流程要多于两个步骤. 否则, 我们将无法显示有关任务执行的详细信息."
         }
     },
-
     "testSettingsDescription": "描述",
     "testSettingsTasks": "任务",
     "testSettingsTaskName": "名称",
@@ -248,7 +508,6 @@
     "testSettingTaskDelete2": "'吗?",
     "testSettingsSaved": "测试设置已更新...",
     "testSettingsUpgradePlan": "升级计划",
-
     "dashTaskEmpty": "单击 &#34;添加任务&#34; 创建一个新分析任务. 编辑流程以衡量任务性能. ",
     "dashTaskTableName": "名称",
     "dashTaskTableSuccess": "成功率",
@@ -261,12 +520,8 @@
     "dashTaskEventDis": "事件粪污",
     "dashTaskDesPlaceholder": "输入描述",
     "dashTaskPerfHeadline": "任务: ",
-
     "taskRecorder1": "流程是用户完成任务必须执行的交互顺序.",
     "taskRecorderStep1": "执行用户应执行的互动",
-    "taskRecorderStep2": "您可以按<b>暂停</b>暂停记录",
-    "taskRecorderStep3": "单机<b>完成</b>, 流程完成.",
-    "taskRecorderStep4": "<b>选择</b>对任务重要的所有步骤.",
     "taskRecorderPauseHint": "单击暂停以暂停记录",
     "taskRecorderPauseBtn": "暂停",
     "taskRecorderPauseDes": "记录交互...",
@@ -278,7 +533,6 @@
     "taskRecorderScreen": "屏幕",
     "taskRecorderWidget": "组件",
     "taskRecorderAction": "重要",
-
     "videoTableStatus": "状态",
     "videoTableUser": "用于",
     "videoTableDuration": "时间 (秒)",
@@ -286,5 +540,202 @@
     "videoTableEvents": "事件",
     "videoTableDate": "日期",
     "videoTableStatusNotPayed": "阻塞",
-    "videoTablePlanUpdateMsg": "查看全部视频更新您的计划"
+    "videoTablePlanUpdateMsg": "查看全部视频更新您的计划",
+    "scatter": {
+        "no-data": "未记录到测试数据。"
+    },
+    "sim-user": {
+        "tab-prompt": "AI 模拟器",
+        "tab-preview": "预览",
+        "tab-settings": "设置",
+        "rounds": "模拟测试会话数量",
+        "task": "任务描述",
+        "waiting-details": "正在模拟会话",
+        "prompt-placeholder": "描述用户需要完成的任务",
+        "beta1": "此功能为实验性功能，我们欢迎",
+        "beta2": "反馈"
+    },
+    "design-gpt": {
+        "error-server": "服务器出现了一些问题",
+        "error-no-model": "缺少模型，请刷新页面",
+        "error-no-html": "服务器返回了错误的结果",
+        "error-no-content": "服务器没有返回结果",
+        "error-no-idea": "出现了一些问题",
+        "error-server-no-key": "请输入 API Key",
+        "error-server-key": "API Key 不正确",
+        "error-insufficient_quota": "你的 OpenAI 配额有问题，请检查付款信息。",
+        "error-prompt-too-short": "提示词太短了",
+        "error-yaml": "OpenAI 返回了错误的数据，请重试",
+        "is-wireframe": "创建为线框图",
+        "is-minimal": "精简元素",
+        "is-custom-styles": "使用原型样式",
+        "gpt-model-gpt3": "ChatGPT：更快更便宜",
+        "gpt-model-gpt4": "GPT4：更慢但更好",
+        "gpt-model-gpt4-turbo": "GPT4 - 创意模式：耗时更长，但可能有惊喜。",
+        "gpt-model-gpt4-turbo-yaml": "GPT4 - 加速：快速且干净。",
+        "gpt-model-gpt4o": "GPT4o - 加速：快速且干净。",
+        "gpt-model": "选择要使用的 GPT 模型",
+        "gpt-temperature": "随机性（Temperature）",
+        "waiting-title": "处理中",
+        "waiting-details": "正在生成设计…大约需要 60 秒。",
+        "tab-prompt": "AI 助手",
+        "tab-preview": "预览",
+        "tab-settings": "设置",
+        "key-title": "你的 OpenAI API Key",
+        "key-hint-1": "我们使用 OpenAI 驱动 AI 引擎。",
+        "key-hint-2": "要使用该服务，你需要提供自己的 API Key。",
+        "key-hint-3": "获取 Key 请先在以下地址注册账号：",
+        "key-hint-5": "你的 API Key 只保存在浏览器中，不会上传到我们的服务器。",
+        "show-key": "API",
+        "welcome-design-msg": "你好，我是 DesignGPT，我可以为你创建设计",
+        "prompt": "在此描述页面",
+        "prompt-placeholder": "在此描述你的页面，例如\"创建一个带红色按钮的登录栏…\"",
+        "error-public": "使用 DesignGPT 需要先注册",
+        "preview": "运行 AI",
+        "no-preview": "暂无预览",
+        "busy": "AI 运行中…",
+        "robo-start-1": "我是 DesignGPT，让我们开始吧。",
+        "robo-running-1": "正在启动…",
+        "robo-running-2": "正在联系 OpenAI…",
+        "robo-waiting-1": "设计很快就完成了…",
+        "robo-waiting-2": "我打赌这个设计会很棒！",
+        "robo-waiting-3": "想要不同的设计，可以再次运行 AI！",
+        "robo-waiting-4": "我等不及想看看他们的成果了！",
+        "robo-waiting-5": "你知道可以在提示词里指定颜色吗？",
+        "robo-waiting-6": "我太好奇了！",
+        "robo-waiting-7": "OpenAI 正在努力工作！",
+        "robo-waiting-8": "只需要几秒钟了…",
+        "robo-waiting-9": "仍在处理中……",
+        "robo-waiting-10": "描述得越清楚，生成的设计就越好。",
+        "robo-waiting-11": "趁我们处理数据的时候，先吃点零食吧…",
+        "robo-waiting-12": "我保证结果会比巧克力喷泉更棒。",
+        "robo-waiting-13": "只剩几步就完成了！",
+        "robo-waiting-14": "在不打破时空连续性的前提下，我已经尽力加速了",
+        "robo-waiting-15": "别担心，等待是值得的！",
+        "robo-waiting-16": "正在确保每个像素都完美对齐。",
+        "robo-waiting-17": "正在挑选完美的配色，放心，我的品味一流！",
+        "robo-waiting-18": "正在打造一件杰作…",
+        "robo-waiting-19": "正在为你的设计做最后的润色…",
+        "robo-waiting-20": "请等待结果！",
+        "robo-delayed-1": "坚持住！可能还需要几秒、几分钟甚至几小时…",
+        "robo-delayed-2": "不要放弃！",
+        "robo-delayed-3": "这次真的很慢！",
+        "robo-delayed-4": "有时候服务器真的很忙…",
+        "robo-delayed-5": "哇，你的设计一定很复杂！",
+        "robo-delayed-6": "应该快好了…",
+        "robo-delayed-7": "仍在等待 OpenAI…",
+        "robo-delayed-8": "稍安勿躁，结果马上就到。",
+        "robo-delayed-9": "抱歉延迟了，AI 正在喝咖啡休息……",
+        "robo-delayed-10": "我不是说我的系统靠魔法驱动，但魔法有时也需要时间。",
+        "robo-delayed-11": "AI 正在深度思考…但等待是值得的！",
+        "robo-delayed-12": "就快好了！",
+        "robo-delayed-13": "AI 有时需要时间，但值得等待。",
+        "robo-delayed-14": "系统正在进行诊断扫描，以确保天网还没有接管世界。",
+        "robo-delayed-15": "AI 有时会在深度神经网络中迷路…",
+        "robo-delayed-16": "我也不知道这是怎么了。",
+        "hint-did-you-know": "你知道吗？",
+        "hint-1": "你可以在提示词中加入颜色！可以指定背景、文字或边框颜色。例如：",
+        "hint-1-prompt": "创建一个带红色按钮的表单，文字颜色为黑色。",
+        "hint-2": "你可以要求创建表单，并指定需要包含的不同元素。",
+        "hint-2-prompt": "创建一个包含邮箱、密码和年龄输入框的表单。",
+        "hint-3": "OpenAI 可以为你生成表格数据，无需自己编造姓名、地点、生日等",
+        "hint-3-prompt": "请创建一个包含 5 个人数据的表格，含有姓名、年龄、体重和职业。",
+        "hint-4": "你可以影响设计中使用的文本样式。",
+        "hint-4-prompt": "创建一个关于设计师的有趣标题。",
+        "hint-5": "你可以在提示词中包含选项，创建下拉框、单选组和复选框列表。",
+        "hint-5-prompt": "创建一个表单让用户选择最喜欢的音乐风格，例如说唱、灵魂乐、金属和浩室。",
+        "hint-6": "你知道可以在提示词里指定颜色吗？",
+        "hint-6-prompt": "你知道可以在提示词里指定颜色吗？",
+        "hint-7": "你可以要求生成表格数据。",
+        "hint-7-prompt": "请创建一个包含 5 个人数据的表格。",
+        "hint-8": "你可以指定表单包含的输入项。",
+        "hint-8-prompt": "创建一个包含邮箱和密码输入框的表单。",
+        "hint-9": "你可以要求特定的文本样式。",
+        "hint-9-prompt": "创建一个大号粗体的标题。",
+        "hint-10": "你可以创建下拉和多选组件。",
+        "hint-10-prompt": "创建一个带有下拉选择框的表单。",
+        "hint-11": "你可以描述页面布局。",
+        "hint-11-prompt": "创建一个左侧导航、右侧内容的页面。",
+        "hint-12": "试试描述一个完整的页面。",
+        "hint-12-prompt": "创建一个电商产品详情页。"
+    },
+    "script": {
+        "edit": "编辑",
+        "console": "控制台",
+        "run": "运行"
+    },
+    "tooltip": {
+        "edit": "编辑与选择 (A)",
+        "move": "移动画布 (空格)",
+        "simulate": "开始模拟",
+        "screen": "添加屏幕 (S)",
+        "group": "创建分组 (CTRL-G)",
+        "ungroup": "取消分组 (CTRL-G)",
+        "clone": "克隆选中元素 (C)",
+        "distribute": "更改网格 (D)",
+        "template": "创建或编辑组件",
+        "basic": "添加基础元素",
+        "widget": "添加交互组件 (W)",
+        "comment": "添加评论",
+        "layer": "更改图层",
+        "editmode": "切换设计与原型模式 (TAB)",
+        "protomode": "定义交互 (Tab)",
+        "resizeGrid": "更改选中网格",
+        "toggle-design": "切换到编辑模式",
+        "toggle-heatmap": "切换到热力图模式",
+        "analyics-heatmaps": "查看不同类型的热力图",
+        "analyics-user": "查看用户旅程",
+        "analyics-task": "查看任务完成度、异常和流失",
+        "analyics-screen": "查看屏幕统计（滚动热图、停留时间等）",
+        "app-color": "更改应用颜色",
+        "simuser": "用 AI 模拟用户如何使用应用（Beta）",
+        "removeSimuser": "移除 AI 事件",
+        "vector": "矢量工具"
+    },
+    "testSettingsHeader": "测试设置",
+    "testSettingsShowTaskInTest": "测试期间显示任务。",
+    "testSettingsShowSuccessInTest": "所有任务完成后显示提示信息。",
+    "testSettingTaskDeleteTitle": "删除任务",
+    "testSettingsRecordOneTestPerUser": "仅在用户首次测试原型时记录数据。",
+    "testSettingsTranscribeVoice": "转写用户语音。",
+    "taskRecorder2": "例如，他们需要访问\"屏幕 A\"并导航到\"屏幕 C\"。你还可以标记重要的子事件，比如点击按钮或访问中间的某个屏幕。",
+    "login": {
+        "brand-slogan-1": "画出来。",
+        "brand-slogan-2": "连起来。",
+        "brand-slogan-3": "发布出去。",
+        "brand-sub": "开源、可自托管的产品原型设计与测试平台。",
+        "footer-1": "原型",
+        "footer-2": "测试",
+        "footer-3": "迭代",
+        "tab-login": "登录",
+        "tab-signup": "注册",
+        "title-login": "欢迎回来",
+        "title-signup": "创建账号",
+        "title-reset": "设置新密码",
+        "lede-login": "登录以继续你的工作区。",
+        "lede-signup": "免费方案，无需信用卡，数据保存在你自己的服务器上。",
+        "lede-reset": "输入你的邮箱和重置链接中的令牌。",
+        "email": "邮箱",
+        "password": "密码",
+        "new-password": "新密码",
+        "placeholder-email": "you{'@'}studio.com",
+        "placeholder-password": "至少 6 个字符",
+        "forgot": "忘记密码？",
+        "submit-login": "登录",
+        "submit-signup": "创建账号",
+        "submit-reset": "设置新密码",
+        "tos-pre": "我已阅读并同意",
+        "tos-link": "服务条款",
+        "error-email": "请输入邮箱",
+        "error-password-short": "密码太短",
+        "error-token": "令牌不正确",
+        "error-generic": "出现了一些问题",
+        "error-login": "邮箱或密码错误",
+        "error-domain": "邮箱域名不符合要求",
+        "error-nosignup": "当前不允许注册。",
+        "error-taken": "邮箱已被注册",
+        "error-signup": "注册失败，邮箱可能已被注册？",
+        "error-tos": "请先同意服务条款",
+        "reset-sent": "请查收邮件。"
+    }
 }

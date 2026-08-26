@@ -1,0 +1,1625 @@
+[
+  {
+    "id": "QXChartBar",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Chart Card",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart1",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart2",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Weekly revenue"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart0",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 84,
+        "w": 312,
+        "h": 160,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "4"
+            ],
+            [
+              "6"
+            ],
+            [
+              "5"
+            ],
+            [
+              "8"
+            ],
+            [
+              "7"
+            ],
+            [
+              "9"
+            ],
+            [
+              "12"
+            ]
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartBar2",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Chart Card 2 Series",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart4",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart5",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Signups vs upgrades"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart3",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 84,
+        "w": 312,
+        "h": 160,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "4",
+              "1"
+            ],
+            [
+              "6",
+              "2"
+            ],
+            [
+              "5",
+              "2"
+            ],
+            [
+              "8",
+              "3"
+            ],
+            [
+              "7",
+              "3"
+            ],
+            [
+              "9",
+              "4"
+            ],
+            [
+              "12",
+              "5"
+            ]
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartLine",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Line Chart Card",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart7",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart8",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Active users"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart6",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 84,
+        "w": 312,
+        "h": 160,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "12"
+            ],
+            [
+              "18"
+            ],
+            [
+              "15"
+            ],
+            [
+              "22"
+            ],
+            [
+              "28"
+            ],
+            [
+              "25"
+            ],
+            [
+              "34"
+            ]
+          ],
+          "isLine": true
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartHorizontal",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Horizontal Chart Card",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart10",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart11",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Top pages"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart9",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 84,
+        "w": 312,
+        "h": 160,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "/home",
+              "840"
+            ],
+            [
+              "/pricing",
+              "520"
+            ],
+            [
+              "/docs",
+              "380"
+            ],
+            [
+              "/blog",
+              "260"
+            ],
+            [
+              "/about",
+              "140"
+            ]
+          ],
+          "isHorizontal": true
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartPie",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Pie Chart Card",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart19",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart20",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Device split"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart12",
+        "type": "PieChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 84,
+        "y": 84,
+        "w": 160,
+        "h": 160,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              45,
+              30,
+              25
+            ]
+          ]
+        },
+        "has": {},
+        "style": {
+          "background0": "#2563eb",
+          "background1": "#10b981",
+          "background2": "#f59e0b",
+          "background3": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXChart13",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 44,
+        "y": 100,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXChart14",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L1",
+        "x": 58,
+        "y": 96,
+        "w": 80,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Desktop"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXChart15",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 44,
+        "y": 124,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#10b981",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#10b981",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#10b981",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#10b981",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#10b981"
+        }
+      },
+      {
+        "id": "QXChart16",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L2",
+        "x": 58,
+        "y": 120,
+        "w": 80,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Mobile"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXChart17",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 44,
+        "y": 148,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#f59e0b",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#f59e0b",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#f59e0b",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#f59e0b",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#f59e0b"
+        }
+      },
+      {
+        "id": "QXChart18",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L3",
+        "x": 58,
+        "y": 144,
+        "w": 80,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Tablet"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartRing",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Ring Chart Card",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart24",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart25",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Goal completion"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart21",
+        "type": "RingChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 84,
+        "y": 84,
+        "w": 160,
+        "h": 160,
+        "z": null,
+        "props": {
+          "value": 68
+        },
+        "has": {},
+        "style": {
+          "background": "#e5e7eb",
+          "color": "#2563eb",
+          "lineWidth": 24
+        }
+      },
+      {
+        "id": "QXChart22",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Value",
+        "x": 140,
+        "y": 150,
+        "w": 48,
+        "h": 26,
+        "z": null,
+        "props": {
+          "label": "68%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 20,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart23",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 24,
+        "y": 250,
+        "w": 312,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "1,020 of 1,500 sessions"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartLegend",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Chart Card Legend",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart33",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart34",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Revenue by region"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart26",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 84,
+        "w": 312,
+        "h": 120,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "4",
+              "2"
+            ],
+            [
+              "6",
+              "3"
+            ],
+            [
+              "5",
+              "2"
+            ],
+            [
+              "8",
+              "4"
+            ],
+            [
+              "7",
+              "3"
+            ]
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      },
+      {
+        "id": "QXChart27",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 84,
+        "y": 220,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXChart28",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 0",
+        "x": 98,
+        "y": 216,
+        "w": 60,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "EMEA"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXChart29",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 164,
+        "y": 220,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#93c5fd",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#93c5fd",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#93c5fd",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#93c5fd",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#93c5fd"
+        }
+      },
+      {
+        "id": "QXChart30",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 1",
+        "x": 178,
+        "y": 216,
+        "w": 60,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "AMER"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXChart31",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 244,
+        "y": 220,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#10b981",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#10b981",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#10b981",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#10b981",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#10b981"
+        }
+      },
+      {
+        "id": "QXChart32",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 2",
+        "x": 258,
+        "y": 216,
+        "w": 60,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "APAC"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXChartSpark",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Mini Chart Card",
+    "category": "Charts",
+    "subcategory": "QCards",
+    "w": 360,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXChart39",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXChart40",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Today’s visitors"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart35",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Value",
+        "x": 24,
+        "y": 84,
+        "w": 200,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "1,284"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 28,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart36",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta",
+        "x": 24,
+        "y": 126,
+        "w": 55,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXChart37",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta Label",
+        "x": 24,
+        "y": 129,
+        "w": 55,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▲ 12%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXChart38",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 160,
+        "w": 312,
+        "h": 84,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "2"
+            ],
+            [
+              "5"
+            ],
+            [
+              "3"
+            ],
+            [
+              "7"
+            ],
+            [
+              "4"
+            ],
+            [
+              "8"
+            ],
+            [
+              "6"
+            ],
+            [
+              "9"
+            ],
+            [
+              "7"
+            ],
+            [
+              "11"
+            ]
+          ],
+          "isLine": true
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  }
+]

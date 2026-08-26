@@ -157,6 +157,7 @@ def test_libraries():
                 page.evaluate(
                     f"""() => {{
                         localStorage.setItem('quxUser', JSON.stringify({json.dumps(owner)}));
+                        localStorage.setItem('quxLanguage', 'en');
                     }}"""
                 )
                 page.reload()

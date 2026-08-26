@@ -25,24 +25,31 @@
         }
     },
     "simulator": {
-      "welcome": {
-          "title": "Willkommen",
-          "msg": 	"Sie wurden eingeladen den <b>{{name}}</b> Prototypen zu testen. .",
-          "privacy": "Im Rahmen dieses Usabilitytests werden ihre Interaktionen zur Verbessung des Designs aufgezeichnet und gespeichert.",
-          "privacy1": "Es werden keine persönlichen Informationen gespeichert. Sie finden mehr informationen auf unserer <a target='quxPrivacy' href='#/privacy.html'>Privacy Seite</a>.",
-          "click-start": "",
-          "start": "Starten",
-          "showTasks": "Aufgaben zeigen"
-      },
-      "tasks": {
-          "title": "Aufgaben",
-          "msg": "Bitte versuchen Sie die folgenden Aufgaben zu erfüllen."
-      },
-      "password": {
-          "title": "Passwort",
-          "msg": "Bitte geben Sie das Passwort ein und klicken Sie auf <b>Weiter</b>",
-          "next": "Weiter"
-      }
+        "welcome": {
+            "title": "Willkommen",
+            "msg": "Sie wurden eingeladen den {name} Prototypen zu testen. .",
+            "privacy": {
+                "1": "Im Rahmen dieses Usabilitytests werden ihre Interaktionen zur Verbessung des Designs aufgezeichnet und gespeichert.",
+                "2": "",
+                "3": ""
+            },
+            "privacy1": {
+                "1": "Es werden keine persönlichen Informationen gespeichert. Sie finden mehr informationen auf unserer ",
+                "2": "Privacy Seite"
+            },
+            "click-start": "",
+            "start": "Starten",
+            "showTasks": "Aufgaben zeigen"
+        },
+        "tasks": {
+            "title": "Aufgaben",
+            "msg": "Bitte versuchen Sie die folgenden Aufgaben zu erfüllen."
+        },
+        "password": {
+            "title": "Passwort",
+            "msg": "Bitte geben Sie das Passwort ein und klicken Sie auf ",
+            "next": "Weiter"
+        }
     },
     "table": {
         "action": "Action"
@@ -85,6 +92,12 @@
                 "2": "Privacy Notice",
                 "error": "You must accept the privacy notice"
             }
+        },
+        "import": {
+            "tab-axure": "Axure",
+            "axure-drop-msg": "Axure HTML Export (ZIP) hier ablegen",
+            "axure-progress": "Axure Prototyp wird importiert...",
+            "error-axure-parse": "Der Axure Export konnte nicht importiert werden. Bitte exportieren Sie über 'Publish > ZIP' oder zippen Sie den generierten HTML-Ordner."
         }
     },
     "test": {
@@ -92,9 +105,7 @@
             "headline": "Willkommen!",
             "intro": {
                 "1": "Sie wurden zu einem Usability-Test der",
-                "2": "Anwendung eingeladen.",
-                "tasks": "Sie können den Prototyp ausprobieren und bestimmte Aufgaben erledigen. Wenn Sie auf den <b>Aufgaben anzeigen</b> Button klicken, erhalten Sie detaillierte Anweisungen.",
-                "no-tasks": "Sie können den Prototyp ausprobieren, indem Sie auf den <b>Prototyp starten</b> Button klicken."
+                "2": "Anwendung eingeladen."
             },
             "next": "Aufgaben anzeigen",
             "start": "Prototyp starten"
@@ -102,7 +113,6 @@
         "task": {
             "headline": "Aufgaben",
             "description": "Im Rahmen dieses Usability-Tests werden Sie gebeten, die unten aufgeführten Aufgaben zu erledigen. Keine Sorge, wenn Sie nicht alle Aufgaben erfüllen können. Dies ist nur ein Hinweis darauf, dass der Prototyp noch Verbesserungen benötigt. Die Aufgaben sind:",
-            "footer": "Sie können den Prototyp ausprobieren, indem Sie auf den <b>Prototyp starten</b> Button klicken.",
             "success-title": "Herzlichen Glückwunsch!",
             "success-message": "Sie haben alle Aufgaben abgeschlossen. Sie können die Seite jetzt schließen."
         },
@@ -114,11 +124,14 @@
             "uploading": "Wird hochgeladen..."
         }
     },
-  
     "user": {
         "retire": {
             "hi": "Hi ",
-            "msg": "are you sure that you want to <b>delete</b> your account? You will loose all your data.",
+            "msg": {
+                "1": "are you sure that you want to ",
+                "2": "delete",
+                "3": " your account? You will loose all your data."
+            },
             "cusoon": "Thanks for using Quant-UX. We hope to see you soon again."
         }
     },
@@ -138,7 +151,6 @@
             "duration": "Test Duration",
             "coverage": "Test Coverage"
         }
-  
     },
     "dashScreenList": {
         "views": "Views",
@@ -186,10 +198,9 @@
                 "session-play": "here"
             },
             "no-flow-title": "No FLow",
-            "no-flow-msg": "<p>Please define a flow with <b>more</b> than <b>two</b> steps.<br> Otherwise we cannot show details about the task performance.</p>"
+            "no-flow-msg": "Please define a flow with more than two steps. Otherwise we cannot show details about the task performance."
         }
     },
-  
     "testSettingsDescription": "Description",
     "testSettingsTasks": "Tasks",
     "testSettingsTaskName": "Name",
@@ -206,7 +217,6 @@
     "testSettingTaskDelete2": "'?",
     "testSettingsSaved": "Test settings updated...",
     "testSettingsUpgradePlan": "Upgrade Plan",
-  
     "dashTaskEmpty": "Click the  'Add Task' button to create a new analytic task. Edit the flow to measure task performance. ",
     "dashTaskTableName": "Name",
     "dashTaskTableSuccess": "Success Rate",
@@ -219,13 +229,8 @@
     "dashTaskEventDis": "Event Distribution",
     "dashTaskDesPlaceholder": "Enter a description here",
     "dashTaskPerfHeadline": "Task: ",
-  
     "taskRecorder1": "A flow is the sequence of interactions the users have to perform to complete a task.",
-    "taskRecorderStep0": "Pess <b>Begin</b> to launch the simulator.",
     "taskRecorderStep1": "Perform the interactions your users should perform",
-    "taskRecorderStep2": "You can press <b>Pause</b> to pause the recording",
-    "taskRecorderStep3": "Press <b>Done</b> when the flow is complete.",
-    "taskRecorderStep4": "<b>Select</b> all steps that are important for the task.",
     "taskRecorderPauseHint": "Click Pause to pause recording",
     "taskRecorderPauseBtn": "Pause",
     "taskRecorderPauseDes": "Recoding interaction...",
@@ -237,7 +242,6 @@
     "taskRecorderScreen": "Screen",
     "taskRecorderWidget": "Widget",
     "taskRecorderAction": "Important",
-  
     "videoTableStatus": "Status",
     "videoTableUser": "User",
     "videoTableDuration": "Duration (sec)",
@@ -245,6 +249,44 @@
     "videoTableEvents": "Events",
     "videoTableDate": "Date",
     "videoTableStatusNotPayed": "Blocked",
-    "videoTablePlanUpdateMsg": "To see all videos upgate your plan."
-  }
-  
+    "videoTablePlanUpdateMsg": "To see all videos upgate your plan.",
+    "login": {
+        "brand-slogan-1": "Skizziere es.",
+        "brand-slogan-2": "Verkable es.",
+        "brand-slogan-3": "Verschiffe es.",
+        "brand-sub": "Der offene, selbst gehostete Weg um Ideen zu prototypen, zu testen und zu verfeinern.",
+        "footer-1": "Prototyp",
+        "footer-2": "Test",
+        "footer-3": "Lernen",
+        "tab-login": "Anmelden",
+        "tab-signup": "Registrieren",
+        "title-login": "Willkommen zurück",
+        "title-signup": "Account erstellen",
+        "title-reset": "Neues Passwort setzen",
+        "lede-login": "Melden Sie sich an, um fortzufahren.",
+        "lede-signup": "Kostenloser Plan, keine Kreditkarte, Ihre Daten bleiben auf Ihrem Server.",
+        "lede-reset": "Geben Sie Ihre E-Mail und den Token aus dem Reset-Link ein.",
+        "email": "E-Mail",
+        "password": "Passwort",
+        "new-password": "Neues Passwort",
+        "placeholder-email": "you{'@'}studio.com",
+        "placeholder-password": "Mindestens 6 Zeichen",
+        "forgot": "Passwort vergessen?",
+        "submit-login": "Anmelden",
+        "submit-signup": "Account erstellen",
+        "submit-reset": "Neues Passwort setzen",
+        "tos-pre": "Ich akzeptiere die",
+        "tos-link": "Nutzungsbedingungen",
+        "error-email": "Bitte geben Sie Ihre E-Mail ein",
+        "error-password-short": "Passwort zu kurz",
+        "error-token": "Token ist falsch",
+        "error-generic": "Etwas ist schief gelaufen",
+        "error-login": "Anmeldung ist falsch",
+        "error-domain": "Nicht die korrekte Domain",
+        "error-nosignup": "Keine Registrierung möglich.",
+        "error-taken": "E-Mail ist bereits vergeben",
+        "error-signup": "Registrierung fehlgeschlagen. Ist die E-Mail bereits vergeben?",
+        "error-tos": "Bitte akzeptieren Sie die Nutzungsbedingungen",
+        "reset-sent": "Prüfen Sie Ihre E-Mails."
+    }
+}

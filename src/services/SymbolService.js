@@ -154,6 +154,15 @@ class SymbolService extends AbstractService{
             import(/* webpackChunkName: "themes" */ 'themes/composite/card_xl_button.json'),
             import(/* webpackChunkName: "themes" */ 'themes/composite/card_profile.json'),
 
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_navigation.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_hero.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_cards.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_forms.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_dashboard.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_lists.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_ecommerce.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/composite/qux_mobile.json'),
+
             import(/* webpackChunkName: "themes" */ 'themes/survey/textbox.json'),
             // import(/* webpackChunkName: "themes" */ 'themes/survey/labeledtextbox.json'),
             // import(/* webpackChunkName: "themes" */ 'themes/survey/labeledtextarea.json'),
@@ -227,6 +236,7 @@ class SymbolService extends AbstractService{
             import(/* webpackChunkName: "themes" */ 'themes/charts/legend.json'),
             import(/* webpackChunkName: "themes" */ 'themes/charts/pie.json'),
             import(/* webpackChunkName: "themes" */ 'themes/charts/ring.json'),
+            import(/* webpackChunkName: "themes" */ 'themes/charts/qux_charts.json'),
 
             // import(/* webpackChunkName: "themes" */ 'themes/bootstrap4/alerts.json'),
             // import(/* webpackChunkName: "themes" */ 'themes/bootstrap4/boxes.json'),

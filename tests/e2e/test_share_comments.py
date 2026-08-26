@@ -116,6 +116,7 @@ def _run_share_comments(env):
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(viewport={"width": 1280, "height": 800})
         page = context.new_page()
+        page.add_init_script("localStorage.setItem('quxLanguage', 'en')")
 
         console_logs = []
         page.on("console", lambda msg: console_logs.append(f"{msg.type}: {msg.text}"))

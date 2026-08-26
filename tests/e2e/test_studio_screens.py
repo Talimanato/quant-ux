@@ -97,6 +97,7 @@ def test_studio_screens():
                 page.evaluate(
                     f"""() => {{
                         localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                        localStorage.setItem('quxLanguage', 'en');
                     }}"""
                 )
                 page.reload()

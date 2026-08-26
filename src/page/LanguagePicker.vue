@@ -28,6 +28,7 @@ import Logger from "common/Logger";
 import QIcon from "../page/QIcon";
 
 import _Tooltip from "common/_Tooltip";
+import { resolveLocale } from "services/Locale";
 
 export default {
   name: "LangaugePicker",
@@ -91,6 +92,8 @@ export default {
     this.logger = new Logger("LangaugePicker");
     if (this.value) {
       this.language = this.value
+    } else {
+      this.language = resolveLocale(localStorage.getItem('quxLanguage') || this.$root.$i18n.locale)
     }
 
     this.addTooltip(this.$el, "Change the language", "vommondToolTipRightBottom")

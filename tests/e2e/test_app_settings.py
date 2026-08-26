@@ -58,6 +58,7 @@ def test_app_settings():
                 page.evaluate(
                     f"""() => {{
                         localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                        localStorage.setItem('quxLanguage', 'en');
                     }}"""
                 )
                 page.reload()

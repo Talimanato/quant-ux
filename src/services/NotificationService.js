@@ -1,5 +1,6 @@
 import AbstractService from './AbstractService'
 import Logger from '../common/Logger'
+import { resolveLocale } from 'services/Locale'
 
 function getDays (user) {
     const now = new Date().getTime()
@@ -7,6 +8,10 @@ function getDays (user) {
     const age = now - created
     const days = age / 86400000
     return Math.floor(days)
+}
+
+function isCN () {
+    return resolveLocale(localStorage.getItem('quxLanguage')) === 'cn'
 }
 
 function getDaysSinceLastNotification (user) {
@@ -182,6 +187,31 @@ class NotificationService extends AbstractService{
     }
 
     initRules () {
+        const welcomeCN = `
+                    <p>
+                        欢迎加入！Quant-UX 是一站式的 UX 原型设计、测试与分析平台。
+                        无论你是在为下一个好点子绘制线框图，还是深入研究用户行为，
+                        Quant-UX 都能帮你在一个流畅的工作流中完成这一切。
+                    </p>
+                    <p>
+                        如果你喜欢 Quant-UX，并且是 GitHub 社区的一员，请给我们一个 ⭐️
+                        <a href="https://github.com/KlausSchaefers/quant-ux" target="github">GitHub 上的 Quant-UX</a>
+                    </p>
+
+                    <p>
+                        为了帮助你快速上手，可以查看我们的 <a href="https://www.youtube.com/@quant-ux8332" target="github">YouTube</a> 频道，
+                        里面有教程、功能介绍和专业技巧。
+                    </p>
+
+                    <p>
+                        如果你想与其他设计师交流、获取支持或分享反馈，欢迎加入我们的 <a href="https://discord.gg/TQBpfAAKmU" target="github">Discord</a>
+                        社区。
+                    </p>
+
+                    <p>
+                        让我们一起打造更好的体验！🚀
+                    </p>
+        `
         return [
             {
                 matches () {
@@ -189,34 +219,34 @@ class NotificationService extends AbstractService{
                 },
                 id:"Welcome",
                 img: 'Welcome.png',
-                more: `
+                more: isCN() ? welcomeCN : `
                     <p>
-                        We're excited to have you on board! Quant-UX is your all-in-one platform to design, test, and analyze UX prototypes with ease. 
-                        Whether you're wireframing your next big idea or diving into user behavior, 
+                        We're excited to have you on board! Quant-UX is your all-in-one platform to design, test, and analyze UX prototypes with ease.
+                        Whether you're wireframing your next big idea or diving into user behavior,
                         Quant-UX helps you bring it all together in one seamless workflow.
                     </p>
                     <p>
                         If you like Quant-UX and you're part of the GitHub community, pleaese give us a star ⭐️
-                        <a href="https://github.com/KlausSchaefers/quant-ux" target="github">Quant-UX on GitHub</a> 
+                        <a href="https://github.com/KlausSchaefers/quant-ux" target="github">Quant-UX on GitHub</a>
                     </p>
-                    
+
                     <p>
-                        To help you get started, check out our <a href="https://www.youtube.com/@quant-ux8332" target="github">YouTube</a> channel where we share tutorials, feature overviews, 
+                        To help you get started, check out our <a href="https://www.youtube.com/@quant-ux8332" target="github">YouTube</a> channel where we share tutorials, feature overviews,
                         and pro tips to make the most of the platform.
                     </p>
 
-                    <p>                                     
-                        And if you’d like to connect with other designers, get support, or share your feedback, join our <a href="https://discord.gg/TQBpfAAKmU" target="github">Discord</a> 
+                    <p>
+                        And if you’d like to connect with other designers, get support, or share your feedback, join our <a href="https://discord.gg/TQBpfAAKmU" target="github">Discord</a>
                         community — we would love to have you there.
                     </p>
 
-                    <p>     
+                    <p>
                         Let's build better experiences together! 🚀
                     </p>
 
 
-                `,              
-                title: 'Welcome to Quant-UX!'
+                `,
+                title: isCN() ? '欢迎使用 Quant-UX！' : 'Welcome to Quant-UX!'
             },
             {
                 matches (user) {

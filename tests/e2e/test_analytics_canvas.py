@@ -164,6 +164,7 @@ def _run_analytics_canvas(env):
             page.evaluate(
                 f"""() => {{
                     localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                    localStorage.setItem('quxLanguage', 'en');
                 }}"""
             )
             page.goto(f"{frontend_url}/#/apps/{app_id}/analyze/workspace.html")

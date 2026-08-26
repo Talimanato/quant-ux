@@ -93,6 +93,7 @@ def _test_studio_image(env: dict, user: dict, app_id: str, upload: dict) -> None
             page.evaluate(
                 f"""() => {{
                     localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                    localStorage.setItem('quxLanguage', 'en');
                 }}"""
             )
             page.reload()

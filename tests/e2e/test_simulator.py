@@ -111,6 +111,7 @@ def test_simulator():
                 page.evaluate(
                     f"""() => {{
                         localStorage.setItem('quxUser', JSON.stringify({json.dumps(user)}));
+                        localStorage.setItem('quxLanguage', 'en');
                     }}"""
                 )
                 page.reload()

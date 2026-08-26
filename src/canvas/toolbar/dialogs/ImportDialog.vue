@@ -5,6 +5,7 @@
             <a @click="tab='images'" :class="{'MatcToolbarTabActive': tab === 'images'}">{{ getNLS('dialog.import.tab-images')}}</a>
             <a @click="tab='figma'" :class="{'MatcToolbarTabActive': tab === 'figma'}">{{ getNLS('dialog.import.tab-figma')}}</a>
             <a @click="tab='zip'" :class="{'MatcToolbarTabActive': tab === 'zip'}">{{ getNLS('dialog.import.tab-zip')}}</a>
+            <a @click="tab='axure'" :class="{'MatcToolbarTabActive': tab === 'axure'}">{{ getNLS('dialog.import.tab-axure')}}</a>
             <a @click="tab='swagger'" :class="{'MatcToolbarTabActive': tab === 'swagger'}" v-if="hasSwagger">{{ getNLS('dialog.import.')}}</a>
             <a @click="tab='openai'" :class="{'MatcToolbarTabActive': tab === 'openai'}" v-if="hasOpenAI">{{ getNLS('dialog.import.tab-open-ai')}}</a>
  
@@ -32,6 +33,16 @@
                         <span class="mdi mdi-file-code-outline"/>
                     </span>
                     <input type="file" @change="onZipChange" >
+                </div>
+            </div>
+
+            <div v-if="tab=== 'axure'">
+                <div :class="['MatchImportDialogDropZone MatchImportDialogCntr', {'MatchImportDialogDropZoneHover': hasDrop}]">
+                    <span class="MatcHint" v-if="!hasAxureZip">{{ getNLS('dialog.import.axure-drop-msg')}}</span>
+                    <span v-else class="MatchImportDialogPreview MatchImportDialogZip MatcToolbarDropDownButtonItem">
+                        <span class="mdi mdi-file-code-outline"/>
+                    </span>
+                    <input type="file" @change="onAxureChange" >
                 </div>
             </div>
 
@@ -132,6 +143,7 @@ import RadioBoxList from 'common/RadioBoxList'
 import ZipSevice from 'services/ZipService'
 import FigmaService from 'services/FigmaService'
 import SwaggerService from 'services/SwaggerService'
+import AxureService from 'services/AxureService'
 
 export default {
     name: 'ImportDialog',
@@ -144,6 +156,7 @@ export default {
             uploadFiles: [],
             uploadPreviews: [],
             hasZip: false,
+            hasAxureZip: false,
             zoom: 1,
             errorMSG: '',
             progressMSG: '',
@@ -217,6 +230,9 @@ export default {
             }
             if (this.tab === 'zip') {
                 await this.importZip()
+            }
+            if (this.tab === 'axure') {
+                await this.importAxure()
             }
             if (this.tab === 'swagger') {
                 await this.loadSwagger()
@@ -548,10 +564,15 @@ export default {
             this.hasDrop = false
             // flip tab if zip is dropped
             if (files.length === 1 && this.isZipFile(files[0])) {
-                this.tab = 'zip'
+                if (this.tab !== 'axure') {
+                    this.tab = 'zip'
+                }
             }
             if (this.tab === 'zip') {
                 this.showZip(files)
+            }
+            if (this.tab === 'axure') {
+                this.showAxureZip(files)
             }
             if (this.tab === "images") {
                 this.showFiles(files)
@@ -658,6 +679,74 @@ export default {
             await this.controller.importApp(zipModel, this.getCanvasCenter())
             // close dialog
             this.$emitDojo('save')
+        },
+
+
+        /**
+         * Axure stuff
+         */
+        onAxureChange (e) {
+            let files = e.target.files
+            this.showAxureZip(files)
+        },
+
+        showAxureZip (files) {
+            this.logger.log(-1, 'showAxureZip', 'enter', files)
+            this.hasDrop = false
+            this.errorMSG = ""
+            if (files && files.length > 0 && this.isZipFile(files[0])) {
+                this.axureZipFile = files[0]
+                this.hasAxureZip = true
+            } else {
+                this.axureZipFile = null
+                this.hasAxureZip = false
+                this.errorMSG = this.getNLS('dialog.import.error-zip-no-file')
+            }
+        },
+
+        async importAxure () {
+            this.logger.log(-1, 'importAxure', 'enter')
+            if (!this.hasAxureZip || !this.axureZipFile) {
+                this.errorMSG = this.getNLS('dialog.import.error-no-file')
+                return
+            }
+
+            this.tab = 'progress'
+            this.setProgress(10, 'dialog.import.axure-progress')
+
+            try {
+                const model = await AxureService.parse(this.axureZipFile, this.model.id, progress => {
+                    this.setProgress(Math.max(10, progress))
+                })
+
+                /**
+                 * Move the screens to the center of the visible canvas
+                 */
+                let minX = 1000000
+                let minY = 1000000
+                Object.values(model.screens).forEach(screen => {
+                    minX = Math.min(minX, screen.x)
+                    minY = Math.min(minY, screen.y)
+                })
+                let pos = this.getCanvasCenter()
+                let offsetX = pos.x - minX
+                let offsetY = pos.y - minY
+                Object.values(model.screens).forEach(screen => {
+                    screen.x += offsetX
+                    screen.y += offsetY
+                })
+                Object.values(model.widgets).forEach(widget => {
+                    widget.x += offsetX
+                    widget.y += offsetY
+                })
+
+                this.controller.addScreensAndWidgets(model)
+                this.$emitDojo('save')
+            } catch (err) {
+                this.logger.error('importAxure', 'Cannot import axure', err)
+                this.errorMSG = this.getNLS('dialog.import.error-axure-parse')
+                this.tab = 'axure'
+            }
         }
 
 

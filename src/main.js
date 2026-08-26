@@ -5,6 +5,7 @@ import router from './router'
 import { createI18n } from 'vue-i18n'
 
 import Services from 'services/Services'
+import { resolveLocale } from 'services/Locale'
 
 // Configure Vue 3 compat mode. MODE: 3 emits deprecation warnings but keeps
 // most Vue 2 features working while we migrate.
@@ -52,15 +53,24 @@ async function start() {
     await keycloakService.init();
   }
 
+  /**
+   * Default to Chinese. A language picked in the UI (LanguagePicker ->
+   * UserService.setLanguage) is persisted in localStorage and wins.
+   */
+  const storedLanguage = localStorage.getItem('quxLanguage')
+  const initialLocale = storedLanguage ? resolveLocale(storedLanguage) : 'cn'
+
   const i18n = createI18n({
     legacy: false,
-    locale: 'en',
+    locale: initialLocale,
     fallbackLocale: 'en',
     messages: {
       'en': require('./nls/en.json'),
       'en-uk': require('./nls/en.json'),
       'en-us': require('./nls/en.json'),
       'cn': require('./nls/cn.json'),
+      'zh': require('./nls/cn.json'),
+      'zh-cn': require('./nls/cn.json'),
       'de': require('./nls/de.json'),
       'pt-br': require('./nls/pt_br.json'),
       'pt': require('./nls/pt_br.json')

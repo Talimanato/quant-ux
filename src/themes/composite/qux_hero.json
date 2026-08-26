@@ -1,0 +1,3801 @@
+[
+  {
+    "id": "QXHeroCentered",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Hero Centered",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 820,
+    "h": 392,
+    "children": [
+      {
+        "id": "QXHero0",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Badge",
+        "x": 470,
+        "y": 24,
+        "w": 209,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero1",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Badge Label",
+        "x": 470,
+        "y": 27,
+        "w": 209,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "✦ New: AI design generation"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero2",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H1",
+        "x": 220,
+        "y": 68,
+        "w": 600,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": "Design, test and iterate faster"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 40,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero3",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 260,
+        "y": 128,
+        "w": 520,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": "Quant-UX is the open source design and research platform for teams that ship."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero4",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA",
+        "x": 400,
+        "y": 204,
+        "w": 140,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "Start for free"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8
+        }
+      },
+      {
+        "id": "QXHero5",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA 2",
+        "x": 552,
+        "y": 204,
+        "w": 140,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "View demo"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#111827",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#9ca3af",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#9ca3af",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#9ca3af",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#9ca3af",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXHero6",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 428,
+        "y": 268,
+        "w": 28,
+        "h": 28,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 14,
+          "borderTopLeftRadius": 14,
+          "borderBottomRightRadius": 14,
+          "borderBottomLeftRadius": 14,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero7",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 448,
+        "y": 268,
+        "w": 28,
+        "h": 28,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fef3c7",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fef3c7",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fef3c7",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fef3c7",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 14,
+          "borderTopLeftRadius": 14,
+          "borderBottomRightRadius": 14,
+          "borderBottomLeftRadius": 14,
+          "background": "#fef3c7"
+        }
+      },
+      {
+        "id": "QXHero8",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 468,
+        "y": 268,
+        "w": 28,
+        "h": 28,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#dcfce7",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#dcfce7",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#dcfce7",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#dcfce7",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 14,
+          "borderTopLeftRadius": 14,
+          "borderBottomRightRadius": 14,
+          "borderBottomLeftRadius": 14,
+          "background": "#dcfce7"
+        }
+      },
+      {
+        "id": "QXHero9",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Users",
+        "x": 504,
+        "y": 276,
+        "w": 160,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Loved by 10,000+ designers"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero10",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 300,
+        "y": 324,
+        "w": 440,
+        "h": 1,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXHero11",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Trusted",
+        "x": 420,
+        "y": 344,
+        "w": 200,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "TRUSTED BY TEAMS AT"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero12",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand 0",
+        "x": 250,
+        "y": 372,
+        "w": 96,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Google"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero13",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand 1",
+        "x": 362,
+        "y": 372,
+        "w": 96,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Spotify"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero14",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand 2",
+        "x": 474,
+        "y": 372,
+        "w": 96,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Airbnb"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero15",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand 3",
+        "x": 586,
+        "y": 372,
+        "w": 96,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Uber"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero16",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Brand 4",
+        "x": 698,
+        "y": 372,
+        "w": 96,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Netflix"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroLeft",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Hero with Image",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 1040,
+    "h": 380,
+    "children": [
+      {
+        "id": "QXHero17",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Eyebrow",
+        "x": 0,
+        "y": 20,
+        "w": 104,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero18",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Eyebrow Label",
+        "x": 0,
+        "y": 23,
+        "w": 104,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "v4.0 is here"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero19",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H1",
+        "x": 0,
+        "y": 60,
+        "w": 460,
+        "h": 88,
+        "z": null,
+        "props": {
+          "label": "Prototype that feels like the real product"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 32,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.25,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero20",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 0,
+        "y": 164,
+        "w": 440,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": "Create interactive prototypes, run usability tests and gather feedback — all in one place."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero21",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA",
+        "x": 0,
+        "y": 232,
+        "w": 140,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "Get started"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8
+        }
+      },
+      {
+        "id": "QXHero22",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA 2",
+        "x": 156,
+        "y": 232,
+        "w": 120,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "Learn more"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#111827",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXHero23",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 0,
+        "y": 312,
+        "w": 440,
+        "h": 1,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXHero24",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "S1V",
+        "x": 0,
+        "y": 332,
+        "w": 120,
+        "h": 26,
+        "z": null,
+        "props": {
+          "label": "10k+"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero25",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "S1L",
+        "x": 0,
+        "y": 360,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Designers"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero26",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "S2V",
+        "x": 140,
+        "y": 332,
+        "w": 120,
+        "h": 26,
+        "z": null,
+        "props": {
+          "label": "45k"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero27",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "S2L",
+        "x": 140,
+        "y": 360,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Prototypes"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero28",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "S3V",
+        "x": 280,
+        "y": 332,
+        "w": 120,
+        "h": 26,
+        "z": null,
+        "props": {
+          "label": "99.9%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero29",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "S3L",
+        "x": 280,
+        "y": 360,
+        "w": 140,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Uptime"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero30",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Hero Image",
+        "x": 520,
+        "y": 40,
+        "w": 520,
+        "h": 340,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#f3f4f6"
+        }
+      },
+      {
+        "id": "QXHero31",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Image Icon",
+        "x": 738,
+        "y": 168,
+        "w": 85,
+        "h": 85,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-image",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero32",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Float Card",
+        "x": 840,
+        "y": 300,
+        "w": 160,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero33",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Float Card Label",
+        "x": 840,
+        "y": 303,
+        "w": 160,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "✓ 38% faster testing"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroDark",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Hero Dark with Form",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 1040,
+    "h": 400,
+    "children": [
+      {
+        "id": "QXHero34",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Bg",
+        "x": 0,
+        "y": 0,
+        "w": 1040,
+        "h": 400,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#1f2937",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#1f2937",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#1f2937",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#1f2937",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#1f2937"
+        }
+      },
+      {
+        "id": "QXHero35",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Eyebrow",
+        "x": 64,
+        "y": 96,
+        "w": 200,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "EARLY ACCESS"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#93c5fd",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero36",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H1",
+        "x": 64,
+        "y": 124,
+        "w": 420,
+        "h": 96,
+        "z": null,
+        "props": {
+          "label": "The future of design research"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 34,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.25,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero37",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 64,
+        "y": 236,
+        "w": 400,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": "Join the waitlist and be the first to try collaborative testing."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXHero38",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA",
+        "x": 64,
+        "y": 304,
+        "w": 160,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "Join waitlist"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8
+        }
+      },
+      {
+        "id": "QXHero39",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Note",
+        "x": 240,
+        "y": 316,
+        "w": 200,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "No credit card required"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXHero40",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Form Card",
+        "x": 580,
+        "y": 60,
+        "w": 396,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ffffff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ffffff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ffffff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ffffff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderBottomLeftRadius": 16,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXHero41",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Form Title",
+        "x": 612,
+        "y": 92,
+        "w": 200,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": "Create account"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 18,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero42",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Form Sub",
+        "x": 612,
+        "y": 118,
+        "w": 300,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Start your free 14-day trial."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero43",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "F1L",
+        "x": 612,
+        "y": 152,
+        "w": 100,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Email"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero44",
+        "type": "TextBox",
+        "_type": "Widget",
+        "name": "F1",
+        "x": 612,
+        "y": 170,
+        "w": 332,
+        "h": 38,
+        "z": null,
+        "props": {
+          "label": "you@company.com",
+          "placeholder": true
+        },
+        "has": {
+          "label": true,
+          "backgroundColor": true,
+          "border": true,
+          "editable": true,
+          "onclick": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        },
+        "focus": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        },
+        "hover": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#f3f4f6",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        },
+        "error": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#ef4444",
+          "borderTopWidth": 1,
+          "borderTopColor": "#ef4444",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ef4444",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ef4444",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ef4444",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#fef2f2",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        }
+      },
+      {
+        "id": "QXHero45",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "F2L",
+        "x": 612,
+        "y": 220,
+        "w": 100,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Password"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero46",
+        "type": "Password",
+        "_type": "Widget",
+        "name": "F2",
+        "x": 612,
+        "y": 238,
+        "w": 332,
+        "h": 38,
+        "z": null,
+        "props": {
+          "label": "••••••••",
+          "placeholder": true,
+          "cleartext": true,
+          "cleartextHideLabel": "Hide",
+          "cleartextShowLabel": "Show"
+        },
+        "has": {
+          "label": true,
+          "backgroundColor": true,
+          "border": true,
+          "editable": true,
+          "onclick": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        },
+        "focus": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        },
+        "hover": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#f3f4f6",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        },
+        "error": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#ef4444",
+          "borderTopWidth": 1,
+          "borderTopColor": "#ef4444",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ef4444",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ef4444",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ef4444",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#fef2f2",
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12
+        }
+      },
+      {
+        "id": "QXHero47",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Form CTA",
+        "x": 612,
+        "y": 290,
+        "w": 332,
+        "h": 40,
+        "z": null,
+        "props": {
+          "label": "Create account"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroFeatures3",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Feature Row",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 1040,
+    "h": 240,
+    "children": [
+      {
+        "id": "QXHero48",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 0",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 240,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXHero49",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Icon Bg 0",
+        "x": 24,
+        "y": 24,
+        "w": 48,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero50",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 0",
+        "x": 36,
+        "y": 36,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-vector-square",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero51",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title 0",
+        "x": 24,
+        "y": 92,
+        "w": 260,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Design"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero52",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Text 0",
+        "x": 24,
+        "y": 120,
+        "w": 272,
+        "h": 64,
+        "z": null,
+        "props": {
+          "label": "Draw screens with a rich widget set and smart snapping."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero53",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 0",
+        "x": 24,
+        "y": 196,
+        "w": 160,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Learn more →"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXHero54",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 360",
+        "x": 360,
+        "y": 0,
+        "w": 320,
+        "h": 240,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXHero55",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Icon Bg 360",
+        "x": 384,
+        "y": 24,
+        "w": 48,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero56",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 360",
+        "x": 396,
+        "y": 36,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-cellphone",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero57",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title 360",
+        "x": 384,
+        "y": 92,
+        "w": 260,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Test"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero58",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Text 360",
+        "x": 384,
+        "y": 120,
+        "w": 272,
+        "h": 64,
+        "z": null,
+        "props": {
+          "label": "Run moderated and unmoderated usability tests."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero59",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 360",
+        "x": 384,
+        "y": 196,
+        "w": 160,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Learn more →"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXHero60",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 720",
+        "x": 720,
+        "y": 0,
+        "w": 320,
+        "h": 240,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXHero61",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Icon Bg 720",
+        "x": 744,
+        "y": 24,
+        "w": 48,
+        "h": 48,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero62",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 720",
+        "x": 756,
+        "y": 36,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chart-bar",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero63",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title 720",
+        "x": 744,
+        "y": 92,
+        "w": 260,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Analyze"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 16,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero64",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Text 720",
+        "x": 744,
+        "y": 120,
+        "w": 272,
+        "h": 64,
+        "z": null,
+        "props": {
+          "label": "Heatmaps, funnels and task analytics out of the box."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero65",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Link 720",
+        "x": 744,
+        "y": 196,
+        "w": 160,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Learn more →"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroFeatureSplit",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Feature Split",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 920,
+    "h": 340,
+    "children": [
+      {
+        "id": "QXHero66",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Img",
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 320,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#f3f4f6"
+        }
+      },
+      {
+        "id": "QXHero67",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Image Icon",
+        "x": 180,
+        "y": 120,
+        "w": 80,
+        "h": 80,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-image",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero68",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 500,
+        "y": 16,
+        "w": 400,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": "Everything included"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero69",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 500,
+        "y": 56,
+        "w": 420,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "No plugins, no add-ons. Everything your team needs ships in the core."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero70",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Check 0",
+        "x": 500,
+        "y": 116,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-check-circle",
+          "color": "#10b981",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero71",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Bullet 0",
+        "x": 534,
+        "y": 119,
+        "w": 300,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Unlimited prototypes"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXHero72",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Check 1",
+        "x": 500,
+        "y": 160,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-check-circle",
+          "color": "#10b981",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero73",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Bullet 1",
+        "x": 534,
+        "y": 163,
+        "w": 300,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Collaborative editing"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXHero74",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Check 2",
+        "x": 500,
+        "y": 204,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-check-circle",
+          "color": "#10b981",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero75",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Bullet 2",
+        "x": 534,
+        "y": 207,
+        "w": 300,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Usability test suite"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXHero76",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Check 3",
+        "x": 500,
+        "y": 248,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-check-circle",
+          "color": "#10b981",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero77",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Bullet 3",
+        "x": 534,
+        "y": 251,
+        "w": 300,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Analytics & heatmaps"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXHero78",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA",
+        "x": 500,
+        "y": 300,
+        "w": 140,
+        "h": 40,
+        "z": null,
+        "props": {
+          "label": "See all features"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroCTA",
+    "type": "Group",
+    "_type": "Group",
+    "name": "CTA Banner",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 1040,
+    "h": 180,
+    "children": [
+      {
+        "id": "QXHero79",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Bg",
+        "x": 0,
+        "y": 0,
+        "w": 1040,
+        "h": 180,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#bfdbfe",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#bfdbfe",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#bfdbfe",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#bfdbfe",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderBottomLeftRadius": 16,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXHero80",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 48,
+        "y": 44,
+        "w": 520,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": "Ready to start designing?"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero81",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 48,
+        "y": 84,
+        "w": 520,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Free for individuals. No credit card required."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero82",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "CTA",
+        "x": 760,
+        "y": 68,
+        "w": 220,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": "Create free account"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroPageHeader",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Page Header",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 1040,
+    "h": 97,
+    "children": [
+      {
+        "id": "QXHero83",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "B1",
+        "x": 0,
+        "y": 8,
+        "w": 48,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Home"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXHero84",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Chev",
+        "x": 52,
+        "y": 9,
+        "w": 12,
+        "h": 12,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chevron-right",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXHero85",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "B2",
+        "x": 70,
+        "y": 8,
+        "w": 120,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Team management"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero86",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 0,
+        "y": 32,
+        "w": 400,
+        "h": 30,
+        "z": null,
+        "props": {
+          "label": "Team members"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 22,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero87",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 0,
+        "y": 68,
+        "w": 480,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Manage who can access your workspace and prototypes."
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero88",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Secondary",
+        "x": 856,
+        "y": 40,
+        "w": 84,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "Export"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#111827",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXHero89",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Primary",
+        "x": 952,
+        "y": 40,
+        "w": 88,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "+ Invite"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXHero90",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 0,
+        "y": 96,
+        "w": 1040,
+        "h": 1,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXHeroStats",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Stats Row",
+    "category": "Composite",
+    "subcategory": "BHero",
+    "w": 1000,
+    "h": 58,
+    "children": [
+      {
+        "id": "QXHero91",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "V 0",
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "24.5k"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 30,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero92",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 0",
+        "x": 0,
+        "y": 40,
+        "w": 220,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Monthly visitors"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero93",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 244,
+        "y": 0,
+        "w": 1,
+        "h": 52,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXHero94",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "V 260",
+        "x": 260,
+        "y": 0,
+        "w": 220,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "3,204"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 30,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero95",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 260",
+        "x": 260,
+        "y": 40,
+        "w": 220,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Active users"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero96",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 504,
+        "y": 0,
+        "w": 1,
+        "h": 52,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXHero97",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "V 520",
+        "x": 520,
+        "y": 0,
+        "w": 220,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "4.8%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 30,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero98",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 520",
+        "x": 520,
+        "y": 40,
+        "w": 220,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Conversion rate"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXHero99",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Divider",
+        "x": 764,
+        "y": 0,
+        "w": 1,
+        "h": 52,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#e5e7eb"
+        }
+      },
+      {
+        "id": "QXHero100",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "V 780",
+        "x": 780,
+        "y": 0,
+        "w": 220,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "92%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 30,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXHero101",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "L 780",
+        "x": 780,
+        "y": 40,
+        "w": 220,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": "Retention"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      }
+    ]
+  }
+]

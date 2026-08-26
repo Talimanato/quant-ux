@@ -15,8 +15,12 @@
     "simulator": {
         "welcome": {
             "title": "Bem vindo",
-            "msg": "Você foi convidado para o teste de usabilidade da aplicação <b>{{name}}</b>. Você pode testar o protótipo clicando no botão <b>Iniciar Protótipo</b>.",
-            "privacy": "Este é um teste de usabilidade. Esteja ciente de que sua interação será registrada para melhorar o design. Nós não armazenamos nenhuma informação pessoal sobre você.",
+            "msg": "Você foi convidado para o teste de usabilidade da aplicação {name}. Você pode testar o protótipo clicando no botão Iniciar Protótipo.",
+            "privacy": {
+                "1": "Este é um teste de usabilidade. Esteja ciente de que sua interação será registrada para melhorar o design. Nós não armazenamos nenhuma informação pessoal sobre você.",
+                "2": "",
+                "3": ""
+            },
             "start": "Iniciar Protótipo",
             "showTasks": "Mostrar Tarefas"
         },
@@ -26,7 +30,7 @@
         },
         "password": {
             "title": "Senha",
-            "msg": "Para testar este protótipo você precisa de uma senha. Por favor, digite a senha e pressione <b>Próximo</b>",
+            "msg": "Para testar este protótipo você precisa de uma senha. Por favor, digite a senha e pressione ",
             "next": "Próximo"
         }
     },
@@ -71,7 +75,7 @@
             "images-title": "Importar de imagens",
             "figma-title": "Importar do Figma",
             "tab-images": "Imagens",
-            "tab-figma": "Figma", 
+            "tab-figma": "Figma",
             "tab-zip": "Zip",
             "tab-github": "Github",
             "tab-open-api": "Swagger (OpenAPI)",
@@ -92,7 +96,11 @@
             "error-swagger-no-url": "Por favor introduza uma URL com um arquivo swagger.",
             "error-no-file": "Nenhum arquivo selecionado",
             "error-zip-no-file": "Tipo de arquivo errado",
-            "open-api-url": "URL"
+            "open-api-url": "URL",
+            "tab-axure": "Axure",
+            "axure-drop-msg": "Arraste o export HTML do Axure (ZIP) aqui",
+            "axure-progress": "Importando protótipo do Axure...",
+            "error-axure-parse": "Não foi possível importar o export do Axure. Exporte via 'Publish > ZIP' ou compacte a pasta HTML gerada."
         },
         "export": {
             "tab-images": "Imagens",
@@ -137,8 +145,6 @@
             "intro": {
                 "1": "Você foi convidado para um teste de usabilidade da",
                 "2": "aplicação.",
-                "tasks": "Você pode experimentar o protótipo e executar certas tarefas. Ao clicar no botão <b>Mostrar Tarefas</b>, vocêr receber instruções detalhadas.",
-                "no-tasks": "Você pode experimentar o protótipo, clicando no botão <b>Iniciar protótipo</b>. ",
                 "privacy": "Esteja ciente de que a sua interação será registada para tornar o sedinng melhor. Não armazenamos qualquer informação pessoal sobre você."
             },
             "next": "Mostrar Tarefas",
@@ -147,8 +153,7 @@
         },
         "task": {
             "headline": "Tarefas",
-            "description": "No escopo deste teste de usabilidade solicitado gentilmente que execute as tarefas listadas abaixo. Não se preocupe se não conseguir cumprir todas as tarefas. Isto é apenas um sinal de que o protótipo necessita de mais melhorias. As tarefas são:",
-            "footer": "Você pode experimentar o protótipo, clicando no botão <b>Iniciar protótipo</b>."
+            "description": "No escopo deste teste de usabilidade solicitado gentilmente que execute as tarefas listadas abaixo. Não se preocupe se não conseguir cumprir todas as tarefas. Isto é apenas um sinal de que o protótipo necessita de mais melhorias. As tarefas são:"
         },
         "qr": {
             "headline": "Ler código QR com seu dispositivo móvel."
@@ -161,7 +166,11 @@
     "user": {
         "retire": {
             "hi": "Oi ",
-            "msg": "tem a certeza de que deseja <b>deletar</b> sua conta? Você perderá todos os seus dados.",
+            "msg": {
+                "1": "tem a certeza de que deseja ",
+                "2": "deletar",
+                "3": " sua conta? Você perderá todos os seus dados."
+            },
             "cusoon": "Obrigado por utilizar Quant-UX. Esperamos vê-lo em breve novamente."
         }
     },
@@ -190,9 +199,7 @@
         "header": "Resultados da tarefa",
         "download": "Download do resumo da tarefa"
     },
-    "canvas": {
-
-    },
+    "canvas": {},
     "comments": {
         "title": "Comentários",
         "post": "Poste um comentário"
@@ -268,10 +275,9 @@
                 "session-play": "aqui"
             },
             "no-flow-title": "Não há fluxo",
-            "no-flow-msg": "<p>Por favor, defina um fluxo com <b>dois ou mais </b> passos. Caso contrário, não podemos mostrar detalhes sobre o desempenho da tarefa.</p>"
+            "no-flow-msg": "Por favor, defina um fluxo com dois ou mais passos. Caso contrário, não podemos mostrar detalhes sobre o desempenho da tarefa."
         }
     },
-
     "testSettingsDescription": "Descrição",
     "testSettingsTasks": "Tarefas",
     "testSettingsTaskName": "Nome",
@@ -290,7 +296,6 @@
     "testSettingTaskDelete2": "'?",
     "testSettingsSaved": "Configurações de teste atualizadas...",
     "testSettingsUpgradePlan": "Plano de Atualização",
-
     "dashTaskEmpty": "Pode criar tarefas no tabuleiro 'Teste'. ",
     "dashTaskTableName": "Nome",
     "dashTaskTableSuccess": "Sucesso",
@@ -303,14 +308,9 @@
     "dashTaskEventDis": "Eventos de Distribuição",
     "dashTaskDesPlaceholder": "Entre com a descrição aqui",
     "dashTaskPerfHeadline": "Tarefa: ",
-
     "taskRecorder1": "Um fluxo é a sequência de interacções que os usuários têm de realizar para completar uma tarefa. ",
     "taskRecorder2": "Por exemplo, têm de visitar o 'Tela A' e navegar para o 'Tela C'. Também podem marcar subeventos importantes, como clicar num botão, ou visitar uma tela no meio.",
-    "taskRecorderStep0": "Pressione <b>Começar</b> para iniciar o simulador.",
     "taskRecorderStep1": "Realize as interações que os seus usuários devem realizar",
-    "taskRecorderStep2": "Você pode pressionar <b>Pausar</b> para fazer uma pausa na gravação",
-    "taskRecorderStep3": "Pressione <b>Feito</b> quando o fluxo estiver completo.",
-    "taskRecorderStep4": "<b>Selecione</b> todos os passos que são importantes para a tarefa.",
     "taskRecorderPauseHint": "Clique em Pausar para pausar a gravação",
     "taskRecorderPauseBtn": "Pausar",
     "taskRecorderPauseDes": "Interação na gravação ...",
@@ -322,7 +322,6 @@
     "taskRecorderScreen": "Tela",
     "taskRecorderWidget": "Widget",
     "taskRecorderAction": "Importante",
-
     "videoTableStatus": "Status",
     "videoTableUser": "Usuário",
     "videoTableDuration": "Duração",
@@ -330,5 +329,44 @@
     "videoTableEvents": "Eventos",
     "videoTableDate": "Data",
     "videoTableStatusNotPayed": "Bloqueado",
-    "videoTablePlanUpdateMsg": "Para ver todos os vídeos, atualize o seu plano."
+    "videoTablePlanUpdateMsg": "Para ver todos os vídeos, atualize o seu plano.",
+    "login": {
+        "brand-slogan-1": "Esboce.",
+        "brand-slogan-2": "Conecte.",
+        "brand-slogan-3": "Entregue.",
+        "brand-sub": "A forma aberta e auto-hospedada de criar protótipos, testar e refinar suas ideias de produto.",
+        "footer-1": "Prototipar",
+        "footer-2": "Testar",
+        "footer-3": "Aprender",
+        "tab-login": "Entrar",
+        "tab-signup": "Criar conta",
+        "title-login": "Bem-vindo de volta",
+        "title-signup": "Crie sua conta",
+        "title-reset": "Definir nova senha",
+        "lede-login": "Entre para continuar no seu espaço de trabalho.",
+        "lede-signup": "Plano gratuito, sem cartão de crédito, seus dados ficam no seu servidor.",
+        "lede-reset": "Digite seu e-mail e o token do link de redefinição.",
+        "email": "E-mail",
+        "password": "Senha",
+        "new-password": "Nova senha",
+        "placeholder-email": "voce{'@'}estudio.com",
+        "placeholder-password": "Pelo menos 6 caracteres",
+        "forgot": "Esqueceu a senha?",
+        "submit-login": "Entrar",
+        "submit-signup": "Criar conta",
+        "submit-reset": "Definir nova senha",
+        "tos-pre": "Eu aceito os",
+        "tos-link": "termos de serviço",
+        "error-email": "Por favor, digite seu e-mail",
+        "error-password-short": "Senha muito curta",
+        "error-token": "Token incorreto",
+        "error-generic": "Algo deu errado",
+        "error-login": "Login incorreto",
+        "error-domain": "Domínio incorreto",
+        "error-nosignup": "Registros não permitidos.",
+        "error-taken": "E-mail já cadastrado",
+        "error-signup": "Não foi possível criar a conta. O e-mail já está em uso?",
+        "error-tos": "Por favor, aceite os termos de serviço",
+        "reset-sent": "Verifique seu e-mail."
+    }
 }

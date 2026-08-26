@@ -1,0 +1,6597 @@
+[
+  {
+    "id": "QXDashHeader",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Dashboard Header",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 1040,
+    "h": 58,
+    "children": [
+      {
+        "id": "QXDash0",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 0,
+        "y": 8,
+        "w": 300,
+        "h": 28,
+        "z": null,
+        "props": {
+          "label": "Analytics overview"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 22,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash1",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Sub",
+        "x": 0,
+        "y": 42,
+        "w": 400,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Data from Jan 1 – Jan 31, 2026"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXDash2",
+        "type": "DropDown",
+        "_type": "Widget",
+        "name": "Range",
+        "x": 700,
+        "y": 12,
+        "w": 160,
+        "h": 36,
+        "z": null,
+        "props": {
+          "options": [
+            "Last 30 days",
+            "Last 7 days",
+            "This year"
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true,
+          "backgroundColor": true,
+          "data": true,
+          "padding": true,
+          "label": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff"
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXDash3",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Export",
+        "x": 872,
+        "y": 12,
+        "w": 64,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#6b7280",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXDash4",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Export Ic",
+        "x": 896,
+        "y": 22,
+        "w": 16,
+        "h": 16,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-download",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash5",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Add",
+        "x": 936,
+        "y": 12,
+        "w": 104,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": "+ New report"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#ffffff",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#2563eb",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#ffffff",
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashKPIRow",
+    "type": "Group",
+    "_type": "Group",
+    "name": "KPI Row",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 1044,
+    "h": 130,
+    "children": [
+      {
+        "id": "QXDash6",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 0",
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 130,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash7",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 0",
+        "x": 192,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-currency-usd",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash8",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Label 0",
+        "x": 20,
+        "y": 18,
+        "w": 150,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Revenue"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXDash9",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Value 0",
+        "x": 20,
+        "y": 38,
+        "w": 170,
+        "h": 30,
+        "z": null,
+        "props": {
+          "label": "$48.2k"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash10",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta 0",
+        "x": 20,
+        "y": 78,
+        "w": 69,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ecfdf5",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ecfdf5",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ecfdf5",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ecfdf5",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#ecfdf5"
+        }
+      },
+      {
+        "id": "QXDash11",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta 0 Label",
+        "x": 20,
+        "y": 81,
+        "w": 69,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▲ 12.5%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#10b981",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash12",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Since 0",
+        "x": 104,
+        "y": 81,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "vs last month"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash13",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 268",
+        "x": 268,
+        "y": 0,
+        "w": 240,
+        "h": 130,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash14",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 268",
+        "x": 460,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-account-group",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash15",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Label 268",
+        "x": 288,
+        "y": 18,
+        "w": 150,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Active users"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXDash16",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Value 268",
+        "x": 288,
+        "y": 38,
+        "w": 170,
+        "h": 30,
+        "z": null,
+        "props": {
+          "label": "8,421"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash17",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta 268",
+        "x": 288,
+        "y": 78,
+        "w": 62,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ecfdf5",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ecfdf5",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ecfdf5",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ecfdf5",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#ecfdf5"
+        }
+      },
+      {
+        "id": "QXDash18",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta 268 Label",
+        "x": 288,
+        "y": 81,
+        "w": 62,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▲ 3.2%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#10b981",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash19",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Since 268",
+        "x": 372,
+        "y": 81,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "vs last month"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash20",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 536",
+        "x": 536,
+        "y": 0,
+        "w": 240,
+        "h": 130,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash21",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 536",
+        "x": 728,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chart-line",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash22",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Label 536",
+        "x": 556,
+        "y": 18,
+        "w": 150,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Churn"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXDash23",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Value 536",
+        "x": 556,
+        "y": 38,
+        "w": 170,
+        "h": 30,
+        "z": null,
+        "props": {
+          "label": "2.1%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash24",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta 536",
+        "x": 556,
+        "y": 78,
+        "w": 62,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fef2f2",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fef2f2",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fef2f2",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fef2f2",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#fef2f2"
+        }
+      },
+      {
+        "id": "QXDash25",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta 536 Label",
+        "x": 556,
+        "y": 81,
+        "w": 62,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▼ 0.4%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ef4444",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash26",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Since 536",
+        "x": 640,
+        "y": 81,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "vs last month"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash27",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card 804",
+        "x": 804,
+        "y": 0,
+        "w": 240,
+        "h": 130,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash28",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Icon 804",
+        "x": 996,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-heart",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash29",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Label 804",
+        "x": 824,
+        "y": 18,
+        "w": 150,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "NPS"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      },
+      {
+        "id": "QXDash30",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Value 804",
+        "x": 824,
+        "y": 38,
+        "w": 170,
+        "h": 30,
+        "z": null,
+        "props": {
+          "label": "62"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 24,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash31",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta 804",
+        "x": 824,
+        "y": 78,
+        "w": 55,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ecfdf5",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ecfdf5",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ecfdf5",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ecfdf5",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#ecfdf5"
+        }
+      },
+      {
+        "id": "QXDash32",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta 804 Label",
+        "x": 824,
+        "y": 81,
+        "w": 55,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▲ 5.0"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#10b981",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash33",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Since 804",
+        "x": 908,
+        "y": 81,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "vs last month"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashBarCard",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Bar Chart Card",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 480,
+    "h": 320,
+    "children": [
+      {
+        "id": "QXDash34",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 480,
+        "h": 320,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash35",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 220,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Weekly sessions"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash36",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta",
+        "x": 24,
+        "y": 48,
+        "w": 62,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXDash37",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta Label",
+        "x": 24,
+        "y": 51,
+        "w": 62,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▲ 8.1%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash38",
+        "type": "DropDown",
+        "_type": "Widget",
+        "name": "Range",
+        "x": 348,
+        "y": 16,
+        "w": 108,
+        "h": 32,
+        "z": null,
+        "props": {
+          "options": [
+            "This week",
+            "This month"
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true,
+          "backgroundColor": true,
+          "data": true,
+          "padding": true,
+          "label": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff"
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXDash39",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 88,
+        "w": 432,
+        "h": 200,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "120"
+            ],
+            [
+              "180"
+            ],
+            [
+              "90"
+            ],
+            [
+              "220"
+            ],
+            [
+              "310"
+            ],
+            [
+              "260"
+            ],
+            [
+              "340"
+            ]
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashLineCard",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Line Chart Card",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 480,
+    "h": 320,
+    "children": [
+      {
+        "id": "QXDash40",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 480,
+        "h": 320,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash41",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Conversion rate"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash42",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Delta",
+        "x": 24,
+        "y": 48,
+        "w": 62,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ecfdf5",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ecfdf5",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ecfdf5",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ecfdf5",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#ecfdf5"
+        }
+      },
+      {
+        "id": "QXDash43",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Delta Label",
+        "x": 24,
+        "y": 51,
+        "w": 62,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "▲ 2.4%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#10b981",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash44",
+        "type": "DropDown",
+        "_type": "Widget",
+        "name": "Range",
+        "x": 348,
+        "y": 16,
+        "w": 108,
+        "h": 32,
+        "z": null,
+        "props": {
+          "options": [
+            "30 days",
+            "90 days"
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "border": true,
+          "backgroundColor": true,
+          "data": true,
+          "padding": true,
+          "label": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff"
+        },
+        "hover": {
+          "background": "#f3f4f6",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXDash45",
+        "type": "BarChart",
+        "_type": "Widget",
+        "name": "Chart",
+        "x": 24,
+        "y": 88,
+        "w": 432,
+        "h": 200,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              "2.1"
+            ],
+            [
+              "2.4"
+            ],
+            [
+              "2.2"
+            ],
+            [
+              "2.8"
+            ],
+            [
+              "3.0"
+            ],
+            [
+              "2.9"
+            ],
+            [
+              "3.4"
+            ]
+          ],
+          "isLine": true
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "borderTopWidth": 0,
+          "borderBottomWidth": 1,
+          "borderRightWidth": 0,
+          "borderLeftWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderBottomColor": "#e5e7eb",
+          "borderRightColor": "#e5e7eb",
+          "borderLeftColor": "#e5e7eb",
+          "background0": "#2563eb",
+          "background1": "#93c5fd",
+          "background2": "#d1d5db",
+          "background3": "#f9fafb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashRingCard",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Ring Chart Card",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 320,
+    "h": 300,
+    "children": [
+      {
+        "id": "QXDash46",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 300,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash47",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 20,
+        "y": 20,
+        "w": 200,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Traffic sources"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash48",
+        "type": "RingChart",
+        "_type": "Widget",
+        "name": "Ring",
+        "x": 36,
+        "y": 64,
+        "w": 140,
+        "h": 140,
+        "z": null,
+        "props": {
+          "value": 62
+        },
+        "has": {},
+        "style": {
+          "background": "#e5e7eb",
+          "color": "#2563eb",
+          "lineWidth": 24
+        }
+      },
+      {
+        "id": "QXDash49",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Ring Value",
+        "x": 76,
+        "y": 118,
+        "w": 60,
+        "h": 24,
+        "z": null,
+        "props": {
+          "label": "62%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 20,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash50",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 196,
+        "y": 74,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXDash51",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 0",
+        "x": 212,
+        "y": 70,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Organic search"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash52",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 0",
+        "x": 212,
+        "y": 88,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "2,845"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash53",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 196,
+        "y": 114,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#10b981",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#10b981",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#10b981",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#10b981",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#10b981"
+        }
+      },
+      {
+        "id": "QXDash54",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 1",
+        "x": 212,
+        "y": 110,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Direct"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash55",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 1",
+        "x": 212,
+        "y": 128,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "1,120"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash56",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 196,
+        "y": 154,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#f59e0b",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#f59e0b",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#f59e0b",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#f59e0b",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#f59e0b"
+        }
+      },
+      {
+        "id": "QXDash57",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 2",
+        "x": 212,
+        "y": 150,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Referral"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash58",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 2",
+        "x": 212,
+        "y": 168,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "645"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash59",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 196,
+        "y": 194,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#9ca3af",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#9ca3af",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#9ca3af",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#9ca3af",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash60",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 3",
+        "x": 212,
+        "y": 190,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Social"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash61",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 3",
+        "x": 212,
+        "y": 208,
+        "w": 100,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "312"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashPieCard",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Pie Chart Card",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 320,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXDash62",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash63",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 20,
+        "y": 20,
+        "w": 200,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Device split"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash64",
+        "type": "PieChart",
+        "_type": "Widget",
+        "name": "Pie",
+        "x": 40,
+        "y": 60,
+        "w": 160,
+        "h": 160,
+        "z": null,
+        "props": {
+          "data": [
+            [
+              45,
+              30,
+              25
+            ]
+          ]
+        },
+        "has": {},
+        "style": {
+          "background0": "#2563eb",
+          "background1": "#10b981",
+          "background2": "#f59e0b",
+          "background3": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash65",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 216,
+        "y": 92,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXDash66",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 0",
+        "x": 232,
+        "y": 86,
+        "w": 80,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "Desktop"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash67",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 0",
+        "x": 232,
+        "y": 102,
+        "w": 80,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "45%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash68",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 216,
+        "y": 136,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#10b981",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#10b981",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#10b981",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#10b981",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#10b981"
+        }
+      },
+      {
+        "id": "QXDash69",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 1",
+        "x": 232,
+        "y": 130,
+        "w": 80,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "Mobile"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash70",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 1",
+        "x": 232,
+        "y": 146,
+        "w": 80,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "30%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash71",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 216,
+        "y": 180,
+        "w": 8,
+        "h": 8,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#f59e0b",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#f59e0b",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#f59e0b",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#f59e0b",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4,
+          "background": "#f59e0b"
+        }
+      },
+      {
+        "id": "QXDash72",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LL 2",
+        "x": 232,
+        "y": 174,
+        "w": 80,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "Tablet"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash73",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "LV 2",
+        "x": 232,
+        "y": 190,
+        "w": 80,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "25%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashTableCard",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Table Card",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 720,
+    "h": 400,
+    "children": [
+      {
+        "id": "QXDash74",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 720,
+        "h": 400,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash75",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 24,
+        "y": 20,
+        "w": 240,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Recent orders"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash76",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Search",
+        "x": 480,
+        "y": 14,
+        "w": 130,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#f9fafb"
+        }
+      },
+      {
+        "id": "QXDash77",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Search Ic",
+        "x": 492,
+        "y": 22,
+        "w": 16,
+        "h": 16,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-magnify",
+          "color": "#9ca3af",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash78",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Filter",
+        "x": 624,
+        "y": 14,
+        "w": 72,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": "Filter"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#6b7280",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXDash79",
+        "type": "Table",
+        "_type": "Widget",
+        "name": "Table",
+        "x": 24,
+        "y": 60,
+        "w": 672,
+        "h": 260,
+        "z": null,
+        "props": {
+          "columns": [
+            {
+              "label": "Order",
+              "width": 134,
+              "isEditable": false,
+              "isSortable": true,
+              "isSearchable": false
+            },
+            {
+              "label": "Customer",
+              "width": 134,
+              "isEditable": false,
+              "isSortable": true,
+              "isSearchable": false
+            },
+            {
+              "label": "Date",
+              "width": 134,
+              "isEditable": false,
+              "isSortable": true,
+              "isSearchable": false
+            },
+            {
+              "label": "Status",
+              "width": 134,
+              "isEditable": false,
+              "isSortable": true,
+              "isSearchable": false
+            },
+            {
+              "label": "Total",
+              "width": 134,
+              "isEditable": false,
+              "isSortable": true,
+              "isSearchable": false
+            }
+          ],
+          "data": [
+            [
+              "#10248",
+              "Anna Müller",
+              "Jan 12, 2026",
+              "Paid",
+              "$129.00"
+            ],
+            [
+              "#10247",
+              "Peter Simmons",
+              "Jan 11, 2026",
+              "Pending",
+              "$89.00"
+            ],
+            [
+              "#10246",
+              "Julia Chen",
+              "Jan 10, 2026",
+              "Paid",
+              "$249.00"
+            ],
+            [
+              "#10245",
+              "Klaus Huber",
+              "Jan 8, 2026",
+              "Refunded",
+              "$59.00"
+            ],
+            [
+              "#10244",
+              "Maria Silva",
+              "Jan 6, 2026",
+              "Paid",
+              "$179.00"
+            ]
+          ]
+        },
+        "has": {
+          "onclick": true,
+          "label": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "color": "#111827",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 0,
+          "borderTopLeftRadius": 0,
+          "borderBottomRightRadius": 0,
+          "borderBottomLeftRadius": 0,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash80",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Count",
+        "x": 24,
+        "y": 340,
+        "w": 200,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Showing 1–5 of 128"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash81",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Prev",
+        "x": 540,
+        "y": 332,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": "<"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#6b7280",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      },
+      {
+        "id": "QXDash82",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Page",
+        "x": 580,
+        "y": 332,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXDash83",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Page L",
+        "x": 580,
+        "y": 340,
+        "w": 32,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "1"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash84",
+        "type": "Button",
+        "_type": "Widget",
+        "name": "Next",
+        "x": 620,
+        "y": 332,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ">"
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "onclick": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "lineHeight": 1.5,
+          "color": "#6b7280",
+          "verticalAlign": "middle",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6,
+          "background": "#ffffff",
+          "paddingTop": 0,
+          "paddingBottom": 0
+        },
+        "hover": {
+          "background": "#1d4ed8",
+          "color": "#6b7280",
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 6,
+          "borderTopLeftRadius": 6,
+          "borderBottomRightRadius": 6,
+          "borderBottomLeftRadius": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashProgress",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Progress Panel",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 320,
+    "h": 280,
+    "children": [
+      {
+        "id": "QXDash85",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 280,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash86",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 20,
+        "y": 20,
+        "w": 200,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Project progress"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash87",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PL 0",
+        "x": 20,
+        "y": 60,
+        "w": 180,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Design system"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash88",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PV 0",
+        "x": 260,
+        "y": 60,
+        "w": 40,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "82%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "right",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash89",
+        "type": "ProgressBar",
+        "_type": "Widget",
+        "name": "P 0",
+        "x": 20,
+        "y": 82,
+        "w": 280,
+        "h": 8,
+        "z": null,
+        "props": {
+          "value": 82
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "background": "#f3f4f6",
+          "foreground": "#2563eb",
+          "borderTopWidth": 0,
+          "borderTopColor": "transparent",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 0,
+          "borderBottomColor": "transparent",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 0,
+          "borderRightColor": "transparent",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 0,
+          "borderLeftColor": "transparent",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4
+        }
+      },
+      {
+        "id": "QXDash90",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PL 1",
+        "x": 20,
+        "y": 112,
+        "w": 180,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Mobile app"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash91",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PV 1",
+        "x": 260,
+        "y": 112,
+        "w": 40,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "54%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "right",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash92",
+        "type": "ProgressBar",
+        "_type": "Widget",
+        "name": "P 1",
+        "x": 20,
+        "y": 134,
+        "w": 280,
+        "h": 8,
+        "z": null,
+        "props": {
+          "value": 54
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "background": "#f3f4f6",
+          "foreground": "#2563eb",
+          "borderTopWidth": 0,
+          "borderTopColor": "transparent",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 0,
+          "borderBottomColor": "transparent",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 0,
+          "borderRightColor": "transparent",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 0,
+          "borderLeftColor": "transparent",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4
+        }
+      },
+      {
+        "id": "QXDash93",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PL 2",
+        "x": 20,
+        "y": 164,
+        "w": 180,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Website"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash94",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PV 2",
+        "x": 260,
+        "y": 164,
+        "w": 40,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "96%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "right",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash95",
+        "type": "ProgressBar",
+        "_type": "Widget",
+        "name": "P 2",
+        "x": 20,
+        "y": 186,
+        "w": 280,
+        "h": 8,
+        "z": null,
+        "props": {
+          "value": 96
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "background": "#f3f4f6",
+          "foreground": "#2563eb",
+          "borderTopWidth": 0,
+          "borderTopColor": "transparent",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 0,
+          "borderBottomColor": "transparent",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 0,
+          "borderRightColor": "transparent",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 0,
+          "borderLeftColor": "transparent",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4
+        }
+      },
+      {
+        "id": "QXDash96",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PL 3",
+        "x": 20,
+        "y": 216,
+        "w": 180,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "API docs"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash97",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "PV 3",
+        "x": 260,
+        "y": 216,
+        "w": 40,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "28%"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "right",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash98",
+        "type": "ProgressBar",
+        "_type": "Widget",
+        "name": "P 3",
+        "x": 20,
+        "y": 238,
+        "w": 280,
+        "h": 8,
+        "z": null,
+        "props": {
+          "value": 28
+        },
+        "has": {
+          "onclick": true,
+          "border": true
+        },
+        "style": {
+          "background": "#f3f4f6",
+          "foreground": "#2563eb",
+          "borderTopWidth": 0,
+          "borderTopColor": "transparent",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 0,
+          "borderBottomColor": "transparent",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 0,
+          "borderRightColor": "transparent",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 0,
+          "borderLeftColor": "transparent",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderBottomLeftRadius": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashActivity",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Activity Feed",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 360,
+    "h": 400,
+    "children": [
+      {
+        "id": "QXDash99",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 400,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash100",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 20,
+        "y": 20,
+        "w": 200,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "Activity"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash101",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "See All",
+        "x": 288,
+        "y": 23,
+        "w": 52,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "See all"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "right",
+          "letterSpacing": 0,
+          "color": "#2563eb"
+        }
+      },
+      {
+        "id": "QXDash102",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Ic Bg 0",
+        "x": 20,
+        "y": 56,
+        "w": 36,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 18,
+          "borderTopLeftRadius": 18,
+          "borderBottomRightRadius": 18,
+          "borderBottomLeftRadius": 18,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXDash103",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Ic 0",
+        "x": 28,
+        "y": 64,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-comment-text",
+          "color": "#2563eb",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash104",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T 0",
+        "x": 68,
+        "y": 58,
+        "w": 268,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "Anna commented on “Checkout flow”"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash105",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Time 0",
+        "x": 68,
+        "y": 78,
+        "w": 200,
+        "h": 13,
+        "z": null,
+        "props": {
+          "label": "10:42 AM"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash106",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Ic Bg 1",
+        "x": 20,
+        "y": 120,
+        "w": 36,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ecfdf5",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ecfdf5",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ecfdf5",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ecfdf5",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 18,
+          "borderTopLeftRadius": 18,
+          "borderBottomRightRadius": 18,
+          "borderBottomLeftRadius": 18,
+          "background": "#ecfdf5"
+        }
+      },
+      {
+        "id": "QXDash107",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Ic 1",
+        "x": 28,
+        "y": 128,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-file-document-outline",
+          "color": "#10b981",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash108",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T 1",
+        "x": 68,
+        "y": 122,
+        "w": 268,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "Peter uploaded “Brand-assets-v3.zip”"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash109",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Time 1",
+        "x": 68,
+        "y": 142,
+        "w": 200,
+        "h": 13,
+        "z": null,
+        "props": {
+          "label": "9:15 AM"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash110",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Ic Bg 2",
+        "x": 20,
+        "y": 184,
+        "w": 36,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fffbeb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fffbeb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fffbeb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fffbeb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 18,
+          "borderTopLeftRadius": 18,
+          "borderBottomRightRadius": 18,
+          "borderBottomLeftRadius": 18,
+          "background": "#fffbeb"
+        }
+      },
+      {
+        "id": "QXDash111",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Ic 2",
+        "x": 28,
+        "y": 192,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-account-plus",
+          "color": "#f59e0b",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash112",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T 2",
+        "x": 68,
+        "y": 186,
+        "w": 268,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "Maria invited 2 new members"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash113",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Time 2",
+        "x": 68,
+        "y": 206,
+        "w": 200,
+        "h": 13,
+        "z": null,
+        "props": {
+          "label": "Yesterday"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash114",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Ic Bg 3",
+        "x": 20,
+        "y": 248,
+        "w": 36,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#ecfdf5",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#ecfdf5",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#ecfdf5",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#ecfdf5",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 18,
+          "borderTopLeftRadius": 18,
+          "borderBottomRightRadius": 18,
+          "borderBottomLeftRadius": 18,
+          "background": "#ecfdf5"
+        }
+      },
+      {
+        "id": "QXDash115",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Ic 3",
+        "x": 28,
+        "y": 256,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-check-circle",
+          "color": "#10b981",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash116",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T 3",
+        "x": 68,
+        "y": 250,
+        "w": 268,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "Sprint 24 goals completed"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash117",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Time 3",
+        "x": 68,
+        "y": 270,
+        "w": 200,
+        "h": 13,
+        "z": null,
+        "props": {
+          "label": "Yesterday"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash118",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Ic Bg 4",
+        "x": 20,
+        "y": 312,
+        "w": 36,
+        "h": 36,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#f3f4f6",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#f3f4f6",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#f3f4f6",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#f3f4f6",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 18,
+          "borderTopLeftRadius": 18,
+          "borderBottomRightRadius": 18,
+          "borderBottomLeftRadius": 18,
+          "background": "#f3f4f6"
+        }
+      },
+      {
+        "id": "QXDash119",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Ic 4",
+        "x": 28,
+        "y": 320,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-cog",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash120",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "T 4",
+        "x": 68,
+        "y": 314,
+        "w": 268,
+        "h": 34,
+        "z": null,
+        "props": {
+          "label": "Integration settings changed"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash121",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Time 4",
+        "x": 68,
+        "y": 334,
+        "w": 200,
+        "h": 13,
+        "z": null,
+        "props": {
+          "label": "Monday"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashCalendar",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Calendar Month",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 320,
+    "h": 340,
+    "children": [
+      {
+        "id": "QXDash122",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Card",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 340,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 12,
+          "borderTopLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderBottomLeftRadius": 12,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash123",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Month",
+        "x": 20,
+        "y": 20,
+        "w": 160,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "January 2026"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 15,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash124",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Prev",
+        "x": 264,
+        "y": 20,
+        "w": 18,
+        "h": 18,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chevron-left",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash125",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Next",
+        "x": 288,
+        "y": 20,
+        "w": 18,
+        "h": 18,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-chevron-right",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash126",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 0",
+        "x": 20,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Mo"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash127",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 1",
+        "x": 60,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Tu"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash128",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 2",
+        "x": 100,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "We"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash129",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 3",
+        "x": 140,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Th"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash130",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 4",
+        "x": 180,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Fr"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash131",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 5",
+        "x": 220,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Sa"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash132",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "H 6",
+        "x": 260,
+        "y": 56,
+        "w": 32,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "Su"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash133",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 0",
+        "x": 20,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash134",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 1",
+        "x": 60,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash135",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 2",
+        "x": 100,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash136",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 3",
+        "x": 140,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "1"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash137",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 4",
+        "x": 180,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "2"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash138",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 5",
+        "x": 220,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "3"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash139",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 6",
+        "x": 260,
+        "y": 84,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "4"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash140",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 7",
+        "x": 20,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "5"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash141",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 8",
+        "x": 60,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "6"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash142",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 9",
+        "x": 100,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "7"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash143",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 10",
+        "x": 140,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "8"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash144",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 11",
+        "x": 180,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "9"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash145",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 12",
+        "x": 220,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "10"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash146",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 13",
+        "x": 260,
+        "y": 124,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "11"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash147",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 14",
+        "x": 20,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "12"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash148",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 15",
+        "x": 60,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "13"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash149",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 16",
+        "x": 100,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "14"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash150",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "D Bg 17",
+        "x": 140,
+        "y": 156,
+        "w": 32,
+        "h": 32,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXDash151",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 17",
+        "x": 140,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "15"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash152",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 18",
+        "x": 180,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "16"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash153",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 19",
+        "x": 220,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "17"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash154",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 20",
+        "x": 260,
+        "y": 164,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "18"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash155",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 21",
+        "x": 20,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "19"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash156",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 22",
+        "x": 60,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "20"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash157",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 23",
+        "x": 100,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "21"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash158",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 24",
+        "x": 140,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "22"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash159",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 25",
+        "x": 180,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "23"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash160",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 26",
+        "x": 220,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "24"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash161",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 27",
+        "x": 260,
+        "y": 204,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "25"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash162",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 28",
+        "x": 20,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "26"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash163",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 29",
+        "x": 60,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "27"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash164",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 30",
+        "x": 100,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "28"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash165",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 31",
+        "x": 140,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "29"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash166",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 32",
+        "x": 180,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "30"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#111827"
+        }
+      },
+      {
+        "id": "QXDash167",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 33",
+        "x": 220,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": "31"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash168",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "D 34",
+        "x": 260,
+        "y": 244,
+        "w": 32,
+        "h": 15,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 12,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash169",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 153,
+        "y": 142,
+        "w": 6,
+        "h": 6,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 3,
+          "borderTopLeftRadius": 3,
+          "borderBottomRightRadius": 3,
+          "borderBottomLeftRadius": 3,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXDash170",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 113,
+        "y": 222,
+        "w": 6,
+        "h": 6,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 3,
+          "borderTopLeftRadius": 3,
+          "borderBottomRightRadius": 3,
+          "borderBottomLeftRadius": 3,
+          "background": "#2563eb"
+        }
+      },
+      {
+        "id": "QXDash171",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Dot",
+        "x": 33,
+        "y": 262,
+        "w": 6,
+        "h": 6,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#2563eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#2563eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#2563eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#2563eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 3,
+          "borderTopLeftRadius": 3,
+          "borderBottomRightRadius": 3,
+          "borderBottomLeftRadius": 3,
+          "background": "#2563eb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "QXDashKanban",
+    "type": "Group",
+    "_type": "Group",
+    "name": "Kanban Column",
+    "category": "Composite",
+    "subcategory": "EDash",
+    "w": 244,
+    "h": 400,
+    "children": [
+      {
+        "id": "QXDash172",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Title",
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 20,
+        "z": null,
+        "props": {
+          "label": "In Progress"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash173",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Count",
+        "x": 92,
+        "y": 2,
+        "w": 24,
+        "h": 18,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 9,
+          "borderTopLeftRadius": 9,
+          "borderBottomRightRadius": 9,
+          "borderBottomLeftRadius": 9,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXDash174",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Count L",
+        "x": 92,
+        "y": 5,
+        "w": 24,
+        "h": 13,
+        "z": null,
+        "props": {
+          "label": "3"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash175",
+        "type": "Icon",
+        "_type": "Widget",
+        "name": "Add",
+        "x": 224,
+        "y": 0,
+        "w": 20,
+        "h": 20,
+        "z": null,
+        "props": {},
+        "has": {
+          "onclick": true,
+          "data": true
+        },
+        "style": {
+          "icon": "mdi mdi-plus",
+          "color": "#6b7280",
+          "iconSizeFactor": 1
+        }
+      },
+      {
+        "id": "QXDash176",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Task 32",
+        "x": 12,
+        "y": 32,
+        "w": 232,
+        "h": 96,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash177",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "TT 32",
+        "x": 24,
+        "y": 44,
+        "w": 180,
+        "h": 17,
+        "z": null,
+        "props": {
+          "label": "Fix login redirect on Safari"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash178",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Tag 32",
+        "x": 24,
+        "y": 70,
+        "w": 41,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fef2f2",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fef2f2",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fef2f2",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fef2f2",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#fef2f2"
+        }
+      },
+      {
+        "id": "QXDash179",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Tag 32 Label",
+        "x": 24,
+        "y": 73,
+        "w": 41,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Bug"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#ef4444",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash180",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Due 32",
+        "x": 24,
+        "y": 98,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "⏱ Jan 14"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash181",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 212,
+        "y": 96,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fee2e2",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fee2e2",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fee2e2",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fee2e2",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 11,
+          "borderTopLeftRadius": 11,
+          "borderBottomRightRadius": 11,
+          "borderBottomLeftRadius": 11,
+          "background": "#fee2e2"
+        }
+      },
+      {
+        "id": "QXDash182",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Task 140",
+        "x": 12,
+        "y": 140,
+        "w": 232,
+        "h": 96,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash183",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "TT 140",
+        "x": 24,
+        "y": 152,
+        "w": 180,
+        "h": 17,
+        "z": null,
+        "props": {
+          "label": "Update pricing page copy"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash184",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Tag 140",
+        "x": 24,
+        "y": 178,
+        "w": 69,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#eff6ff",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#eff6ff",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#eff6ff",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#eff6ff",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#eff6ff"
+        }
+      },
+      {
+        "id": "QXDash185",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Tag 140 Label",
+        "x": 24,
+        "y": 181,
+        "w": 69,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "Content"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#2563eb",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash186",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Due 140",
+        "x": 24,
+        "y": 206,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "⏱ Jan 16"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash187",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 212,
+        "y": 204,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#dbeafe",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#dbeafe",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#dbeafe",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#dbeafe",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 11,
+          "borderTopLeftRadius": 11,
+          "borderBottomRightRadius": 11,
+          "borderBottomLeftRadius": 11,
+          "background": "#dbeafe"
+        }
+      },
+      {
+        "id": "QXDash188",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Task 248",
+        "x": 12,
+        "y": 248,
+        "w": 232,
+        "h": 96,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash189",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "TT 248",
+        "x": 24,
+        "y": 260,
+        "w": 180,
+        "h": 17,
+        "z": null,
+        "props": {
+          "label": "Setup CI for e2e tests"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.3,
+          "color": "#111827",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash190",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Tag 248",
+        "x": 24,
+        "y": 286,
+        "w": 62,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fffbeb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fffbeb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fffbeb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fffbeb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 999,
+          "borderTopLeftRadius": 999,
+          "borderBottomRightRadius": 999,
+          "borderBottomLeftRadius": 999,
+          "background": "#fffbeb"
+        }
+      },
+      {
+        "id": "QXDash191",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Tag 248 Label",
+        "x": 24,
+        "y": 289,
+        "w": 62,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "DevOps"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#f59e0b",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "id": "QXDash192",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Due 248",
+        "x": 24,
+        "y": 314,
+        "w": 120,
+        "h": 14,
+        "z": null,
+        "props": {
+          "label": "⏱ Jan 18"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 11,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "color": "#9ca3af"
+        }
+      },
+      {
+        "id": "QXDash193",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Avatar",
+        "x": 212,
+        "y": 312,
+        "w": 22,
+        "h": 22,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#fef3c7",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#fef3c7",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#fef3c7",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#fef3c7",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 11,
+          "borderTopLeftRadius": 11,
+          "borderBottomRightRadius": 11,
+          "borderBottomLeftRadius": 11,
+          "background": "#fef3c7"
+        }
+      },
+      {
+        "id": "QXDash194",
+        "type": "Box",
+        "_type": "Widget",
+        "name": "Add Card",
+        "x": 12,
+        "y": 356,
+        "w": 232,
+        "h": 44,
+        "z": null,
+        "props": {
+          "label": ""
+        },
+        "has": {
+          "backgroundColor": true,
+          "border": true,
+          "label": true,
+          "padding": true
+        },
+        "style": {
+          "fontSize": 14,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "left",
+          "letterSpacing": 0,
+          "lineHeight": 1.4,
+          "borderTopWidth": 1,
+          "borderTopColor": "#e5e7eb",
+          "borderTopStyle": "solid",
+          "borderBottomWidth": 1,
+          "borderBottomColor": "#e5e7eb",
+          "borderBottomStyle": "solid",
+          "borderRightWidth": 1,
+          "borderRightColor": "#e5e7eb",
+          "borderRightStyle": "solid",
+          "borderLeftWidth": 1,
+          "borderLeftColor": "#e5e7eb",
+          "borderLeftStyle": "solid",
+          "borderTopRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomLeftRadius": 8,
+          "background": "#ffffff"
+        }
+      },
+      {
+        "id": "QXDash195",
+        "type": "Label",
+        "_type": "Widget",
+        "name": "Add L",
+        "x": 12,
+        "y": 370,
+        "w": 232,
+        "h": 16,
+        "z": null,
+        "props": {
+          "label": "+ Add card"
+        },
+        "has": {
+          "label": true,
+          "padding": true,
+          "advancedText": true
+        },
+        "style": {
+          "fontSize": 13,
+          "fontFamily": "Helvetica Neue,Helvetica,Arial,sans-serif",
+          "textAlign": "center",
+          "letterSpacing": 0,
+          "color": "#6b7280"
+        }
+      }
+    ]
+  }
+]
