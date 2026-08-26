@@ -23,10 +23,10 @@
 			</div>		
 		</div>
         <div class="MatcToolbarItem">
-		    <CheckBox label="Sticky ruler" :value="sticky" @change="onStickyChange"/>
+		    <CheckBox :label="getNLS('ui.ruler.sticky')" :value="sticky" @change="onStickyChange"/>
         </div>
         <div class="MatcToolbarItem">
-		    <CheckBox label="Resize Components" :value="resize" @change="onResizeChange" v-show="sticky"/>
+		    <CheckBox :label="getNLS('ui.ruler.resize')" :value="resize" @change="onResizeChange" v-show="sticky"/>
         </div>
 	</div>
 </template>

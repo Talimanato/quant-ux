@@ -4,7 +4,7 @@
          <div class="MatcToobarInputL MatcToobarInputIconCntr" v-show="!isScreen" ref="tooltipClick">
 
              <input class="MatcIgnoreOnKeyPress MatcToobarInlineEdit MatcToobarInput"
-                placeholder="Click callback"
+                :placeholder="getNLS('ui.callback.click')"
                 :value="callbacks.click"
                 @change="onClickChange"/>
                 <QIcon icon="EventClick"/>
@@ -13,7 +13,7 @@
         <div class="MatcToobarInputL MatcToobarInputIconCntr" v-show="!isScreen && isInput" ref="tooltipChange">
 
              <input class="MatcIgnoreOnKeyPress MatcToobarInlineEdit MatcToobarInput"
-                placeholder="Change callback"
+                :placeholder="getNLS('ui.callback.change')"
                 :value="callbacks.change"
                 @change="onChangeChange"/>
                 <QIcon icon="EventData"/>
@@ -22,7 +22,7 @@
          <div class="MatcToobarInputL MatcToobarInputIconCntr" v-show="isScreen" ref="tooltipLoad">
 
              <input class="MatcIgnoreOnKeyPress MatcToobarInlineEdit MatcToobarInput"
-                placeholder="Load callback"
+                :placeholder="getNLS('ui.callback.load')"
                 :value="callbacks.load"
                 @change="onLoadChange"/>
                 <QIcon icon="EventLoaded"/>

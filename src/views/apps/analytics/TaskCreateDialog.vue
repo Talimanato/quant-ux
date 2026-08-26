@@ -5,20 +5,20 @@
       <div class="FormCntr" >
 
           <div class="form-group">
-            <label>Name</label>
-            <input  v-model="task.name" type="text" class="form-control" placeholder="Name" ref="inputName"/>
+            <label>{{ getNLS('ui.taskCreate.name') }}</label>
+            <input  v-model="task.name" type="text" class="form-control" :placeholder="getNLS('ui.taskCreate.namePlaceholder')" ref="inputName"/>
           </div>
 
           <div class="form-group">
-            <label>Description</label>
-            <textarea  v-model="task.description" type="text" class="form-control"  placeholder="An explaination for the users"  />
+            <label>{{ getNLS('ui.taskCreate.description') }}</label>
+            <textarea  v-model="task.description" type="text" class="form-control"  :placeholder="getNLS('ui.taskCreate.descriptionPlaceholder')"  />
           </div>
 
 
 
           <div>
-            <label>Expected Steps</label>
-            <p class="MatcHint mb-16">Click in the simulator to add steps. You can remove steps that are not needed by clicking on them.</p>
+            <label>{{ getNLS('ui.taskCreate.expectedSteps') }}</label>
+            <p class="MatcHint mb-16">{{ getNLS('ui.taskCreate.stepsHint') }}</p>
             <div class="StepCntr form-group">
               <div v-for="(step, i) in steps" :key="i" class="Step">
                 <span class="mdi mdi-arrow-right" v-if="i > 0"/>
@@ -26,16 +26,16 @@
                     {{step.type}} -
                     {{step.label}}
                     <div class="removePopup" @click="removeEvent(i)">
-                      <span class="mdi">Remove</span>
+                      <span class="mdi">{{ getNLS('ui.taskCreate.remove') }}</span>
                     </div>
                 </div>
               </div>
             </div>
             <div class="form-group">
-               <CheckBox label="Strict matching. No events between are allowed." :value="task.strict"  @change="setStrict"/>
+               <CheckBox :label="getNLS('ui.taskCreate.strict')" :value="task.strict"  @change="setStrict"/>
             </div>
             <div class="form-group">
-              <CheckBox label="Record only screen views" :value="recordOnlyScreenViews"  @change="setRecordOnlyScreenView"/>
+              <CheckBox :label="getNLS('ui.taskCreate.recordOnlyScreen')" :value="recordOnlyScreenViews"  @change="setRecordOnlyScreenView"/>
             </div>
           </div>
 
@@ -49,7 +49,7 @@
 
         <div v-if="abScreens && abScreens.length > 0" class="ABSelector">
           <p class="MatcHint">
-            Select the next screen to show
+            {{ getNLS('ui.taskCreate.selectNextScreen') }}
           </p>
           <div v-for="box in abScreens" :key="box.id" class="MatcButton" @click="selectABLine(box)">
             {{box.name}}
@@ -62,8 +62,8 @@
 
 
     <div class="MatcButtonBar">
-      <a class="MatcButton MatcButtonPrimary" @click="onSave">Save</a>
-      <a class="MatcLinkButton" @click="onCancel" >Cancel</a>
+      <a class="MatcButton MatcButtonPrimary" @click="onSave">{{ getNLS('btn.save') }}</a>
+      <a class="MatcLinkButton" @click="onCancel" >{{ getNLS('btn.cancel') }}</a>
     </div>
 
   </div>

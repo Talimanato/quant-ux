@@ -772,8 +772,8 @@ export default {
 				if (!this._inlineEditStarted) {
 					this.stopEvent(e);
 					if (this.getMode() != "move") {
-						this.showHint("Move the mouse to move canvas...");
-						this.onDragStart(this.container, "container", "onCanvasDnDStart", "onCanvasDnDMove", "onCanvasDnDEnd", null, this._lastMouseMoveEvent, true);
+						this.showHint("Click and drag to move canvas...");
+						this._spaceMovePreviousMode = this.getMode();
 						this.setMode("move");
 					}
 				}
@@ -799,7 +799,10 @@ export default {
 			var k = e.keyCode ? e.keyCode : e.which;
 			if (k == 32) {
 				this.onDragEnd(this._lastMouseMoveEvent);
-				this.setMode("view");
+				if (this._spaceMovePreviousMode) {
+					this.setMode(this._spaceMovePreviousMode);
+					delete this._spaceMovePreviousMode;
+				}
 			}
 
 			delete this._currentKeyEvent;

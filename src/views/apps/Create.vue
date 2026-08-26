@@ -2,18 +2,18 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2 class="title">Create a new prototype</h2>
+        <h2 class="title">{{ getNLS('ui.prototype.title') }}</h2>
         <div class="columns">
           <div class="column is-6">
             <form>
               <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" v-model="name" placeholder="Enter App name" ref="inputName"/>
+                <label>{{ getNLS('ui.prototype.name') }}</label>
+                <input type="text" class="form-control" v-model="name" :placeholder="getNLS('ui.prototype.placeholder')" ref="inputName"/>
                 <div data-binding-error="name"></div>
               </div>
 
               <div class="form-group">
-                <label>ScreenSize *</label>
+                <label>{{ getNLS('ui.prototype.screenSize') }}</label>
                 <ScreenSizeSelector @change="setType" />
               </div>
             </form>
@@ -21,11 +21,11 @@
         </div>
 
         <div class="MatcButtonBar">
-          <a class="MatcButton MatcButtonPrimary" @click="create">Create</a>
-          <a href="#/apps/my-apps.html" class="MatcLinkButton">Cancel</a>
+          <a class="MatcButton MatcButtonPrimary" @click="create">{{ getNLS('ui.prototype.create') }}</a>
+          <a href="#/apps/my-apps.html" class="MatcLinkButton">{{ getNLS('ui.prototype.cancel') }}</a>
         </div>
 
-        <p class="has-text-grey is-size-6 MatcMarginTop">* The screen size is measured in points and not pixel!</p>
+        <p class="has-text-grey is-size-6 MatcMarginTop">{{ getNLS('ui.prototype.screenSizeHint') }}</p>
       </div>
     </section>
   </main>

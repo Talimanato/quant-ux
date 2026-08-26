@@ -35,7 +35,7 @@
 			<div class="MatchCanvasScrollHandle" data-dojo-attach-point="scrollRightHandler"></div>
 		</div>
 	</div>
-	<div class="MatcCanvasScrollBar MatcCanvasScrollBarBottom" data-dojo-attach-point="scrollBottom" :style="'padding-left:' + this.layerListWidth + 'px'">
+	<div class="MatcCanvasScrollBar MatcCanvasScrollBarBottom" data-dojo-attach-point="scrollBottom">
 		<div class="MatcCanvasScrollBarCntr MatcCanvasScrollBarCntrBottom" data-dojo-attach-point="scrollBottomCntr">
 			<div class="MatchCanvasScrollHandle" data-dojo-attach-point="scrollBottomHandler"></div>
 		</div>
@@ -71,6 +71,7 @@ import Util from 'core/Util'
 import InlineEdit from 'canvas/InlineEdit'
 import Scroll from 'canvas/Scroll'
 import Upload from 'canvas/Upload'
+import ComponentDrop from 'canvas/ComponentDrop'
 import Comment from 'canvas/Comment'
 import Layer from 'canvas/Layer'
 import DataView from 'canvas/DataView'
@@ -93,7 +94,7 @@ export default {
   name: 'Canvas',
 	props:['viewport'],
 	mixins:[DojoWidget, _DragNDrop, Util, Render, Lines, DnD, Add, Select, Distribute, Tools,
-			Zoom, InlineEdit, Scroll, Upload, Comment, Layer, CustomHandler, ScreenRuler, DataView,
+			Zoom, InlineEdit, Scroll, Upload, ComponentDrop, Comment, Layer, CustomHandler, ScreenRuler, DataView,
 			KeyBoard, Resize, Replicate, Prototyping, Collab, SVG, GridResize],
     data: function () {
         return {
@@ -143,6 +144,11 @@ export default {
 			this.initMouseTracker();
 			this.initZoom();
 			this.initScrollBars();
+			/**
+			 * Component panel DnD has to be registered before the upload
+			 * DnD so component drags can be intercepted.
+			 */
+			this.initComponentDrop()
 			this.initUpload();
 			this.initComment();
 			this.initScreenRuler()

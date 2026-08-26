@@ -49,14 +49,14 @@
           </table>
 
           <div class="form-group MatcMarginTopXL">
-            <Combo formControl="true" placeholder="Add new member" :hints="hints"></Combo>
+            <Combo formControl="true" :placeholder="$t('ui.team.addMemberPlaceholder')" :hints="hints"></Combo>
     
           </div>
        
             
           <div class="MatcButtonBar MatcMarginTopXXL">
-            <a class="MatcButton MatcButtonPrimary" @click="save">Save</a>
-            <a @click="close" class="MatcLinkButton">Cancel</a>
+            <a class="MatcButton MatcButtonPrimary" @click="save">{{ $t('btn.save') }}</a>
+            <a @click="close" class="MatcLinkButton">{{ $t('btn.cancel') }}</a>
           </div>
   
 

@@ -3,14 +3,14 @@
     <section class="section">
       <div class="container">
         <div class="box is-shadowless">
-          <h2 class="title">Prototype Name</h2>
+          <h2 class="title">{{ getNLS('ui.settings.title') }}</h2>
           <div class="form-group">
             <input
               type="text"
               class="form-control"
               v-model="app.name"
               @change="setAppName"
-              placeholder="Enter App name"
+              :placeholder="getNLS('ui.settings.placeholder')"
             />
           </div>
         </div>
@@ -20,7 +20,7 @@
     <section class="section">
       <div class="container">
         <div class="box is-shadowless team-settings">
-          <h2 class="title">Team</h2>
+          <h2 class="title">{{ getNLS('ui.settings.team') }}</h2>
           <Team v-if="app && user" :appID="app.id" :userID="user.id" />
         </div>
       </div>
@@ -31,25 +31,25 @@
         <div class="box is-shadowless">
           <div class="level">
             <div class="level-left">
-              <h2 class="title level-item">Sharing</h2>
+              <h2 class="title level-item">{{ getNLS('ui.settings.sharing') }}</h2>
             </div>
             <div class="level-right">
-              <a class="MatcButton is-outlined level-item" @click="resetShare">Reset</a>
+              <a class="MatcButton is-outlined level-item" @click="resetShare">{{ getNLS('ui.settings.reset') }}</a>
             </div>
           </div>
 
           <div class="form-group">
-            <label>Test</label>
+            <label>{{ getNLS('ui.settings.test') }}</label>
             <input type="text" class="form-control" :value="`${base}/#/test.html?h=${hashes[1]}`" />
           </div>
 
           <div class="form-group">
-            <label>Share and Comment</label>
+            <label>{{ getNLS('ui.settings.shareAndComment') }}</label>
             <input type="text" class="form-control" :value="`${base}/#/share.html?h=${hashes[1]}`" />
           </div>
 
           <div class="form-group">
-            <label>Code Generation</label>
+            <label>{{ getNLS('ui.settings.code') }}</label>
             <input type="text" class="form-control" :value="`${hashes[1]}`" />
           </div>
           <!--
@@ -63,7 +63,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <a @click="showDeleteDialog" class="button is-fullwidth is-normal is-danger level-item" ><span ref="deleteBtn">Delete Prototype</span></a>
+        <a @click="showDeleteDialog" class="button is-fullwidth is-normal is-danger level-item" ><span ref="deleteBtn">{{ getNLS('ui.settings.delete') }}</span></a>
       </div>
     </section>
   </div>

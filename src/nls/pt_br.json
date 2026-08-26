@@ -51,7 +51,20 @@
         "sign-up": "Inscrever-se para salvar",
         "templates": {
             "new": "Novo Template"
+        },
+        "componentPanel": {
+            "title": "Components",
+            "searchPlaceholder": "Pesquisar componentes…",
+            "empty": "Nenhum componente encontrado"
+        },
+        "floatingLayer": {
+            "title": "Layers",
+            "toggle": "Toggle Layers"
         }
+    },
+    "tooltip": {
+        "componentPanel": "Toggle Components",
+        "layerTree": "Toggle Layer Tree"
     },
     "table": {
         "action": "Ação"
@@ -180,6 +193,7 @@
             "server-offline-title": "Ooops",
             "server-offline-msg": "Você ficou ausente por mais de 30 minutos. Para continuar a trabalhar, faça novamente o login."
         },
+        "recent-projects-empty": "Sem protótipos recentes",
         "overview": {
             "design": "Design",
             "test": "Teste",
@@ -369,5 +383,174 @@
         "error-signup": "Não foi possível criar a conta. O e-mail já está em uso?",
         "error-tos": "Por favor, aceite os termos de serviço",
         "reset-sent": "Verifique seu e-mail."
+    },
+    "ui": {
+        "viewConfig": {
+            "zoomOut": "Zoom out (-)",
+            "zoomIn": "Zoom in (+)",
+            "lines": "Lines",
+            "comments": "Comments",
+            "grayScale": "Gray Scale",
+            "snapToGrid": "Snapp to Grid",
+            "showGrid": "Show Grid",
+            "configureGrid": "Configure Grid",
+            "layers": "Layers",
+            "distance": "Distance",
+            "ruler": "Ruler"
+        },
+        "analytics": {
+            "showDropoff": "Show Dropoff",
+            "zScore": "zScore"
+        },
+        "optionsList": {
+            "createValue": "Create a new value"
+        },
+        "account": {
+            "title": "My Account",
+            "lede": "Change your personal settings here!",
+            "email": "Email",
+            "emailHint": "(double click to edit)",
+            "name": "Name",
+            "lastname": "Lastname",
+            "homepage": "Homepage",
+            "password": "Password",
+            "newsletter": "Newsletter",
+            "newsletterLabel": "I want to receive the newsletter",
+            "placeholderEmail": "Your email",
+            "placeholderName": "Enter your name",
+            "placeholderLastname": "Enter your lastname",
+            "placeholderHomepage": "http://www.yourpage.com",
+            "placeholderPassword": "To change, enter new password",
+            "save": "Save",
+            "cancel": "Cancel",
+            "keycloak": "Your credentials are managed in Keycloak. Contact your admin for help.",
+            "image": "Image",
+            "deleteHint": "If you want to delete your account, click",
+            "deleteHere": "here",
+            "deleteSuffix": ". All your data will be removed, including your prototypes. If you want to save them, export them as *.zip files."
+        },
+        "resetPassword": {
+            "title": "Password Reset",
+            "instructions": "Forgot your password? To reset your password, enter your email and click on &quot;Reset&quot;.",
+            "placeholderEmail": "Enter your email",
+            "reset": "Reset",
+            "cancel": "Cancel",
+            "sent": "We have send you an email with a reset-link. Please open the mail and visit the link.",
+            "newPasswordInstructions": "Please enter your email and your new password here",
+            "email": "Email",
+            "password": "Password",
+            "passwordRepeat": "Password (Repetition)",
+            "send": "Send",
+            "success": "Your password was reset. You can login now!"
+        },
+        "prototype": {
+            "title": "Create a new prototype",
+            "name": "Name",
+            "placeholder": "Enter App name",
+            "screenSize": "ScreenSize *",
+            "screenSizeHint": "* The screen size is measured in points and not pixel!",
+            "create": "Create",
+            "cancel": "Cancel"
+        },
+        "settings": {
+            "title": "Prototype Name",
+            "placeholder": "Enter App name",
+            "team": "Team",
+            "sharing": "Sharing",
+            "reset": "Reset",
+            "test": "Test",
+            "shareAndComment": "Share and Comment",
+            "code": "Code Generation",
+            "embedded": "Embedded",
+            "delete": "Delete Prototype"
+        },
+        "test": {
+            "tableName": "Name",
+            "tableDescription": "Description",
+            "tableSteps": "Steps",
+            "tableAction": "Action",
+            "noSteps": "No steps",
+            "addTask": "Add task",
+            "tooltipEdit": "Edit",
+            "tooltipDuplicate": "Duplicate",
+            "tooltipDelete": "Delete",
+            "title": "Tests",
+            "welcomePlaceholder": "Enter here a welcome message for your testers.",
+            "tasks": "Tasks",
+            "thinkAloud": "Think-aloud Testing",
+            "screenRecordings": "Screen Recordings"
+        },
+        "videoTab": {
+            "title": "Screen Recording",
+            "tooBig": "The Screen Recording is too big!",
+            "testPerformed": "Test Performed {currentDate}",
+            "testName": "Test name",
+            "testNamePlaceholder": "Enter a name for the test"
+        },
+        "taskCreate": {
+            "name": "Name",
+            "namePlaceholder": "Name",
+            "description": "Description",
+            "descriptionPlaceholder": "An explaination for the users",
+            "expectedSteps": "Expected Steps",
+            "stepsHint": "Click in the simulator to add steps. You can remove steps that are not needed by clicking on them.",
+            "remove": "Remove",
+            "strict": "Strict matching. No events between are allowed.",
+            "recordOnlyScreen": "Record only screen views",
+            "selectNextScreen": "Select the next screen to show"
+        },
+        "heat": {
+            "open": "Open Analytic Canvas",
+            "noData": "No data",
+            "noDataHint": "You have not performed any test yet, therefore Quant-UX could not collect any data. Once you start testing, you will see here the heat maps."
+        },
+        "sessionList": {
+            "noTest": "No one has tested this prototype yet.",
+            "shareHint": "Test your prototype with real users, by clicking the \"Share\" button in the toolbar.",
+            "simHintPart1": "Click on the AI icon (",
+            "simHintPart2": ") in the toolbar to simulate tests with AI."
+        },
+        "share": {
+            "headline": "Share and Comment",
+            "lowCodeToken": "Low-Code Token",
+            "doNotStore": "Do not store test data",
+            "requirePassword": "Require Password"
+        },
+        "team": {
+            "addMemberPlaceholder": "Add new member"
+        },
+        "appList": {
+            "searchPlaceholder": "Search"
+        },
+        "help": {
+            "searchPlaceholder": "Search"
+        },
+        "ruler": {
+            "sticky": "Sticky ruler",
+            "resize": "Resize Components"
+        },
+        "callback": {
+            "click": "Click callback",
+            "change": "Change callback",
+            "load": "Load callback",
+            "render": "Render callback"
+        },
+        "table": {
+            "name": "Name",
+            "dataBinding": "Data Binding",
+            "editable": "Editable",
+            "background": "Background",
+            "showOnHover": "Show on Hover",
+            "addAction": "Add Action",
+            "dataBindingPlaceholder": "Databinding Variable",
+            "addColumn": "Add Column"
+        },
+        "styledTable": {
+            "border": "Border",
+            "header": "Header",
+            "oddRow": "Odd Row",
+            "evenRow": "Eeven Row",
+            "hover": "Hover"
+        }
     }
 }

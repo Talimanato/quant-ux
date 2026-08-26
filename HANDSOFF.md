@@ -263,3 +263,154 @@ python3 /tmp/test_replay_quick.py
 
 - 本次实测中 subagent 遇到整体消息速率限制，导致 2 个测试子任务未完成。后续修复工作可视情况拆分为更小的 subagent 任务或直接由主会话处理。
 - `HANDSOFF.md` 生成时未修改仓库源码；源码修改记录从本文件落盘后开始。
+
+---
+
+## 8. 画布页面重构 Handoff（2026-08-26）
+
+> 本 Handoff 对应一次新的会话：用户要求「画布页面整体优化」+「左侧 sidebar 改为可拖拽新组件面板」+「当前组件树改为浮窗」。
+
+### 8.1 已完成：Phase 1（布局重排 + 浮窗层级树 + 组件面板壳体）
+
+Phase 1 已实施并验证通过，由 subagent `06e1bbdb` 完成：
+
+- **左侧组件面板**：新增 `ComponentPanel.vue` / `ComponentPanelCategory.vue` / `ComponentPanelItem.vue` / `ComponentData.js`，基于 `SymbolService.getCore()` 和 `model.templates` 加载 7 个分类（WireFrame/Advanced/Composite/Survey/Material/IOS/Charts + My Components）。当前为只读展示，DOM 已 `draggable="true"`。
+- **Top Bar 开关**：新增 `ComponentPanelToggle.vue` / `LayerTreeToggle.vue`，用 `QIcon` 图标切换面板。
+- **浮窗层级树**：新增 `LayerListFloating.vue`，`Layer.vue` 不再把 `LayerList` 挂到 `Toolbar.layerListCntr`，而是挂到新的浮窗容器。浮窗支持拖拽标题栏移动、右下角 resize、关闭，位置/大小持久化到 `localStorage.quxLayerFloating`。
+- **布局重构**：`Design.vue` 模板重排为 Top Bar + 左侧 280px 组件面板 + 画布 + 右侧面板 + 浮窗挂载点；`Toolbar.vue` 改为 48px 全宽 Top Bar；`canvas.scss` 使用 CSS 变量 `--component-panel-width` 动态偏移画布。
+- **i18n**：新增 `toolbar.componentPanel.title`、`toolbar.floatingLayer.title/toggle`、`tooltip.componentPanel` / `tooltip.layerTree` 等 key，合并到 `en.json` / `cn.json` / `de.json` / `pt_br.json`，未覆盖已有的 `ui.viewConfig` 等未提交内容。
+- **新增样式文件**：`src/style/canvas/component_panel.scss`、`src/style/canvas/layer_floating.scss`。
+
+### 8.2 Phase 1 修改/新增文件清单
+
+```
+新增：
+  src/canvas/toolbar/components/ComponentData.js
+  src/canvas/toolbar/components/ComponentPanel.vue
+  src/canvas/toolbar/components/ComponentPanelCategory.vue
+  src/canvas/toolbar/components/ComponentPanelItem.vue
+  src/canvas/toolbar/components/ComponentPanelToggle.vue
+  src/canvas/toolbar/components/LayerListFloating.vue
+  src/canvas/toolbar/components/LayerTreeToggle.vue
+  src/style/canvas/component_panel.scss
+  src/style/canvas/layer_floating.scss
+
+修改：
+  src/views/apps/Design.vue
+  src/canvas/toolbar/Toolbar.vue
+  src/canvas/toolbar/LayerList.vue
+  src/canvas/Layer.vue
+  src/canvas/Canvas.vue
+  src/style/variables.scss
+  src/style/canvas/all.scss
+  src/style/canvas/canvas.scss
+  src/style/toolbar/toolbar_layer_list.scss
+  src/style/toolbar/toolbar_layout.scss
+  src/nls/en.json
+  src/nls/cn.json
+  src/nls/de.json
+  src/nls/pt_br.json
+```
+
+### 8.3 Phase 1 验证结果
+
+| 检查 | 命令 | 结果 |
+|---|---|---|
+| Lint | `npm run lint` | No errors |
+| Build | `npm run build` | Success |
+| Unit tests | `npm run test:unit` | 54 suites passed, 149 tests passed |
+
+> 注：Phase 1 subagent 报告还进行了一次 Playwright smoke test（`npm run serve` + 截图），编辑器页面加载、组件面板、浮窗层级树、开关按钮可见。
+
+### 8.4 Phase 2 / 3 / 4 完成记录（2026-08-26 第三次会话）
+
+#### Phase 2：组件面板拖拽到画布 ✅
+
+- **新增 `src/canvas/ComponentDrop.vue` mixin**（Canvas mixins 已注册，`postCreate` 中在 `initUpload()` **之前**调用 `initComponentDrop()`，用 `stopImmediatePropagation` 拦截组件拖拽，避免触发上传 DnD 高亮）：
+  - 识别 `application/qux-component` MIME（`ComponentPanelItem.onDragStart` 设置该 MIME + `text/plain` fallback）；层级树/表格等 `text` DnD 不受影响。
+  - `dragover` 显示 `.MatcComponentDropTarget` 虚线预览（样式在 `canvas.scss`，oklch+HEX fallback），中心对准光标，经 `alignmentStart('widget'|'boundingbox'|'screen') + allignPosition` 吸附网格/其他组件；`dragleave`（relatedTarget 判空防子元素抖动）/`drop`/`dragend` 清理。
+  - `drop` 按 `_type` 分发：`Widget→controller.addWidget`、`Group→addGroupByTheme`、`Screen→addScreen`、`ScreenAndWidget→addScreensAndWidgets`、`_isTemplate→factory.createTemplatedModel + addWidget/addGroupByTemplate`。坐标走 zoomed 约定（controller 内部 unzoom），与 `_onAddNDropUp` 路径一致；meta 字段清理同 `Toolbar.onNewThemeObject`。
+  - 点击面板项 = 点击创建：`Design.vue` `@select` → `canvas.addComponentAt(item)`，落在选中屏（或第一屏）内居中偏 (16,16)。
+- **接线**：`Design.vue` 监听 panel `@dragstart/@dragend/@select`；`_componentDragItem` 通过 `setComponentDragItem` 注入（dataTransfer 在 dragover 期间不可读）。
+- **i18n**：新增 `toolbar.componentPanel.searchPlaceholder` / `empty`（4 个 nls 文件），替换误用的 `ui.appList.searchPlaceholder`。
+
+#### 本次发现并修复的 3 个 Phase 1/2 隐蔽 Bug（重要！）
+
+1. **画布坐标偏移 280px（P0，Phase 1 引入）**：组件面板用 `margin-left` 平移的是 `.MatcCanvasFrame`，但 `Render.getCanvasMousePosition()` 以 `.MatcCanvas` 根（`domPos`，仅 initRender 计算一次）为基准——面板打开时所有绘制/点击向右偏移一个面板宽度（E2E 第二次删除 widget 失败的根因）。**修复**：margin 移到 `#CanvasNode.MatcComponentPanelOpen .MatcCanvas` 根上 + `Render.updateDomPos()` + `Design.onToggleComponentPanel` 在 nextTick 和 300ms 后重算。
+2. **Vue 3 事件 fallthrough 覆盖拖拽 payload（P1）**：`ComponentPanelItem/ComponentPanel` 未声明 `emits`，父级 `@dragstart` 同时 fallthrough 为根元素**原生** dragstart 监听，DragEvent 对象在正确 item 之后到达并**覆盖** `_componentDragItem` → ghost 尺寸永远 fallback。**修复**：两个组件声明 `emits: ['select','dragstart','dragend']`。
+3. **设计 token 尺寸 NaN（P2）**：wireframe 主题的 w/h 是 `@box-width-l`/`@form-height` 字符串（仅 QSS 渲染管线可解析），`Math.max()` 产生 NaN → ghost 宽高变成 2px。**修复**：`getComponentItemSize` 用 `Number()+isFinite` 防御，token 引用回落默认值（drop 后的 widget 本身仍走 QSS token 渲染，与 CreateButton 一致）。
+
+#### 其他产品改动
+
+- **浮窗层级树默认收起**（仅 40px 标题条）：避免默认遮挡画布中央；`collapsed` 状态随位置/尺寸一起持久化到 `quxLayerFloating`。`LayerListFloating` 根类名为 `MatcLayerListRoot`（不再是 `MatcToolbarLayerList`）。
+
+#### Phase 3：视觉打磨 ✅（轻量）
+
+- `.MatcComponentDropTarget` 虚线 + 光晕（oklch + HEX fallback）。
+- 面板拖拽时源 item 半透明（`MatcComponentPanelItemDragging`）。
+- 面板开合 220ms `cubic-bezier(0.16,1,0.3,1)` 过渡（Phase 1 已有，保留）。
+
+#### Phase 4：验证 ✅
+
+| 检查 | 结果 |
+|---|---|
+| `npm run lint` | No errors |
+| `npm run test:unit` | 149/149 passed（54 suites） |
+| `npm run build` | success |
+| `cd backend && npm test` | 18/18 passed |
+| `python3 tests/e2e/test_studio.py` | PASS（修复坐标 bug 后） |
+| `python3 tests/e2e/test_studio_layers.py` | PASS（选择器改 `.MatcLayerListRoot` + 先展开浮窗） |
+| `pytest tests/e2e` | 17/18 首轮（test_simulator dashboard 偶发超时，单独重跑 PASS）；修复后已全量重跑见下 |
+| 手动 DnD 验证（dist 环境，DragEvent 合成） | Button ghost 100x40 ✓、Confirm 组 ghost 320x176（children bbox）✓、drop 创建 widget/group+children ✓、点击创建 ✓、i18n ✓、无 pageerror ✓ |
+
+#### 已知遗留问题（非本次范围）
+
+- **dashboard "Welcome to Quant-UX!" 偶发超时**（影响 test_simulator 等）：dev server 编译抖动 + Studio.vue 对单 app 用户的自动跳转（AGENTS.md 已记载该行为）叠加。建议后续把 E2E 的 dashboard 等待换成更稳定的 selector（如 app 卡片元素）。
+- 合成 DragEvent 的 `dataTransfer.dropEffect` 在无用户手势时不可写（显示 none），仅影响测试脚本，真实拖拽正常。
+- de/pt_br 语言缺失 key 约按原计划回退英文。
+
+### 8.6 重要：工作区未提交改动混杂
+
+当前 `git status --short` 显示 65 文件改动，除本次 Phase 1 的文件外，还包含大量未提交内容（通知系统删除、Studio/Account/Settings 等 i18n 化、dashboard 样式调整）。建议：
+
+1. 不要直接 `git add -A` 后提交；先 `git diff --stat` / `git add -p` 分块审查。
+2. 本次 Phase 1 改动集中在 `src/canvas/toolbar/components/*`、`src/canvas/*`、`src/style/canvas/*`、`src/style/toolbar/*`、`src/views/apps/Design.vue`、`src/nls/*.json` 等。
+3. 通知系统相关删除（`public/notification/*`、`src/services/NotificationService.js`、`src/views/apps/StudioNotification.vue` 等）与画布重构无关，是其他并行改动。
+
+### 8.7 关键设计/架构上下文
+
+- 当前画布入口为 `src/views/apps/Design.vue`。
+- 现有添加组件逻辑可参考 `src/canvas/toolbar/components/CreateButton.vue`（`onCreate` 触发 `createTheme`）和 `src/canvas/Add.vue`（`addThemedWidget` / `_onAddNDropStart`）。
+- `ComponentData.js` 已提取 `setDefaultValues` / `mergeThemeExtensions` / `groupCoreThemes` / `loadComponentData`，可用于 Phase 2 避免复制 `CreateButton.vue` 的大段逻辑。
+- `LayerList.vue` 内部仍使用 `Tree.vue` / `TreeItem.vue` 的 HTML5 drag 进行层级排序，浮窗自身拖拽使用 `src/util/DND.js` 的 `onStartDND`。
+- Dojo 生命周期：`DojoUtil.initDojoWidget` 同步执行；浮窗容器必须在 `LayerList.$new()` 前存在于 DOM。
+
+### 8.8 推荐下一步命令
+
+```bash
+# 快速确认当前状态
+npm run lint
+npm run test:unit
+npm run build
+
+# 继续 Phase 2 后
+python3 tests/e2e/test_studio.py
+python3 tests/e2e/test_studio_layers.py
+```
+
+### 8.9 相关文件索引
+
+| 作用 | 路径 |
+|---|---|
+| 画布入口/布局 | `src/views/apps/Design.vue` |
+| Top Bar | `src/canvas/toolbar/Toolbar.vue` |
+| 左侧组件面板 | `src/canvas/toolbar/components/ComponentPanel.vue` |
+| 组件数据/共享 helper | `src/canvas/toolbar/components/ComponentData.js` |
+| 组件面板开关 | `src/canvas/toolbar/components/ComponentPanelToggle.vue` |
+| 层级树浮窗 | `src/canvas/toolbar/components/LayerListFloating.vue` |
+| 层级树开关 | `src/canvas/toolbar/components/LayerTreeToggle.vue` |
+| 画布核心/拖拽 | `src/canvas/Canvas.vue`、`src/canvas/Add.vue`、`src/canvas/Render.vue` |
+| 层级树初始化 | `src/canvas/Layer.vue` |
+| 组件面板样式 | `src/style/canvas/component_panel.scss` |
+| 浮窗层级树样式 | `src/style/canvas/layer_floating.scss` |
+| 项目笔记 | `AGENTS.md` |

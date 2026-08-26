@@ -144,8 +144,14 @@ def _run_studio_layers(env):
             widget_name = widget["name"]
             print(f"Widget id: {widget_id}, name: {widget_name}")
 
-            # 5. Open/verify the LayerList.
-            layer_list = page.locator(".MatcToolbarLayerList")
+            # 5. Open/verify the LayerList. The floating Layers window is
+            # collapsed by default; expand it first.
+            floating = page.locator(".MatcLayerListFloating")
+            expect(floating).to_be_visible(timeout=10000)
+            if floating.locator(".MatcLayerListFloatingContent").first.is_hidden():
+                page.locator(".MatcLayerListFloatingToggle").first.click()
+                page.wait_for_timeout(500)
+            layer_list = page.locator(".MatcLayerListRoot")
             layer_count = layer_list.count()
             canvas_classes = page.evaluate(
                 """() => {

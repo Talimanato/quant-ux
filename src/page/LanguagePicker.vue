@@ -2,10 +2,10 @@
 <template>
  <div :class="['MatcLanguagePicker', {'MatcToolbarPopUpVisible': isVisible}]">
     <a type="button" @click.stop="open" class="MatcToolbarIconButton" >
-      <span v-if="hasLabel">
+      <QIcon icon="World"></QIcon>
+      <span v-if="hasLabel" class="MatcCollapseViewMinHidden">
         {{selectedLanguage}}
       </span>
-      <QIcon icon="World"></QIcon>
       <span class="caret" v-if="hasCarret"></span>
     </a>
     <div class="MatcDropDownPopUp" role="menu" data-dojo-attach-point="popup" v-if="isVisible">
@@ -45,7 +45,7 @@ export default {
           value: "en"
         },
         {
-          label: "Chinese",
+          label: "中文",
           value: "cn"
         },
         {
@@ -53,7 +53,7 @@ export default {
           value: "de"
         },
         {
-          label: "Portuguese",
+          label: "Português",
           value: "pt"
         }
       ]

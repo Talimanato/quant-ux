@@ -7,10 +7,10 @@
           <table class="vommondTable table is-hoverable">
             <thead>
                 <tr>
-                  <td style="width: 20%;">Name</td>
-                  <td style="width: 30%;">Description</td>
-                  <td style="width: 35%;">Steps</td>
-                  <td style="width: 15%;" class="action">Action</td>
+                  <td style="width: 20%;">{{ getNLS('ui.test.tableName') }}</td>
+                  <td style="width: 30%;">{{ getNLS('ui.test.tableDescription') }}</td>
+                  <td style="width: 35%;">{{ getNLS('ui.test.tableSteps') }}</td>
+                  <td style="width: 15%;" class="action">{{ getNLS('ui.test.tableAction') }}</td>
                 </tr>
             </thead>
             <tbody>
@@ -28,13 +28,13 @@
 
 
                     </template>
-                    <span class="MatcHint" v-else>No steps </span>
+                    <span class="MatcHint" v-else>{{ getNLS('ui.test.noSteps') }} </span>
                   </td>
                   <td class=" action">
                     <div style="min-width: 100px; width:100%; ">
-                    <a class="MatcButton MatcButtonXXS MatcButtonSecondary" @click="onEditTask(task, i, $event)"><QIcon icon="EditSquare" tooltip="Edit" attachToParent="true"/></a>
-                    <a class="MatcButton MatcButtonXXS MatcButtonSecondary" @click="onCopyTask(task, i, $event)"><QIcon icon="Paste" tooltip="Duplicate" attachToParent="true"/></a>
-                    <a class="MatcButton MatcButtonXXS MatcButtonDanger MatcButtonSecondary" @click="onDelete(task, i, $event)"><QIcon icon="DeleteTrash" tooltip="Delete" attachToParent="true"/></a>
+                    <a class="MatcButton MatcButtonXXS MatcButtonSecondary" @click="onEditTask(task, i, $event)"><QIcon icon="EditSquare" :tooltip="getNLS('ui.test.tooltipEdit')" attachToParent="true"/></a>
+                    <a class="MatcButton MatcButtonXXS MatcButtonSecondary" @click="onCopyTask(task, i, $event)"><QIcon icon="Paste" :tooltip="getNLS('ui.test.tooltipDuplicate')" attachToParent="true"/></a>
+                    <a class="MatcButton MatcButtonXXS MatcButtonDanger MatcButtonSecondary" @click="onDelete(task, i, $event)"><QIcon icon="DeleteTrash" :tooltip="getNLS('ui.test.tooltipDelete')" attachToParent="true"/></a>
                     </div>
                   </td>
                 </tr>
@@ -54,7 +54,7 @@
           </p>
         </div>
 
-        <a data-nls="testSettingsAddTask" @click="showCreateDialog" class="MatcButton MatcButtonXS">Add task</a>
+        <a data-nls="testSettingsAddTask" @click="showCreateDialog" class="MatcButton MatcButtonXS">{{ getNLS('ui.test.addTask') }}</a>
 
 
   </div>

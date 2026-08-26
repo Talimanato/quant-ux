@@ -100,7 +100,16 @@
             "gpt": "AI 设计助手"
         },
         "svgStop": "停止编辑",
-        "removeAIEvents": "停止 AI"
+        "removeAIEvents": "停止 AI",
+        "componentPanel": {
+            "title": "组件",
+            "searchPlaceholder": "搜索组件…",
+            "empty": "未找到组件"
+        },
+        "floatingLayer": {
+            "title": "图层",
+            "toggle": "切换图层"
+        }
     },
     "table": {
         "action": "Action"
@@ -266,13 +275,7 @@
         "test-summary": "测试摘要",
         "view-more": "查看更多",
         "contact": "联系",
-        "notifications": "更新",
-        "notifications-none": "当前没有新更新。",
-        "oldnotifications": "历史更新",
-        "allnotifications": "全部更新",
-        "newnotifications": "新更新",
         "lastEdit": "最近更新",
-        "notification_no_auto": "有新更新时显示此对话框",
         "numberTests": "测试",
         "create": "创建",
         "help": "文档",
@@ -294,7 +297,8 @@
         "screen-list": "屏幕",
         "description": "描述",
         "description-hint": "在此添加描述",
-        "loading": "加载中…"
+        "loading": "加载中…",
+        "recent-projects-empty": "空"
     },
     "survey": {
         "header": "测量问卷",
@@ -691,7 +695,9 @@
         "app-color": "更改应用颜色",
         "simuser": "用 AI 模拟用户如何使用应用（Beta）",
         "removeSimuser": "移除 AI 事件",
-        "vector": "矢量工具"
+        "vector": "矢量工具",
+        "componentPanel": "切换组件面板",
+        "layerTree": "切换图层树"
     },
     "testSettingsHeader": "测试设置",
     "testSettingsShowTaskInTest": "测试期间显示任务。",
@@ -738,5 +744,174 @@
         "error-signup": "注册失败，邮箱可能已被注册？",
         "error-tos": "请先同意服务条款",
         "reset-sent": "请查收邮件。"
+    },
+    "ui": {
+        "viewConfig": {
+            "zoomOut": "缩小 (-)",
+            "zoomIn": "放大 (+)",
+            "lines": "连线",
+            "comments": "评论",
+            "grayScale": "灰度",
+            "snapToGrid": "对齐网格",
+            "showGrid": "显示网格",
+            "configureGrid": "配置网格",
+            "layers": "图层",
+            "distance": "间距",
+            "ruler": "标尺"
+        },
+        "analytics": {
+            "showDropoff": "显示流失",
+            "zScore": "zScore"
+        },
+        "optionsList": {
+            "createValue": "创建新值"
+        },
+        "account": {
+            "title": "我的账户",
+            "lede": "在这里修改你的个人设置！",
+            "email": "邮箱",
+            "emailHint": "（双击编辑）",
+            "name": "姓名",
+            "lastname": "姓氏",
+            "homepage": "主页",
+            "password": "密码",
+            "newsletter": "订阅",
+            "newsletterLabel": "我想接收订阅邮件",
+            "placeholderEmail": "你的邮箱",
+            "placeholderName": "输入你的姓名",
+            "placeholderLastname": "输入你的姓氏",
+            "placeholderHomepage": "http://www.yourpage.com",
+            "placeholderPassword": "输入新密码以修改",
+            "save": "保存",
+            "cancel": "取消",
+            "keycloak": "你的凭据由 Keycloak 管理。请联系管理员获取帮助。",
+            "image": "头像",
+            "deleteHint": "如果你想删除账户，请点击",
+            "deleteHere": "这里",
+            "deleteSuffix": "。你的所有数据将被删除，包括你的原型。如果你想保留它们，请导出为 *.zip 文件。"
+        },
+        "resetPassword": {
+            "title": "重置密码",
+            "instructions": "忘记密码？请输入邮箱并点击「重置」。",
+            "placeholderEmail": "输入你的邮箱",
+            "reset": "重置",
+            "cancel": "取消",
+            "sent": "我们已向你发送了一封包含重置链接的邮件。请打开邮件并访问链接。",
+            "newPasswordInstructions": "请在此输入你的邮箱和新密码",
+            "email": "邮箱",
+            "password": "密码",
+            "passwordRepeat": "重复密码",
+            "send": "发送",
+            "success": "你的密码已重置。现在可以登录了。"
+        },
+        "prototype": {
+            "title": "创建新原型",
+            "name": "名称",
+            "placeholder": "输入应用名称",
+            "screenSize": "屏幕尺寸 *",
+            "screenSizeHint": "* 屏幕尺寸以点（points）为单位，而不是像素！",
+            "create": "创建",
+            "cancel": "取消"
+        },
+        "settings": {
+            "title": "原型名称",
+            "placeholder": "输入应用名称",
+            "team": "团队",
+            "sharing": "共享",
+            "reset": "重置",
+            "test": "测试",
+            "shareAndComment": "分享与评论",
+            "code": "代码生成",
+            "embedded": "嵌入",
+            "delete": "删除原型"
+        },
+        "test": {
+            "tableName": "名称",
+            "tableDescription": "描述",
+            "tableSteps": "步骤",
+            "tableAction": "操作",
+            "noSteps": "无步骤",
+            "addTask": "添加任务",
+            "tooltipEdit": "编辑",
+            "tooltipDuplicate": "复制",
+            "tooltipDelete": "删除",
+            "title": "测试",
+            "welcomePlaceholder": "在此输入给测试人员的欢迎语。",
+            "tasks": "任务",
+            "thinkAloud": "出声思维测试",
+            "screenRecordings": "屏幕录制"
+        },
+        "videoTab": {
+            "title": "屏幕录制",
+            "tooBig": "屏幕录制文件过大！",
+            "testPerformed": "测试于 {currentDate}",
+            "testName": "测试名称",
+            "testNamePlaceholder": "输入测试名称"
+        },
+        "taskCreate": {
+            "name": "名称",
+            "namePlaceholder": "名称",
+            "description": "描述",
+            "descriptionPlaceholder": "给用户看的说明",
+            "expectedSteps": "预期步骤",
+            "stepsHint": "在模拟器中点击添加步骤。不需要的步骤可以点击删除。",
+            "remove": "移除",
+            "strict": "严格匹配。不允许中间出现其他事件。",
+            "recordOnlyScreen": "仅记录屏幕浏览",
+            "selectNextScreen": "选择要显示的下一个屏幕"
+        },
+        "heat": {
+            "open": "打开分析画布",
+            "noData": "无数据",
+            "noDataHint": "你还没有进行任何测试，因此 Quant-UX 没有收集到数据。开始测试后，你将在这里看到热力图。"
+        },
+        "sessionList": {
+            "noTest": "还没有人测试过这个原型。",
+            "shareHint": "邀请真实用户测试你的原型，点击工具栏中的 \"分享\" 按钮。",
+            "simHintPart1": "点击工具栏中的 AI 图标（",
+            "simHintPart2": "）来用 AI 模拟测试。"
+        },
+        "share": {
+            "headline": "分享与评论",
+            "lowCodeToken": "低代码 Token",
+            "doNotStore": "不存储测试数据",
+            "requirePassword": "需要密码"
+        },
+        "team": {
+            "addMemberPlaceholder": "添加新成员"
+        },
+        "appList": {
+            "searchPlaceholder": "搜索"
+        },
+        "help": {
+            "searchPlaceholder": "搜索"
+        },
+        "ruler": {
+            "sticky": "粘性标尺",
+            "resize": "调整组件大小"
+        },
+        "callback": {
+            "click": "点击回调",
+            "change": "变更回调",
+            "load": "加载回调",
+            "render": "渲染回调"
+        },
+        "table": {
+            "name": "名称",
+            "dataBinding": "数据绑定",
+            "editable": "可编辑",
+            "background": "背景",
+            "showOnHover": "悬停显示",
+            "addAction": "添加操作",
+            "dataBindingPlaceholder": "数据绑定变量",
+            "addColumn": "添加列"
+        },
+        "styledTable": {
+            "border": "边框",
+            "header": "表头",
+            "oddRow": "奇数行",
+            "evenRow": "偶数行",
+            "hover": "悬停"
+        }
     }
 }

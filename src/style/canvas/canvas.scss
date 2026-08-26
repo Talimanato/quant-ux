@@ -1,5 +1,13 @@
 @import '../variables.scss';
 
+#CanvasNode {
+	--component-panel-width: 0px;
+}
+
+#CanvasNode.MatcComponentPanelOpen {
+	--component-panel-width: #{$component-panel-width};
+}
+
 .MatcCanvasPage{
 	width:100%;
 	height: 100%;
@@ -103,6 +111,17 @@
  	overflow: hidden;
  	background-color: #cecece;
  	transition: background 0.8s;
+ }
+
+ /**
+  * The offset is applied to the canvas root (not the frame) so that
+  * Render.getCanvasMousePosition() - which is relative to the root - stays
+  * in sync with the rendered content while the component panel is open.
+  */
+ #CanvasNode.MatcComponentPanelOpen .MatcCanvas {
+ 	margin-left: var(--component-panel-width);
+ 	width: calc(100% - var(--component-panel-width));
+ 	transition: margin-left 0.2s, width 0.2s;
  }
 
 .MatcCanvasContainer{
@@ -280,6 +299,18 @@
 	z-index: 999999;
 }
 
+.MatcComponentDropTarget {
+	position: absolute;
+	box-sizing: border-box;
+	border: 1px dashed #365fff;
+	border: 1px dashed oklch(56% 0.24 264);
+	border-radius: 4px;
+	background: rgba(54, 95, 255, 0.08);
+	box-shadow: 0 0 0 1px rgba(54, 95, 255, 0.15), 0 4px 14px rgba(54, 95, 255, 0.15);
+	pointer-events: none;
+	z-index: 999998;
+}
+
 .MatcImportBox.MatcAddBox {
 	border:1px dashed #92c500;
 	background:rgba(146,197,0,0.4);
@@ -347,12 +378,15 @@
 
 .MatcCanvasModemove .MatcCanvasContainer,
 .MatcCanvasModemove .MatcBox {
-	cursor: pointer;
+	cursor: grab;
 }
 
 
 .MatcCanvasModemove .VommondDnDMove .MatcCanvasContainer,
-.MatcCanvasModemove .VommondDnDMove .MatcBox,
+.MatcCanvasModemove .VommondDnDMove .MatcBox {
+	cursor: grabbing;
+}
+
 .MatcCanvasResizeCursorAll,
 .MatcCanvasResizeCursorAll .MatcBox {
 	cursor: move;
@@ -620,8 +654,8 @@
 	bottom:0px;
 }
 
-.MatcCanvasScrollBarBottom.MatcCanvasScrollBarBottomLayerList {
-	padding-left:300px;
+#CanvasNode.MatcComponentPanelOpen .MatcCanvasScrollBarBottom{
+	padding-left: var(--component-panel-width);
 }
 
 .MatcCanvasScrollBarBottomOpen.MatcCanvasScrollBarBottom{

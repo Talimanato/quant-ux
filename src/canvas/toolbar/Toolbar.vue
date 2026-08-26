@@ -2,19 +2,13 @@
 <template>
      <div class="MatcToolbar" @dblclick="onDoubleClick">
 
-		<div class="" data-dojo-attach-point="layerListCntr">
-		</div>
-
-
-
-
 		<div class="MatcToolbarTop">
-				<div class="MatcToolbarTopHome" :style="'width:'+ layerListWidth +'px'">
+				<div class="MatcToolbarTopHome">
 					<HomeMenu @select="onHomeMenu" :name="modelName" @change="onChangeModelName"/>
 				</div>
-			
 
-				<div class="MatcToolbarTopCntr" :style="'width:calc(100% - '+ layerListWidth +'px)'">
+
+				<div class="MatcToolbarTopCntr">
 
 			
 						<div v-show="svgEditorVisible" class="MatcToolbarSection MatcToolbarMaxSection">							
@@ -117,15 +111,24 @@
 							</div> -->
 
 						
-							<ViewConfig :value="canvasViewConfig" @change="onChangeCanvasViewConfig" v-if="hasViewConfigVtn"/>	
-							<HeatmapToggleButton :value="'Design'" @change="$emit('viewModeChange', $event)"/>		
-						
+							<ComponentPanelToggle
+								:active="componentPanelOpen"
+								@click="$emit('toggle-component-panel')" />
+
+							<LayerTreeToggle
+								:active="layerListOpen"
+								@click="$emit('toggle-layer-list')" />
+
+							<ViewConfig :value="canvasViewConfig" @change="onChangeCanvasViewConfig" v-if="hasViewConfigVtn"/>
+							<HeatmapToggleButton :value="'Design'" @change="$emit('viewModeChange', $event)"/>
+
 							<div class="MatcToolbarItem" @click="showSharing">
-								<div class="MatcToobarPrimaryButton">									
-									Share						
+								<div class="MatcToobarPrimaryButton">
+
+									Share
 								</div>
-							</div> 
-							
+							</div>
+
 						</div>
 
 				</div>
@@ -175,6 +178,8 @@ import HomeMenu from './components/HomeMenu'
 import LayerButton from './components/LayerButton.vue'
 import TemplateButton from './components/TemplateButton.vue'
 import HeatmapToggleButton from './components/HeatmapToggleButton.vue'
+import ComponentPanelToggle from './components/ComponentPanelToggle.vue'
+import LayerTreeToggle from './components/LayerTreeToggle.vue'
 
 import QIcon from 'page/QIcon'
 
@@ -182,7 +187,7 @@ import QIcon from 'page/QIcon'
 export default {
   name: 'Toolbar',
 	mixins:[Util, _Render, _Dialogs, _Tools,_Show, DojoWidget],
-	props:['pub'],
+	props:['pub', 'componentPanelOpen', 'layerListOpen'],
     data: function () {
         return {
 			modelName: "Loading...",
@@ -220,6 +225,8 @@ export default {
 		'LayerButton': LayerButton,
 		'TemplateButton': TemplateButton,
 		'HeatmapToggleButton': HeatmapToggleButton,
+		'ComponentPanelToggle': ComponentPanelToggle,
+		'LayerTreeToggle': LayerTreeToggle,
 		'QIcon': QIcon
 	},
 	computed: {
@@ -323,9 +330,8 @@ export default {
 			this.subMode = subMode
 		},
 
-		setLayerList (layerlist){
+		setLayerList (){
 			this.logger.log(1,"setLayerList", "entry ");
-			layerlist.placeAt(this.layerListCntr)
 		},
 
 		setUser (user){
@@ -395,12 +401,10 @@ export default {
 
 		onFadeOut (){
 			this.logger.log(-1,"onFadeOut", "entry ");
-			css.add(this.layerListCntr, "MatcLayerListFadeOut");
 		},
 
 		onFadeIn (){
 			this.logger.log(-1,"onFadeIn", "entry ");
-			css.remove(this.layerListCntr, "MatcLayerListFadeOut");
 		},
 
 		/********************************************************

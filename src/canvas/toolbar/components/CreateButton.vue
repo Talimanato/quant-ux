@@ -13,7 +13,7 @@
 							</div>
 							<div class="col-md-2 MatcCreateBtnLeft">
 								<div class="form-group has-feedback">
-									<input type="search" class=" MatcCreateSearch MatcIgnoreOnKeyPress form-control" placeholder="Search" data-dojo-attach-point="searchBox"/>
+									<input type="search" class=" MatcCreateSearch MatcIgnoreOnKeyPress form-control" :placeholder="getNLS('ui.appList.searchPlaceholder')" data-dojo-attach-point="searchBox"/>
 									<span class="mdi mdi-magnify  form-control-feedback MatcCreateSearchBtn " aria-hidden="true" data-dojo-attach-point="searchRemoveBtn"></span>
 								</div>
 								<div class="MatcCreateCatCntr" data-dojo-attach-point="leftCntr"></div>

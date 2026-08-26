@@ -1,5 +1,5 @@
 <template>
-     <div class="MatcToolbarLayerList MatcToobarPropertiesSection MatcToolbar" v-show="isVisible" :style="'width:'+ layerListWidth +'px'">
+     <div class="MatcLayerListRoot" v-show="isVisible">
 		<div class="MatcToolbarLayerListCntr" data-dojo-attach-point="cntr">
 			<div class="MatcToolbarLayerListScreenCntr">
 				<div class="MatcLayerListScreens">

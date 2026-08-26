@@ -90,8 +90,11 @@ $color_picker_border: rgba(255,255,255, 0.25);
 $color_picker_border-hover: rgba(255,255,255, 0.35);
 
 $layerlist_width: 256px;
+$component-panel-width: 280px;
 $layerlist_background: red;
 $layerlist_selected: $toolbar_selected_background;
+$layer_floating_zindex: 91005;
+$component_panel_zindex: 91000;
 $layerlist_chevron_color: $gray_4;
 $layerlist_chevron_color_hover: $gray_2;
 

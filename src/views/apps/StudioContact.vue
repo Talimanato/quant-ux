@@ -45,7 +45,7 @@ import ZoomDialog from 'common/ZoomDialog'
 import topic from 'dojo/topic'
 
 export default {
-    name: "StudioNotification",
+    name: "StudioContact",
     props:['user'],
     mixins: [],
     data: function () {

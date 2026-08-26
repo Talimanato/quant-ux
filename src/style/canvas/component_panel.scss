@@ -1,0 +1,203 @@
+@import '../variables.scss';
+
+.MatcComponentPanel {
+    position: fixed;
+    top: $toolbar_height;
+    left: 0;
+    width: $component-panel-width;
+    height: calc(100vh - #{$toolbar_height});
+    z-index: $component_panel_zindex;
+    background: #25292f;
+    color: $white;
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), opacity 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.MatcComponentPanelClosed {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.MatcComponentPanelRail {
+    width: 64px;
+    flex: 0 0 64px;
+    border-right: 1px solid $toolbar_border;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    gap: 4px;
+    overflow-y: auto;
+}
+
+.MatcComponentPanelCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    cursor: pointer;
+    border-radius: $toolbar_form_radius;
+    margin: 0 4px;
+    transition: background-color 80ms, color 80ms;
+    color: $toolbar_color_passive;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: $white;
+    }
+
+    &.MatcComponentPanelCategorySelected {
+        background-color: rgba(255, 255, 255, 0.12);
+        color: $white;
+    }
+}
+
+.MatcComponentPanelCategoryIcon {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.MatcComponentPanelCategoryLabel {
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 0 2px;
+}
+
+.MatcComponentPanelBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.MatcComponentPanelSearch {
+    height: 36px;
+    margin: 12px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    background: $toolbar_form_background;
+    border: 1px solid $toolbar_border;
+    border-radius: $toolbar_form_radius;
+    padding: 0 8px;
+    gap: 6px;
+}
+
+.MatcComponentPanelSearchIcon {
+    color: $toolbar_color_passive;
+    font-size: 16px;
+}
+
+.MatcComponentPanelSearchInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: $white;
+    outline: none;
+    font-size: 12px;
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    &::placeholder {
+        color: $toolbar_color_passive;
+    }
+}
+
+.MatcComponentPanelSearchClear {
+    background: none;
+    border: none;
+    color: $toolbar_color_passive;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    transition: color 80ms;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.MatcComponentPanelList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.MatcComponentPanelEmpty {
+    padding: 24px 12px;
+    text-align: center;
+    color: $toolbar_color_passive;
+    font-size: 12px;
+}
+
+.MatcComponentPanelItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 8px;
+    border-radius: $toolbar_form_radius;
+    cursor: pointer;
+    transition: background-color 80ms, color 80ms, border-color 80ms;
+    color: $white;
+    font-size: 13px;
+    border: 1px solid transparent;
+    user-select: none;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: $white;
+    }
+
+    &.MatcComponentPanelItemSelected {
+        background-color: rgba(255, 255, 255, 0.12);
+        border-color: $toolbar_border;
+    }
+
+    &.MatcComponentPanelItemDragging {
+        opacity: 0.4;
+    }
+
+    &[draggable="true"] {
+        cursor: grab;
+    }
+
+    &:active[draggable="true"] {
+        cursor: grabbing;
+    }
+}
+
+.MatcComponentPanelItemIcon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    color: $toolbar_color_passive;
+    transition: color 80ms;
+}
+
+.MatcComponentPanelItem:hover .MatcComponentPanelItemIcon {
+    color: $white;
+}
+
+.MatcComponentPanelItemLabel {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

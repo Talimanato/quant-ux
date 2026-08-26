@@ -23,8 +23,8 @@
                             <th style="width:120px;">ID</th>
                             <th style="width:120px;">Label</th>
                             <th style="width:50px;">Color</th>
-                            <th style="width:50px;">Background</th>
-                            <th style="width:50px;">Show on Hover</th>
+                            <th style="width:50px;">{{ getNLS('ui.table.background') }}</th>
+                            <th style="width:50px;">{{ getNLS('ui.table.showOnHover') }}</th>
                             <th style="width:50px"></th>
                         </tr>
                     </thead>
@@ -65,7 +65,7 @@
 
                         <tr class="MatcFormRow">
                             <td>
-                                <span class="MatcButton MatcButtonXS" @click="addAction">Add Action</span>
+                                <span class="MatcButton MatcButtonXS" @click="addAction">{{ getNLS('ui.table.addAction') }}</span>
                             </td>
                             <td></td>
                             <td></td>
@@ -84,9 +84,9 @@
                 <table class="MatcToolbarTableSettingsTable">
                     <thead>
                         <tr class="MatcFormRow">
-                            <th style="width:160px;">Name</th>
-                            <th style="width:160px;">Data Binding</th>
-                            <th style="width:100px;">Editable</th>
+                            <th style="width:160px;">{{ getNLS('ui.table.name') }}</th>
+                            <th style="width:160px;">{{ getNLS('ui.table.dataBinding') }}</th>
+                            <th style="width:100px;">{{ getNLS('ui.table.editable') }}</th>
                             <th style="width:60px;">Color</th>
                             <th style="width:60px;">Background</th>
                             <th style="width:60px;">Width</th>
@@ -109,7 +109,7 @@
                                 </div>
                             </td>
                             <td>
-                                <input class="form-control" placeholder="Databinding Variable"
+                                <input class="form-control" :placeholder="getNLS('ui.table.dataBindingPlaceholder')"
                                     v-model="column.databinding" />
                             </td>
                             <td>
@@ -139,7 +139,7 @@
 
                         <tr>
                             <td>
-                                <span class="MatcButton MatcButtonXS" @click="addColumn">Add Column</span>
+                                <span class="MatcButton MatcButtonXS" @click="addColumn">{{ getNLS('ui.table.addColumn') }}</span>
                             </td>
                             <td></td>
                             <td></td>

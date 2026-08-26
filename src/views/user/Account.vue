@@ -5,10 +5,10 @@
     <div class="MatcContent MatcMarginTopXXL ">
       <div class="MatcSection">
         <div class="container" v-if="user">
-          <h2>My Account</h2>
+          <h2>{{ getNLS('ui.account.title') }}</h2>
 
           <p class="MatcLead MatcMarginBottomXL">
-            Change your personal settings here!
+            {{ getNLS('ui.account.lede') }}
           </p>
           <div class="row">
 
@@ -17,41 +17,41 @@
 
                 <div class="form-group MatcHoverHint" @dblclick="isEmailDisabled = false">
                   <label>
-                    Email <span class="MatcHint" v-if="isEmailDisabled">(double click to edit)</span>
+                    {{ getNLS('ui.account.email') }} <span class="MatcHint" v-if="isEmailDisabled">{{ getNLS('ui.account.emailHint') }}</span>
                   </label>
 
                   <input type="email" class="form-control" ref="emailField" :disabled="isEmailDisabled"
-                    v-model="user.email" placeholder="Your email" />
+                    v-model="user.email" :placeholder="getNLS('ui.account.placeholderEmail')" />
                 </div>
 
                 <div class="form-group">
-                  <label>Name</label>
-                  <input type="email" class="form-control" v-model="user.name" placeholder="Enter your name"
+                  <label>{{ getNLS('ui.account.name') }}</label>
+                  <input type="email" class="form-control" v-model="user.name" :placeholder="getNLS('ui.account.placeholderName')"
                     data-binding-required="true">
                 </div>
 
                 <div class="form-group">
-                  <label>Lastname</label>
-                  <input type="email" class="form-control" v-model="user.lastname" placeholder="Enter your lastname"
+                  <label>{{ getNLS('ui.account.lastname') }}</label>
+                  <input type="email" class="form-control" v-model="user.lastname" :placeholder="getNLS('ui.account.placeholderLastname')"
                     data-binding-required="true">
                 </div>
 
                 <div class="form-group">
-                  <label>Homepage</label>
-                  <input type="text" class="form-control" v-model="user.homepage" placeholder="http://www.yourpage.com">
+                  <label>{{ getNLS('ui.account.homepage') }}</label>
+                  <input type="text" class="form-control" v-model="user.homepage" :placeholder="getNLS('ui.account.placeholderHomepage')">
                 </div>
 
                 <div class="form-group">
-                  <label>Password</label>
+                  <label>{{ getNLS('ui.account.password') }}</label>
                   <input type="password" class="form-control" v-model="password"
-                    placeholder="To change, enter new password">
+                    :placeholder="getNLS('ui.account.placeholderPassword')">
                 </div>
 
 
                 <div class="form-group">
-                  <label>Newsletter</label>
+                  <label>{{ getNLS('ui.account.newsletter') }}</label>
                   <div>
-                    <CheckBox v-model="user.newsletter" label="I want to receive the newsletter" />
+                    <CheckBox v-model="user.newsletter" :label="getNLS('ui.account.newsletterLabel')" />
                   </div>
                 </div>
 
@@ -60,18 +60,18 @@
                 </div>
 
                 <div class="MatcButtonBar">
-                  <a class="MatcButton" @click="save">Save</a>
-                  <a class="MatcLinkButton" href="#/apps/my-apps.html">Cancel</a>
+                  <a class="MatcButton" @click="save">{{ getNLS('ui.account.save') }}</a>
+                  <a class="MatcLinkButton" href="#/apps/my-apps.html">{{ getNLS('ui.account.cancel') }}</a>
                 </div>
               </div>
             </div>
             <div class="col-md-8" v-else>
               <p class="MatcLead MatcMarginBottomXL">
-                Your credentials are managed in Keycloak. Contact your admin for help.
+                {{ getNLS('ui.account.keycloak') }}
               </p>
             </div>
             <div class="col-md-2 col-md-offset-1 visible-md-block visible-lg-block">
-              <label>Image</label>
+              <label>{{ getNLS('ui.account.image') }}</label>
               <UserImage :user="user" @change="onImageChanged"/>
             </div>
    
@@ -81,8 +81,7 @@
          
               <p class="MatcDangerBox">
              
-                If you want to delete your account, click <a @click="retire">here</a>. All your data will
-                be removed, including your prototypes. If you want to save them, export them as *.zip files.
+                {{ getNLS('ui.account.deleteHint') }} <a @click="retire">{{ getNLS('ui.account.deleteHere') }}</a>{{ getNLS('ui.account.deleteSuffix') }}
               </p>
             </div>
 

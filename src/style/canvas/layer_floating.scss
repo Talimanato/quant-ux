@@ -1,0 +1,116 @@
+@import '../variables.scss';
+
+.MatcLayerListFloating {
+    position: fixed;
+    z-index: $layer_floating_zindex;
+    background: $toolbar_background;
+    color: $white;
+    border: 1px solid $toolbar_border;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1), transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.MatcLayerListFloatingHeader {
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 0 12px;
+    border-bottom: 1px solid $toolbar_border;
+    cursor: grab;
+    user-select: none;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.MatcLayerListFloatingDragHandle {
+    color: $toolbar_color_passive;
+    font-size: 18px;
+    margin-right: 8px;
+    cursor: grab;
+}
+
+.MatcLayerListFloatingTitle {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 500;
+    color: $white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.MatcLayerListFloatingActions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.MatcLayerListFloatingAction {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: $toolbar_form_radius;
+    color: $toolbar_color_passive;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 80ms, color 80ms, border-color 80ms;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: $white;
+        border-color: $toolbar_border;
+    }
+}
+
+.MatcLayerListFloatingContent {
+    flex: 1;
+    overflow: auto;
+    min-height: 0;
+
+    .MatcLayerListRoot {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        top: auto;
+        left: auto;
+    }
+
+    .MatcToolbarLayerListDND {
+        display: none;
+    }
+
+    .MatcToolbarLayerListCntr {
+        padding: 0;
+    }
+}
+
+.MatcLayerListFloatingResize {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    cursor: se-resize;
+    background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.2) 50%);
+    border-radius: 0 0 4px 0;
+
+    &:hover {
+        background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.35) 50%);
+    }
+}

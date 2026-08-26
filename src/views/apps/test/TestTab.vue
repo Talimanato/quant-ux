@@ -3,7 +3,7 @@
     <section class="" v-if="false">
    
         <div class="box is-shadowless">
-          <h3 class="title">Tests
+          <h3 class="title">{{ getNLS('ui.test.title') }}
             <HelpButton
               topic="testing"
               subtopic="testing.howmany"
@@ -33,7 +33,7 @@
                     v-model="localTest.description"
                     data-gramm_editor="false"
                     @change="onTestChange"
-                    placeholder="Enter here a welcome message for your testers."
+                    :placeholder="getNLS('ui.test.welcomePlaceholder')"
                   />
               
                   <div class="MatcLayoutCol3" >
@@ -62,7 +62,7 @@
     <section data-dojo-attach-point="sectionTask">
 
         <div class="box is-shadowless">
-          <h3 data-nls="testSettingsTasks" class="title">Tasks
+          <h3 data-nls="testSettingsTasks" class="title">{{ getNLS('ui.test.tasks') }}
             <HelpButton
               topic="testing"
               subtopic="testing.tasks"
@@ -91,7 +91,7 @@
     <section class="">
  
         <div class="box is-shadowless">
-          <h3 class="title">Screen Recordings</h3>
+          <h3 class="title">{{ getNLS('ui.test.screenRecordings') }}</h3>
           <div ref="sessionCntr" class="MatcDashTable"></div>
         </div>
 

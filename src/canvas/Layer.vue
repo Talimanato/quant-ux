@@ -1,5 +1,4 @@
 <script>
-import css from 'dojo/css'
 import LayerList from 'canvas/toolbar/LayerList'
 
 export default {
@@ -7,6 +6,7 @@ export default {
 	data: function () {
         return {
 			layerListWidth: 256,
+			floatingLayerList: null
         }
     },
     methods: {
@@ -19,7 +19,6 @@ export default {
 			try{
 				if (this.getSettings().layerListVisible){
 					this.buildLayerList()
-					this.setLayerListScrollBar(true)
 				}
 			} catch (e){
 				this.logger.error('initLayer', 'Could not build layer list', e)
@@ -30,36 +29,23 @@ export default {
 			this.layerListWidth = w
 			if (this.toolbar) {
 				this.toolbar.setLayerListWidth(w)
-			} else {
-				console.debug('No toolbar')
 			}
+		},
+
+		setFloatingLayerListContainer (container){
+			this.floatingLayerList = container
 		},
 
 		setLayerVisibility (v){
 			this.logger.log(-1,"setLayerVisibility", "enter", v);
-			if (this.layerList){
-				// this does not work.. should be done later with v-if
-				// this.layerList.$destroy();
-				//delete this.layerList
-			}
 			delete this.selectionListener;
-			css.remove("CanvasNode", "MatcLayerListVisible");
 			if (v){
 				this.buildLayerList();
 			}
-
-			this.setLayerListScrollBar(v)
-
-			this.setSettings({layerListVisible: v})
-		},
-
-		setLayerListScrollBar(v) {
-		
-			if (v) {
-				css.add(this.scrollBottom, "MatcCanvasScrollBarBottomLayerList");
-			} else {
-				css.add(this.scrollBottom, "MatcCanvasScrollBarBottomLayerList");
+			if (this.floatingLayerList){
+				this.floatingLayerList.setVisible(v)
 			}
+			this.setSettings({layerListVisible: v})
 		},
 
 		buildLayerList (){
@@ -67,7 +53,6 @@ export default {
 				this.layerList = this.$new(LayerList, {layerListWidth: this.layerListWidth});
 				if (this.toolbar && this.controller){
 					this.layerList.setToolbar(this.toolbar);
-					this.toolbar.setLayerList(this.layerList)
 					this.layerList.setController(this.controller);
 					this.layerList.setCanvas(this);
 					this.layerList.on("onWidthChange", width => this.onChangeLayerListWidth(width))
@@ -75,12 +60,14 @@ export default {
 					this.logger.log(-1,"buildLayerList", "no toolbar", this); // expect in init
 				}
 			}
+			if (this.floatingLayerList){
+				this.floatingLayerList.setLayerList(this.layerList)
+			}
 			this.selectionListener = this.layerList;
-			css.add("CanvasNode", "MatcLayerListVisible");
 		},
 
 		onChangeLayerListWidth(width) {
-			this.logger.log(2,"onChangeLayerListWidth", "enter", width); // expect in init
+			this.logger.log(2,"onChangeLayerListWidth", "enter", width);
 			localStorage.setItem('quxLayerListWidth', this.layerListWidth)
 			this.setLayerListWidth(width)	
 		},

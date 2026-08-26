@@ -1045,6 +1045,14 @@ export default {
 			return pos;
 		},
 
+		/**
+		 * The canvas root offset changes when the component panel is
+		 * toggled, so domPos has to be recomputed.
+		 */
+		updateDomPos (){
+			this.domPos = domGeom.position(this.domNode);
+		},
+
 		getRelCanvasMousePosition (e){
 			const pos = this.getCanvasMousePosition(e);
 			pos.x = pos.x / this.getZoomed(this.canvasPos.w, this.zoom);

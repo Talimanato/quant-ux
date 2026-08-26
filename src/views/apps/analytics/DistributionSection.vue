@@ -13,7 +13,7 @@
         </div>
         <div class="level-right level-options">
 
-          <CheckBox @change="onChangeNorm" :value="false" label="zScore" v-if="hasConfig"/>
+          <CheckBox @change="onChangeNorm" :value="false" :label="$t('ui.analytics.zScore')" v-if="hasConfig"/>
 
           <DropDownButton @change="onChangeAlgo" :value="clusterAlgo" :options="clusterAlgoOptions" v-if="hasConfig"/>
 

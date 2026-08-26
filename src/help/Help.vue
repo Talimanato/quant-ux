@@ -77,7 +77,7 @@ x
             <div class="">
                 <div class="MatcHelpTopics" v-if="hasSideBar">
                 <div v-if="hasSearch">
-                    <input type="search" class=" MatcCreateSearch MatcIgnoreOnKeyPress form-control" placeholder="Search" v-model="search"/>
+                    <input type="search" class=" MatcCreateSearch MatcIgnoreOnKeyPress form-control" :placeholder="getNLS('ui.help.searchPlaceholder')" v-model="search"/>
                 </div>
                 <span v-if="loading" class="MatchHint">
                     Loading...

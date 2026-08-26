@@ -13,7 +13,7 @@
 
         <div class="MatcListSearchCntr" data-dojo-attach-point="searchCntr" v-if="hasSearch">
           <div class="MatcSearchForm">
-            <input id="MatcAppListSearchField" placeholder="Search" data-dojo-attach-point="searchInput" />
+            <input id="MatcAppListSearchField" :placeholder="getNLS('ui.appList.searchPlaceholder')" data-dojo-attach-point="searchInput" />
             <QIcon icon="Search" class="MatcCreateSearchBtn" @click="showSearch" />
           </div>
 

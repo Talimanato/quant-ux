@@ -28,17 +28,15 @@
       </div>
 
       <div v-if="sortedSession.length == 0" class="MatcToolbarHelpSection MatcToolbarLabel">
-        No one has tested this prototype yet. 
+        {{ getNLS('ui.sessionList.noTest') }} 
         
         <ol>
         <li>
-          Test your prototype with real users, by clicking the 
-          "Share" button in the toolbar.
+          {{ getNLS('ui.sessionList.shareHint') }}
         </li>
 
         <li>
-          Click on the AI icon (<QIcon icon="AI" class="MatcQIconInline"/>) in
-          the toolbar to simulate tests with AI.
+          {{ getNLS('ui.sessionList.simHintPart1') }}<QIcon icon="AI" class="MatcQIconInline"/>{{ getNLS('ui.sessionList.simHintPart2') }}
         </li>
         </ol>
       </div>

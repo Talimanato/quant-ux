@@ -8,7 +8,6 @@ import ImageService from './ImageService'
 import WebSocketService from './WebSocketService'
 import KeyCloakService from './KeyCloakService'
 import CommandService from './CommandService'
-import NotificationService from './NotificationService'
 import AIService from './AIService'
 import AISimService from './AISimService'
 import UploadService from './UploadService'
@@ -68,12 +67,6 @@ class Services {
     getUploadService() {
         UploadService.setToken(this.getUserService().getToken())
         return UploadService
-    }
-
-    getNotificationService() {
-        NotificationService.setToken(this.getUserService().getToken())
-        NotificationService.setUser(this.getUserService().getUser())
-        return NotificationService
     }
 
     getWebSocketService (modelId, token, user) {

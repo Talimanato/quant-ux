@@ -53,10 +53,9 @@
 
                             {{$t('app.loading')}}
                         </div>
-                    </div>
-
-                    <div class="MatcStudioNavRow">
-                        <StudioNotification :user="user"/>
+                        <div v-else-if="filteredAppList.length === 0" class="MatcStudioAppListEmpty MatcCollapseViewMinHidden">
+                            {{$t('app.recent-projects-empty')}}
+                        </div>
                     </div>
 
                     <div class="MatcStudioNavRow">
@@ -150,7 +149,6 @@ import StudioOverview from './StudioOverview'
 import CreateAppDialog from "page/CreateAppDialog";
 import QIcon from "page/QIcon";
 import AppListDialog from './AppListDialog'
-import StudioNotification from './StudioNotification'
 import StudioContact from './StudioContact'
 import LanguagePicker from 'page/LanguagePicker'
 
@@ -171,7 +169,6 @@ export default {
         'CreateAppDialog': CreateAppDialog,
         'QIcon': QIcon,
         'AppListDialog': AppListDialog,
-        'StudioNotification': StudioNotification,
         'StudioContact': StudioContact,
         'LanguagePicker': LanguagePicker
     },

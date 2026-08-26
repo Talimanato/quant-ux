@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div data-dojo-attach-point="toolbar" class="MatcToolbarTableToolbar MatcToobarPropertiesSection" v-if="widget">
-					<PropertySection title="Border">
+					<PropertySection :title="getNLS('ui.styledTable.border')">
 							
 							<ToolbarSelector :options="borderStyles" selected="None"/>
 
@@ -24,7 +24,7 @@
 
 					</PropertySection>
 
-					<PropertySection title="Header">
+					<PropertySection :title="getNLS('ui.styledTable.header')">
 							<ToolbarColor
 								:isDialog="true"
 								:app="model"
@@ -41,7 +41,7 @@
 
 					</PropertySection>
 
-					<PropertySection title="Odd Row">
+					<PropertySection :title="getNLS('ui.styledTable.oddRow')">
 					
 
 							<ToolbarColor
@@ -60,7 +60,7 @@
 
 					</PropertySection>
 
-					<PropertySection title="Eeven Row">
+					<PropertySection :title="getNLS('ui.styledTable.evenRow')">
 					
 							<ToolbarColor
 								:isDialog="true"
@@ -78,7 +78,7 @@
 
 					</PropertySection>
 
-					<PropertySection title="Hover">
+					<PropertySection :title="getNLS('ui.styledTable.hover')">
 					
 							<ToolbarColor
 								:isDialog="true"

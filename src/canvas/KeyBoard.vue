@@ -155,18 +155,12 @@ export default {
           if(!this._inlineEditStarted ){
             this.stopEvent(e);
             if(this.getMode() != "move"){
-              this.showHint("Move the mouse to move canvas...");
-              this.onDragStart(this.container, "container", "onCanvasDnDStart", "onCanvasDnDMove", "onCanvasDnDEnd", null, this._lastMouseMoveEvent, true);
-              /**
-               * If we are adding a line, we do not want to change mode ( and trigger redraw).
-               * Instead we block the Add._updateAddLineMove() method by setting the pause flag.
-               */
-              if (this.getMode() != "addLine") {
-                this.setMode("move");
-                this.setDnDMinTime(0);
-              } else {
+              this.showHint("Click and drag to move canvas...");
+              this._spaceMovePreviousMode = this.getMode();
+              if (this._spaceMovePreviousMode === "addLine") {
                 this._addLineIsPaused = true;
               }
+              this.setMode("move");
             }
           }
         /**
@@ -450,13 +444,12 @@ export default {
           this.setMode("edit");
         } else if (k==32){ // space
           this.onDragEnd(this._lastMouseMoveEvent);
-          /**
-           * Enable line Add._updateAddLineMove again.
-           * Set mode to edit, if we are not adding a line
-           */
           this._addLineIsPaused = false;
-          if (this.getMode() != "addLine") {
-            this.setMode("edit");
+          if (this._spaceMovePreviousMode) {
+            if (this._spaceMovePreviousMode !== "move") {
+              this.setMode(this._spaceMovePreviousMode);
+            }
+            delete this._spaceMovePreviousMode;
           }
           this.stopEvent(e);
         } else if (k==84){ // t

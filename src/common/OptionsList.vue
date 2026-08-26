@@ -34,7 +34,7 @@
                         </td>                 
                        
                         <td >
-							<input class="form-control" placeholder="Create a new value" v-model="newValue" @change="onNewOption()"/>
+							<input class="form-control" :placeholder="getNLS('ui.optionsList.createValue')" v-model="newValue" @change="onNewOption()"/>
                         </td>
                        
 						<td class="MatcFormRowRemove">                   

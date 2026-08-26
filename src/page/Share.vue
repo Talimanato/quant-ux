@@ -3,7 +3,7 @@
   <div class="MatcShareDialog" @keydown.stop @keyup.stop @keypress.stop>
     <LanguagePicker @change="setLanguage"  :hasLabel="true"/>
     <div class="form-group MatcShareRow">
-      <label>Test</label>
+      <label>{{ getNLS('ui.settings.test') }}</label>
       <input type="text" class="form-control" :value="testLink" @focus="select" />
       <a class="MatcShareIcon" :href="testLink" target="_QuantUXTest">
         <QIcon icon="Share"/>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="form-group MatcShareRow">
-      <label>Share and Comment</label>
+      <label>{{ getNLS('ui.share.headline') }}</label>
       <input type="text" class="form-control" :value="shareLink" @focus="select" />
       <a class="MatcShareIcon" :href="shareLink" target="_QuantUXShare">
         <QIcon icon="Share"/>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="form-group  MatcShareRow">
-      <label>Low-Code Token</label>
+      <label>{{ getNLS('ui.share.lowCodeToken') }}</label>
       <input type="text" class="form-control" :value="`${hash}`" @focus="select" ref="hashInput" />
       <a class="MatcShareIcon" @click="copy" target="_QuantUXShare">
         <QIcon icon="Copy"/>
@@ -27,11 +27,11 @@
     </div>
 
     <div class="MatcMarginTopL MatcShareRow form-group">
-      <CheckBox v-model="doNotStore" label="Do not store test data" />
+      <CheckBox v-model="doNotStore" :label="getNLS('ui.share.doNotStore')" />
     </div>
 
     <div class="MatcMarginTop MatcShareRow MatcSharePasswordRow" v-if="hasPassword">
-      <CheckBox v-model="needPassword" label="Require Password" />
+      <CheckBox v-model="needPassword" :label="getNLS('ui.share.requirePassword')" />
       <input
         type="text"
         class="form-control password-control"

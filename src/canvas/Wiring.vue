@@ -148,6 +148,7 @@ export default {
 				 */
 				if (this.mode == "move"){
 					this.onDragStart(this.container, "container", "onCanvasDnDStart", "onCanvasDnDMove", "onCanvasDnDEnd", null, e);
+					return;
 				}
 
 				if(this.mode == "select") {

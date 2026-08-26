@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="MatcDashTaskPerfDropCntr" data-dojo-attach-point="dropoffCntr">
-						<CheckBox label="Show Dropoff" @change="onChangeFunnelDropOff"/>
+						<CheckBox :label="getNLS('ui.analytics.showDropoff')" @change="onChangeFunnelDropOff"/>
 					</div>
 
 					

@@ -8,14 +8,14 @@
             <a
               class="MatcButton level-item"
               :href="`#/${urlPrefix}/${app.id}/analyze/workspace.html`"
-            >Open Analytic Canvas</a>
+            >{{ getNLS('ui.heat.open') }}</a>
           </div>
         </div>
 
         <HeatList :app="app" :pub="isPublic" :events="events" v-if="events && events.length > 0" />
 
         <div v-if="loading" class="MatcHint">
-            Loading...
+            {{ getNLS('common.loading') }}
         </div>
        
       </div>
@@ -26,10 +26,9 @@
     <section class="section" v-if="!loading && events.length === 0">
       <div class="container">
         <div class="box is-shadowless MatcCardWarning MatcCard">
-          <h3 class="title">No data</h3>
+          <h3 class="title">{{ getNLS('ui.heat.noData') }}</h3>
           <p>
-            You have not performed any test yet, therefore Quant-UX could not collect any data. Once you start testing,
-            you will see here the heat maps.
+            {{ getNLS('ui.heat.noDataHint') }}
           </p>
         </div>
       </div>

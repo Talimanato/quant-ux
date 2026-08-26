@@ -20,11 +20,11 @@
                 <div class="MatcToolbarViewConfigCntrSpace">
                     <div class="MatcToolbarViewConfigCntrRow MatcToolbarViewConfigBtn" @mouseup.stop="" @click.stop=""
                         @mousedown.stop="onZoomMinus">
-                        Zoom out (-)
+                        {{ $t('ui.viewConfig.zoomOut') }}
                     </div>
                     <div class="MatcToolbarViewConfigCntrRow MatcToolbarViewConfigBtn" @mousedown.stop="onZoomPlus"
                         @mouseup.stop="" @click.stop="">
-                        Zoom in (+)
+                        {{ $t('ui.viewConfig.zoomIn') }}
                     </div>
                     <div class="MatcToolbarViewConfigCntrRow MatcToolbarViewConfigBtn" @mousedown.stop="onZoom(3)"
                         @mouseup.stop="" @click.stop="">
@@ -44,47 +44,47 @@
                 <div v-if="analytic == true">
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Lines" :value="hasLines" @change="onChangeLines" />
+                        <CheckBox :label="$t('ui.viewConfig.lines')" :value="hasLines" @change="onChangeLines" />
                     </div>
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Comments" :value="hasComments" @change="onChangeComments" />
+                        <CheckBox :label="$t('ui.viewConfig.comments')" :value="hasComments" @change="onChangeComments" />
                     </div>
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Gray Scale" :value="hasBW" @change="onChangeBW" />
+                        <CheckBox :label="$t('ui.viewConfig.grayScale')" :value="hasBW" @change="onChangeBW" />
                     </div>
 
                 </div>
                 <div v-else>
                     <div @mousedown="showGrid" class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Snapp to Grid" :value="hasGrid" @change="onChangeGrid" />
+                        <CheckBox :label="$t('ui.viewConfig.snapToGrid')" :value="hasGrid" @change="onChangeGrid" />
                     </div>
 
                     <div @mousedown="showGrid" class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Show Grid" :value="hasVisibleGrid" @change="onChangeVisibleGrid" />
+                        <CheckBox :label="$t('ui.viewConfig.showGrid')" :value="hasVisibleGrid" @change="onChangeVisibleGrid" />
                     </div>
 
                     <div @mousedown="showGrid"
                         class="MatcToolbarViewConfigCntrSpace MatcToolbarViewConfigCntrRow MatcToolbarViewConfigBtn">
                         <QIcon icon="Settings" />
-                        <span class="MatcStatusItemLabel">Configure Grid</span>
+                        <span class="MatcStatusItemLabel">{{ $t('ui.viewConfig.configureGrid') }}</span>
                     </div>
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Layers" :value="hasLayers" @change="onChangeLayer" />
+                        <CheckBox :label="$t('ui.viewConfig.layers')" :value="hasLayers" @change="onChangeLayer" />
                     </div>
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Distance" :value="hasDistance" @change="onChangeDistance" />
+                        <CheckBox :label="$t('ui.viewConfig.distance')" :value="hasDistance" @change="onChangeDistance" />
                     </div>
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Ruler" :value="hasRuler" @change="onChangeRuler" />
+                        <CheckBox :label="$t('ui.viewConfig.ruler')" :value="hasRuler" @change="onChangeRuler" />
                     </div>
 
                     <div class="MatcToolbarViewConfigCntrRow">
-                        <CheckBox label="Comments" :value="hasComments" @change="onChangeComments" />
+                        <CheckBox :label="$t('ui.viewConfig.comments')" :value="hasComments" @change="onChangeComments" />
                     </div>
                 </div>
             </div> <!-- end MatcToolbarPopUpWrapper-->

@@ -1,14 +1,33 @@
 <template>
-  <div class="MatcCanvasPage" id="CanvasNode" @wheel="onMouseWheel">
+  <div
+    class="MatcCanvasPage"
+    id="CanvasNode"
+    @wheel="onMouseWheel"
+    :class="{'MatcComponentPanelOpen': showComponentPanel && selectedViewMode === 'Design'}">
     <template v-if="selectedViewMode === 'Design'">
-        <DesignToolbar ref="toolbar" :pub="pub"  @viewModeChange="onVieModeChange" />
+        <DesignToolbar
+          ref="toolbar"
+          :pub="pub"
+          :componentPanelOpen="showComponentPanel"
+          :layerListOpen="layerListOpen"
+          @viewModeChange="onVieModeChange"
+          @toggle-component-panel="onToggleComponentPanel"
+          @toggle-layer-list="onToggleLayerList" />
+        <ComponentPanel
+          ref="componentPanel"
+          :model="designModel"
+          :open="showComponentPanel"
+          @dragstart="onComponentDragStart"
+          @dragend="onComponentDragEnd"
+          @select="onComponentSelect" />
         <DesignCanvas ref="canvas" @viewport="onViewPortChange" :viewport="viewport" />
+        <LayerListFloating ref="layerListFloating" @close="onLayerListClose" />
     </template>
     <template v-if="selectedViewMode === 'Heatmap'">
         <AnalyticToolbar ref="toolbar" @viewModeChange="onVieModeChange" />
         <AnalyticCanvas ref="canvas" @viewport="onViewPortChange" :viewport="viewport"/>
     </template>
- 
+
   </div>
 </template>
 
@@ -27,6 +46,8 @@ import css from "dojo/css";
 import win from "dojo/win";
 import Toolbar from "canvas/toolbar/Toolbar";
 import Canvas from "canvas/Canvas";
+import ComponentPanel from "canvas/toolbar/components/ComponentPanel";
+import LayerListFloating from "canvas/toolbar/components/LayerListFloating";
 import Controller from "canvas/controller/Controller";
 import ModelFactory from "core/ModelFactory";
 import RenderFactory from "core/RenderFactory";
@@ -46,12 +67,17 @@ export default {
   data: function() {
     return {
       selectedViewMode: '',
-      viewport: null
+      viewport: null,
+      showComponentPanel: true,
+      layerListOpen: false,
+      designModel: null
     };
   },
   components: {
     'DesignToolbar': Toolbar,
     'DesignCanvas': Canvas,
+    'ComponentPanel': ComponentPanel,
+    'LayerListFloating': LayerListFloating,
     'AnalyticToolbar': AnalyticToolbar,
     'AnalyticCanvas': AnalyticCanvas
   },
@@ -83,6 +109,53 @@ export default {
         e.preventDefault();
       }
     },
+
+    onToggleComponentPanel () {
+      this.showComponentPanel = !this.showComponentPanel
+      /**
+       * The canvas root is shifted by the panel. Recompute the mouse
+       * position base now and again after the CSS transition ended.
+       */
+      const canvas = this.$refs.canvas
+      if (canvas && canvas.updateDomPos) {
+        this.$nextTick(() => canvas.updateDomPos())
+        setTimeout(() => canvas.updateDomPos(), 300)
+      }
+    },
+
+    onComponentDragStart (item) {
+      if (this.$refs.canvas && this.$refs.canvas.setComponentDragItem) {
+        this.$refs.canvas.setComponentDragItem(item)
+      }
+    },
+
+    onComponentDragEnd () {
+      if (this.$refs.canvas && this.$refs.canvas.setComponentDragItem) {
+        this.$refs.canvas.setComponentDragItem(null)
+      }
+    },
+
+    onComponentSelect (item) {
+      if (this.$refs.canvas && this.$refs.canvas.addComponentAt) {
+        this.$refs.canvas.addComponentAt(item)
+      }
+    },
+
+    onToggleLayerList () {
+      if (this.$refs.canvas && this.$refs.canvas.getSettings) {
+        const settings = this.$refs.canvas.getSettings()
+        this.$refs.canvas.setLayerVisibility(!settings.layerListVisible)
+        this.layerListOpen = !settings.layerListVisible
+      }
+    },
+
+    onLayerListClose () {
+      if (this.$refs.canvas && this.$refs.canvas.setLayerVisibility) {
+        this.$refs.canvas.setLayerVisibility(false)
+        this.layerListOpen = false
+      }
+    },
+
     load (mode) {
       if (mode === 'Design') {
         this.loadData(mode)
@@ -302,10 +375,14 @@ export default {
        */
       controller.setModel(model, this.$route.params.sid);
 
+      this.designModel = model;
+      canvas.setFloatingLayerListContainer(this.$refs.layerListFloating)
+
       /**
        * Init layer list
        */
       canvas.initLayer();
+      this.layerListOpen = canvas.getSettings().layerListVisible;
 
       if (!this.pub && this.user.role !== 'guest') {
         this.collabSession = new CollabSession(this.user)

@@ -4,7 +4,7 @@
 
         <div class="box is-shadowless">
 
-            <h3 class="title">Screen Recording</h3>
+            <h3 class="title">{{ getNLS('ui.videoTab.title') }}</h3>
        
 
        
@@ -23,8 +23,8 @@
             <div
               class="notification is-danger"
               v-if="hasToManyEvents"
-            >The Screen Recording is too big!</div>
-            <div class="MatcLoading" v-else>Loading...</div>
+            >{{ getNLS('ui.videoTab.tooBig') }}</div>
+            <div class="MatcLoading" v-else>{{ getNLS('common.loading') }}</div>
           </div>
           <div class=" MatcSessionDetails">
             <div>
@@ -40,7 +40,7 @@
             </div>
       
           
-            <p>Test Performed {{currentDate}}</p>      
+            <p>{{ $t('ui.videoTab.testPerformed', {currentDate: currentDate}) }}</p>      
             
           </div>
         </div>
