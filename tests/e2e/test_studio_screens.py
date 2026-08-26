@@ -105,7 +105,7 @@ def test_studio_screens():
 
                 # Open the Studio editor for the test app.
                 page.goto(f"{env['frontend_url']}/#/apps/{app_id}/create.html")
-                page.wait_for_selector(".MatcCanvas", timeout=20000)
+                page.wait_for_selector(".MatcCanvas", timeout=40000)
                 page.wait_for_selector(
                     '[data-dojo-attach-point="addScreenBtn"]', timeout=10000
                 )

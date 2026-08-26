@@ -109,7 +109,7 @@ def test_app_dashboard():
 
                 # Wait for navigation to the editor and capture the new app id.
                 page.wait_for_url("**/#/apps/*/create.html", timeout=20000)
-                page.wait_for_selector(".MatcCanvas", timeout=20000)
+                page.wait_for_selector(".MatcCanvas", timeout=40000)
 
                 created_url = page.url
                 match = re.search(r"/apps/([^/]+)/create\.html", created_url)

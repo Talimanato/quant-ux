@@ -82,6 +82,10 @@ Vue 3 flushes `mounted()` hooks in a **microtask** after `app.mount()`, but the 
 - `DojoUtil.$new()` (and `RenderFactory.$new` / `SymbolService.$new`) therefore call the exported `initDojoWidget(instance)` helper, which runs `initDojoListeners/initLogger/initDomNodes/registry.add/startup/postCreate` synchronously. `DojoWidget.mounted()` skips the repeat via the `dojoInited` flag. Do not remove this.
 - `DojoUtil.$new()` also drops **object/array valued params that the component does not declare as props** (`filterRootProps`). Vue 2 ignored undeclared `propsData`; Vue 3 would render them as fall-through DOM attributes and throw `Cannot convert object to primitive value` (e.g. `BoxBorder2` `{colorWidgets: [...]}`). If a `$new` param must survive, declare it as a prop (see `BoxBorder2.colorWidgets`).
 
+## Never navigate from async lifecycle code without re-checking
+
+`Studio.vue` used to `router.push('/apps/<id>.html')` (default app auto-select) as soon as its async `load()` resolved. When the user navigated away in the meantime (E2E: dashboard → editor), vue-router resolved the queued push LAST and hijacked the editor navigation (`#/apps/<id>/create.html` ended up at `#/apps/<id>.html`). This was the root cause of the "sequential E2E editor timeouts" flakiness. Fixes (do not remove): `Studio.setDefaultApp()` defers the push one tick and re-checks the synchronous `location.hash`, and `Studio.mounted()` bails when the component unmounted during `await load()`.
+
 ## Never mutate props in watchers
 
 A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **throws** `'set' on proxy: trap returned falsish` in Vue 3 — and an uncaught throw inside a lifecycle/watcher flush can abort other components' mounted hooks (this is how the LayerList disappeared). All remaining offenders were removed (`LoginPage`, `Header`, `EditModeButton`, `HeatmapToggleButton`, `AnalyticViewModeButton`, `BulletGraph`, `Tree`, `TreeItem`, `AnimatedLabel`, `CommentsTab`, `AnalyticsHeader`, `HeatTab`). When porting, just delete the self-assignment — the prop is already updated when the watcher fires.
@@ -96,6 +100,7 @@ A watcher like `value (v) { this.value = v }` was a silent no-op in Vue 2 but **
 
 ## Backend feature notes
 
+- **Default account**: the server seeds an `admin` / `admin` user on startup when that email does not exist (`backend/src/seed.ts`). Disable with `QUX_SEED_ADMIN=false`, change credentials with `QUX_ADMIN_EMAIL` / `QUX_ADMIN_PASSWORD`.
 - **Password reset**: `POST /rest/user/password/request` and `/rest/user/password/set` (migration `002_password_reset.sql`). There is **no SMTP support** — the reset link is printed to the server log (`[password-reset] ... #/?id=<key>`); wire `QUX_MAIL_*` up if email delivery is needed.
 - **AI proxy**: `POST /ai/openai.json` (`backend/src/routes/ai.ts`) forwards `openAIPayload` to the OpenAI-style upstream. Configure via `QUX_AI_TOKEN` (server key, takes precedence) and `QUX_AI_ALLOWED_URLS` (comma separated base URLs; default `https://api.openai.com`). Returns 503 `ai.token.missing` when no key is configured.
 - **Client error log**: `POST /rest/log/error` acknowledges `Logger` reports (no-op sink).

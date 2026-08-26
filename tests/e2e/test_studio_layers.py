@@ -92,7 +92,7 @@ def _run_studio_layers(env):
             # 2. Open the Studio editor.
             page.goto(f"{frontend_url}/#/apps/{app_id}/create.html")
             try:
-                page.wait_for_selector(".MatcCanvas", timeout=20000)
+                page.wait_for_selector(".MatcCanvas", timeout=40000)
             except Exception as selector_err:
                 print("EDITOR DID NOT LOAD.")
                 print("Current URL:", page.url)

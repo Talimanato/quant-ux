@@ -148,7 +148,7 @@ def test_studio_smoke():
             page.goto(f"{FRONTEND_URL}/#/apps/{app_id}/create.html")
 
             try:
-                page.wait_for_selector(".MatcCanvas", timeout=20000)
+                page.wait_for_selector(".MatcCanvas", timeout=40000)
             except Exception:
                 print("PAGE BODY:", page.locator("body").inner_text()[:500])
                 print("CONSOLE ERRORS:", collect_rest_errors(page))

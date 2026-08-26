@@ -65,15 +65,12 @@ def test_auth_account():
             try:
                 # 2. Log in with the user through the actual login form.
                 page.goto(f"{frontend_url}/#/")
-                page.wait_for_selector(".MatcLoginPage", timeout=15000)
+                page.wait_for_selector(".qux-login", timeout=15000)
 
-                # Make sure the login panel is active.
-                page.locator(".MatcToolbarTabs a", has_text="Login").click()
-
-                login_panel = page.locator(".MatcLoginWrapper.login")
-                login_panel.locator(".MatcLoginContent:nth-of-type(1) input[type='text']").fill(email)
-                login_panel.locator(".MatcLoginContent:nth-of-type(1) input[type='password']").fill(password)
-                login_panel.locator(".MatcLoginContent:nth-of-type(1) a.MatcButton:has-text('Login')").click()
+                page.locator(".qux-login__tab", has_text="Log in").click()
+                page.locator("#qux-login-email").fill(email)
+                page.locator("#qux-login-password").fill(password)
+                page.locator(".qux-login__submit").click()
 
                 page.wait_for_selector("text=Welcome to Quant-UX!", timeout=20000)
                 print("[2] Logged in through the UI")
@@ -112,7 +109,7 @@ def test_auth_account():
 
                 # 4. Log out and verify the redirect.
                 page.locator("a[href='#/logout.html']").click()
-                page.wait_for_selector(".MatcLoginPage", timeout=20000)
+                page.wait_for_selector(".qux-login", timeout=20000)
 
                 current_url = page.url
                 print(f"[4] After logout URL: {current_url}")

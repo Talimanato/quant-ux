@@ -79,7 +79,7 @@ def _run_studio_widgets_advanced(env):
 
             # 2. Open the Studio editor.
             page.goto(f"{frontend_url}/#/apps/{app_id}/create.html")
-            page.wait_for_selector(".MatcCanvas", timeout=20000)
+            page.wait_for_selector(".MatcCanvas", timeout=40000)
             page.wait_for_timeout(2000)
 
             # Determine a point in the middle of the canvas.

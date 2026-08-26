@@ -250,12 +250,26 @@ export default {
         setDefaultApp () {
             if (this.apps.length > 0 && !this.defaultDispatched) {
                 const app = this.apps[0]
-                if (this.pub) {
-                    this.$router.push(`/examples/${app.id}.html`)                   
-                } else {
-                    this.$router.push(`/apps/${app.id}.html`)
-                }      
-                this.defaultDispatched = true      
+                this.defaultDispatched = true
+                /**
+                 * The push is deferred and re-checked: the user might
+                 * navigate away while load() resolves (e.g. straight into
+                 * the editor). A queued push would then hijack that
+                 * navigation, because vue-router resolves it last.
+                 * location.hash is the synchronous source of truth here.
+                 */
+                this.$nextTick(() => {
+                    if (this.isUnmounted) {
+                        return
+                    }
+                    if (location.hash === '' || location.hash === '#' || location.hash === '#/') {
+                        if (this.pub) {
+                            this.$router.push(`/examples/${app.id}.html`)
+                        } else {
+                            this.$router.push(`/apps/${app.id}.html`)
+                        }
+                    }
+                })
             }
         },
         onLogout () {
@@ -275,8 +289,20 @@ export default {
         this.logger = new Logger("Studio");
         this.user = Services.getUserService().getUser();
         await this.load();
+        /**
+         * load() can resolve after the user has already navigated away
+         * (e.g. straight into the editor). initRoute() would then push the
+         * default app route and hijack that navigation - do nothing once
+         * the component is unmounted.
+         */
+        if (this.isUnmounted) {
+            return
+        }
         this.initRoute();
         this.logger.log(2,"mounted", "exit > ", this.user);
+    },
+    beforeUnmount () {
+        this.isUnmounted = true
     }
 };
 </script>

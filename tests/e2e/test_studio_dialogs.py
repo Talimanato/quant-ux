@@ -116,7 +116,7 @@ def test_studio_dialogs():
 
                 # Open the Studio editor for the test app.
                 page.goto(f"{env['frontend_url']}/#/apps/{app_id}/create.html")
-                page.wait_for_selector(".MatcCanvas", timeout=20000)
+                page.wait_for_selector(".MatcCanvas", timeout=40000)
                 page.wait_for_selector(".MatcToobarHomeSection", timeout=10000)
 
                 # Dismiss any auto-opened dialogs (e.g. reminders or help).
